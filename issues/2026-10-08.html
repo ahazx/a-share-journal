@@ -2,164 +2,167 @@
 <html lang="zh-CN"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2026-10-08 外部政策杀估值（FCC+美债） · A股复盘第013期</title>
-<style>
+<title>外部政策杀估值（FCC+美债）｜2026-10-08 A股复盘</title>
+<meta name="description" content="外部政策杀估值（FCC+美债）">
+<style>/* ---------------------------------------------------------------
+   A股复盘期刊 · 编辑部风格
+   原则：白底、细线、衬线标题、无卡片无阴影无彩色标签
+   --------------------------------------------------------------- */
 :root{
-  --paper:#f6f3ee; --card:#fffdf9; --ink:#1c1a17; --ink2:#413c35; --muted:#8a8279;
-  --line:#e2dbd0; --line2:#cfc6b8; --red:#c0392b; --redbg:#fdf1ef;
-  --green:#1a7f4b; --greenbg:#eef7f1; --gold:#8c6b2f;
-  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --ink:#111110;
+  --body:#26251f;
+  --muted:#8b887f;
+  --hair:#e4e1da;
+  --hair2:#c9c5bb;
+  --up:#b02a1e;
+  --down:#166b45;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0; background:var(--paper); color:var(--ink);
-  font-family:var(--sans); font-size:15.5px; line-height:1.85;
+  margin:0;background:#fff;color:var(--body);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16.5px;line-height:1.95;
   -webkit-font-smoothing:antialiased;
+  font-feature-settings:"palt" 1;
 }
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+.serif{font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif}
 
 /* ---------- 报头 ---------- */
-.masthead{border-bottom:3px double var(--ink);background:var(--card);padding:26px 0 18px}
-.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.brand h1{
-  font-family:var(--serif);font-size:34px;line-height:1.15;margin:0;
-  letter-spacing:2px;font-weight:700;
-}
-.brand .sub{
-  font-family:var(--sans);font-size:11px;letter-spacing:3.5px;color:var(--muted);
-  text-transform:uppercase;margin-top:7px;
-}
-.masthead .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.9}
-.masthead .meta b{color:var(--ink);font-family:var(--serif);font-size:22px;letter-spacing:1px}
+.masthead{border-bottom:1px solid var(--ink);background:#fff}
+.masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:15px 0 11px}
+.masthead .brand{font-size:15px;letter-spacing:2px;font-weight:600;color:var(--ink)}
+.masthead .mhmeta{font-size:12px;color:var(--muted);letter-spacing:.6px;white-space:nowrap}
 
-/* ---------- 版面骨架 ---------- */
-.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px;padding:38px 0 80px}
-@media(max-width:940px){.layout{grid-template-columns:1fr;gap:20px;padding-top:26px}}
+/* ---------- 版面 ---------- */
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px;padding:40px 0 90px}
+@media(max-width:920px){.layout{grid-template-columns:1fr;gap:0;padding-top:26px}}
 
 /* ---------- 目录 ---------- */
-.toc{position:sticky;top:24px;align-self:start;font-size:13px}
-.toc .toc-t{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:12px}
-.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
-.toc li{margin:0}
-.toc a{display:block;padding:6px 0 6px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink2);line-height:1.5}
-.toc a:hover{color:var(--red);border-left-color:var(--red);background:var(--redbg)}
-@media(max-width:940px){
-  .toc{position:static;border:1px solid var(--line);background:var(--card);padding:14px 16px}
-  .toc ol{columns:2;column-gap:18px}
-  .toc a{font-size:12.5px}
+.toc{position:sticky;top:26px;align-self:start;font-size:12px;line-height:1.5}
+.toc .toc-t{font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:11px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:0 0 3px}
+.toc a{display:block;padding:5px 0;color:#57544c;transition:color .12s}
+.toc a:hover{color:var(--up)}
+@media(max-width:920px){
+  .toc{position:static;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--hair)}
+  .toc ol{columns:2;column-gap:22px}
 }
+
+/* ---------- 标题区 ---------- */
+.meta{font-size:12px;color:var(--muted);letter-spacing:1px;margin-bottom:14px}
+h1.hl{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:31px;line-height:1.45;letter-spacing:.5px;font-weight:700;
+  margin:0 0 14px;color:var(--ink);
+}
+.dek{font-size:15.5px;line-height:1.9;color:#57544c;margin:0 0 30px;padding-bottom:26px;border-bottom:1px solid var(--hair)}
+@media(max-width:640px){h1.hl{font-size:25px}}
 
 /* ---------- 正文 ---------- */
-article{max-width:820px}
-.issue-head{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
-.issue-head .kicker{font-size:11.5px;letter-spacing:2px;color:var(--red);margin-bottom:6px}
-.issue-head h1{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:.5px}
-.issue-head .dateline{font-size:12.5px;color:var(--muted)}
-
+article{max-width:720px}
 h2{
-  font-family:var(--serif);font-size:21px;margin:44px 0 16px;padding-bottom:9px;
-  border-bottom:1px solid var(--line2);letter-spacing:.5px;
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:19px;font-weight:700;letter-spacing:.4px;color:var(--ink);
+  margin:52px 0 18px;padding-top:13px;border-top:1px solid var(--ink);
 }
-h2::before{content:"";display:inline-block;width:5px;height:15px;background:var(--red);margin-right:10px;vertical-align:-2px}
-h3{font-family:var(--serif);font-size:17px;margin:30px 0 10px;color:var(--ink)}
-h4{font-size:14.5px;margin:22px 0 8px;color:var(--ink2)}
-p{margin:0 0 13px;text-align:justify}
+h3{font-size:16.5px;font-weight:700;color:var(--ink);margin:34px 0 10px;letter-spacing:.2px}
+h4{font-size:15px;font-weight:600;margin:24px 0 8px;color:#3a3730}
+p{margin:0 0 15px;text-align:left}
 strong{font-weight:700;color:#000}
-em{font-style:normal;background:linear-gradient(transparent 62%,#f3e2b8 62%);padding:0 1px}
+em{font-style:normal;font-weight:600}
 hr{display:none}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:#efe9df;padding:1px 5px;border-radius:3px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.87em;background:#f4f2ec;padding:1px 5px}
 
-/* 首段引言 */
+/* 数据来源等说明 */
 blockquote{
-  margin:0 0 26px;padding:14px 18px;background:var(--card);border-left:3px solid var(--line2);
-  font-size:12.8px;line-height:1.8;color:var(--muted);
+  margin:0 0 34px;padding:0;border:none;color:var(--muted);
+  font-size:12.5px;line-height:1.85;
 }
-blockquote p{margin:0 0 6px;text-align:left}
+blockquote p{margin:0 0 5px;text-align:left}
 blockquote p:last-child{margin:0}
 
-/* 列表 */
-ul,ol{margin:0 0 16px;padding-left:22px}
-li{margin:0 0 9px;line-height:1.8}
-li::marker{color:var(--muted)}
-ul ul,ol ul,ul ol{margin:8px 0 0}
+/* 列表：短横线游标 */
+ul,ol{margin:0 0 18px;padding:0;list-style:none}
+li{position:relative;padding-left:1.15em;margin:0 0 10px;line-height:1.85}
+li::before{content:"–";position:absolute;left:0;top:0;color:#b3aea3}
+ol{counter-reset:n}
+ol li{padding-left:1.5em;counter-increment:n}
+ol li::before{content:counter(n) ".";color:var(--muted);font-size:.9em}
+ul ul,ol ul,ul ol{margin:9px 0 0}
 
-/* 表格 */
-.tbl{overflow-x:auto;margin:16px 0 24px;border:1px solid var(--line);background:var(--card)}
-table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6;font-variant-numeric:tabular-nums}
+/* 表格：无边框无斑马，报纸数据表 */
+.tbl{overflow-x:auto;margin:20px 0 28px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.72;font-variant-numeric:tabular-nums}
 thead th{
-  background:#efe9df;color:var(--ink);font-weight:600;text-align:left;
-  padding:9px 12px;border-bottom:1px solid var(--line2);white-space:nowrap;font-size:12.5px;
+  border-bottom:1.5px solid var(--ink);padding:0 10px 8px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:.4px;color:#3a3730;white-space:nowrap;
 }
-tbody td{padding:9px 12px;border-bottom:1px solid #f0ebe3;vertical-align:top}
-tbody tr:nth-child(even){background:#fcfaf6}
-tbody tr:last-child td{border-bottom:none}
-tbody tr:hover{background:#fbf4ec}
-td:first-child{font-weight:600;white-space:nowrap}
-.num{font-variant-numeric:tabular-nums}
+thead th:first-child,td:first-child{padding-left:0}
+tbody td{padding:10px 10px 10px 10px;border-bottom:1px solid var(--hair);vertical-align:top}
+tbody tr:last-child td{border-bottom:1px solid var(--hair2)}
+td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+tbody tr:hover{background:#fcfbf8}
 
-/* 数字着色（红涨绿跌） */
-.up{color:var(--red);font-weight:600}
-.down{color:var(--green);font-weight:600}
+/* 涨跌色 */
+.up{color:var(--up)}
+.down{color:var(--down)}
 .flat{color:var(--muted)}
 
-/* 章节内小节 */
-article>b,article>strong{display:block}
+/* ---------- 翻页 ---------- */
+.pager{display:flex;justify-content:space-between;gap:30px;margin-top:64px;padding-top:18px;border-top:1px solid var(--hair);font-size:13px}
+.pager a{color:#57544c;max-width:46%}
+.pager a:hover{color:var(--up)}
+.pager .dir{display:block;font-size:11px;color:var(--muted);letter-spacing:1.5px;margin-bottom:4px}
+.pager a.next{text-align:right;margin-left:auto}
 
-/* 页脚 */
-.foot{border-top:3px double var(--ink);margin-top:70px;padding:22px 0 60px;font-size:12px;color:var(--muted)}
-.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-/* 上下期 */
-.pager{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
-.pager a{flex:1;border:1px solid var(--line);background:var(--card);padding:12px 16px;font-size:13px;transition:.15s}
-.pager a:hover{border-color:var(--red);color:var(--red)}
-.pager .dir{display:block;font-size:10.5px;letter-spacing:2px;color:var(--muted);margin-bottom:3px}
-.pager a.next{text-align:right}
+/* ---------- 页脚 ---------- */
+.foot{border-top:1px solid var(--ink);margin-top:0;padding:16px 0 64px;font-size:11.5px;color:var(--muted);letter-spacing:.3px}
+.foot .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 
 @media print{
-  body{background:#fff;font-size:11.5pt}
-  .toc,.pager,.masthead .meta{display:none}
+  body{font-size:11pt;line-height:1.7}
+  .toc,.pager,.masthead .mhmeta{display:none}
   .layout{grid-template-columns:1fr;padding:0}
   h2{break-after:avoid}
-  .tbl{overflow:visible;break-inside:avoid}
+  .tbl{overflow:visible}
 }
+
+/* ---------- 整行加粗的小标题（报告里的 1./2./3.） ---------- */
+p.k{
+  margin:30px 0 9px;font-size:15.5px;line-height:1.75;
+  letter-spacing:.2px;color:var(--ink);
+}
+p.k strong{font-weight:700}
 </style>
 </head><body>
-
 <header class="masthead"><div class="wrap">
-  <div class="brand">
-    <h1>山哥 · A股每日复盘</h1>
-    <div class="sub">Daily Market Review · A-Share Journal</div>
-  </div>
-  <div class="meta"><b>第 013 期</b><br>2026-10-08 · 周四</div>
+  <a class="brand" href="../index.html">A股每日复盘</a>
+  <div class="mhmeta">2026-10-08 · 周四 · 第 013 期</div>
 </div></header>
-
 <div class="wrap"><div class="layout">
-<nav class="toc"><div class="toc-t">本期目录</div><ol><li><a href="#sec0">一、核心结论：指数跌出两条平行线，机构在砸、游资在接</a></li><li><a href="#sec1">二、核心指数表现：全部收在全天最低点</a></li><li><a href="#sec2">三、市场情绪与量能：宽度崩了，高度没崩</a></li><li><a href="#sec3">四、资金表现：接口只给到前三，但前三已经说明问题</a></li><li><a href="#sec4">五、题材涨跌分析（领涨 3 + 领跌 3）</a></li><li><a href="#sec5">六、你的持仓今天（10/8）</a></li><li><a href="#sec6">七、后市观察清单（按优先级）</a></li><li><a href="#sec7">八、一句话总结（公众号标题）</a></li></ol></nav>
+<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、资金表现</a></li><li><a href="#sec4">五、题材涨跌分析</a></li><li><a href="#sec5">六、你的持仓今天</a></li><li><a href="#sec6">七、后市观察清单</a></li><li><a href="#sec7">八、一句话总结</a></li></ol></nav>
 <article>
-  <div class="issue-head">
-    <div class="kicker">第 013 期 · NO.013</div>
-    <h1>外部政策杀估值（FCC+美债）</h1>
-    <div class="dateline">2026-10-08 · 周四</div>
-  </div>
-<h1 class="md-h1">A股深度复盘 · 2026年10月8日（周四）· 节后首日</h1>
+  <div class="meta">2026年10月8日　周四</div>
+  <h1 class="hl">外部政策杀估值（FCC+美债）</h1>
+  
 <blockquote><p>交易状态判定：上证/深证 20261008 均「开市」，行情接口「盘后交易中」，数据为当日实盘。</p><p>取数链路：neodata-financial-search（westock CLI 仍处于未授权状态，全程走免鉴权通道）。</p></blockquote>
 <h2 id="sec0">一、核心结论：指数跌出两条平行线，机构在砸、游资在接</h2>
 <p>今天只有一个事实值得记住：<strong>上证只跌 0.79%，创业板跌 3.15%、科创50 跌 4.82%——但全市场有 3748 只股票下跌。</strong></p>
 <p>这不是"大盘抗跌"能解释的，是两条资金线在完全相反的方向上走：</p>
 <ul><li><strong>机构线在出货</strong>：光芯片/CPO（通信设备 <span class="down">-4.48%</span>、半导体 <span class="down">-5.13%</span>）和创新药/生物制品（生物制品 <span class="down">-4.00%</span>）这两条节前最拥挤的主线，今天被政策传闻 + 临床失败 + 美债长端三重因素同时砸盘。</li><li><strong>游资线在接力</strong>：油运三巨头开盘秒板、固态电池链 8 家涨停（全市场涨停行业第一）、8 板新华传媒封死、昨日连板指数逆势 <strong><span class="up">+5.09%</span></strong>。</li></ul>
 <p>量能上，两市成交 <strong>16821 亿元，较节前最后一日放量 2441 亿（<span class="up">+17%</span>）</strong>——放量不是好事，是<strong>分歧</strong>。上涨占比只有 30%，跌超 5% 的家数从 9/30 的 131 家暴增到 <strong>452 家</strong>。</p>
-<p><strong>一句话定性：今天是「外部政策杀估值（FCC+美债）」与「内部地缘炒涨价（霍尔木兹）」的对撞日；指数用来骗人，个股用来亏钱。</strong></p>
+<p class="k">一句话定性：今天是「外部政策杀估值（FCC+美债）」与「内部地缘炒涨价（霍尔木兹）」的对撞日；指数用来骗人，个股用来亏钱。</p>
 <h2 id="sec1">二、核心指数表现：全部收在全天最低点</h2>
 <div class="tbl"><table><thead><tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>振幅</th><th>量比</th><th>全天最低</th></tr></thead><tbody><tr><td>上证指数</td><td>3811.90</td><td><strong><span class="down">-0.79%</span></strong></td><td>1.79%</td><td>1.11</td><td>3795.37</td></tr><tr><td>深证成指</td><td>12620.90</td><td><span class="down">-2.07%</span></td><td>3.45%</td><td>1.01</td><td>12540.73</td></tr><tr><td>创业板指</td><td>3036.66</td><td><strong><span class="down">-3.15%</span></strong></td><td>4.99%</td><td>1.04</td><td>3012.03</td></tr><tr><td>科创50</td><td>1456.32</td><td><strong><span class="down">-4.82%</span></strong></td><td>4.90%</td><td>1.27</td><td>1446.43</td></tr><tr><td>北证50</td><td>1012.10</td><td><span class="down">-2.65%</span></td><td>3.46%</td><td>0.94</td><td>1011.22</td></tr><tr><td>沪深300</td><td>4310.28</td><td><span class="down">-1.09%</span></td><td>2.15%</td><td>1.21</td><td>4289.79</td></tr></tbody></table></div>
-<p><strong>三个读出来的事实：</strong></p>
+<p class="k">三个读出来的事实：</p>
 <ol><li><strong>收盘价≈全天最低点</strong>（科创50 收 1456.32 / 最低 1446.43，创业板收 3036.66 / 最低 3012.03）。这不是"低开震荡"，是<strong>开盘冲高后一路向下、尾盘没有任何承接</strong>。上证是唯一例外：最低 3795.37，收在 3811.90，靠尾盘拉回 16 个点。</li><li><strong>上证抗跌的代价是银行和石油在扛</strong>：申万银行指数早盘 <span class="up">+1.01%</span>，42 只银行股 39 只飘红，工商银行、中国银行、杭州银行<strong>同时创历史新高</strong>；石油石化 <strong><span class="up">+2.46%</span></strong>、煤炭开采 <strong><span class="up">+1.05%</span></strong>。红利把上证盾住了，但红利只有几十只股票，撑不起 3748 只的跌。</li><li><strong>创业板跌幅 (<span class="down">-3.15%</span>) &gt; 深成指 (<span class="down">-2.07%</span>) &gt; 沪深300 (<span class="down">-1.09%</span>) &gt; 上证 (<span class="down">-0.79%</span>)</strong> —— 跌幅沿市值权重递减，说明<strong>杀的就是高估值成长</strong>，不是系统性风险。</li></ol>
 <h2 id="sec2">三、市场情绪与量能：宽度崩了，高度没崩</h2>
 <div class="tbl"><table><thead><tr><th>指标</th><th>今日（10/8）</th><th>节前（9/30）</th><th>变化</th></tr></thead><tbody><tr><td>两市成交额</td><td><strong>16821.09 亿</strong></td><td>14379.89 亿</td><td><strong>+2441 亿 / <span class="up">+17.0%</span></strong></td></tr><tr><td>上涨家数</td><td>1698（占比 30%）</td><td>2567（46%）</td><td>↓</td></tr><tr><td>下跌家数</td><td><strong>3748</strong></td><td>2824</td><td>↑</td></tr><tr><td>涨停 / 跌停</td><td>45 / 16</td><td>56 / 13</td><td>↓ / ↑</td></tr><tr><td>涨超 5%</td><td>161 家</td><td>148 家</td><td>微增</td></tr><tr><td><strong>跌超 5%</strong></td><td><strong>452 家</strong></td><td>131 家</td><td><strong>↑3.4 倍</strong></td></tr><tr><td>昨日涨停股今日上涨率</td><td>38.98%</td><td>—</td><td>短线情绪「一般」</td></tr><tr><td>融资余额</td><td>25324.19 亿（5 日连降，日 <span class="down">-1.52%</span>）</td><td>—</td><td>杠杆资金撤退</td></tr></tbody></table></div>
-<p><strong>这里有个必须拆开看的反差：</strong></p>
+<p class="k">这里有个必须拆开看的反差：</p>
 <ul><li><strong>宽度极差</strong>：涨 1698 对跌 3748，上涨占比 30%，跌超 5% 的家数是节前的 3.4 倍。9/30 我们记的是"指数稳、结构裂"，今天结构直接裂到底了。</li><li><strong>高度不低</strong>：连板梯队 8 板 1 家（新华传媒）、4 板 2 家、3 板 4 家、2 板 3 家、首板 33 家；<strong>"昨日连板"概念 <span class="up">+5.09%</span></strong>，,"昨日涨停"股今日还有 38.98% 上涨。节前最高 7 板，今天是 8 板。</li></ul>
 <p><strong>结论：这是一次「机构减仓、游资抬轿」的分工日，不是「全员撤退」。</strong> 融资余额 5 日连降 + 放量 + 跌超 5% 翻倍，三条共同指向——<strong>杠杆和机构在走，短线活性资金还在</strong>。判断"崩盘"为时尚早，但判断"普涨修复"更是错。</p>
 <p>⚠️ 口径说明：涨停/跌停以涨跌分布统计为 45/16，东财涨停池返回 43 家，存在数据源口径差（历史多次如此）。</p>
@@ -204,22 +207,20 @@ article>b,article>strong{display:block}
 <h2 id="sec6">七、后市观察清单（按优先级）</h2>
 <ol><li><strong>FCC26-50 的 10/13 生效日（下周二）</strong> —— 光芯片板块的第二波情绪拐点。在见到官方政策文本之前，不谈"错杀修复"，只谈情绪宣泄。</li><li><strong>霍尔木兹"宣布封锁"能否持续</strong> —— 油运能否从"一天脉冲"变成"一段主线"，看 BDTI 与 TD3C TCE 能否连续 3 个交易日走高。地缘是可证伪的，这是今天唯一有硬价格背书的线。</li><li><strong>美债 30Y 5.72%（2002 年来最高）</strong> —— 这条线今天第一次用行动证明它比恒指、比 A 股涨跌更值得看。<strong>把 10/4 定的"看 10Y 美债"纪律升级为"看 30Y 美债"</strong>，因为它才是创新药和成长股估值的天花板。</li><li><strong>8 板新华传媒 + 昨日连板 <span class="up">+5.09%</span> 的游资高度</strong> —— 指数连跌、跌停仅 16 家的环境下还能上 8 板，说明游资没死。若明日连板梯队首炸（尤其 8 板断板），本轮游资行情即宣告结束，届时才轮到真正的普跌。</li><li><strong>跌超 5% 452 家 vs 涨停 45 家的剪刀差</strong> —— 宽度极差但高度不低，是"机构出货+游资接力"结构。要盯的是哪一方先断：机构先断 → 指数补跌；游资先断 → 题材塌方。</li></ol>
 <h2 id="sec7">八、一句话总结（公众号标题）</h2>
-<p><strong>【主推】</strong></p>
+<p class="k">【主推】</p>
 <blockquote><p>机构砸光芯片创新药、游资接油运固态电池：节后首日，A股跌出了两条平行线</p></blockquote>
-<p><strong>【备选 1】</strong></p>
+<p class="k">【备选 1】</p>
 <blockquote><p>科创50 跌 4.82%，8 板股却封死涨停：今天 A 股本该只跌一样东西</p></blockquote>
-<p><strong>【备选 2】</strong></p>
+<p class="k">【备选 2】</p>
 <blockquote><p>霍尔木兹一纸"封锁"把油运送涨停、把光芯片送跌停：同一个市场，两个世界</p></blockquote>
-<p><strong>【备选 3】</strong></p>
+<p class="k">【备选 3】</p>
 <blockquote><p>30 年美债冲上 5.72%，砸的不是指数，是创新药的未来现金流</p></blockquote>
 <p><em>数据来源：neodata-financial-search 统一行情/板块排行/大盘宽度、东财涨停池、公开财经媒体（已做点位交叉校验）。 westock CLI 未授权，未参与取数。</em></p>
-<div class="pager"><a class="prev" href="2026-10-07.html"><span class="dir">← 上一期</span>10-07 同一条 AI 硬件链，定价权在美股、减仓在离岸</a><a class="next" href="2026-10-09.html"><span class="dir">下一期 →</span>10-09 机构砸盘 + 宽度崩塌</a></div>
+<div class="pager"><a class="prev" href="2026-10-07.html"><span class="dir">上一期</span>10-07　15:15</a><a class="next" href="2026-10-09.html"><span class="dir">下一期</span>10-09　机构砸盘 + 宽度崩塌</a></div>
 </article>
 </div></div>
-
 <footer class="foot"><div class="wrap">
-  <span>A股每日复盘期刊 · 由收盘数据自动生成</span>
-  <span>数据口径：沪深A股全市场 · 红涨绿跌</span>
+  <span>数据口径：沪深A股全市场 · 红涨绿跌 · 收盘数据</span>
+  <span>每日收盘后自动生成</span>
 </div></footer>
-
 </body></html>

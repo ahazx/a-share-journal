@@ -2,150 +2,153 @@
 <html lang="zh-CN"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2026-11-15 休市（周末休市） · A股复盘第050期</title>
-<style>
+<title>周末休市｜2026-11-15 A股复盘</title>
+<meta name="description" content="周末休市">
+<style>/* ---------------------------------------------------------------
+   A股复盘期刊 · 编辑部风格
+   原则：白底、细线、衬线标题、无卡片无阴影无彩色标签
+   --------------------------------------------------------------- */
 :root{
-  --paper:#f6f3ee; --card:#fffdf9; --ink:#1c1a17; --ink2:#413c35; --muted:#8a8279;
-  --line:#e2dbd0; --line2:#cfc6b8; --red:#c0392b; --redbg:#fdf1ef;
-  --green:#1a7f4b; --greenbg:#eef7f1; --gold:#8c6b2f;
-  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --ink:#111110;
+  --body:#26251f;
+  --muted:#8b887f;
+  --hair:#e4e1da;
+  --hair2:#c9c5bb;
+  --up:#b02a1e;
+  --down:#166b45;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0; background:var(--paper); color:var(--ink);
-  font-family:var(--sans); font-size:15.5px; line-height:1.85;
+  margin:0;background:#fff;color:var(--body);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16.5px;line-height:1.95;
   -webkit-font-smoothing:antialiased;
+  font-feature-settings:"palt" 1;
 }
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+.serif{font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif}
 
 /* ---------- 报头 ---------- */
-.masthead{border-bottom:3px double var(--ink);background:var(--card);padding:26px 0 18px}
-.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.brand h1{
-  font-family:var(--serif);font-size:34px;line-height:1.15;margin:0;
-  letter-spacing:2px;font-weight:700;
-}
-.brand .sub{
-  font-family:var(--sans);font-size:11px;letter-spacing:3.5px;color:var(--muted);
-  text-transform:uppercase;margin-top:7px;
-}
-.masthead .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.9}
-.masthead .meta b{color:var(--ink);font-family:var(--serif);font-size:22px;letter-spacing:1px}
+.masthead{border-bottom:1px solid var(--ink);background:#fff}
+.masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:15px 0 11px}
+.masthead .brand{font-size:15px;letter-spacing:2px;font-weight:600;color:var(--ink)}
+.masthead .mhmeta{font-size:12px;color:var(--muted);letter-spacing:.6px;white-space:nowrap}
 
-/* ---------- 版面骨架 ---------- */
-.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px;padding:38px 0 80px}
-@media(max-width:940px){.layout{grid-template-columns:1fr;gap:20px;padding-top:26px}}
+/* ---------- 版面 ---------- */
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px;padding:40px 0 90px}
+@media(max-width:920px){.layout{grid-template-columns:1fr;gap:0;padding-top:26px}}
 
 /* ---------- 目录 ---------- */
-.toc{position:sticky;top:24px;align-self:start;font-size:13px}
-.toc .toc-t{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:12px}
-.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
-.toc li{margin:0}
-.toc a{display:block;padding:6px 0 6px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink2);line-height:1.5}
-.toc a:hover{color:var(--red);border-left-color:var(--red);background:var(--redbg)}
-@media(max-width:940px){
-  .toc{position:static;border:1px solid var(--line);background:var(--card);padding:14px 16px}
-  .toc ol{columns:2;column-gap:18px}
-  .toc a{font-size:12.5px}
+.toc{position:sticky;top:26px;align-self:start;font-size:12px;line-height:1.5}
+.toc .toc-t{font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:11px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:0 0 3px}
+.toc a{display:block;padding:5px 0;color:#57544c;transition:color .12s}
+.toc a:hover{color:var(--up)}
+@media(max-width:920px){
+  .toc{position:static;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--hair)}
+  .toc ol{columns:2;column-gap:22px}
 }
+
+/* ---------- 标题区 ---------- */
+.meta{font-size:12px;color:var(--muted);letter-spacing:1px;margin-bottom:14px}
+h1.hl{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:31px;line-height:1.45;letter-spacing:.5px;font-weight:700;
+  margin:0 0 14px;color:var(--ink);
+}
+.dek{font-size:15.5px;line-height:1.9;color:#57544c;margin:0 0 30px;padding-bottom:26px;border-bottom:1px solid var(--hair)}
+@media(max-width:640px){h1.hl{font-size:25px}}
 
 /* ---------- 正文 ---------- */
-article{max-width:820px}
-.issue-head{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
-.issue-head .kicker{font-size:11.5px;letter-spacing:2px;color:var(--red);margin-bottom:6px}
-.issue-head h1{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:.5px}
-.issue-head .dateline{font-size:12.5px;color:var(--muted)}
-
+article{max-width:720px}
 h2{
-  font-family:var(--serif);font-size:21px;margin:44px 0 16px;padding-bottom:9px;
-  border-bottom:1px solid var(--line2);letter-spacing:.5px;
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:19px;font-weight:700;letter-spacing:.4px;color:var(--ink);
+  margin:52px 0 18px;padding-top:13px;border-top:1px solid var(--ink);
 }
-h2::before{content:"";display:inline-block;width:5px;height:15px;background:var(--red);margin-right:10px;vertical-align:-2px}
-h3{font-family:var(--serif);font-size:17px;margin:30px 0 10px;color:var(--ink)}
-h4{font-size:14.5px;margin:22px 0 8px;color:var(--ink2)}
-p{margin:0 0 13px;text-align:justify}
+h3{font-size:16.5px;font-weight:700;color:var(--ink);margin:34px 0 10px;letter-spacing:.2px}
+h4{font-size:15px;font-weight:600;margin:24px 0 8px;color:#3a3730}
+p{margin:0 0 15px;text-align:left}
 strong{font-weight:700;color:#000}
-em{font-style:normal;background:linear-gradient(transparent 62%,#f3e2b8 62%);padding:0 1px}
+em{font-style:normal;font-weight:600}
 hr{display:none}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:#efe9df;padding:1px 5px;border-radius:3px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.87em;background:#f4f2ec;padding:1px 5px}
 
-/* 首段引言 */
+/* 数据来源等说明 */
 blockquote{
-  margin:0 0 26px;padding:14px 18px;background:var(--card);border-left:3px solid var(--line2);
-  font-size:12.8px;line-height:1.8;color:var(--muted);
+  margin:0 0 34px;padding:0;border:none;color:var(--muted);
+  font-size:12.5px;line-height:1.85;
 }
-blockquote p{margin:0 0 6px;text-align:left}
+blockquote p{margin:0 0 5px;text-align:left}
 blockquote p:last-child{margin:0}
 
-/* 列表 */
-ul,ol{margin:0 0 16px;padding-left:22px}
-li{margin:0 0 9px;line-height:1.8}
-li::marker{color:var(--muted)}
-ul ul,ol ul,ul ol{margin:8px 0 0}
+/* 列表：短横线游标 */
+ul,ol{margin:0 0 18px;padding:0;list-style:none}
+li{position:relative;padding-left:1.15em;margin:0 0 10px;line-height:1.85}
+li::before{content:"–";position:absolute;left:0;top:0;color:#b3aea3}
+ol{counter-reset:n}
+ol li{padding-left:1.5em;counter-increment:n}
+ol li::before{content:counter(n) ".";color:var(--muted);font-size:.9em}
+ul ul,ol ul,ul ol{margin:9px 0 0}
 
-/* 表格 */
-.tbl{overflow-x:auto;margin:16px 0 24px;border:1px solid var(--line);background:var(--card)}
-table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6;font-variant-numeric:tabular-nums}
+/* 表格：无边框无斑马，报纸数据表 */
+.tbl{overflow-x:auto;margin:20px 0 28px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.72;font-variant-numeric:tabular-nums}
 thead th{
-  background:#efe9df;color:var(--ink);font-weight:600;text-align:left;
-  padding:9px 12px;border-bottom:1px solid var(--line2);white-space:nowrap;font-size:12.5px;
+  border-bottom:1.5px solid var(--ink);padding:0 10px 8px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:.4px;color:#3a3730;white-space:nowrap;
 }
-tbody td{padding:9px 12px;border-bottom:1px solid #f0ebe3;vertical-align:top}
-tbody tr:nth-child(even){background:#fcfaf6}
-tbody tr:last-child td{border-bottom:none}
-tbody tr:hover{background:#fbf4ec}
-td:first-child{font-weight:600;white-space:nowrap}
-.num{font-variant-numeric:tabular-nums}
+thead th:first-child,td:first-child{padding-left:0}
+tbody td{padding:10px 10px 10px 10px;border-bottom:1px solid var(--hair);vertical-align:top}
+tbody tr:last-child td{border-bottom:1px solid var(--hair2)}
+td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+tbody tr:hover{background:#fcfbf8}
 
-/* 数字着色（红涨绿跌） */
-.up{color:var(--red);font-weight:600}
-.down{color:var(--green);font-weight:600}
+/* 涨跌色 */
+.up{color:var(--up)}
+.down{color:var(--down)}
 .flat{color:var(--muted)}
 
-/* 章节内小节 */
-article>b,article>strong{display:block}
+/* ---------- 翻页 ---------- */
+.pager{display:flex;justify-content:space-between;gap:30px;margin-top:64px;padding-top:18px;border-top:1px solid var(--hair);font-size:13px}
+.pager a{color:#57544c;max-width:46%}
+.pager a:hover{color:var(--up)}
+.pager .dir{display:block;font-size:11px;color:var(--muted);letter-spacing:1.5px;margin-bottom:4px}
+.pager a.next{text-align:right;margin-left:auto}
 
-/* 页脚 */
-.foot{border-top:3px double var(--ink);margin-top:70px;padding:22px 0 60px;font-size:12px;color:var(--muted)}
-.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-/* 上下期 */
-.pager{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
-.pager a{flex:1;border:1px solid var(--line);background:var(--card);padding:12px 16px;font-size:13px;transition:.15s}
-.pager a:hover{border-color:var(--red);color:var(--red)}
-.pager .dir{display:block;font-size:10.5px;letter-spacing:2px;color:var(--muted);margin-bottom:3px}
-.pager a.next{text-align:right}
+/* ---------- 页脚 ---------- */
+.foot{border-top:1px solid var(--ink);margin-top:0;padding:16px 0 64px;font-size:11.5px;color:var(--muted);letter-spacing:.3px}
+.foot .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 
 @media print{
-  body{background:#fff;font-size:11.5pt}
-  .toc,.pager,.masthead .meta{display:none}
+  body{font-size:11pt;line-height:1.7}
+  .toc,.pager,.masthead .mhmeta{display:none}
   .layout{grid-template-columns:1fr;padding:0}
   h2{break-after:avoid}
-  .tbl{overflow:visible;break-inside:avoid}
+  .tbl{overflow:visible}
 }
+
+/* ---------- 整行加粗的小标题（报告里的 1./2./3.） ---------- */
+p.k{
+  margin:30px 0 9px;font-size:15.5px;line-height:1.75;
+  letter-spacing:.2px;color:var(--ink);
+}
+p.k strong{font-weight:700}
 </style>
 </head><body>
-
 <header class="masthead"><div class="wrap">
-  <div class="brand">
-    <h1>山哥 · A股每日复盘</h1>
-    <div class="sub">Daily Market Review · A-Share Journal</div>
-  </div>
-  <div class="meta"><b>第 050 期</b><br>2026-11-15 · 周日</div>
+  <a class="brand" href="../index.html">A股每日复盘</a>
+  <div class="mhmeta">2026-11-15 · 周日 · 第 050 期</div>
 </div></header>
-
 <div class="wrap"><div class="layout">
-<nav class="toc"><div class="toc-t">本期目录</div><ol><li><a href="#sec0">一、交易日判定（三步一致）</a></li><li><a href="#sec1">二、核心结论</a></li><li><a href="#sec2">三、外围观察（2026-11-13 美股收盘，T+1~T+2 口径）</a></li><li><a href="#sec3">四、下一交易日（11-16 周一）关注清单</a></li><li><a href="#sec4">五、公众号标题（休市日·周末观察向）</a></li></ol></nav>
+<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、交易日判定</a></li><li><a href="#sec1">二、核心结论</a></li><li><a href="#sec2">三、外围观察</a></li><li><a href="#sec3">四、下一交易日关注清单</a></li><li><a href="#sec4">五、公众号标题</a></li></ol></nav>
 <article>
-  <div class="issue-head">
-    <div class="kicker">第 050 期 · NO.050</div>
-    <h1>休市（周末休市）</h1>
-    <div class="dateline">2026-11-15 · 周日 · 休市</div>
-  </div>
-<h1 class="md-h1">A股深度复盘 · 2026-11-15（周日·休市）</h1>
+  <div class="meta">2026年11月15日　周日</div>
+  <h1 class="hl">周末休市</h1>
+  
 <blockquote><p>定时任务 15:15 触发。按「交易日判定三步流程」核验：<strong>今日非交易日</strong>，故产出休市版（外围观察 + 下一交易日清单），<strong>不编造任何当日 A 股涨跌/板块数据</strong>。</p></blockquote>
 <h2 id="sec0">一、交易日判定（三步一致）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>核验项</th><th>结果</th></tr></thead><tbody><tr><td>1. 统一交易日历</td><td>2026-11-15 上交所交易状态</td><td><strong>休市（周末休市）</strong></td></tr><tr><td>2. 行情「交易状态」字段</td><td>上证指数 000001.SH</td><td>11-15「未开盘」，交易状态「已休市」</td></tr><tr><td>3. 最新有效日期</td><td>上证行情表最新有数据日</td><td><strong>2026-11-13</strong>（上一交易日）</td></tr></tbody></table></div>
@@ -159,18 +162,16 @@ article>b,article>strong{display:block}
 <p>基于「上一交易日锚点 + 周末外围」给出可执行的观察项，<strong>所有结论待周一盘后数据验证</strong>：</p>
 <ol><li><strong>量能定调</strong>：11-13 上证振幅仅 1.25%、收跌 0.59%，属缩量回落。周一重点看 <strong>是否放量选择方向</strong>——放量上收复 3634 为修复，继续缩量则弱势延续。</li><li><strong>指数位置</strong>：3634 一线为短线多空分水岭，关注能否站稳；若跳空低开需看外围（纳指走弱）传导力度。</li><li><strong>成长/科技线</strong>：纳指 −0.91% + 30Y 待查，对 <strong>AI 算力、创新药、半导体</strong> 等长久期资产偏压制；周一开盘前 30 分钟看这些方向的承接，勿在弱势中外推。</li><li><strong>连板梯队 / 题材结构</strong>：需待周一 15:00 后统计（涨停分布、连板高度、前排后排联动）。今日不预设。</li><li><strong>红利 / 短久期方向</strong>：若成长承压，资金是否切回银行、红利等短久期资产，看 10Y/30Y 利差与盘面切换。</li></ol>
 <h2 id="sec4">五、公众号标题（休市日·周末观察向）</h2>
-<p><strong>主推</strong></p>
+<p class="k">主推</p>
 <blockquote><p>周日休市不瞎猜：纳指跌近1%，周一A股成长线先防一波估值承压</p></blockquote>
-<p><strong>备选</strong></p>
+<p class="k">备选</p>
 <ol><li>周末复盘｜上一交易日3634收跌0.59%，周一量能定方向</li><li>美股分化信号：道指红、纳指绿，A股科技股周一怎么接？</li><li>30Y美债才是成长股命门（数据待补），下周重点盯这条线</li></ol>
 <p><em>数据来源：neodata 统一交易日历 / 统一行情查询（上证指数、美股三大指数）。休市日不产出板块、连板、题材等当日数据。</em></p>
-<div class="pager"><a class="prev" href="2026-11-14.html"><span class="dir">← 上一期</span>11-14 2026-11-13</a><a class="next" href="2026-11-16.html"><span class="dir">下一期 →</span>11-16 英伟达治理危机引爆算力链、高低切到红利创新高</a></div>
+<div class="pager"><a class="prev" href="2026-11-14.html"><span class="dir">上一期</span>11-14　周末外围观察 + 11/16 盘前清单</a><a class="next" href="2026-11-16.html"><span class="dir">下一期</span>11-16　英伟达治理危机引爆算力链、高低切到红利创新高</a></div>
 </article>
 </div></div>
-
 <footer class="foot"><div class="wrap">
-  <span>A股每日复盘期刊 · 由收盘数据自动生成</span>
-  <span>数据口径：沪深A股全市场 · 红涨绿跌</span>
+  <span>数据口径：沪深A股全市场 · 红涨绿跌 · 收盘数据</span>
+  <span>每日收盘后自动生成</span>
 </div></footer>
-
 </body></html>

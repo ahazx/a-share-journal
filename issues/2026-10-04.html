@@ -2,153 +2,157 @@
 <html lang="zh-CN"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2026-10-04 1. ⚠️【最重要·修正 10/3 的判断】10 年期美债的"松绑"是盘中诱 · A股复盘第009期</title>
-<style>
+<title>昨天的"美债松绑"被证伪了一半 —— 10/8 开盘前最后一份作战图｜2026-10-04 A股复盘</title>
+<meta name="description" content="昨天的"美债松绑"被证伪了一半 —— 10/8 开盘前最后一份作战图">
+<style>/* ---------------------------------------------------------------
+   A股复盘期刊 · 编辑部风格
+   原则：白底、细线、衬线标题、无卡片无阴影无彩色标签
+   --------------------------------------------------------------- */
 :root{
-  --paper:#f6f3ee; --card:#fffdf9; --ink:#1c1a17; --ink2:#413c35; --muted:#8a8279;
-  --line:#e2dbd0; --line2:#cfc6b8; --red:#c0392b; --redbg:#fdf1ef;
-  --green:#1a7f4b; --greenbg:#eef7f1; --gold:#8c6b2f;
-  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --ink:#111110;
+  --body:#26251f;
+  --muted:#8b887f;
+  --hair:#e4e1da;
+  --hair2:#c9c5bb;
+  --up:#b02a1e;
+  --down:#166b45;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0; background:var(--paper); color:var(--ink);
-  font-family:var(--sans); font-size:15.5px; line-height:1.85;
+  margin:0;background:#fff;color:var(--body);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16.5px;line-height:1.95;
   -webkit-font-smoothing:antialiased;
+  font-feature-settings:"palt" 1;
 }
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+.serif{font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif}
 
 /* ---------- 报头 ---------- */
-.masthead{border-bottom:3px double var(--ink);background:var(--card);padding:26px 0 18px}
-.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.brand h1{
-  font-family:var(--serif);font-size:34px;line-height:1.15;margin:0;
-  letter-spacing:2px;font-weight:700;
-}
-.brand .sub{
-  font-family:var(--sans);font-size:11px;letter-spacing:3.5px;color:var(--muted);
-  text-transform:uppercase;margin-top:7px;
-}
-.masthead .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.9}
-.masthead .meta b{color:var(--ink);font-family:var(--serif);font-size:22px;letter-spacing:1px}
+.masthead{border-bottom:1px solid var(--ink);background:#fff}
+.masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:15px 0 11px}
+.masthead .brand{font-size:15px;letter-spacing:2px;font-weight:600;color:var(--ink)}
+.masthead .mhmeta{font-size:12px;color:var(--muted);letter-spacing:.6px;white-space:nowrap}
 
-/* ---------- 版面骨架 ---------- */
-.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px;padding:38px 0 80px}
-@media(max-width:940px){.layout{grid-template-columns:1fr;gap:20px;padding-top:26px}}
+/* ---------- 版面 ---------- */
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px;padding:40px 0 90px}
+@media(max-width:920px){.layout{grid-template-columns:1fr;gap:0;padding-top:26px}}
 
 /* ---------- 目录 ---------- */
-.toc{position:sticky;top:24px;align-self:start;font-size:13px}
-.toc .toc-t{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:12px}
-.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
-.toc li{margin:0}
-.toc a{display:block;padding:6px 0 6px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink2);line-height:1.5}
-.toc a:hover{color:var(--red);border-left-color:var(--red);background:var(--redbg)}
-@media(max-width:940px){
-  .toc{position:static;border:1px solid var(--line);background:var(--card);padding:14px 16px}
-  .toc ol{columns:2;column-gap:18px}
-  .toc a{font-size:12.5px}
+.toc{position:sticky;top:26px;align-self:start;font-size:12px;line-height:1.5}
+.toc .toc-t{font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:11px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:0 0 3px}
+.toc a{display:block;padding:5px 0;color:#57544c;transition:color .12s}
+.toc a:hover{color:var(--up)}
+@media(max-width:920px){
+  .toc{position:static;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--hair)}
+  .toc ol{columns:2;column-gap:22px}
 }
+
+/* ---------- 标题区 ---------- */
+.meta{font-size:12px;color:var(--muted);letter-spacing:1px;margin-bottom:14px}
+h1.hl{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:31px;line-height:1.45;letter-spacing:.5px;font-weight:700;
+  margin:0 0 14px;color:var(--ink);
+}
+.dek{font-size:15.5px;line-height:1.9;color:#57544c;margin:0 0 30px;padding-bottom:26px;border-bottom:1px solid var(--hair)}
+@media(max-width:640px){h1.hl{font-size:25px}}
 
 /* ---------- 正文 ---------- */
-article{max-width:820px}
-.issue-head{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
-.issue-head .kicker{font-size:11.5px;letter-spacing:2px;color:var(--red);margin-bottom:6px}
-.issue-head h1{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:.5px}
-.issue-head .dateline{font-size:12.5px;color:var(--muted)}
-
+article{max-width:720px}
 h2{
-  font-family:var(--serif);font-size:21px;margin:44px 0 16px;padding-bottom:9px;
-  border-bottom:1px solid var(--line2);letter-spacing:.5px;
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:19px;font-weight:700;letter-spacing:.4px;color:var(--ink);
+  margin:52px 0 18px;padding-top:13px;border-top:1px solid var(--ink);
 }
-h2::before{content:"";display:inline-block;width:5px;height:15px;background:var(--red);margin-right:10px;vertical-align:-2px}
-h3{font-family:var(--serif);font-size:17px;margin:30px 0 10px;color:var(--ink)}
-h4{font-size:14.5px;margin:22px 0 8px;color:var(--ink2)}
-p{margin:0 0 13px;text-align:justify}
+h3{font-size:16.5px;font-weight:700;color:var(--ink);margin:34px 0 10px;letter-spacing:.2px}
+h4{font-size:15px;font-weight:600;margin:24px 0 8px;color:#3a3730}
+p{margin:0 0 15px;text-align:left}
 strong{font-weight:700;color:#000}
-em{font-style:normal;background:linear-gradient(transparent 62%,#f3e2b8 62%);padding:0 1px}
+em{font-style:normal;font-weight:600}
 hr{display:none}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:#efe9df;padding:1px 5px;border-radius:3px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.87em;background:#f4f2ec;padding:1px 5px}
 
-/* 首段引言 */
+/* 数据来源等说明 */
 blockquote{
-  margin:0 0 26px;padding:14px 18px;background:var(--card);border-left:3px solid var(--line2);
-  font-size:12.8px;line-height:1.8;color:var(--muted);
+  margin:0 0 34px;padding:0;border:none;color:var(--muted);
+  font-size:12.5px;line-height:1.85;
 }
-blockquote p{margin:0 0 6px;text-align:left}
+blockquote p{margin:0 0 5px;text-align:left}
 blockquote p:last-child{margin:0}
 
-/* 列表 */
-ul,ol{margin:0 0 16px;padding-left:22px}
-li{margin:0 0 9px;line-height:1.8}
-li::marker{color:var(--muted)}
-ul ul,ol ul,ul ol{margin:8px 0 0}
+/* 列表：短横线游标 */
+ul,ol{margin:0 0 18px;padding:0;list-style:none}
+li{position:relative;padding-left:1.15em;margin:0 0 10px;line-height:1.85}
+li::before{content:"–";position:absolute;left:0;top:0;color:#b3aea3}
+ol{counter-reset:n}
+ol li{padding-left:1.5em;counter-increment:n}
+ol li::before{content:counter(n) ".";color:var(--muted);font-size:.9em}
+ul ul,ol ul,ul ol{margin:9px 0 0}
 
-/* 表格 */
-.tbl{overflow-x:auto;margin:16px 0 24px;border:1px solid var(--line);background:var(--card)}
-table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6;font-variant-numeric:tabular-nums}
+/* 表格：无边框无斑马，报纸数据表 */
+.tbl{overflow-x:auto;margin:20px 0 28px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.72;font-variant-numeric:tabular-nums}
 thead th{
-  background:#efe9df;color:var(--ink);font-weight:600;text-align:left;
-  padding:9px 12px;border-bottom:1px solid var(--line2);white-space:nowrap;font-size:12.5px;
+  border-bottom:1.5px solid var(--ink);padding:0 10px 8px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:.4px;color:#3a3730;white-space:nowrap;
 }
-tbody td{padding:9px 12px;border-bottom:1px solid #f0ebe3;vertical-align:top}
-tbody tr:nth-child(even){background:#fcfaf6}
-tbody tr:last-child td{border-bottom:none}
-tbody tr:hover{background:#fbf4ec}
-td:first-child{font-weight:600;white-space:nowrap}
-.num{font-variant-numeric:tabular-nums}
+thead th:first-child,td:first-child{padding-left:0}
+tbody td{padding:10px 10px 10px 10px;border-bottom:1px solid var(--hair);vertical-align:top}
+tbody tr:last-child td{border-bottom:1px solid var(--hair2)}
+td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+tbody tr:hover{background:#fcfbf8}
 
-/* 数字着色（红涨绿跌） */
-.up{color:var(--red);font-weight:600}
-.down{color:var(--green);font-weight:600}
+/* 涨跌色 */
+.up{color:var(--up)}
+.down{color:var(--down)}
 .flat{color:var(--muted)}
 
-/* 章节内小节 */
-article>b,article>strong{display:block}
+/* ---------- 翻页 ---------- */
+.pager{display:flex;justify-content:space-between;gap:30px;margin-top:64px;padding-top:18px;border-top:1px solid var(--hair);font-size:13px}
+.pager a{color:#57544c;max-width:46%}
+.pager a:hover{color:var(--up)}
+.pager .dir{display:block;font-size:11px;color:var(--muted);letter-spacing:1.5px;margin-bottom:4px}
+.pager a.next{text-align:right;margin-left:auto}
 
-/* 页脚 */
-.foot{border-top:3px double var(--ink);margin-top:70px;padding:22px 0 60px;font-size:12px;color:var(--muted)}
-.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-/* 上下期 */
-.pager{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
-.pager a{flex:1;border:1px solid var(--line);background:var(--card);padding:12px 16px;font-size:13px;transition:.15s}
-.pager a:hover{border-color:var(--red);color:var(--red)}
-.pager .dir{display:block;font-size:10.5px;letter-spacing:2px;color:var(--muted);margin-bottom:3px}
-.pager a.next{text-align:right}
+/* ---------- 页脚 ---------- */
+.foot{border-top:1px solid var(--ink);margin-top:0;padding:16px 0 64px;font-size:11.5px;color:var(--muted);letter-spacing:.3px}
+.foot .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 
 @media print{
-  body{background:#fff;font-size:11.5pt}
-  .toc,.pager,.masthead .meta{display:none}
+  body{font-size:11pt;line-height:1.7}
+  .toc,.pager,.masthead .mhmeta{display:none}
   .layout{grid-template-columns:1fr;padding:0}
   h2{break-after:avoid}
-  .tbl{overflow:visible;break-inside:avoid}
+  .tbl{overflow:visible}
 }
+
+/* ---------- 整行加粗的小标题（报告里的 1./2./3.） ---------- */
+p.k{
+  margin:30px 0 9px;font-size:15.5px;line-height:1.75;
+  letter-spacing:.2px;color:var(--ink);
+}
+p.k strong{font-weight:700}
 </style>
 </head><body>
-
 <header class="masthead"><div class="wrap">
-  <div class="brand">
-    <h1>山哥 · A股每日复盘</h1>
-    <div class="sub">Daily Market Review · A-Share Journal</div>
-  </div>
-  <div class="meta"><b>第 009 期</b><br>2026-10-04 · 周日</div>
+  <a class="brand" href="../index.html">A股每日复盘</a>
+  <div class="mhmeta">2026-10-04 · 周日 · 第 009 期</div>
 </div></header>
-
 <div class="wrap"><div class="layout">
-<nav class="toc"><div class="toc-t">本期目录</div><ol><li><a href="#sec0">一、核心结论（先看这三条）</a></li><li><a href="#sec1">二、外围定价全景（截至 10/2 收盘 / 10/3 全天消息）</a></li><li><a href="#sec2">三、假期题材涨跌分析（领涨 3 / 领跌 3）</a></li><li><a href="#sec3">四、A 股自身的增量（假期后段才浮出来的）</a></li><li><a href="#sec4">五、10/8 开盘推演</a></li><li><a href="#sec5">六、持仓提示（9/30 收盘价 × 最新确认名单）</a></li><li><a href="#sec6">七、10/8 开盘验证清单（5 条）</a></li><li><a href="#sec7">八、一句话总结（公众号标题）</a></li></ol></nav>
+<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、外围定价全景</a></li><li><a href="#sec2">三、假期题材涨跌分析</a></li><li><a href="#sec3">四、A 股自身的增量</a></li><li><a href="#sec4">五、10/8 开盘推演</a></li><li><a href="#sec5">六、持仓提示</a></li><li><a href="#sec6">七、10/8 开盘验证清单</a></li><li><a href="#sec7">八、一句话总结</a></li></ol></nav>
 <article>
-  <div class="issue-head">
-    <div class="kicker">第 009 期 · NO.009</div>
-    <h1>1. ⚠️【最重要·修正 10/3 的判断】10 年期美债的"松绑"是盘中诱</h1>
-    <div class="dateline">2026-10-04 · 周日 · 休市</div>
-  </div>
-<h1 class="md-h1">昨天的"美债松绑"被证伪了一半 —— 10/8 开盘前最后一份作战图</h1>
+  <div class="meta">2026年10月4日　周日</div>
+  <h1 class="hl">昨天的"美债松绑"被证伪了一半 —— 10/8 开盘前最后一份作战图</h1>
+  
 <blockquote><p><strong>⚠️ 本文不是 A 股复盘。</strong></p><p>2026-10-04（周日）为国庆假期第 4 天，A 股休市（三步判定一致：A 股指数行情停更在 <code>2026-09-30</code>、</p><p>K 线最新一根=2026-09-30；港股停更在 <code>2026-10-02</code>），香港市场周末同样休市。</p><p>文中不出现任何"今日 A 股涨跌"，不基于 9/30 的数据改写当日口径。</p><p>本文做的是 <strong>10/3 报告的修正 + 假期第 4 天新增变量 + 10/8 开盘推演</strong>。</p><p><strong>与 10/3《节后作战手册》配套阅读，先读那份，再读这份，否则会错过下面第一条的修正。</strong></p></blockquote>
 <h2 id="sec0">一、核心结论（先看这三条）</h2>
-<p><strong>1. ⚠️【最重要·修正 10/3 的判断】10 年期美债的"松绑"是盘中诱多，收盘打回原形。</strong> 10/3 那篇写"10 年美债 5.18%（-6bp）、压制因素正在解除"——<strong>这个读数是非农公布瞬间的盘中值， 收盘是 5.28%（部分口径 5.30%），全周累计上行 11~12bp，已经连续第五周攀升。</strong> 同一时间，2 年期全周反而下行约 3bp（非农当日单日跌 10bp 至 4.69%）。 <strong>短端在降息，长端在加息，两条曲线像剪刀一样张开了。</strong></p>
+<p class="k">1. ⚠️【最重要·修正 10/3 的判断】10 年期美债的"松绑"是盘中诱多，收盘打回原形。</p>
+<p>10/3 那篇写"10 年美债 5.18%（-6bp）、压制因素正在解除"——<strong>这个读数是非农公布瞬间的盘中值， 收盘是 5.28%（部分口径 5.30%），全周累计上行 11~12bp，已经连续第五周攀升。</strong> 同一时间，2 年期全周反而下行约 3bp（非农当日单日跌 10bp 至 4.69%）。 <strong>短端在降息，长端在加息，两条曲线像剪刀一样张开了。</strong></p>
 <p>为什么长端死活不下来？因为长端锚的不是"美联储下一步做什么"，而是 <strong>通胀 + 财政供给 + 期限溢价</strong>——美国政府每年要发数千亿美元国债填赤字，全球买家没有同步接盘。 华尔街见闻引的分析很直白："疲软非农降低了短端利率预期，但通胀、财政供给和期限溢价仍牢牢托住长端。"</p>
 <p>→ <strong>这一条的杀伤力是：所有靠"折现率下降"上涨的高估值成长股，逻辑只兑现了一半。</strong> 你不能在"10 月不加息"和"估值修复"之间跳步——不加息不等于分母下来了。</p>
 <p><strong>2. 但国内有一件事 10/3 那篇漏了，它恰好对冲掉第一条的一半：央行 10/8 当天将开展 1.2 万亿元 买断式逆回购，3 个月期，到期日 2027/1/5，净投放 2000 亿。</strong> 金额不算夸张，但<strong>选在 10/8 当天、期限直接覆盖到明年 1 月</strong>，信号意义远大于实际量。 配合节前落地的 PSL 降息 0.25pct、"六张网"纳入 PSL 支持范围（含算力网、通信网）、 科技再贷款支持比例从 60% 拉到 100%、购房贴息 10/1 起正式执行—— <strong>外部利率不下来的同时，国内的流动性是明确托底的。这决定了 10/8 更可能是震荡修复，而不是被砸。</strong></p>
@@ -220,29 +224,27 @@ article>b,article>strong{display:block}
 <div class="tbl"><table><thead><tr><th>标的</th><th>持股</th><th>成本</th><th>9/30 收盘</th><th>市值</th><th>权重</th><th>60 日</th><th>年内</th><th>节后关注点</th></tr></thead><tbody><tr><td>华兰疫苗 301207</td><td>14,600</td><td>18.142</td><td>20.11</td><td>29.36 万</td><td><strong>59.7%</strong></td><td><span class="up">+21.44%</span></td><td><span class="up">+12.74%</span></td><td>10/28 三季报：公司自述上半年流感疫苗<strong>未取得批签发</strong>、收入主要确认 Q4 → 三季报大概率无改善；机构目标价 21.13（上方约 5%）</td></tr><tr><td>大港股份 002077</td><td>7,200</td><td>12.778</td><td>13.68</td><td>9.85 万</td><td><strong>20.0%</strong></td><td><strong><span class="down">-28.26%</span></strong></td><td><span class="down">-8.00%</span></td><td>半导体封测，10/27 三季报；假期外围半导体净利多（日韩 10/1 开门红、SK 海力士 <span class="up">+5.08%</span>）</td></tr><tr><td>特一药业 002728</td><td>5,500</td><td>9.668</td><td>9.91</td><td>5.45 万</td><td>11.1%</td><td><span class="up">+10.48%</span></td><td><span class="down">-7.39%</span></td><td>⚠️ 中报净利 <strong><span class="down">-18.15%</span></strong>，10/27 三季报是硬考验</td></tr><tr><td>中证2000ETF 159531</td><td>20,000</td><td>1.4403</td><td>1.450</td><td>2.90 万</td><td>5.9%</td><td><span class="down">-2.62%</span></td><td><span class="up">+3.94%</span></td><td>小盘宽基；<strong>险资举牌降至 6 次 + 57.7% 私募重仓过节，小盘两端都不友好</strong></td></tr><tr><td>汉邦科技 688755</td><td>548</td><td>30.189</td><td>30.24</td><td>1.66 万</td><td>3.4%</td><td><span class="up">+20.48%</span></td><td><span class="down">-0.40%</span></td><td>制药装备，试仓级；10/31 三季报</td></tr><tr><td><strong>华微电子 600360</strong></td><td><strong>待补</strong></td><td>—</td><td>10.83</td><td>—</td><td>—</td><td><strong><span class="down">-29.31%</span></strong></td><td><span class="up">+36.42%</span></td><td>⚠️ 增速逐季走弱（35% → 5% → 10%）；若仍在持仓，属半导体第二条腿，与大港同赛道</td></tr><tr><td><strong>合计（不含华微）</strong></td><td>—</td><td>—</td><td>—</td><td><strong>49.22 万</strong></td><td>—</td><td>—</td><td>—</td><td>浮盈 +3.68 万（<span class="up">+8.07%</span>）</td></tr></tbody></table></div>
 <p><strong>结构定性</strong>：医药 <strong>74.1%</strong>（华兰 59.7% + 特一 11.1% + 汉邦 3.4%）</p>
 <ul><li>半导体 20%（大港，+华微则更高）+ 小盘宽基 5.9%。</li></ul>
-<p><strong>单一赛道问题没解决，只是换了赛道且单票更重——华兰疫苗一只占近六成。</strong></p>
+<p class="k">单一赛道问题没解决，只是换了赛道且单票更重——华兰疫苗一只占近六成。</p>
 <p><strong>关于假期外围对持仓的净影响（今天新增两条）</strong>：</p>
 <ol><li><strong>大港股份（20%）依然是唯一直接受益的</strong>。假期外围对半导体净利多：日韩 10/1 开门红（时区最近）、 SK 海力士 <span class="up">+5.08%</span>、美光 <span class="up">+3.03%</span>、港股中芯仅 <span class="down">-0.66%</span>/华虹 <span class="up">+0.09%</span> 抗跌。 它是封测，不属于 HDD/SSD 直接标的，<strong>若节后因存储链情绪被砸，是误伤</strong>。60 日已跌 28.26%，位置不高。 ⚠️ 但今天要加一句：<strong>长端美债不下这条，对半导体是一把双刃剑</strong>—— 有业绩（芯联集成立刻扭亏到 6.81 亿）的能扛，纯题材扛不住。<strong>10/8 起这条线要按业绩分层看。</strong></li><li><strong>三只医药（74.1%）今日再添一条逆风：国庆档票房 <span class="down">-45.2%</span> 把"消费复苏"打回原形。</strong> 医药属于防御 + 内需双属性，理论上该受益于内需政策， 但节前主力资金已经用脚投票——<strong>本周医药生物是少数净流入方向</strong>， 同时港股中生制药 10/2 <span class="down">-2.28%</span>、港股医药随大盘调整。 <strong>判断：医药这条线节后要靠 10/27、10/28、10/31 三份三季报自己说话，外围帮不上忙。</strong></li><li>险资举牌从约 30 次降到 6 次，说明<strong>大资金在变保守</strong>——对 74% 医药 + 20% 半导体的组合 不是坏事（防御属性），但对 5.9% 的中证2000ETF 是实打实的逆风。</li></ol>
 <p><strong>一句话</strong>：假期外围对持仓的净影响仍偏正面，但<strong>受益面收窄了</strong>—— 今天新增的"长端不下"只利好有业绩的半导体（大港）， 新增的"消费证伪"直接打到内需叙事，而 74% 的医药要靠三季报自证。</p>
 <h2 id="sec6">七、10/8 开盘验证清单（5 条）</h2>
 <ol><li><strong>长端美债（最重要，排在量能前面）</strong>：10Y 能否守住 <strong>5.2%</strong>。 守不住 5.2%（即继续上行破 5.34% 前高）→ "高估值成长股修复"整条逻辑作废，只做有业绩的。 跌回 5.15% 下方 → 10/3 那篇的判断才真正成立。</li><li><strong>量能标尺</strong>：节前 1.45 万亿地量 → 节后能否到 <strong>1.6 万亿（及格）/ 1.8 万亿（加分）</strong>。 按东吴口径，首日大概率仍缩量，<strong>T+2 才是真标尺，别在开盘半小时做决定</strong>。</li><li><strong>港股三天先行指标</strong>：10/5–10/7 恒指能否站上 ADR 隐含的 <strong>24061</strong>、中芯能否转涨。</li><li><strong>杀跌面是否收敛</strong>：节前跌超 5% 由 68 家翻倍至 131 家，节后若仍 &gt;100 家， "指数红但杀跌面扩大"的双轨格局未解。</li><li><strong>三季报第一枪</strong>：10/8–10/21 共 134 家披露，<strong>沃华医药 10/10 率先</strong>， 电子、基础化工、医药生物、有色为主力。有订单/现金流可验证的优先，纯题材持续承压。</li></ol>
 <h2 id="sec7">八、一句话总结（公众号标题）</h2>
-<p><strong>主推：</strong></p>
+<p class="k">主推：</p>
 <blockquote><p><strong>非农爆冷两天后，10 年美债却收在了 5.28%：昨天那句"利率松绑"，得打个对折</strong></p></blockquote>
-<p><strong>备选 1：</strong></p>
+<p class="k">备选 1：</p>
 <blockquote><p><strong>央行 1.2 万亿当天落地、长端美债纹丝不动——10 月 8 日开盘前最硬的两根标尺</strong></p></blockquote>
-<p><strong>备选 2：</strong></p>
+<p class="k">备选 2：</p>
 <blockquote><p><strong>票房首日跌 45%、美债连涨五周：假期最后两天，A 股要面对的不再是"利好"，而是"证伪"</strong></p></blockquote>
-<p><strong>备选 3（偏持仓）：</strong></p>
+<p class="k">备选 3（偏持仓）：</p>
 <blockquote><p><strong>假期外围只利好你 20% 的仓位：74% 的医药，10 月 27 日之后要靠自己说话</strong></p></blockquote>
 <p><em>数据来源：腾讯自选股（westock）行情接口、BT财经、华尔街见闻、东方财富财富号、格隆汇、网易财经、 雪球、中新经纬、CME FedWatch、ADR（AASTOCKS/长桥）。</em> <em>行情数据：A 股截至 2026-09-30 收盘，港股截至 2026-10-02 收盘，美股截至 2026-10-02 收盘。</em> <em>本文为市场观察记录，不构成投资建议。与《A股复盘_20261003_休市_节后作战手册.md》配套阅读。</em></p>
-<div class="pager"><a class="prev" href="2026-10-03.html"><span class="dir">← 上一期</span>10-03 1. 假期最重要的一件事：美国 9 月非农爆冷，加息押注崩塌</a><a class="next" href="2026-10-05.html"><span class="dir">下一期 →</span>10-05 休市（国庆节休市）</a></div>
+<div class="pager"><a class="prev" href="2026-10-03.html"><span class="dir">上一期</span>10-03　假期过半，外围已翻多 —— 10/8 开盘作战手册</a><a class="next" href="2026-10-05.html"><span class="dir">下一期</span>10-05　A 股复盘 · 2026-10-05</a></div>
 </article>
 </div></div>
-
 <footer class="foot"><div class="wrap">
-  <span>A股每日复盘期刊 · 由收盘数据自动生成</span>
-  <span>数据口径：沪深A股全市场 · 红涨绿跌</span>
+  <span>数据口径：沪深A股全市场 · 红涨绿跌 · 收盘数据</span>
+  <span>每日收盘后自动生成</span>
 </div></footer>
-
 </body></html>

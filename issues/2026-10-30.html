@@ -2,153 +2,156 @@
 <html lang="zh-CN"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2026-10-30 系统性杀跌、极致避险 · A股复盘第034期</title>
-<style>
+<title>系统性杀跌、极致避险｜2026-10-30 A股复盘</title>
+<meta name="description" content="系统性杀跌、极致避险">
+<style>/* ---------------------------------------------------------------
+   A股复盘期刊 · 编辑部风格
+   原则：白底、细线、衬线标题、无卡片无阴影无彩色标签
+   --------------------------------------------------------------- */
 :root{
-  --paper:#f6f3ee; --card:#fffdf9; --ink:#1c1a17; --ink2:#413c35; --muted:#8a8279;
-  --line:#e2dbd0; --line2:#cfc6b8; --red:#c0392b; --redbg:#fdf1ef;
-  --green:#1a7f4b; --greenbg:#eef7f1; --gold:#8c6b2f;
-  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --ink:#111110;
+  --body:#26251f;
+  --muted:#8b887f;
+  --hair:#e4e1da;
+  --hair2:#c9c5bb;
+  --up:#b02a1e;
+  --down:#166b45;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0; background:var(--paper); color:var(--ink);
-  font-family:var(--sans); font-size:15.5px; line-height:1.85;
+  margin:0;background:#fff;color:var(--body);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16.5px;line-height:1.95;
   -webkit-font-smoothing:antialiased;
+  font-feature-settings:"palt" 1;
 }
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+.serif{font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif}
 
 /* ---------- 报头 ---------- */
-.masthead{border-bottom:3px double var(--ink);background:var(--card);padding:26px 0 18px}
-.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.brand h1{
-  font-family:var(--serif);font-size:34px;line-height:1.15;margin:0;
-  letter-spacing:2px;font-weight:700;
-}
-.brand .sub{
-  font-family:var(--sans);font-size:11px;letter-spacing:3.5px;color:var(--muted);
-  text-transform:uppercase;margin-top:7px;
-}
-.masthead .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.9}
-.masthead .meta b{color:var(--ink);font-family:var(--serif);font-size:22px;letter-spacing:1px}
+.masthead{border-bottom:1px solid var(--ink);background:#fff}
+.masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:15px 0 11px}
+.masthead .brand{font-size:15px;letter-spacing:2px;font-weight:600;color:var(--ink)}
+.masthead .mhmeta{font-size:12px;color:var(--muted);letter-spacing:.6px;white-space:nowrap}
 
-/* ---------- 版面骨架 ---------- */
-.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px;padding:38px 0 80px}
-@media(max-width:940px){.layout{grid-template-columns:1fr;gap:20px;padding-top:26px}}
+/* ---------- 版面 ---------- */
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px;padding:40px 0 90px}
+@media(max-width:920px){.layout{grid-template-columns:1fr;gap:0;padding-top:26px}}
 
 /* ---------- 目录 ---------- */
-.toc{position:sticky;top:24px;align-self:start;font-size:13px}
-.toc .toc-t{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:12px}
-.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
-.toc li{margin:0}
-.toc a{display:block;padding:6px 0 6px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink2);line-height:1.5}
-.toc a:hover{color:var(--red);border-left-color:var(--red);background:var(--redbg)}
-@media(max-width:940px){
-  .toc{position:static;border:1px solid var(--line);background:var(--card);padding:14px 16px}
-  .toc ol{columns:2;column-gap:18px}
-  .toc a{font-size:12.5px}
+.toc{position:sticky;top:26px;align-self:start;font-size:12px;line-height:1.5}
+.toc .toc-t{font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:11px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:0 0 3px}
+.toc a{display:block;padding:5px 0;color:#57544c;transition:color .12s}
+.toc a:hover{color:var(--up)}
+@media(max-width:920px){
+  .toc{position:static;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--hair)}
+  .toc ol{columns:2;column-gap:22px}
 }
+
+/* ---------- 标题区 ---------- */
+.meta{font-size:12px;color:var(--muted);letter-spacing:1px;margin-bottom:14px}
+h1.hl{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:31px;line-height:1.45;letter-spacing:.5px;font-weight:700;
+  margin:0 0 14px;color:var(--ink);
+}
+.dek{font-size:15.5px;line-height:1.9;color:#57544c;margin:0 0 30px;padding-bottom:26px;border-bottom:1px solid var(--hair)}
+@media(max-width:640px){h1.hl{font-size:25px}}
 
 /* ---------- 正文 ---------- */
-article{max-width:820px}
-.issue-head{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
-.issue-head .kicker{font-size:11.5px;letter-spacing:2px;color:var(--red);margin-bottom:6px}
-.issue-head h1{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:.5px}
-.issue-head .dateline{font-size:12.5px;color:var(--muted)}
-
+article{max-width:720px}
 h2{
-  font-family:var(--serif);font-size:21px;margin:44px 0 16px;padding-bottom:9px;
-  border-bottom:1px solid var(--line2);letter-spacing:.5px;
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:19px;font-weight:700;letter-spacing:.4px;color:var(--ink);
+  margin:52px 0 18px;padding-top:13px;border-top:1px solid var(--ink);
 }
-h2::before{content:"";display:inline-block;width:5px;height:15px;background:var(--red);margin-right:10px;vertical-align:-2px}
-h3{font-family:var(--serif);font-size:17px;margin:30px 0 10px;color:var(--ink)}
-h4{font-size:14.5px;margin:22px 0 8px;color:var(--ink2)}
-p{margin:0 0 13px;text-align:justify}
+h3{font-size:16.5px;font-weight:700;color:var(--ink);margin:34px 0 10px;letter-spacing:.2px}
+h4{font-size:15px;font-weight:600;margin:24px 0 8px;color:#3a3730}
+p{margin:0 0 15px;text-align:left}
 strong{font-weight:700;color:#000}
-em{font-style:normal;background:linear-gradient(transparent 62%,#f3e2b8 62%);padding:0 1px}
+em{font-style:normal;font-weight:600}
 hr{display:none}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:#efe9df;padding:1px 5px;border-radius:3px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.87em;background:#f4f2ec;padding:1px 5px}
 
-/* 首段引言 */
+/* 数据来源等说明 */
 blockquote{
-  margin:0 0 26px;padding:14px 18px;background:var(--card);border-left:3px solid var(--line2);
-  font-size:12.8px;line-height:1.8;color:var(--muted);
+  margin:0 0 34px;padding:0;border:none;color:var(--muted);
+  font-size:12.5px;line-height:1.85;
 }
-blockquote p{margin:0 0 6px;text-align:left}
+blockquote p{margin:0 0 5px;text-align:left}
 blockquote p:last-child{margin:0}
 
-/* 列表 */
-ul,ol{margin:0 0 16px;padding-left:22px}
-li{margin:0 0 9px;line-height:1.8}
-li::marker{color:var(--muted)}
-ul ul,ol ul,ul ol{margin:8px 0 0}
+/* 列表：短横线游标 */
+ul,ol{margin:0 0 18px;padding:0;list-style:none}
+li{position:relative;padding-left:1.15em;margin:0 0 10px;line-height:1.85}
+li::before{content:"–";position:absolute;left:0;top:0;color:#b3aea3}
+ol{counter-reset:n}
+ol li{padding-left:1.5em;counter-increment:n}
+ol li::before{content:counter(n) ".";color:var(--muted);font-size:.9em}
+ul ul,ol ul,ul ol{margin:9px 0 0}
 
-/* 表格 */
-.tbl{overflow-x:auto;margin:16px 0 24px;border:1px solid var(--line);background:var(--card)}
-table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6;font-variant-numeric:tabular-nums}
+/* 表格：无边框无斑马，报纸数据表 */
+.tbl{overflow-x:auto;margin:20px 0 28px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.72;font-variant-numeric:tabular-nums}
 thead th{
-  background:#efe9df;color:var(--ink);font-weight:600;text-align:left;
-  padding:9px 12px;border-bottom:1px solid var(--line2);white-space:nowrap;font-size:12.5px;
+  border-bottom:1.5px solid var(--ink);padding:0 10px 8px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:.4px;color:#3a3730;white-space:nowrap;
 }
-tbody td{padding:9px 12px;border-bottom:1px solid #f0ebe3;vertical-align:top}
-tbody tr:nth-child(even){background:#fcfaf6}
-tbody tr:last-child td{border-bottom:none}
-tbody tr:hover{background:#fbf4ec}
-td:first-child{font-weight:600;white-space:nowrap}
-.num{font-variant-numeric:tabular-nums}
+thead th:first-child,td:first-child{padding-left:0}
+tbody td{padding:10px 10px 10px 10px;border-bottom:1px solid var(--hair);vertical-align:top}
+tbody tr:last-child td{border-bottom:1px solid var(--hair2)}
+td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+tbody tr:hover{background:#fcfbf8}
 
-/* 数字着色（红涨绿跌） */
-.up{color:var(--red);font-weight:600}
-.down{color:var(--green);font-weight:600}
+/* 涨跌色 */
+.up{color:var(--up)}
+.down{color:var(--down)}
 .flat{color:var(--muted)}
 
-/* 章节内小节 */
-article>b,article>strong{display:block}
+/* ---------- 翻页 ---------- */
+.pager{display:flex;justify-content:space-between;gap:30px;margin-top:64px;padding-top:18px;border-top:1px solid var(--hair);font-size:13px}
+.pager a{color:#57544c;max-width:46%}
+.pager a:hover{color:var(--up)}
+.pager .dir{display:block;font-size:11px;color:var(--muted);letter-spacing:1.5px;margin-bottom:4px}
+.pager a.next{text-align:right;margin-left:auto}
 
-/* 页脚 */
-.foot{border-top:3px double var(--ink);margin-top:70px;padding:22px 0 60px;font-size:12px;color:var(--muted)}
-.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-/* 上下期 */
-.pager{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
-.pager a{flex:1;border:1px solid var(--line);background:var(--card);padding:12px 16px;font-size:13px;transition:.15s}
-.pager a:hover{border-color:var(--red);color:var(--red)}
-.pager .dir{display:block;font-size:10.5px;letter-spacing:2px;color:var(--muted);margin-bottom:3px}
-.pager a.next{text-align:right}
+/* ---------- 页脚 ---------- */
+.foot{border-top:1px solid var(--ink);margin-top:0;padding:16px 0 64px;font-size:11.5px;color:var(--muted);letter-spacing:.3px}
+.foot .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 
 @media print{
-  body{background:#fff;font-size:11.5pt}
-  .toc,.pager,.masthead .meta{display:none}
+  body{font-size:11pt;line-height:1.7}
+  .toc,.pager,.masthead .mhmeta{display:none}
   .layout{grid-template-columns:1fr;padding:0}
   h2{break-after:avoid}
-  .tbl{overflow:visible;break-inside:avoid}
+  .tbl{overflow:visible}
 }
+
+/* ---------- 整行加粗的小标题（报告里的 1./2./3.） ---------- */
+p.k{
+  margin:30px 0 9px;font-size:15.5px;line-height:1.75;
+  letter-spacing:.2px;color:var(--ink);
+}
+p.k strong{font-weight:700}
 </style>
 </head><body>
-
 <header class="masthead"><div class="wrap">
-  <div class="brand">
-    <h1>山哥 · A股每日复盘</h1>
-    <div class="sub">Daily Market Review · A-Share Journal</div>
-  </div>
-  <div class="meta"><b>第 034 期</b><br>2026-10-30 · 周五</div>
+  <a class="brand" href="../index.html">A股每日复盘</a>
+  <div class="mhmeta">2026-10-30 · 周五 · 第 034 期</div>
 </div></header>
-
 <div class="wrap"><div class="layout">
-<nav class="toc"><div class="toc-t">本期目录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、题材涨跌分析</a></li><li><a href="#sec4">五、后市观察与持仓视角</a></li><li><a href="#sec5">公众号标题（一句话总结当日市场）</a></li></ol></nav>
+<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、题材涨跌分析</a></li><li><a href="#sec4">五、后市观察与持仓视角</a></li><li><a href="#sec5">公众号标题</a></li></ol></nav>
 <article>
-  <div class="issue-head">
-    <div class="kicker">第 034 期 · NO.034</div>
-    <h1>系统性杀跌、极致避险</h1>
-    <div class="dateline">2026-10-30 · 周五</div>
-  </div>
-<h1 class="md-h1">A股深度复盘 · 2026-10-30（周五）</h1>
+  <div class="meta">2026年10月30日　周五</div>
+  <h1 class="hl">系统性杀跌、极致避险</h1>
+  
 <blockquote><p>15:15 收盘数据。本日为交易日，数据来自 westock 行情终端，全A主力净额按 124 个行业榜求和。</p></blockquote>
 <h2 id="sec0">一、核心结论</h2>
-<p><strong>「系统性杀跌、极致避险」的黑色星期五——风险偏好一夜坍塌，消费防御独扛盘面，科技硬件与传媒全线血洗。</strong></p>
+<p class="k">「系统性杀跌、极致避险」的黑色星期五——风险偏好一夜坍塌，消费防御独扛盘面，科技硬件与传媒全线血洗。</p>
 <ul><li><strong>资金表现</strong>：全A行业主力净额 <strong>-390.9 亿（净流出）</strong>；全天呈"防御吸金、科技失血"的极致结构——净流入前排清一色消费/医药/红利（白酒 <span class="up">+24.52亿</span> 居全市场第一、医疗服务 <span class="up">+16.04亿</span>、电池 <span class="up">+6.26亿</span>、生物制品 <span class="up">+5.46亿</span>、白色家电 <span class="up">+5.20亿</span>、炼化 <span class="up">+3.03亿</span>、医疗器械 <span class="up">+2.78亿</span>、饮料乳品 <span class="up">+1.51亿</span>、医药商业 <span class="up">+1.51亿</span>、酒店餐饮 <span class="up">+1.03亿</span>、银行 <span class="up">+1.01亿</span>）；失血最重集中在科技硬件（通信设备 <strong><span class="down">-51.88亿</span></strong>、半导体 <strong><span class="down">-55.57亿</span></strong> 为全市场两大出血口，元件 <span class="down">-11.98亿</span>、IT服务 <span class="down">-16.02亿</span>、软件开发 <span class="down">-23.46亿</span>、自动化设备 <span class="down">-13.77亿</span>、影视 <span class="down">-5.73亿</span>、数字媒体 <span class="down">-3.91亿</span>）。<strong>半导体 20日累计主力 <span class="down">-811亿</span> 仍为全市场最深坑（慢性撤离未止）。</strong></li><li><strong>领涨板块</strong>：白酒Ⅱ（<span class="up">+3.77%</span>，18/19红）、酒店餐饮（<span class="up">+4.30%</span>）、航运港口（<span class="up">+2.91%</span>）、CRO/CXO（概念 <span class="up">+2.30%</span>）、医药商业（<span class="up">+1.62%</span>）——典型弱市"喝酒吃药+高股息"避险组合。</li><li><strong>领跌板块</strong>：通信设备（<span class="down">-7.36%</span>，2/86红）、数字媒体（<span class="down">-7.16%</span>）、影视院线（<span class="down">-6.57%</span>）、元件（<span class="down">-6.21%</span>）、半导体（<span class="down">-5.32%</span>，5/183红）、软件开发（<span class="down">-5.61%</span>）——光通信/AI硬件/传媒应用同步崩塌。</li><li><strong>一句话定性</strong>：指数与个股双杀、跌停数反超涨停、双创创年内新低，市场从 10/28 的放量大反攻彻底逆转回 10/27 级别的系统性杀跌，但本轮"避风港"由银行红利切到了白酒消费。</li></ul>
 <h2 id="sec1">二、核心指数表现</h2>
 <div class="tbl"><table><thead><tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>备注</th></tr></thead><tbody><tr><td>上证指数</td><td>3599.02</td><td><strong><span class="down">-1.44%</span></strong></td><td>失守 3600</td></tr><tr><td>深证成指</td><td>10833.78</td><td><strong><span class="down">-2.73%</span></strong></td><td></td></tr><tr><td>创业板指</td><td>2413.63</td><td><strong><span class="down">-4.13%</span></strong></td><td>失守 2500，主要指数次弱</td></tr><tr><td>科创50</td><td>1160.84</td><td><strong><span class="down">-5.48%</span></strong></td><td><strong>最弱主要指数，创年内新低</strong></td></tr><tr><td>北证50</td><td>885.74</td><td><span class="down">-2.67%</span></td><td></td></tr><tr><td>沪深300</td><td>3985.50</td><td><span class="down">-1.39%</span></td><td>权重相对抗跌</td></tr><tr><td>中证500</td><td>6266.19</td><td><span class="down">-2.91%</span></td><td></td></tr><tr><td>中证1000</td><td>6161.23</td><td><strong><span class="down">-3.41%</span></strong></td><td>小盘承压</td></tr></tbody></table></div>
@@ -157,35 +160,33 @@ article>b,article>strong{display:block}
 <ul><li><strong>成交额</strong>：<strong>16744.63 亿</strong>，较上日（15565.17亿）<strong><span class="up">+1179.39亿</span>（<span class="up">+7.6%</span>），放量下杀</strong>——恐慌抛压未止，非缩量企稳。</li><li><strong>涨跌广度</strong>：上涨 893 / 下跌 4602 / 平 82，<strong>红盘率仅 16%</strong>（过去一年仅 30% 交易日处于该热度区间）。</li><li><strong>极端分布</strong>：<strong>涨停 49 / 跌停 93（跌停数反超涨停，情绪倒挂）</strong>；涨超5% 约 <strong>124 家</strong>，跌超5% 高达 <strong>1386 家</strong>，<strong>约 11 倍差</strong>——杀跌面接近 10/27（917家）但更广。</li><li><strong>打板高度</strong>：涨停仅 49 家且高度稀缺（连板梯队昨日为 6/8 红，今日宽度崩塌），追板亏钱效应显著，短线情绪退潮。</li></ul>
 <h2 id="sec3">四、题材涨跌分析</h2>
 <h3>领涨题材 ③</h3>
-<p><strong>① 白酒 · 消费防御（白酒Ⅱ <span class="up">+3.77%</span> 行业第一 / 白酒概念 <span class="up">+1.17%</span> / 超级品牌 <span class="up">+0.67%</span>）</strong></p>
+<p class="k">① 白酒 · 消费防御（白酒Ⅱ <span class="up">+3.77%</span> 行业第一 / 白酒概念 <span class="up">+1.17%</span> / 超级品牌 <span class="up">+0.67%</span>）</p>
 <ul><li>代表个股：<strong>泸州老窖 <span class="up">+10.01%</span> 涨停</strong>、<strong>贵州茅台创半年新高</strong>、山西汾酒、五粮液、<strong>新乳业 <span class="up">+10.01%</span></strong>、<strong>黑芝麻 <span class="up">+10.08%</span></strong>、<strong>首旅酒店 <span class="up">+10.00%</span></strong>（酒店餐饮 <span class="up">+4.30%</span> 行业第二）。</li><li>涨跌逻辑：红盘率仅16%、双创新低之下，资金抱团高确定性消费防御。催化链：①东方财富午评"白酒出清已渐近尾声"+茅台半年新高，验证悲观预期定价充分；②10/28 五粮液Q3单季净利腰斩的业绩利空已兑现（利空出尽）；③酒店/食品饮料同步走强，弱市"喝酒吃药"行情重现（每日经济新闻 13:33 标题）。属典型的避险轮动，非增量进攻信号。</li></ul>
-<p><strong>② 航运港口 · BDI（BDI概念 <span class="up">+2.58%</span> 7/7全红 / 航运港口 <span class="up">+2.91%</span> 23/34红 / 港口概念 <span class="up">+0.98%</span>）</strong></p>
+<p class="k">② 航运港口 · BDI（BDI概念 <span class="up">+2.58%</span> 7/7全红 / 航运港口 <span class="up">+2.91%</span> 23/34红 / 港口概念 <span class="up">+0.98%</span>）</p>
 <ul><li>代表个股：<strong>中远海控 <span class="up">+7.02%</span></strong>（BDI概念领涨）、<strong>锦江航运 <span class="up">+10.03%</span></strong>、中谷物流、上港集团 <span class="up">+5.84%</span>。</li><li>涨跌逻辑：运价上调 + BDI 年内 <span class="up">+70%</span> + Q3 业绩大增（证券时报"运价上调，航运板块业绩+股价双丰收"），地缘溢价与周期低位修复共振。与 10/27 航运港口领涨一脉相承，是弱市中为数不多的<strong>业绩确定性主线</strong>，机构避险资金顺势抱团。</li></ul>
-<p><strong>③ CRO/CXO · 医药服务（CRO概念 <span class="up">+2.30%</span> 22/38红 / 医疗服务 <span class="up">+0.83%</span> / 医药商业 <span class="up">+1.62%</span>）</strong></p>
+<p class="k">③ CRO/CXO · 医药服务（CRO概念 <span class="up">+2.30%</span> 22/38红 / 医疗服务 <span class="up">+0.83%</span> / 医药商业 <span class="up">+1.62%</span>）</p>
 <ul><li>代表个股：<strong>万邦医药 <span class="up">+20.00%</span>（20cm）</strong>、<strong>百洋医药 <span class="up">+14.84%</span></strong>、<strong>百花医药 <span class="up">+9.96%</span></strong>（青蒿素）、<strong>澳洋健康 <span class="up">+10.06%</span></strong>（高压氧舱）。</li><li>涨跌逻辑：医药内部分化中 CRO/CXO 逆势。催化：①东方财富"CXO捷报频传、高盛集体上调目标价"；②前期 CRO 20日主力资金为正（全市场稀缺正值信号）的低位修复延续；③礼来业绩超预期、减肥药需求爆发带动创新药外围情绪。需注意化学制药 <span class="down">-0.74%</span>、中药分化，<strong>医药并非全面强、是结构性走强</strong>。</li></ul>
 <h3>领跌题材 ③</h3>
-<p><strong>① 光通信 · AI硬件链（通信设备 <span class="down">-7.36%</span> 行业最惨 2/86红 / 博通概念 <span class="down">-8.89%</span> 0/6 / 谷歌概念 <span class="down">-7.67%</span> 0/18 / 光芯片 <span class="down">-6.86%</span> 1/16 / Sora <span class="down">-7.32%</span> / AI营销 <span class="down">-6.92%</span>）</strong></p>
+<p class="k">① 光通信 · AI硬件链（通信设备 <span class="down">-7.36%</span> 行业最惨 2/86红 / 博通概念 <span class="down">-8.89%</span> 0/6 / 谷歌概念 <span class="down">-7.67%</span> 0/18 / 光芯片 <span class="down">-6.86%</span> 1/16 / Sora <span class="down">-7.32%</span> / AI营销 <span class="down">-6.92%</span>）</p>
 <ul><li>代表个股：<strong>中际旭创 / 新易盛 / 天孚通信（"易中天"集体跳水）</strong>、工业富联（谷歌概念领跌）、沃尔核材。</li><li>涨跌逻辑：隔夜谷歌/英特尔财报引爆 AI 资本开支回报质疑（亚马逊自由现金流 <span class="down">-335亿</span>美元、英特尔盘后 <span class="down">-20%</span>）+ <strong>30Y美债≈5.6% 持续压长久期估值</strong> + 公募/游资止损科技硬件。通信设备今日主力 <strong><span class="down">-51.88亿</span> 全市场第一失血</strong>；这是 10/29 谷歌财报浇灭 AI 反攻后的延续杀跌，光模块从"利空出尽反包"叙事彻底转回出清。</li></ul>
-<p><strong>② 半导体 · 元件 · 硬件制造（半导体 <span class="down">-5.32%</span> 5/183红 / 元件 <span class="down">-6.21%</span> 11/61 / 自动化设备 <span class="down">-5.11%</span> / 光刻机 <span class="down">-6.52%</span> 0/57 / 物理AI <span class="down">-6.65%</span>）</strong></p>
+<p class="k">② 半导体 · 元件 · 硬件制造（半导体 <span class="down">-5.32%</span> 5/183红 / 元件 <span class="down">-6.21%</span> 11/61 / 自动化设备 <span class="down">-5.11%</span> / 光刻机 <span class="down">-6.52%</span> 0/57 / 物理AI <span class="down">-6.65%</span>）</p>
 <ul><li>代表个股：中芯国际、北方华创、必易微 <span class="up">+20.00%</span>（独红）、满坤科技 <span class="up">+20.01%</span>（元件独苗）。</li><li>涨跌逻辑：<strong>半导体 20日主力 <span class="down">-811亿</span> 为全市场最深坑（慢性撤离延续）</strong>；叠加韩股再熔断（"韩股又跌熔断、纳指期货跌2%、亚洲芯片股重挫"）的外盘传导 + 高位筹码出清 + 大基金减持预期。科技硬件系统性失血，仅极少数超跌个股逆势，整体无承接。</li></ul>
-<p><strong>③ 传媒 · AI应用（数字媒体 <span class="down">-7.16%</span> 0/14 / 影视院线 <span class="down">-6.57%</span> 0/19 / 电视广播 <span class="down">-6.52%</span> / 游戏 <span class="down">-5.74%</span> 0/26 / Sora <span class="down">-7.32%</span>）</strong></p>
+<p class="k">③ 传媒 · AI应用（数字媒体 <span class="down">-7.16%</span> 0/14 / 影视院线 <span class="down">-6.57%</span> 0/19 / 电视广播 <span class="down">-6.52%</span> / 游戏 <span class="down">-5.74%</span> 0/26 / Sora <span class="down">-7.32%</span>）</p>
 <ul><li>代表个股：芒果超媒 <span class="down">-4.29%</span>、中文在线、掌阅科技、吉比特。</li><li>涨跌逻辑：10/28 AI应用/传媒为普涨日活口（领涨），今日全面补跌 = <strong>一日游证伪</strong>；高位抱团瓦解、追板亏钱效应显著。与 AI 硬件同属"AI 叙事"被双杀，软硬应用端均无资金承接，印证 AI 链整体进入估值重估窗口。</li></ul>
 <h2 id="sec4">五、后市观察与持仓视角</h2>
-<p><strong>后市观察（5 条）</strong></p>
+<p class="k">后市观察（5 条）</p>
 <ol><li><strong>防御独涨往往对应指数未企稳</strong>：历史看白酒/消费单日领涨多出现在系统性杀跌中段，需观察其持续性而非当作反转信号。</li><li><strong>科技硬件四件套止跌是情绪拐点先行指标</strong>：半导体 20日 <span class="down">-811亿</span> 最深坑未填，重点看韩股/纳指期货是否企稳 + 30Y美债锚（≈5.6%）是否回落。</li><li><strong>跌停家数能否收敛</strong>：今日跌停 93 家（&gt;涨停 49）为极端倒挂，后续若收敛至 30 家以内才谈企稳。</li><li><strong>三季报 10/31 收官 + 外围财报余波</strong>：谷歌/英特尔/亚马逊的 AI 回报质疑何时被市场消化，决定硬件链估值底。</li><li><strong>量能</strong>：1.67万亿放量下杀，若后续缩回 1.5万亿下方且跌停收敛，方有阶段性修复基础。</li></ol>
-<p><strong>持仓视角（用户当前：华兰疫苗 + 特一药业，中证2000ETF已清仓）</strong></p>
+<p class="k">持仓视角（用户当前：华兰疫苗 + 特一药业，中证2000ETF已清仓）</p>
 <ul><li><strong>华兰疫苗 13.95 / <span class="down">-1.20%</span></strong>：缩量微跌，医药分化中相对抗跌；但三季报已由盈转亏（Q3归母 <span class="down">-4089万</span>/<span class="down">-136.67%</span>），基本面证伪式下跌未止跌，<strong>需重点评估止损</strong>。</li><li><strong>特一药业 8.70 / <span class="up">+1.75%</span></strong>：逆势收红，中药OTC防御属性凸显；但三季报净利 <span class="down">-18.15%</span> 仍弱势，反弹属"防御抱团"而非基本面改善。</li><li>两只医药今日处防御顺风位，但华兰疫苗的独立风险（由盈转亏）仍是下阶段最大变量，建议优先处理。</li></ul>
 <h2 id="sec5">公众号标题（一句话总结当日市场）</h2>
 <p><strong>主推</strong>：红盘率仅16%、跌停93家、1386股跌超5%：A股黑色星期五，白酒医药独扛盘面，光模块与半导体再遭血洗</p>
 <p><strong>备选1</strong>：双创指数创年内新低、科创50跌近5.5%：科技硬件四件套成今日唯一系统性失血主线，消费防御成最后避风港</p>
 <p><strong>备选2</strong>：谷歌英特尔财报引爆AI重估、"易中天"集体跳水：10/30 A股放量大跌，喝酒吃药行情重现</p>
-<div class="pager"><a class="prev" href="2026-10-29.html"><span class="dir">← 上一期</span>10-29 今日资金表现（全市场）</a><a class="next" href="2026-10-31.html"><span class="dir">下一期 →</span>10-31 黑色星期五收官 10 月，科创50 创年内新低</a></div>
+<div class="pager"><a class="prev" href="2026-10-29.html"><span class="dir">上一期</span>10-29　今日资金表现（全市场）</a><a class="next" href="2026-10-31.html"><span class="dir">下一期</span>10-31　周末外围观察 + 11/02 盘前清单</a></div>
 </article>
 </div></div>
-
 <footer class="foot"><div class="wrap">
-  <span>A股每日复盘期刊 · 由收盘数据自动生成</span>
-  <span>数据口径：沪深A股全市场 · 红涨绿跌</span>
+  <span>数据口径：沪深A股全市场 · 红涨绿跌 · 收盘数据</span>
+  <span>每日收盘后自动生成</span>
 </div></footer>
-
 </body></html>
