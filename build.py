@@ -217,11 +217,7 @@ def md_to_html(md: str):
 
     flush_para()
     if front_notes:
-        block = f'<div class="source-notes">{"".join(front_notes)}</div>'
-        if out and out[-1].startswith("<blockquote") and "免责" in out[-1]:
-            out.insert(len(out) - 1, block)
-        else:
-            out.append(block)
+        out.append(f'<div class="source-notes">{"".join(front_notes)}</div>')
     return "\n".join(out), toc
 
 # ---------------------------------------------------------------- 元信息
