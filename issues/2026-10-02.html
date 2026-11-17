@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -149,6 +201,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月2日　周五</div>
   <h1 class="hl">｜ · 港股风向标大跌 -2.77%</h1>
   
+
 <blockquote><p><strong>A股状态：国庆假期休市（10/1–10/7），10/8（周四）开市。</strong></p><p>三步判定一致：① <code>westock quote sh000001</code> 返回 time = 2026-09-30 ② <code>kline</code> 最新一根 = 2026-09-30</p><p>③ 采集日志打印「2026-10-01 不是交易日（接口返回 2026-09-30），跳过」。</p><p><strong>本文不是A股复盘</strong>，是假期外围观察——港股10/2正常交易，是这7天里唯一可交易的中国资产定价窗口。</p><p>港股数据截至北京时间 15:15 盘中（港股16:00收盘），非最终收盘价。</p></blockquote>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">A股休市，港股独自承压——但跌幅里有一半是"没有南向资金"造成的，不能1:1映射给A股。</p>
@@ -186,7 +239,7 @@ p.k strong{font-weight:700}
 <ul><li><strong>南向资金缺席造成的放大跌幅</strong>——10/8港股通恢复，A股本身不存在这个流动性缺口。</li><li><strong>汇丰/渣打/友邦的跌幅</strong>——这批是纯利率敏感标的，A股的银行保险定价逻辑不同（国内利率环境独立）。</li></ul>
 <h3>需要重新审视的一条</h3>
 <p><strong>节前被杀的 CPO/光模块，可能迎来修复窗口。</strong> 大摩最新判断：FCC限制或从3.2T规格开始，<strong>中际旭创的不确定性正在下降</strong>。节前CPO是"5日资金-682亿 &gt; 20日-550亿"的急跑型砍仓（可修复型），而非慢性撤离。若国庆期间没有新增对华光模块的限制落地，10/8存在超跌反弹的条件。</p>
-<blockquote><p>⚠️ 数据存疑提示：有媒体今日报道"中际旭创涨超3%"，但中际旭创为纯A股标的、今日休市，该数字无法验证，不作为依据。仅采用大摩观点本身，并标注待10/8验证。</p></blockquote>
+<blockquote><p>数据存疑提示：有媒体今日报道"中际旭创涨超3%"，但中际旭创为纯A股标的、今日休市，该数字无法验证，不作为依据。仅采用大摩观点本身，并标注待10/8验证。</p></blockquote>
 <h2 id="sec5">六、对现有持仓的提示</h2>
 <p>持仓为大港股份(002077)、华微电子(600360)，同属半导体链，单一赛道敞口100%。</p>
 <ul><li><strong>短期（10/8）</strong>：港股中芯-0.82%、华虹0.00%显示半导体链未在假期遭遇新增利空，但美债高位对高估值成长的压制仍在，预计跟随弱势震荡。</li><li><strong>中期</strong>：节前半导体20日资金-564亿属"慢性撤离"（区别于CPO的急跑），需更长时间消化，不宜按"超跌反弹"逻辑加仓。</li><li><strong>已存在的结构问题未变</strong>：两只票相关性强，等于把30%自操作资金押在一个赛道的方向上。</li></ul>

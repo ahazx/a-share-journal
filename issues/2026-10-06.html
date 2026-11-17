@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -149,7 +201,8 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月6日　周二</div>
   <h1 class="hl">周末休市</h1>
   
-<blockquote><p>⚠️ <strong>本文不是 A 股复盘。</strong></p><p>2026-10-06（周二）为国庆假期第 6 天，A 股休市（10/1–10/7 放假，10/8 才开市）。</p><p>按既定纪律，<strong>不生成伪 A 股复盘、不把 9/30 数据当今日数据</strong>。本文是「外围定价 + 下一交易日（10/8）推演」。</p><p>配套阅读顺序：10/3《节后作战手册》→ 10/4《美债证伪与10月作战》→ 10/5《港股背离与10月8日开市清单》→ 本文。</p></blockquote>
+
+<blockquote><p><strong>本文不是 A 股复盘。</strong></p><p>2026-10-06（周二）为国庆假期第 6 天，A 股休市（10/1–10/7 放假，10/8 才开市）。</p><p>按既定纪律，<strong>不生成伪 A 股复盘、不把 9/30 数据当今日数据</strong>。本文是「外围定价 + 下一交易日（10/8）推演」。</p><p>配套阅读顺序：10/3《节后作战手册》→ 10/4《美债证伪与10月作战》→ 10/5《港股背离与10月8日开市清单》→ 本文。</p></blockquote>
 <p><strong>生成时间</strong>：2026-10-06 15:15（北京时间） <strong>取数</strong>：neodata-financial-search（westock CLI 仍未授权，走免鉴权通道） <strong>第三步交易日判定（三步一致）</strong>：</p>
 <ol><li>统一交易日历 → <code>20261006 / SH / 休市（国庆节休市）</code>、<code>20261006 / SZ / 休市（国庆节休市）</code></li><li>上证指数行情 → <code>交易状态: 国庆节休市</code>，10/1–10/6 全部「未开盘」，最新有效日期 <strong>2026-09-30</strong></li><li>沪深300 行情表 → 10/7、10/8 均「未开盘」，最新有效 <strong>2026-09-30（4357.62 <span class="up">+0.29%</span>）</strong></li></ol>
 <p>→ 确认休市。<strong>下一个交易日 = 10/8（周四）</strong>，日历已确认 SH+SZ 均开市。</p>
@@ -163,7 +216,7 @@ p.k strong{font-weight:700}
 <h2 id="sec1">二、核心指数表现</h2>
 <h3>A 股（休市，最新有效交易日 2026-09-30）</h3>
 <div class="tbl"><table><thead><tr><th>指数</th><th>9/30 收盘</th><th>涨跌幅</th><th>成交额</th></tr></thead><tbody><tr><td>上证指数</td><td>3842.19</td><td><span class="up">+0.31%</span></td><td>6793.99 亿</td></tr><tr><td>深证成指</td><td>12887.62</td><td><span class="down">-0.11%</span></td><td>7586.19 亿</td></tr><tr><td>沪深300</td><td>4357.62</td><td><span class="up">+0.29%</span></td><td>3564.92 亿</td></tr></tbody></table></div>
-<blockquote><p>沪深两市合计 14380.18 亿（6793.99 + 7586.19 ✓，与 changedist 口径一致）。</p><p><strong>这行数据只作 10/8 的对照基准，不是今日行情。</strong></p></blockquote>
+<blockquote><p>沪深两市合计 14380.18 亿（6793.99 + 7586.19 ，与 changedist 口径一致）。</p><p><strong>这行数据只作 10/8 的对照基准，不是今日行情。</strong></p></blockquote>
 <h3>外围（10/6 盘中 / 10/5 收盘）</h3>
 <div class="tbl"><table><thead><tr><th>指数</th><th>数值</th><th>涨跌幅</th><th>数据时点</th><th>备注</th></tr></thead><tbody><tr><td>恒生指数</td><td>24232.44</td><td><strong><span class="up">+0.80%</span></strong></td><td>10/6 15:16 盘中</td><td>前收 24040.34（10/5 收红）</td></tr><tr><td>恒生科技</td><td>4213.64</td><td><span class="up">+0.72%</span></td><td>10/6 15:16 盘中</td><td>量比 0.46</td></tr><tr><td>恒生国企</td><td>8113.66</td><td><span class="up">+0.77%</span></td><td>10/6 15:16 盘中</td><td>量比 0.37</td></tr><tr><td>纳斯达克</td><td>27477.31</td><td><span class="up">+1.05%</span></td><td><strong>10/5 收盘</strong></td><td>美股 10/6 未开盘</td></tr><tr><td>标普500</td><td>7773.95</td><td><span class="up">+0.66%</span></td><td>10/5 收盘</td><td></td></tr><tr><td>道琼斯</td><td>51267.90</td><td><span class="up">+0.18%</span></td><td>10/5 收盘</td><td><strong>三大指数里最弱</strong></td></tr><tr><td>纳斯达克中国金龙</td><td>5613.68</td><td><strong><span class="up">+1.71%</span></strong></td><td>10/5 收盘</td><td>领先恒指的关键指标</td></tr></tbody></table></div>
 <p><strong>一个容易被忽略的分化</strong>：美股 10/5 是<strong>纳指 <span class="up">+1.05%</span> 强、道指 <span class="up">+0.18%</span> 弱</strong>——成长/科技跑赢价值。这和 A 股 9/30 的格局（科创50 <span class="down">-2.51%</span>、创业板 <span class="down">-0.23%</span>、上证 <span class="up">+0.31%</span> 的"科技弱、防御强"）<strong>正好镜像</strong>。说明 10/2 以来全球资金都在做同一件事：从高估值成长里撤，往确定性资产挪；只不过美股挪得晚、港股挪得早。</p>

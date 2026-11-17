@@ -67,3 +67,6 @@
 
 /* 最新一期正文链接 */
 .latest .more{font-size:14px;letter-spacing:.5px}
+
+/* 目录页最新一期的情绪指标行 */
+.latest .tape-mood{margin-top:13px;padding:0;border-top:none}

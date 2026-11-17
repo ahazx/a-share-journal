@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -149,7 +201,8 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月17日　周六</div>
   <h1 class="hl">外围观察</h1>
   
-<blockquote><p>⚠️ <strong>本文不是 A 股当日复盘。</strong> 2026-10-17 为周末，A股、港股、美股当日均无 A股交易。</p><p>三步交易日判定一致：①交易日历 SH/SZ = 休市（周末休市）②上证行情「已休市 / 2026-10-17 未开盘」③最新有效行情停在 2026-10-16。</p><p>下一交易日：<strong>2026-10-19（周一）开市</strong>（SH/SZ 日历已确认为开市）。</p><p>本文作用 = 周末外围定价 + 10/19 盘前清单，供公众号素材与下周一开盘准备。</p></blockquote>
+
+<blockquote><p><strong>本文不是 A 股当日复盘。</strong> 2026-10-17 为周末，A股、港股、美股当日均无 A股交易。</p><p>三步交易日判定一致：①交易日历 SH/SZ = 休市（周末休市）②上证行情「已休市 / 2026-10-17 未开盘」③最新有效行情停在 2026-10-16。</p><p>下一交易日：<strong>2026-10-19（周一）开市</strong>（SH/SZ 日历已确认为开市）。</p><p>本文作用 = 周末外围定价 + 10/19 盘前清单，供公众号素材与下周一开盘准备。</p></blockquote>
 <h2 id="sec0">一、上一交易日（10/16 周五）收盘速览（回顾，非今日）</h2>
 <ul><li>指数：上证 <strong>3716.28 / <span class="up">+0.24%</span></strong>、深成指 −0.12%、创业板 −0.39%、科创50 −0.06%、北证50 −1.81%、沪深300 <span class="up">+0.11%</span></li><li>成交：<strong>1.555 万亿</strong>（较 10/15 的 1.633 万亿缩 776 亿 / −4.7%），缩量平淡收场</li><li>广度：红盘率 <strong>59%</strong>（涨 3301 / 跌 2128，较 10/15 的 7% 大幅逆转）、涨停 63 / 跌停 12、<strong>跌超 5% 由 838 家骤降至 163 家</strong></li><li>结构：<strong>军工独强 + 低位轮动修复</strong></li><li>领涨③：国防军工（地面兵装 <span class="up">+5.96%</span> / 航空装备 <span class="up">+3.71%</span>，珠海航展 + 特斯拉 Roadster 碳纤维低空催化）、建材水泥 + 地产链（水泥 <span class="up">+4.17%</span> 福建水泥涨停，金融街论坛政策预期）、商用车 + 农业（江淮汽车 <span class="up">+9.98%</span>）</li><li>领跌③：传媒 / AI 应用（传媒 −2.30%，电魂网络 −9.99%，资金撤离高位 AI 应用、追板亏钱）、医药 CRO / 医疗服务（药明康德 −6.60% 尾盘放量跳水，30Y≈5.6% 压长久期 + 三季报兑现）、电池锂电（万里股份 −10.03% 高位赛道补跌）</li><li>持仓视角：中证2000ETF南方 <span class="up">+0.75%</span>（受益普修）/ 华兰疫苗 −0.47% / 特一药业 −0.72%（医药内部分化微亏）；三季报（华兰 10-28 / 特一 10-27）为关键变量。</li></ul>
 <h2 id="sec1">二、外围市场（周末窗口内可得的最新收盘）</h2>

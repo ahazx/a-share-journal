@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -149,6 +201,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月7日　周六</div>
   <h1 class="hl">周末外围观察 + 11/09 盘前清单</h1>
   
+
 <blockquote><p><strong>本文不是 A 股复盘。</strong> 今日（2026-11-07 周六）A股休市，无当日行情。</p><p>三步交易日判定一致：上交所日历 2026-11-07 = 周末休市、2026-11-09 = 开市；neodata 美股行情 2026-11-07 显示"未开盘"；最近一个有效交易日为 11/06。</p><p>下文为「上一交易日（11/06 周五）收盘基准 + 周末外围窗口（截至 11/06 美股收盘）+ 11/09 盘前清单」，供下周一开盘推演与公众号素材使用。</p></blockquote>
 <h2 id="sec0">一、上一交易日（11/06 周五）收盘基准回顾</h2>
 <p class="k">外围雪崩传导 A 股全线重挫，成长科技遭集中踩踏，资金高低切抱团银行/电力/农业避险，成交大幅缩量 4600 亿。</p>
@@ -159,7 +212,7 @@ p.k strong{font-weight:700}
 <ul><li>道指 <strong>51285.73（<span class="down">-0.46%</span>）</strong>、标普 <strong>7376.86（<span class="up">+0.31%</span>）</strong>、纳指 <strong>24579.42（<span class="up">+1.09%</span>）</strong>、<strong>费城半导体指数 9390.25（<span class="up">+4.21%</span>）</strong>。</li><li>费半 <strong><span class="up">+4.21%</span></strong> 是周四 <span class="down">-12%</span> 后的强力修复，纳指同步翻红 → 周四"AI 监管担忧历史性抛售"在周五被部分消化，恐慌情绪缓和。</li><li>⚠️ 但全周视角：周四 <span class="down">-12%</span> + 周五 <span class="up">+4.21%</span> 仍大幅净跌，<strong>不可简单视作利空出尽</strong>，需看修复能否延续。</li></ul>
 <h3>2. 美国非农（11/06 晚间发布，北京时间 11/07 凌晨）—— 混合信号</h3>
 <ul><li>新增非农就业 <strong>+6.4 万</strong>（预期 5.0 万，<strong>beat</strong>）；失业率 <strong>4.6%</strong>（预期 4.5%、前值 4.4%，<strong>恶化</strong>）；时薪 年增 <strong>3.5%</strong> / 月增 <strong><span class="up">+0.1%</span></strong>（均低于预期）。</li><li>判读：<strong>就业略强、但失业率抬头 + 薪资降温</strong> → 通胀压力缓和，支持 Fed 渐进式宽松；同时失业率上升暗示经济放缓。</li><li>对 A 股：<strong>中性偏正</strong>——降息预期升温利于长久期资产（创新药/AI算力）估值修复，但经济放缓压制整体风险偏好，且 30Y 仍高为锚。</li></ul>
-<h3>3. 商品 / 美债（⚠️ 纪律重点看 30Y，不看 10Y）</h3>
+<h3>3. 商品 / 美债（ 纪律重点看 30Y，不看 10Y）</h3>
 <ul><li><strong>COMEX 黄金 4079.5（<span class="down">-0.83%</span>）</strong>，避险溢价继续回落。</li><li><strong>30 年美债期货 108.406（<span class="down">-0.23%</span>）</strong>，收益率微升仍处高位 → <strong>创新药 / AI 算力等长久期资产估值锚压未完全解除</strong>。</li><li>（原油：本运行未抓取实时收盘价，维持"高位震荡"定性判断，周一开盘前以实时数据为准。）</li></ul>
 <h2 id="sec2">三、周末要闻与 11/09 定价要点</h2>
 <blockquote><p>说明：本运行未接入实时新闻抓取源，以下要点以 11/06 收盘基准 + 11/06 美股/非农实数据推演为主；周末若有新政策/地缘催化，以周一早盘实时信息为准。</p></blockquote>

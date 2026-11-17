@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -149,7 +201,8 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月8日　周日</div>
   <h1 class="hl">周末外围观察 + 11/09 盘前清单</h1>
   
-<blockquote><p><strong>本文不是 A 股复盘。</strong> 今日（2026-11-08 周日）A股休市，无当日行情。</p><p>三步交易日判定一致：上交所日历 2026-11-08 = 周末休市；westock 上证指数 <code>time=2026-11-06</code>（最近有效交易日）；neodata 美股 11/07、11/08 均显示「未开盘」。</p><p>最近一个有效交易日为 <strong>11/06（周五）</strong>；下一交易日为 <strong>11/09（周一）</strong>。</p><p>下文为「11/06 收盘基准 + 周末外围窗口（截至 11/08 北京时间，含非农最终值与地缘新变量）+ 11/09 盘前清单」，供周一开盘推演与公众号素材使用。</p><p>⚠️ 休市日严禁编造当日涨跌/板块数据，下文所有 A 股数字均来自 11/06 收盘，外围数字来自公开报道核验。</p></blockquote>
+
+<blockquote><p><strong>本文不是 A 股复盘。</strong> 今日（2026-11-08 周日）A股休市，无当日行情。</p><p>三步交易日判定一致：上交所日历 2026-11-08 = 周末休市；westock 上证指数 <code>time=2026-11-06</code>（最近有效交易日）；neodata 美股 11/07、11/08 均显示「未开盘」。</p><p>最近一个有效交易日为 <strong>11/06（周五）</strong>；下一交易日为 <strong>11/09（周一）</strong>。</p><p>下文为「11/06 收盘基准 + 周末外围窗口（截至 11/08 北京时间，含非农最终值与地缘新变量）+ 11/09 盘前清单」，供周一开盘推演与公众号素材使用。</p><p>休市日严禁编造当日涨跌/板块数据，下文所有 A 股数字均来自 11/06 收盘，外围数字来自公开报道核验。</p></blockquote>
 <h2 id="sec0">一、上一交易日（11/06 周五）收盘基准回顾</h2>
 <p class="k">外围雪崩传导 A 股全线重挫，成长科技遭集中踩踏，资金高低切抱团银行/电力/农业避险，成交大幅缩量 4600 亿。</p>
 <div class="tbl"><table><thead><tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>点评</th></tr></thead><tbody><tr><td>上证指数</td><td>3649.18</td><td><strong><span class="down">-1.10%</span></strong></td><td>银行保险撑住，跌幅最小</td></tr><tr><td>深证成指</td><td>11175.78</td><td><strong><span class="down">-2.57%</span></strong></td><td>成长权重拖累</td></tr><tr><td>创业板指</td><td>2465.23</td><td><strong><span class="down">-3.96%</span></strong></td><td>跌幅最大，高β成长杀跌</td></tr><tr><td>科创50</td><td>1253.20</td><td><strong><span class="down">-2.60%</span></strong></td><td>半导体链重挫</td></tr><tr><td>沪深300</td><td>4054.28</td><td><strong><span class="down">-1.44%</span></strong></td><td>大盘蓝筹相对抗跌</td></tr><tr><td>中证1000</td><td>6505.35</td><td><strong><span class="down">-2.18%</span></strong></td><td>小盘跟跌</td></tr></tbody></table></div>
@@ -157,11 +210,11 @@ p.k strong{font-weight:700}
 <h2 id="sec1">二、外围窗口（周末更新，截至 11/08 北京时间）</h2>
 <h3>1. 美股周五强劲反弹，但全周仍深跌、纳指入技术性调整</h3>
 <ul><li>道指 <strong>51285.73（<span class="down">-0.46%</span>）</strong>、标普 <strong>7376.86（<span class="up">+0.31%</span>）</strong>、纳指 <strong>24579.42（<span class="up">+1.09%</span>）</strong>、<strong>费城半导体指数 9390.25（<span class="up">+4.21%</span>）</strong>；费半内部 AMD <span class="up">+11.04%</span>、英伟达 <span class="up">+2.87%</span>、美光/迈威尔/Lumentum 均涨超 5%。</li><li>全周视角：纳指 <strong><span class="down">-3.40%</span></strong>、标普 <strong><span class="down">-2.70%</span></strong>、道指 <strong><span class="down">-0.90%</span></strong>，纳指较 10 月高点回落约 <strong>12%</strong>、正式进入技术性调整区间。周五反弹是"超跌修复"，非趋势反转确认。</li></ul>
-<h3>2. ⚠️ 非农最终值大幅强于预期 → 加息概率跳升（比 11/07 初版更鹰派）</h3>
+<h3>2.  非农最终值大幅强于预期 → 加息概率跳升（比 11/07 初版更鹰派）</h3>
 <ul><li>美国 10 月非农 <strong>新增 +16.5 万</strong>（预期约 6.5 万，大幅 beat）；失业率 <strong>4.1%</strong>（前值 4.2%~4.3%，意外下行）。</li><li>利率期货对 <strong>12 月加息 25bp 的概率由约 67% 跳升至 78%~80%</strong>；<strong>10Y 美债升至 4.85%</strong>；美元指数 <span class="up">+0.74%</span> 收 102.30，创近 5 个月新高。</li><li>⚠️ 校正：11/07 初版曾引用一组较低的初步读数（+6.4 万 / 失业率 4.6%），<strong>最终 BLS 印数明显更强、更鹰派</strong>，本次以多源核验的 +16.5 万 / 4.1% 为准。</li><li>判读：<strong>利率"更高更久"</strong> → 压制长久期资产（创新药 / AI 算力）估值，与 30Y 纪律一致；但国内"以我为主"宽松（政策利率换锚，见下）形成对冲。</li></ul>
 <h3>3. 中概独立走强，释放"中国资产相对低估值"信号</h3>
 <ul><li>纳斯达克中国金龙指数周五 <strong><span class="up">+1.67%</span></strong>、<strong>全周 <span class="up">+8.30%</span></strong>，与美股科技周线下跌形成鲜明反差；百度 <span class="up">+3.01%</span>、网易 <span class="up">+2.28%</span>、京东/阿里涨超 1%。</li><li>含义：避险情绪下资金对"中国资产"相对低估值属性再认识，对周一 A 股科技/中概映射偏正面，但需防"高开低走"惯性。</li></ul>
-<h3>4. 商品 / 美债 / 地缘（⚠️ 纪律重点看 30Y，不看 10Y）</h3>
+<h3>4. 商品 / 美债 / 地缘（ 纪律重点看 30Y，不看 10Y）</h3>
 <ul><li><strong>布伦特原油 98.32 美元/桶</strong>：周跌一度约 17%（美伊外交斡旋降温预期），但周五美对伊格什姆岛防空设施发动有限打击、周六霍尔木兹海峡一艘油轮触雷起火，<strong>油价反弹、能源/输入性通胀风险未消</strong>。</li><li><strong>现货黄金 ~4070 美元/盎司（<span class="down">-0.44%</span>）</strong>，避险溢价继续回落；全球央行购金（三季度同比 <span class="up">+42%</span>）支撑中长期逻辑。</li><li><strong>30Y 美债仍处高位</strong>（10Y 已至 4.85%），<strong>创新药 / AI 算力等长久期资产估值锚压未解除</strong> —— 周一判成长股压力先看 30Y。</li><li>国内政策托底同步加码：央行 11/02 起将主要政策利率<strong>换锚为隔夜逆回购（1.25%，每日开展）</strong>；第三批证券基金保险公司互换便利（31 家机构、申请额度 &gt;1000 亿）；股票回购增持再贷款<strong>转为长期制度、利率降至 1%</strong>；首批主动 ETF 建仓预计带来近 360 亿增量。</li></ul>
 <h2 id="sec2">三、周末要闻与 11/09 定价要点</h2>
 <ol><li><strong>非农鹰派 + 加息概率 78%~80%</strong> 是周一最核心外部变量：长久期资产（创新药/AI算力）估值修复的钥匙在 30Y，而非单纯"美股反弹"。</li><li><strong>中概独立行情</strong>（金龙指数周 <span class="up">+8.30%</span>）能否映射 A 股科技线（半导体/AI终端/中概映射），决定开盘情绪强度，但警惕高开低走。</li><li><strong>国内稳市组合拳持续托底</strong>：互换便利 + 回购增持再贷款长期化 + 政策利率换锚，构成"内部政策底"对冲外围扰动。</li><li><strong>地缘升温推高油价波动</strong>（美伊打击 + 霍尔木兹油轮触雷）→ 输入性通胀与能源链（油气/航运）波动，同时压制整体风险偏好。</li><li><strong>周一国内数据</strong>：中国 10 月 CPI 年率将公布，是国内通胀与政策空间的关键观察点；周二（11/10）还有美国 10 月 CPI，牵动 12 月加息定价。</li></ol>

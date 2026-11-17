@@ -2,8 +2,8 @@
 <html lang="zh-CN"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>一句话定性：放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利｜2026-09-22 A股复盘</title>
-<meta name="description" content="一句话定性：放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利">
+<title>放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利｜2026-09-22 A股复盘</title>
+<meta name="description" content="放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利">
 <style>/* ---------------------------------------------------------------
    A股复盘期刊 · 编辑部风格
    原则：白底、细线、衬线标题、无卡片无阴影无彩色标签
@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -144,11 +196,12 @@ p.k strong{font-weight:700}
   <div class="mhmeta">2026-09-22 · 周二 · 第 001 期</div>
 </div></header>
 <div class="wrap"><div class="layout">
-<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、资金表现</a></li><li><a href="#sec4">五、题材涨跌分析</a></li><li><a href="#sec5">六、后市观察</a></li><li><a href="#sec6">📌 一句话总结</a></li></ol></nav>
+<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、资金表现</a></li><li><a href="#sec4">五、题材涨跌分析</a></li><li><a href="#sec5">六、后市观察</a></li><li><a href="#sec6">一句话总结</a></li></ol></nav>
 <article>
   <div class="meta">2026年9月22日　周二</div>
-  <h1 class="hl">一句话定性：放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利</h1>
+  <h1 class="hl">放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利</h1>
   
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-09-22 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3952.13</span><span class="tch up">+0.06%</span></li><li><span class="tnm">深证成指</span><span class="tvl">13723.74</span><span class="tch down">-0.05%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3399.93</span><span class="tch up">+0.01%</span></li><li><span class="tnm">科创50</span><span class="tvl">1665.04</span><span class="tch up">+0.46%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4544.59</span><span class="tch up">+0.11%</span></li><li><span class="tnm">北证50</span><span class="tvl">1046.80</span><span class="tch down">-1.08%</span></li><li><span class="tnm">中证500</span><span class="tvl">7828.94</span><span class="tch down">-0.27%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7759.03</span><span class="tch down">-0.09%</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>42%</b></li><li><span class="tk">涨停</span><b>65 家</b></li><li><span class="tk">跌停</span><b>5 家</b></li><li><span class="tk">成交额</span><b>2.14 万亿</b></li></ul></section>
 <blockquote><p>数据截至 15:15 收盘 · 来源：腾讯自选股/东方财富行情接口</p></blockquote>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">一句话定性：放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利。</p>
@@ -172,7 +225,7 @@ p.k strong{font-weight:700}
 <div class="tbl"><table><thead><tr><th>分组</th><th>今日</th><th>近5日累计</th><th>近20日累计</th></tr></thead><tbody><tr><td>硬件组（通信设备等8行业）</td><td><strong><span class="down">-120.4亿</span></strong></td><td><strong><span class="up">+343.6亿</span></strong></td><td><span class="up">+23.7亿</span></td></tr><tr><td>软件组（广告营销等8行业）</td><td><strong><span class="up">+67.6亿</span></strong></td><td><span class="up">+62.3亿</span></td><td><strong><span class="down">-171.1亿</span></strong></td></tr></tbody></table></div>
 <blockquote><p>近 5 日硬件吸金是软件的 <strong>5.5 倍</strong>，近 20 日软件端还是净流出。所以"主线换挡"目前只有 <strong>1 天证据</strong>，尚不足以推翻中期趋势——需连续 2~3 天验证。</p></blockquote>
 <h2 id="sec4">五、题材涨跌分析</h2>
-<h3>📈 领涨题材 TOP3</h3>
+<h3>领涨题材 TOP3</h3>
 <h4>1️⃣ AI应用 / Agent软件链（今日绝对主线）</h4>
 <ul><li><strong>涨幅</strong>：CPU概念 <span class="up">+4.28%</span>、AI营销 <span class="up">+3.61%</span>、词元概念 <span class="up">+3.07%</span>、AI编程 <span class="up">+3.06%</span>、AI算力芯片 <span class="up">+2.87%</span>、VPN <span class="up">+2.99%</span>、豆包概念 <span class="up">+2.80%</span></li><li><strong>代表个股</strong>：旋极信息 <strong><span class="up">+20.00%</span></strong>（20cm回封涨停）、光云科技 <strong><span class="up">+13.92%</span></strong>、智度股份 <strong><span class="up">+10.04%</span></strong> 涨停、禾盛新材 <strong><span class="up">+10.00%</span></strong> 涨停、新炬网络 <strong><span class="up">+10.01%</span></strong> 涨停、二六三 <span class="up">+9.94%</span>、蓝色光标 <span class="up">+6.76%</span>、易点天下 <span class="up">+5.49%</span>、亚康股份 <span class="up">+11.57%</span></li><li><strong>上涨逻辑</strong>：① 隔夜美股费城半导体指数 <span class="up">+4.29%</span>，ARM <span class="up">+17%</span>、英特尔 <span class="up">+12%</span>、AMD市值首破万亿，全球AI交易情绪被点燃；② Meta 智能体 Muse 登顶美区榜单，"Agent 行情来袭，软件股批量涨停"成为核心叙事；③ 阿里云栖大会今日开幕主打 Agentic AI，吴泳铭表态坚定投入AI模型/芯片/云基础设施；④ 腾讯大涨6%，大摩定调中国消费级AI、给出1.6万亿潜在空间；⑤ 海光信息深圳发布新品类芯片。</li><li><strong>性质</strong>：<strong>估值+叙事双驱动的应用端补涨</strong>，是资金从算力硬件溢出后的新去处，需观察次日能否延续（警惕重演9月中旬AI硬件链"一日游"）。</li></ul>
 <h4>2️⃣ 广告营销 · 出版传媒（资金净流入第一）</h4>
@@ -180,7 +233,7 @@ p.k strong{font-weight:700}
 <h4>3️⃣ 创新药 · 肿瘤疫苗（政策驱动）</h4>
 <ul><li><strong>涨幅</strong>：肿瘤疫苗 <strong><span class="up">+5.03%</span></strong>（803个概念第1）、尼帕病毒 <span class="up">+3.04%</span>、生物制品 <span class="up">+1.35%</span>、化学制药 <span class="up">+0.14%</span></li><li><strong>代表个股</strong>：康希诺 <strong><span class="up">+10.05%</span></strong> 涨停、五洲医疗 <strong><span class="up">+20.00%</span></strong>（20cm）、华仁药业 <strong><span class="up">+20.06%</span></strong>（20cm）、义翘神州 <span class="up">+16.09%</span>、百花医药 <span class="up">+10.04%</span> 涨停、哈药股份、新华制药2连板、南华生物4连板</li><li><strong>上涨逻辑</strong>：工信部等十部门印发《医药工业发展"十五五"规划》，创新药械迎价值重估，CRO概念两股20cm涨停。属于<strong>确定性政策催化</strong>，与情绪驱动的AI主线形成跷跷板互补。</li></ul>
 <blockquote><p>另可关注：房地产服务 <strong><span class="up">+3.40%</span></strong>（我爱我家 <span class="up">+10.03%</span> 涨停、世联行4连板，公积金新政+40年房贷+金九银十接力）；商用车 <strong><span class="up">+2.83%</span></strong>（江淮汽车 <span class="up">+10.01%</span> 涨停，智能驾驶与具身智能多项硬核措施公布）。</p></blockquote>
-<h3>📉 领跌题材 TOP3</h3>
+<h3>领跌题材 TOP3</h3>
 <h4>1️⃣ 航运港口（行业跌幅第一）</h4>
 <ul><li><strong>跌幅</strong>：航运港口 <strong><span class="down">-2.64%</span></strong>，34只成分股仅2只上涨，主力净流出5.48亿；BDI概念 <span class="down">-2.70%</span></li><li><strong>代表个股</strong>：招商轮船 <strong><span class="down">-6.24%</span></strong>、招商南油 <strong><span class="down">-5.57%</span></strong>、国航远洋下挫</li><li><strong>下跌逻辑</strong>：昨日BDI指数爆发带动的运价预期今日快速兑现回落；叠加地缘溢价消退——沙特管道遇袭后反而扩大海湾出口，原油大跌超6%，油运/干散的"战争溢价"被一次性抹掉。典型的<strong>事件驱动型周期股"一日游"</strong>。</li></ul>
 <h4>2️⃣ 贵金属 / 黄金</h4>
@@ -190,7 +243,7 @@ p.k strong{font-weight:700}
 <blockquote><p>另需留意：旅游及景区 <span class="down">-1.89%</span>（国庆临近兑现）、地面兵装 <span class="down">-2.00%</span>、航海装备 <span class="down">-1.93%</span>、风电设备 <span class="down">-1.44%</span>；北证50 <span class="down">-1.08%</span> 连续走弱。</p></blockquote>
 <h2 id="sec5">六、后市观察</h2>
 <ol><li><strong>高位抛压确认</strong>：放量2.14万亿却尾盘翻绿、下跌家数反超上涨家数，连续冲高回落是调整前兆，需降低仓位灵活度。</li><li><strong>AI应用主线持续性</strong>：广告营销/IT服务/计算机设备单日净流入近50亿，软件股批量涨停——对比9/14-9/17 AI硬件链的"一日游"教训，次日能否延续是关键验证点。</li><li><strong>硬件与资金的背离</strong>：通信设备资金从+32.95亿转为-63.53亿，存储/PCB的产业利好与资金流向背离，观察修复力度。</li><li><strong>9/23解禁</strong>：友升股份解禁53.02%，为明日最大压力点。</li><li>明日需关注：美股AI交易延续性、云栖大会后续发布、北向资金动向。</li></ol>
-<h2 id="sec6">📌 一句话总结（公众号标题）</h2>
+<h2 id="sec6">一句话总结（公众号标题）</h2>
 <blockquote><p><strong>放量2.14万亿却尾盘翻绿：AI应用接棒算力硬件，A股主线正在换挡</strong></p></blockquote>
 <p>备选：</p>
 <ul><li>冲高回落、红盘率仅42%：谁在卖出算力，谁在买入AI应用？</li><li>AI主线内部"大换血"？一天的资金反转说明不了什么</li></ul>

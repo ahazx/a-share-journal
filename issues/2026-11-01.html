@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -149,7 +201,8 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月1日　周日</div>
   <h1 class="hl">｜2026-11-01 周末外围观察 + 11/02盘前清单</h1>
   
-<blockquote><p>⚠️ <strong>本文不是 A股复盘</strong>。今日（2026-11-01 周日）为周末，交易所不开市，无 A股行情。</p><p>按纪律：不拿上一交易日数据冒充当日复盘，只做「外围定价 + 下一交易日推演」。</p></blockquote>
+
+<blockquote><p><strong>本文不是 A股复盘</strong>。今日（2026-11-01 周日）为周末，交易所不开市，无 A股行情。</p><p>按纪律：不拿上一交易日数据冒充当日复盘，只做「外围定价 + 下一交易日推演」。</p></blockquote>
 <h2 id="sec0">一、交易日判定（三步一致）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>信号</th><th>结论</th></tr></thead><tbody><tr><td>① westock quote <code>sh000001</code> 的 <code>time</code> 字段</td><td><code>2026-10-30</code>（≠今日）</td><td>休市</td></tr><tr><td>② westock kline 最新一根</td><td>最新有效日 ≤ <code>2026-10-30</code></td><td>休市</td></tr><tr><td>③ 历次执行与日历交叉验证</td><td>今日周日，交易所周末不开市</td><td>休市</td></tr></tbody></table></div>
 <p class="k">下一交易日：2026-11-02（周一）开市。</p>

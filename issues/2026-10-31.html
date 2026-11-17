@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -149,6 +201,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月31日　周六</div>
   <h1 class="hl">周末外围观察 + 11/02 盘前清单</h1>
   
+
 <blockquote><p><strong>本文不是 A 股复盘。</strong> 今日（2026-10-31 周六）A股休市，无当日行情。</p><p>三步交易日判定一致：westock <code>quote sh000001</code> time=2026-10-30、kline 最新一根=2026-10-30、</p><p>上交所日历 2026-10-31=休市（周末）、2026-11-02=开市。</p><p>下文为「上一交易日收盘基准 + 周末外围窗口 + 11/02 盘前清单」，供下周一开盘推演与公众号素材使用。</p></blockquote>
 <h2 id="sec0">一、上一交易日（10/30 周五）收盘基准回顾</h2>
 <p class="k">黑色星期五收官 10 月，科创50 创年内新低。</p>
@@ -163,7 +216,7 @@ p.k strong{font-weight:700}
 <ul><li>日经 225 <strong><span class="down">-2.12%</span></strong>；韩国 KOSPI <strong><span class="down">-3.48%</span></strong>（盘中跌超 5% 触发 sidecar，10 月累跌超 16%）。全球半导体链情绪同步恶化。</li></ul>
 <h3>4. 商品：油价涨、金银崩</h3>
 <ul><li><strong>原油涨</strong>：WTI <strong>102.95（<span class="up">+0.93%</span>）</strong>、布伦特 <strong>113.40（<span class="up">+2.35%</span>）</strong> —— 胡塞武装袭击沙特石油设施 + 特朗普威胁中期选举次日恢复对伊朗打击（11/4 准备）→ 中东地缘升温，油价获支撑（此前周四微跌，周五转涨）。</li><li><strong>金银大跌（避险溢价消退）</strong>：COMEX 黄金 <strong>3884.90（<span class="down">-3.63%</span>，周 <span class="down">-3.07%</span>，10 月 <span class="down">-7.21%</span>）</strong>、白银 <strong>49.13（<span class="down">-6.20%</span>，周 <span class="down">-8.92%</span>，10 月 <span class="down">-18.87%</span>）</strong>。</li><li>铜 14130（<span class="down">-1.58%</span>）；BDI <strong>2712（<span class="up">+2.26%</span>）</strong>（支撑航运/油运逻辑）。</li></ul>
-<h3>5. 美债（⚠️ 纪律重点看 30Y，不看 10Y）</h3>
+<h3>5. 美债（ 纪律重点看 30Y，不看 10Y）</h3>
 <ul><li>2 年 <strong>4.583%（-0.9bp）</strong> / 10 年 <strong>4.925%（-1.2bp）</strong> / <strong>30 年 5.307%（+0.7bp）</strong>。</li><li><strong>30Y 仍在 5.3% 高位</strong>，较 10/7 峰值 5.72% 回落约 41bp 但仍高 → 对<strong>长久期资产（创新药 / AI 算力）估值锚压未解除</strong>。</li><li>美联储官员鹰派：穆萨莱姆称"需更紧缩且尽快"、洛根称"至少还需加息两次" → 加息预期未消。</li></ul>
 <h2 id="sec2">三、周末要闻与 11/02 定价要点（10/31 发布）</h2>
 <ol><li><strong>央行利率"换锚"</strong>：<strong>11/2 起</strong>每个工作日开展隔夜逆回购（固定利率 <strong>1.25%</strong>、数量招标），7 天逆回购改为固定数量利率招标、多价位中标；继续适度宽松。中信证券：隔夜 1.25% 与 DR001 中枢一致，释放积极稳定信号 → <strong>对权益温和支撑，利好短端利率敏感的小盘/题材</strong>。</li><li><strong>证监会</strong>：全力稳市场稳预期，深化投融资综合改革，完善全链条监管；清越科技欺诈发行案 4 名责任人合计罚 2800 万 + 3–8 年证券市场禁入。</li><li><strong>10 月官方 PMI = 49.3%（10/31 9:30 发布）</strong>，较 9 月（50.1%）<strong>下降 0.8 个百分点，回落至荣枯线下方</strong>。大型 50.2 / 中型 48.4 / 小型 47.5；生产 49.8、新订单 49.4 均回落；生产经营活动预期 53.4。统计局特约分析师张立群：经济下行压力加大，需求不足、订单不足问题发展。→ <strong>11/02 最重要宏观锚，偏空，但有"逆周期调节加码"预期对冲</strong>。</li><li><strong>二十届五中全会 10/26–29 闭幕</strong>，审议全面从严治党决定，<strong>不主攻经济</strong>（非"十五五"新催化）。市场此前抢跑的"政策红包/十五五题材"警惕<strong>见光死</strong>。</li><li><strong>美国 FCC</strong> 通过检测实验室限制措施，2028/12 起禁止中国"非互惠经济体"实验室开展涉 FCC 检测认证 → 长期利空中国电子/通信测试链（2028 才生效，短期情绪冲击有限）。</li><li><strong>特朗普威胁</strong>中期选举次日恢复对伊朗打击、11/4 准备；驻沙特使馆非紧急人员撤离 → 中东地缘升温，油价支撑、风险偏好承压。</li><li><strong>币安遭史上最大黑客攻击</strong>（约 63 亿美元影响，链上冻结约 30 亿）→ 加密市场恐慌，对 A 股直接影响小但扰动风险偏好。</li><li><strong>汽车链承压</strong>：乘联会 10/1–25 乘用车零售同比 <strong><span class="down">-26%</span></strong>，全月预计 160 万辆同比 <strong><span class="down">-28.9%</span></strong>，新能源渗透率 66.9%。</li><li><strong>产业亮点（长期）</strong>：工信部"十五五"算力用电年均新增 1000 亿千瓦时以上、2030 达 8000 亿占 6%；DeepSeek 二轮融资 1055 亿（估值 6155 亿，腾讯/宁德领投）；长鑫科技最高 20 亿回购 + Q3 扭亏 + <strong>纳入上证指数第一大权重股</strong>；鸿海 AI 服务器市占率 40%。</li><li><strong>地产局部信号</strong>：杭州土拍滨江集团 29.69 亿、溢价 48.53%；西安现房销售细则；五部门加强消费基础设施建设指导意见（20 项任务）。</li></ol>

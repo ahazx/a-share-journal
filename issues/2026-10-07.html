@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -149,12 +201,13 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月7日　周三</div>
   <h1 class="hl">15:15</h1>
   
-<blockquote><p>⚠️ <strong>本文不是交易复盘。今天是国庆假期第 7 天（10/1–10/7），A 股休市，无 A 股当日行情。</strong></p><p>文中所有"领涨/领跌/涨跌"数据 <strong>全部来自港股 10/7 与美股 10/6（北京时间 10/7 凌晨收盘）</strong>，</p><p>不是 A 股数据。A 股最新有效交易日仍是 <strong>2026-09-30</strong>。</p><p>建议阅读顺序：先看 10/3《节后作战手册》→ 10/4《美债证伪与10月作战》→ 10/5 → 10/6 → 本篇。</p></blockquote>
+
+<blockquote><p><strong>本文不是交易复盘。今天是国庆假期第 7 天（10/1–10/7），A 股休市，无 A 股当日行情。</strong></p><p>文中所有"领涨/领跌/涨跌"数据 <strong>全部来自港股 10/7 与美股 10/6（北京时间 10/7 凌晨收盘）</strong>，</p><p>不是 A 股数据。A 股最新有效交易日仍是 <strong>2026-09-30</strong>。</p><p>建议阅读顺序：先看 10/3《节后作战手册》→ 10/4《美债证伪与10月作战》→ 10/5 → 10/6 → 本篇。</p></blockquote>
 <h2 id="sec0">〇、交易日判定（三步流程，三条一致才算数）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>结果</th></tr></thead><tbody><tr><td>① 统一交易日历</td><td>20261007 <strong>SH 上海证券交易所 = 休市（国庆节休市）</strong>；SZ 深圳证券交易所 = 休市（国庆节休市）</td></tr><tr><td>② 上证指数「交易状态」</td><td><strong>国庆节休市</strong>；10/01–10/07 全部「未开盘」，最新有数据日 2026-09-30</td></tr><tr><td>③ 最新有效日期</td><td>上证行情表最新数据行 = <strong>2026-09-30</strong>（收 3842.19，<span class="up">+0.31%</span>，成交额 6793.99 亿）</td></tr></tbody></table></div>
 <p class="k">结论：休市日。不出 A 股交易复盘。下一交易日 = 2026-10-08（周四）。</p>
 <p>（交易日历另次批量查询 10/01–10/05 SH/SZ 均为「国庆节休市」，与上文一致。）</p>
-<blockquote><p>📌 <strong>取数说明</strong>：westock CLI 仍在但未授权（AUTH_REQUIRED），全程走</p><p><code>neodata-financial-search</code> 的 <code>scripts/query.py --query</code> 免鉴权通道，本次稳定可用。</p><p>⚠️ 美股行情接口存在明显滞后（默认返回 7 月区间），<strong>必须显式指定日期区间</strong>才能拿到 10 月数据，</p><p>否则会拿到 7/13–7/17 的旧值。已踩过，记为新纪律。</p></blockquote>
+<blockquote><p><strong>取数说明</strong>：westock CLI 仍在但未授权（AUTH_REQUIRED），全程走</p><p><code>neodata-financial-search</code> 的 <code>scripts/query.py --query</code> 免鉴权通道，本次稳定可用。</p><p>美股行情接口存在明显滞后（默认返回 7 月区间），<strong>必须显式指定日期区间</strong>才能拿到 10 月数据，</p><p>否则会拿到 7/13–7/17 的旧值。已踩过，记为新纪律。</p></blockquote>
 <h2 id="sec1">一、核心结论（今日资金表现 + 领涨领跌板块）</h2>
 <h3>1.1 一句话核心矛盾</h3>
 <blockquote><p><strong>同一条 AI 硬件链，定价权在美股、减仓在离岸。</strong></p><p>10/6（美）Marvell <span class="up">+5.8%</span>、AMD <span class="up">+3%</span>、博通 <span class="up">+3.7%</span>，纳指与标普同创历史新高；</p><p>10/7（港）华虹宏力 <span class="down">-2.50%</span>、中芯国际 <span class="down">-1.22%</span>、恒生科技 <span class="down">-0.73%</span>。<strong>同一条链，两天里方向完全相反。</strong></p></blockquote>
@@ -176,7 +229,7 @@ p.k strong{font-weight:700}
 <ul><li>代表标的：维亚生物 01873 <strong><span class="down">-7.40%</span></strong>（量比 1.84）、中国生物制药 01177 <span class="down">-1.55%</span></li><li>轨迹：10/6 维亚 <strong><span class="up">+21.62%</span></strong>、中生 <strong><span class="up">+3.96%</span></strong> → 10/7 维亚 <strong><span class="down">-7.40%</span></strong>、中生 <span class="down">-1.55%</span></li><li><strong>涨跌逻辑（本文最重要的纠错）</strong>：10/6 报告我写"CRO 支线获离岸定价，不是内资孤岛"， 现在必须 <strong>作废</strong>。10/6 那根巨阳（量比 4.35）本质是<strong>假期第一天的避险补涨脉冲</strong>， 10/7 直接全额回吐，且维亚量比 1.84 说明是全日放量出货。 <strong>结论修正：CRO 在离岸也只是脉冲，没有形成趋势。</strong> 10/5 清单里"A股医药 10/8 能否接力港股 CRO" 这个问句的前提（港股 CRO 是真主线）本身就不成立。</li></ul>
 <p class="k">③ 港股大科技权重（缩量阴跌）</p>
 <ul><li>代表标的：腾讯控股 00700 <strong><span class="down">-1.77%</span></strong>、恒生科技 <span class="down">-0.73%</span>、国企指数 <span class="down">-0.51%</span></li><li><strong>涨跌逻辑</strong>：腾讯量比 0.67 属于正常波动区间，恒指量比 0.44 / 国企量比 0.38 才是真问题—— <strong>国企指数 0.38 的成交密度是假期里最低的一天</strong>，中小盘内资标的几乎没人交易。 不是"卖"，是"根本没人接"。</li></ul>
-<blockquote><p>⚠️ <strong>假领涨提示（沿用 10/6 教训）</strong>：港股涨幅榜首屏是低价小市值仙股（联洋智能 01561 之类），</p><p>与主线无关。<strong>判港股方向只认权重股（腾讯/汇丰/中芯）和三大指数，不要看排行榜首屏。</strong></p></blockquote>
+<blockquote><p><strong>假领涨提示（沿用 10/6 教训）</strong>：港股涨幅榜首屏是低价小市值仙股（联洋智能 01561 之类），</p><p>与主线无关。<strong>判港股方向只认权重股（腾讯/汇丰/中芯）和三大指数，不要看排行榜首屏。</strong></p></blockquote>
 <h2 id="sec2">二、核心指数表现</h2>
 <h3>A 股（休市，仅列最后交易日基准）</h3>
 <div class="tbl"><table><thead><tr><th>指数</th><th>最新有效日</th><th>收盘</th><th>涨跌幅</th><th>成交额</th><th>换手率</th></tr></thead><tbody><tr><td>上证指数 000001</td><td><strong>2026-09-30</strong></td><td>3842.19</td><td><span class="up">+0.31%</span></td><td>6793.99 亿</td><td>0.85%</td></tr><tr><td>深证成指 / 创业板指</td><td>2026-09-30</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table></div>

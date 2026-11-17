@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -144,11 +196,12 @@ p.k strong{font-weight:700}
   <div class="mhmeta">2026-11-06 · 周五 · 第 041 期</div>
 </div></header>
 <div class="wrap"><div class="layout">
-<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、资金表现</a></li><li><a href="#sec4">五、题材涨跌分析</a></li><li><a href="#sec5">六、后市观察</a></li><li><a href="#sec6">📌 公众号标题</a></li></ol></nav>
+<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、资金表现</a></li><li><a href="#sec4">五、题材涨跌分析</a></li><li><a href="#sec5">六、后市观察</a></li><li><a href="#sec6">公众号标题</a></li></ol></nav>
 <article>
   <div class="meta">2026年11月6日　周五</div>
   <h1 class="hl">外围雪崩拖累 A 股全线重挫，成长科技遭集中踩踏，资金高低切抱团银行</h1>
   
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-06 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3649.18</span><span class="tch down">-1.10%</span><span class="tn">银行保险撑住</span></li><li><span class="tnm">深证成指</span><span class="tvl">11175.78</span><span class="tch down">-2.57%</span><span class="tn">成长权重拖累</span></li><li><span class="tnm">创业板指</span><span class="tvl">2465.23</span><span class="tch down">-3.96%</span><span class="tn">跌幅最大</span></li><li><span class="tnm">科创50</span><span class="tvl">1253.20</span><span class="tch down">-2.60%</span><span class="tn">半导体链重挫</span></li><li><span class="tnm">沪深300</span><span class="tvl">4054.28</span><span class="tch down">-1.44%</span><span class="tn">大盘蓝筹相对抗跌</span></li><li><span class="tnm">北证50</span><span class="tvl">888.48</span><span class="tch down">-2.37%</span><span class="tn">跟跌</span></li><li><span class="tnm">中证500</span><span class="tvl">6597.35</span><span class="tch down">-2.13%</span><span class="tn">中盘成长承压</span></li><li><span class="tnm">中证1000</span><span class="tvl">6505.35</span><span class="tch down">-2.18%</span><span class="tn">小盘跟跌</span></li></ul><ul class="tape-mood"><li><span class="tk">涨停</span><b>33 家</b></li><li><span class="tk">跌停</span><b>15 家</b></li><li><span class="tk">成交额</span><b>4600 亿</b></li></ul></section>
 <blockquote><p>数据来源：腾讯自选股（westock），截至 15:00 收盘。今日为交易日，上证 <code>time=2026-11-06</code>。</p></blockquote>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">一句话：外围雪崩拖累 A 股全线重挫，成长科技遭集中踩踏，资金高低切抱团银行/电力/农业避险，成交大幅缩量 4600 亿。</p>
@@ -164,14 +217,14 @@ p.k strong{font-weight:700}
 <p><strong>结构对比</strong>：今日科技硬件四大行业（元件+通信设备+半导体+消费电子）合计主力净流出约 <strong>-163 亿</strong>；而防御三方向（电力+银行概念+种植业）合计净流入约 <strong>+20.7 亿</strong>。</p>
 <p><strong>持续性判读</strong>：半导体 5 日仍为 +112 亿、20 日为 -256 亿，说明本周前半段仍有资金，今日是集中获利了结；CPO 20 日累计 -1225 亿，属持续性减仓。两者叠加 → <strong>今日下跌是科技主线高位松动的信号，而非孤立一日波动</strong>。</p>
 <h2 id="sec4">五、题材涨跌分析（领涨 3 + 领跌 3，含代表个股与逻辑）</h2>
-<h3>🔼 领涨题材</h3>
+<h3>领涨题材</h3>
 <p class="k">1. 银行（高股息红利避险）</p>
 <ul><li>代表个股：<strong>沪农商行 <span class="up">+4.27%</span></strong>、<strong>建设银行 <span class="up">+2.14%</span></strong>、<strong>苏州银行 <span class="up">+2.03%</span></strong>、国有大行Ⅱ整体 <span class="up">+1.06%</span>。</li><li>涨跌逻辑：外围暴跌日，资金本能避险抱团低估值、高分红、低波动资产。国有大行 20 日主力仍净流入 +3.45 亿（全市场极罕见的持续净流入板块），"类债属性"在恐慌中成为避风港。新闻面"银行力挺大盘"亦强化共识。</li></ul>
 <p class="k">2. 种植业 / 农业（转基因·棉花·玉米·粮食）</p>
 <ul><li>代表个股：<strong>新赛股份 <span class="up">+10.10%</span>（涨停）</strong>、<strong>万向德农 <span class="up">+10.04%</span>（涨停）</strong>、农发种业 <span class="up">+2.58%</span>。</li><li>涨跌逻辑：三重催化叠加——① 厄尔尼诺推高亚洲大米价格至两年新高，粮食通胀风险加剧；② 农业农村部部署第二轮土地承包到期后再延长 30 年试点；③ 板块本身低估值、防御属性，在普跌日获避险资金流入。种植业整体 <span class="up">+1.29%</span>，红盘广度 14/19。</li></ul>
 <p class="k">3. 电力（防御 + 算力用电逻辑）</p>
 <ul><li>代表个股：<strong>新能股份 <span class="up">+10.02%</span>（涨停）</strong>、<strong>长江电力 <span class="up">+2.15%</span></strong>、国电电力 <span class="up">+2.68%</span>。</li><li>涨跌逻辑：类债防御属性 + 低估值修复；叠加"算力带动用电大增、国家能源局确保顶住峰兜住底"的边际催化，电力从纯防御被赋予"AI 基建卖水人"叙事，逆势走强。</li></ul>
-<h3>🔽 领跌题材</h3>
+<h3>领跌题材</h3>
 <p class="k">1. AI 算力 / 光模块（CPO·博通·谷歌·光芯片）</p>
 <ul><li>代表个股：<strong>中际旭创 <span class="down">-9.19%</span></strong>、<strong>新易盛 <span class="down">-7.28%</span></strong>、<strong>天孚通信 <span class="down">-5.79%</span></strong>；概念端 CPO <span class="down">-4.43%</span>、博通概念 <span class="down">-6.21%</span>、谷歌概念 <span class="down">-5.29%</span>、光芯片 <span class="down">-5.02%</span>。</li><li>涨跌逻辑：<strong>直接受隔夜美股半导体指数暴跌 12%、纳指 <span class="down">-5.5%</span> 传导</strong>（AI 监管担忧引爆历史性抛售）。CPO 板块今日主力净流出高达 -132.30 亿、20 日累计 -1225.68 亿，前期涨幅巨大、机构持仓拥挤，今日是高位获利盘的集中踩踏。华胜天成虽逆势涨停，但属个别游资标的，不改板块弱势。</li></ul>
 <p class="k">2. 半导体 / 消费电子（电子全线）</p>
@@ -180,7 +233,7 @@ p.k strong{font-weight:700}
 <ul><li>代表个股：<strong>药明康德 <span class="down">-4.83%</span></strong>；行业端医疗服务 <span class="down">-4.18%</span>、CRO 概念 <span class="down">-4.15%</span>。</li><li>涨跌逻辑：医药成长股属"长久期资产"，估值锚在 30Y 美债收益率而非 10Y；外围利率与风险偏好恶化下，缺乏短期催化的医疗服务/CRO 被动跟跌，反弹中持续跑输。</li></ul>
 <h2 id="sec5">六、后市观察</h2>
 <ol><li><strong>今晚美国非农数据</strong>（财联社重点提示）将决定美债/美股走向，是影响下周 A 股开盘情绪的关键外部变量。</li><li><strong>外围能否企稳</strong>：纳指期货盘中已反弹涨超 1%，若美股止跌，A 股科技线有望技术性修复；若继续下挫，高位成长仍承压。</li><li><strong>内部结构</strong>：防御（银行/电力/农业）的持续性 vs 科技（CPO/半导体）能否止跌，决定短期风格切换是否成立，而非一日游。</li><li><strong>量能警惕</strong>：成交已从高位回落至 1.66 万亿，若继续缩量需防流动性边际收紧；但缩量下跌也意味着抛压未失控，底部承接仍在。</li></ol>
-<h2 id="sec6">📌 公众号标题（一句话总结当天市场）</h2>
+<h2 id="sec6">公众号标题（一句话总结当天市场）</h2>
 <p class="k">主推：</p>
 <blockquote><p>外围雪崩传导 A 股全线重挫，成交缩量 4600 亿，资金抱团银行电力农业避险</p></blockquote>
 <p class="k">备选：</p>

@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -149,6 +201,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月13日　周二</div>
   <h1 class="hl">探底回升、个股修复、结构撕裂</h1>
   
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-13 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3800.86</span><span class="tch up">+0.10%</span><span class="tn">振幅2.12%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12353.70</span><span class="tch flat">0.25%</span><span class="tn">冲高12486回落</span></li><li><span class="tnm">创业板指</span><span class="tvl">2958.34</span><span class="tch flat">0.18%</span><span class="tn">振幅4.69%</span></li><li><span class="tnm">科创50</span><span class="tvl">1427.18</span><span class="tch up">+0.03%</span><span class="tn">基本平收</span></li><li><span class="tnm">沪深300</span><span class="tvl">4275.68</span><span class="tch flat">0.29%</span><span class="tn">权重拖累</span></li><li><span class="tnm">北证50</span><span class="tvl">1008.66</span><span class="tch flat">0.31%</span><span class="tn">偏弱</span></li><li><span class="tnm">中证500</span><span class="tvl">7085.09</span><span class="tch flat">0.11%</span><span class="tn">—</span></li><li><span class="tnm">中证1000</span><span class="tvl">7023.22</span><span class="tch up">+0.02%</span><span class="tn">小盘微红</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>52%</b></li><li><span class="tk">涨停</span><b>70 家</b></li><li><span class="tk">跌停</span><b>10 家</b></li></ul></section>
 <blockquote><p>数据来源：neodata 统一行情 / 大盘市场宽度统计 / 板块涨跌排行 / 板块异动；催化信息交叉 WebSearch 与公开收评（格隆汇、网易、东财）。</p><p>取数口径：交易日历确认 SH/SZ 2026-10-13 开市；上证 15:15 后「盘后交易中」，收盘数据已锁定。</p></blockquote>
 <h2 id="sec0">一、核心结论</h2>
 <p><strong>今天是「探底回升、个股修复、结构撕裂」的假阳线日。</strong> 早盘受隔夜日韩股市暴跌（韩国综指 −5.47%、SK海力士 −10%）拖累，沪指低开后一度杀至 <strong>3741.53</strong>，午后资金进场托底、硬科技与军工率先拉升，走出深 V，沪指收 <strong>3800.86（<span class="up">+0.10%</span>）</strong>。</p>
@@ -164,22 +217,22 @@ p.k strong{font-weight:700}
 <blockquote><p>纪律说明：neodata 板块资金排行仅返回 TOP3 净流入、无全量行业榜与净流出榜，故不编造「全市场主力净流入总额」，改用广度 + 结构证据。</p></blockquote>
 <ul><li><strong>整体</strong>：主力资金净流出（东财复盘口径），全市场避险情绪仍存。</li><li><strong>流入方向（结构）</strong>：军工（地面兵装/航空/航海装备）、AI 硬件（元件/覆铜板/CPO）、低位消费（旅游/零售/冰雪）。</li><li><strong>流出方向（结构）</strong>：新能源（电池 −3.13%、风电 −2.82%、锂电材料链同步走弱）、金融（保险 −3.10% 领跌大金融）。</li><li><strong>杠杆</strong>：融资 2 日连降，风险偏好边际回落。</li><li><strong>核心矛盾</strong>：<strong>不是「新钱进场」，是「场内资金从高位赛道切到事件/低位题材」</strong>——这也是为什么指数红、但深成指/创业板仍绿、红盘率仅 52% 的根本原因。</li></ul>
 <h2 id="sec4">五、题材涨跌分析（领涨 / 领跌各 3 个）</h2>
-<h3>🔺 领涨题材 ①：军工 / 国防（事件 + 低位轮动双驱动）</h3>
+<h3>领涨题材 ①：军工 / 国防（事件 + 低位轮动双驱动）</h3>
 <div class="tbl"><table><thead><tr><th>细分</th><th>涨跌幅</th><th>代表个股</th><th>个股涨幅</th></tr></thead><tbody><tr><td>地面兵装Ⅱ</td><td><span class="up">+5.08%</span></td><td>国科军工</td><td><span class="up">+12.24%</span></td></tr><tr><td>航空装备Ⅱ</td><td><span class="up">+3.55%</span></td><td>航发科技</td><td><span class="up">+10.01%</span>（中航西飞/中航成飞涨超 8%）</td></tr><tr><td>航海装备Ⅱ</td><td><span class="up">+3.18%</span></td><td>江龙船艇</td><td><span class="up">+10.09%</span></td></tr><tr><td>印巴冲突概念</td><td><span class="up">+5.54%</span></td><td>洪都航空</td><td><span class="up">+9.75%</span></td></tr><tr><td>新质战斗力</td><td><span class="up">+3.78%</span></td><td>国睿科技</td><td><span class="up">+6.49%</span></td></tr></tbody></table></div>
 <p><strong>涨跌逻辑</strong>：① <strong>第十六届中国航展（珠海）定于 12/7–13 举办</strong>，订单与主题预期提前发酵，航空装备领涨；②「印巴冲突概念」资金博弈地缘变量；③ 科技与新能源走弱时，军工作为 <strong>低位 + 避险 + 事件</strong> 三重属性被资金切换。属「事件预期驱动的超跌轮动」，持续性需航展临近与订单验证，警惕「预期打满后兑现」。</p>
-<h3>🔺 领涨题材 ②：AI 硬件 / 元件 · 覆铜板（业绩预增触发超跌反弹）</h3>
+<h3>领涨题材 ②：AI 硬件 / 元件 · 覆铜板（业绩预增触发超跌反弹）</h3>
 <div class="tbl"><table><thead><tr><th>细分</th><th>涨跌幅</th><th>代表个股</th><th>个股涨幅</th></tr></thead><tbody><tr><td>元件</td><td><span class="up">+2.97%</span></td><td>金百泽</td><td><span class="up">+20.00%</span>（20cm）</td></tr><tr><td>覆铜板概念</td><td><span class="up">+4.44%</span></td><td>超声电子</td><td><span class="up">+10.00%</span></td></tr><tr><td>博通概念</td><td><span class="up">+3.58%</span></td><td>太辰光</td><td><span class="up">+8.70%</span></td></tr><tr><td>CPO/光通信</td><td>大面积涨停</td><td>迅捷兴（20cm）、协和电子、澳弘电子等十余股</td><td>多股涨停</td></tr></tbody></table></div>
 <p><strong>涨跌逻辑</strong>：① 昨晚 <strong>联讯仪器（前三季度净利预增 <span class="up">+1866%</span>~~<span class="up">+2073%</span>）、源杰科技（Q3 净利预增 <span class="up">+578%</span>~~<span class="up">+660%</span>）</strong> 双双公告业绩高增 → 直接点燃此前连跌的 AI 硬件链超跌反弹；② 华为麒麟 9050 Pro 架构公布助攻半导体情绪。本质是 <strong>「缩量下的量化抄底 + 业绩验证」</strong>，非增量进攻，持续性看量能能否跟上（30Y 美债仍在 5.6% 附近，长久期资产估值锚未松）。</p>
-<h3>🔺 领涨题材 ③：旅游 / 冰雪经济 · 零售（事件 + 促消费）</h3>
+<h3>领涨题材 ③：旅游 / 冰雪经济 · 零售（事件 + 促消费）</h3>
 <div class="tbl"><table><thead><tr><th>细分</th><th>涨跌幅</th><th>代表个股</th><th>个股涨幅</th></tr></thead><tbody><tr><td>旅游及景区</td><td><span class="up">+3.18%</span></td><td>天府文旅</td><td><span class="up">+10.03%</span></td></tr><tr><td>冰雪经济概念</td><td>活跃</td><td>大连圣亚、雪人集团、长白山、晶雪节能</td><td>多股涨停</td></tr><tr><td>零售</td><td>逆势</td><td>中兴商业、南宁百货、东百集团</td><td>涨停</td></tr></tbody></table></div>
 <p><strong>涨跌逻辑</strong>：① 第二十八届哈尔滨冰雪大世界园区 <strong>扩容至 125 万㎡（历届最大）</strong>，「冰雪之冠·龙江有约」推介会落地；② 政策促消费预期 + 低位消费轮动。强度中等，属题材扩散而非主线，需观察能否从「事件脉冲」升级为持续板块。</p>
-<h3>🔻 领跌题材 ①：电池 / 锂电链（−3.13%，全天最弱）</h3>
+<h3>领跌题材 ①：电池 / 锂电链（−3.13%，全天最弱）</h3>
 <div class="tbl"><table><thead><tr><th>细分</th><th>涨跌幅</th><th>代表个股</th><th>个股涨幅</th></tr></thead><tbody><tr><td>电池</td><td><strong>−3.13%</strong></td><td>紫竹高科 / 厦钨新能</td><td>−10.00% / −10.04%</td></tr><tr><td>锂电材料链</td><td>同步走弱</td><td>先导智能 / 杭可科技</td><td>−9.58% / −8.37%</td></tr><tr><td>磷酸铁锂 / 锂矿 / 镍概念</td><td>−1.0%~−1.7%</td><td>中伟新材、赣锋锂业等</td><td>普跌</td></tr></tbody></table></div>
 <p><strong>涨跌逻辑</strong>：科技（AI 硬件）与军工回流，必然从电池这类「前期热门轮动题材」抽血；锂电链前期涨幅大、筹码松动，在存量博弈下成为流出重灾区。属 <strong>被动调整而非基本面恶化</strong>，若 AI 硬件反弹熄火，新能源或有技术性反抽，但中期资金撤离未改。</p>
-<h3>🔻 领跌题材 ②：保险Ⅱ（−3.10%，大金融领跌）</h3>
+<h3>领跌题材 ②：保险Ⅱ（−3.10%，大金融领跌）</h3>
 <div class="tbl"><table><thead><tr><th>细分</th><th>涨跌幅</th><th>代表个股</th><th>备注</th></tr></thead><tbody><tr><td>保险Ⅱ</td><td><strong>−3.10%</strong></td><td>中国太保</td><td>跌幅居前（新闻点名）</td></tr></tbody></table></div>
 <p><strong>涨跌逻辑</strong>：10/8–10/12 银行独撑护盘后，今日银行未再强势、保险接力补跌；<strong>长端利率（30Y 美债约 5.6%）高位压制保险估值（久期资产）</strong>，叠加避险情绪从「买金融权重」转向「买个股/题材」。属「护盘逻辑松动」信号，需观察银行是否同步走弱。</p>
-<h3>🔻 领跌题材 ③：风电设备（−2.82%，强势赛道补跌延续）</h3>
+<h3>领跌题材 ③：风电设备（−2.82%，强势赛道补跌延续）</h3>
 <div class="tbl"><table><thead><tr><th>细分</th><th>涨跌幅</th><th>代表个股</th><th>个股涨幅</th></tr></thead><tbody><tr><td>风电设备</td><td><strong>−2.82%</strong></td><td>大金重工</td><td>−10.00%</td></tr><tr><td>同板块</td><td>普跌</td><td>天顺风能 / 电气风电</td><td>−3.02% / −3.18%（海力风电、德力佳跌超 9%）</td></tr></tbody></table></div>
 <p><strong>涨跌逻辑</strong>：继 10/9（<span class="up">+1.50%</span> 领涨）后连续两日调整，前期强势股补跌；与电池同属「高景气赛道退潮」，资金从新能源整体撤离。验证「强势股补跌 → 主线切换」的经典路径。</p>
 <blockquote><p><strong>次级弱势</strong>：医药集体下跌——化学制药 −0.96%、医疗服务 −1.08%、肿瘤疫苗概念 −1.54%（近岸蛋白领跌），为连续调整第二日，但内部已有分化（特一药业逆势红盘）。</p></blockquote>

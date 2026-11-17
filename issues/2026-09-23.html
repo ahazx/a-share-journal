@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -144,11 +196,12 @@ p.k strong{font-weight:700}
   <div class="mhmeta">2026-09-23 · 周三 · 第 002 期</div>
 </div></header>
 <div class="wrap"><div class="layout">
-<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、题材涨跌分析</a></li><li><a href="#sec4">五、持仓相关提示</a></li><li><a href="#sec5">六、后市观察要点</a></li><li><a href="#sec6">📌 一句话总结</a></li></ol></nav>
+<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、题材涨跌分析</a></li><li><a href="#sec4">五、持仓相关提示</a></li><li><a href="#sec5">六、后市观察要点</a></li><li><a href="#sec6">一句话总结</a></li></ol></nav>
 <article>
   <div class="meta">2026年9月23日　周三</div>
   <h1 class="hl">缩量冲高回落，指数全线收绿但跌幅有限，赚钱效应明显收缩</h1>
   
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-09-23 收盘 · 沪深A股</span></div><ul class="tape-mood"><li><span class="tk">涨停</span><b>3564 家</b></li><li><span class="tk">成交额</span><b>8341 亿</b></li></ul></section>
 <blockquote><p>数据截止 15:15 收盘｜数据源：腾讯自选股（westock）｜成交额单位：亿元</p></blockquote>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">一句话：缩量冲高回落，指数全线收绿但跌幅有限，赚钱效应明显收缩——资金从"昨日追AI应用"掉头撤出，转而在PCB涨价链、量子科技、地产低位股里做结构性轮动，且主力整体大幅净流出。</p>
@@ -182,7 +235,7 @@ p.k strong{font-weight:700}
 <p><strong>代表个股</strong>：华远控股（600743）<span class="up">+10.16%</span>、我爱我家（000560）<span class="up">+9.97%</span>、万科A（000002）<span class="up">+2.89%</span>、福建水泥（600802）<span class="up">+10.05%</span></p>
 <p><strong>上涨逻辑</strong>：政策预期 + 存量时代地产格局重塑（今日消息：《地产多股涨停，房地产存量时代换谁站上风口？》《500强房企，只剩5家》）。房地产开发行业<strong>主力净流入 8.83亿位列全市场第一</strong>，且 5日（<span class="up">+18.71亿</span>）、20日（<span class="up">+7.48亿</span>）<strong>三个周期全为正</strong>——这是今天<strong>唯一同时满足"价格不弱 + 三周期资金同向流入"的方向</strong>。</p>
 <p><strong>⚠️ 但</strong>：盘中明显冲高回落（房地产开发最终 <span class="down">-0.21%</span>），且开发板块广度只有 36%（30/83），说明是<strong>小市值地产服务股在涨，大市值开发商没跟</strong>。属于低位防御性资金流入，弹性有限。</p>
-<blockquote><p>📌 <strong>次强方向（未进TOP3但值得记）</strong>：医药——生物制品 <span class="up">+1.80%</span>（欧林生物 <span class="up">+12.99%</span>）、CRO <span class="up">+1.41%</span>（和元生物 <span class="up">+10.71%</span>）、肿瘤疫苗 <span class="up">+2.41%</span>。受政策利好（《政策方向利好，医药股全线大涨》）与美股减肥药巨头暴涨35%带动。同样存在"个股涨、大票被卖"的问题（化学制药主力 <span class="down">-16.48亿</span>、医疗服务 <span class="down">-12.44亿</span>）。</p></blockquote>
+<blockquote><p><strong>次强方向（未进TOP3但值得记）</strong>：医药——生物制品 <span class="up">+1.80%</span>（欧林生物 <span class="up">+12.99%</span>）、CRO <span class="up">+1.41%</span>（和元生物 <span class="up">+10.71%</span>）、肿瘤疫苗 <span class="up">+2.41%</span>。受政策利好（《政策方向利好，医药股全线大涨》）与美股减肥药巨头暴涨35%带动。同样存在"个股涨、大票被卖"的问题（化学制药主力 <span class="down">-16.48亿</span>、医疗服务 <span class="down">-12.44亿</span>）。</p></blockquote>
 <h3>【领跌 TOP3】</h3>
 <h4>1️⃣ AI应用 / 传媒 —— 昨日热门的反向屠杀（今日最需要重视的信号）</h4>
 <div class="tbl"><table><thead><tr><th>概念/行业</th><th>涨跌幅</th><th>上涨广度</th><th>主力净流出</th></tr></thead><tbody><tr><td>AI营销</td><td><strong><span class="down">-3.08%</span></strong></td><td>4/36</td><td><span class="down">-24.77亿</span></td></tr><tr><td>Sora概念(文生视频)</td><td><span class="down">-2.88%</span></td><td>4/34</td><td><span class="down">-21.46亿</span></td></tr><tr><td>短视频</td><td><span class="down">-2.81%</span></td><td>2/36</td><td><span class="down">-13.72亿</span></td></tr><tr><td>今日头条概念</td><td><span class="down">-2.78%</span></td><td>2/54</td><td><span class="down">-24.80亿</span></td></tr><tr><td>快手概念</td><td><span class="down">-2.70%</span></td><td>8/54</td><td><span class="down">-24.80亿</span></td></tr><tr><td>广告营销（行业）</td><td><strong><span class="down">-3.18%</span></strong></td><td><strong>3/28（11%）</strong></td><td><strong><span class="down">-16.51亿</span></strong></td></tr><tr><td>游戏Ⅱ（行业）</td><td><span class="down">-2.44%</span></td><td><strong>2/26（8%）</strong></td><td><span class="down">-9.59亿</span></td></tr><tr><td>短剧/互动游戏</td><td><span class="down">-2.51%</span></td><td>7/88</td><td><span class="down">-28.32亿</span></td></tr><tr><td>影视传媒</td><td><span class="down">-2.32%</span></td><td>5/88</td><td><span class="down">-17.36亿</span></td></tr></tbody></table></div>
@@ -202,7 +255,7 @@ p.k strong{font-weight:700}
 <p>半导体（申万）今日 <strong><span class="up">+0.19%</span></strong>、上涨广度 118/181（65%），但主力资金<strong>净流出 39.4亿</strong>，5日 <span class="up">+49.4亿</span>、20日 <strong><span class="down">-304.6亿</span></strong>。 → 意味着：近5日半导体仍在回流，但20日维度仍是大幅失血状态，且今日<strong>指数红盘但主力在卖</strong>。 → 持仓（大港股份、华微电子）均属此链，<strong>短期是"反弹修复"而非"趋势反转"</strong>，20日资金尚未转正前不宜加仓。</p>
 <h2 id="sec5">六、后市观察要点</h2>
 <ol><li><strong>量能是第一个观察点</strong>：1.76万亿是缩量还是趋势性下台阶？若明日继续缩至 1.6万亿以下，则节前观望确立，指数难有作为；若重回 2万亿以上，今日回调只是一日洗盘。</li><li><strong>PCB涨价链能否接力</strong>：广度优秀（147/222）、逻辑有产业价格支撑，但<strong>主力资金没跟</strong>（PCB概念仅+1.24亿）。盯明日主力是否转为净流入——<strong>若资金进来，这条线有可能成为真主线；若不进，则今日是情绪高点</strong>。</li><li><strong>AI应用是超跌还是趋势反转</strong>：今日全板块无差别杀跌、广度跌到 8%~11%，属于恐慌性出清。明日若能止跌企稳，说明是超跌；若继续放量下杀，则要警惕这波AI应用行情结束。</li><li><strong>地产链的三周期资金同向</strong>（今日+8.83 / 5日+18.71 / 20日+7.48亿）是目前<strong>资金质量最好的方向</strong>，若政策端有实质落地，可能从"避险承接"升级为"新主线"。</li><li><strong>北证50 <span class="up">+2.60%</span> 的独立性</strong>值得单独跟踪——在主板缩量调整时北交所放量走强，通常意味着<strong>高风险偏好资金在寻找新的高弹性出口</strong>。</li></ol>
-<h2 id="sec6">📌 一句话总结（公众号标题）</h2>
+<h2 id="sec6">一句话总结（公众号标题）</h2>
 <p class="k">主推：</p>
 <blockquote><p><strong>缩量3706亿、上涨家数只剩33%：A股冲高回落，PCB涨价链与量子科技逆势扛旗，AI应用全线退潮</strong></p></blockquote>
 <p class="k">备选 1：</p>
@@ -210,7 +263,7 @@ p.k strong{font-weight:700}
 <p class="k">备选 2：</p>
 <blockquote><p>全市场主力净流出369亿：A股高开低走收在低点，只有北证50逆势涨2.6%</p></blockquote>
 <p><em>免责声明：本文为基于公开行情数据的客观复盘，不构成任何投资建议。</em></p>
-<div class="pager"><a class="prev" href="2026-09-22.html"><span class="dir">上一期</span>09-22　一句话定性：放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利</a><a class="next" href="2026-09-24.html"><span class="dir">下一期</span>09-24　1）今天是"高位筹码清算日"，不是"系统性风险日"</a></div>
+<div class="pager"><a class="prev" href="2026-09-22.html"><span class="dir">上一期</span>09-22　放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利</a><a class="next" href="2026-09-24.html"><span class="dir">下一期</span>09-24　1）今天是"高位筹码清算日"，不是"系统性风险日"</a></div>
 </article>
 </div></div>
 <footer class="foot"><div class="wrap">

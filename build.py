@@ -29,6 +29,20 @@ WEEKDAYS = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"
 BASE_CSS = (ASSETS / "base.css").read_text(encoding="utf-8")
 INDEX_CSS = (ASSETS / "index.css").read_text(encoding="utf-8")
 
+EMOJI_RE = re.compile(
+    "["
+    "\U0001F000-\U0001FAFF"
+    "\U00002600-\U000027BF"
+    "\U00002B00-\U00002BFF"
+    "\U0000FE0F"
+    "]+"
+)
+
+
+def strip_emoji(t: str) -> str:
+    return EMOJI_RE.sub("", t).strip()
+
+
 # ---------------------------------------------------------------- Markdown 解析
 NUM_RE = re.compile(r"(?<![\w.])[+\-]\d+(?:\.\d+)?(?:%|亿|万|倍|pct)")
 
@@ -105,10 +119,10 @@ def md_to_html(md: str):
             if level == 2:
                 hid = f"sec{h2_idx}"
                 h2_idx += 1
-                toc.append((hid, text))
-                out.append(f'<h2 id="{hid}">{inline(text, False)}</h2>')
+                toc.append((hid, strip_emoji(text)))
+                out.append(f'<h2 id="{hid}">{inline(strip_emoji(text), False)}</h2>')
             elif level == 3:
-                out.append(f"<h3>{inline(text, False)}</h3>")
+                out.append(f"<h3>{inline(strip_emoji(text), False)}</h3>")
             elif level >= 4:
                 out.append(f"<h4>{inline(text, False)}</h4>")
             i += 1
@@ -140,7 +154,7 @@ def md_to_html(md: str):
             while i < n and lines[i].strip().startswith(">"):
                 q.append(re.sub(r"^\s*>\s?", "", lines[i]))
                 i += 1
-            inner = "".join(f"<p>{inline(x)}</p>" for x in (y.strip() for y in q) if x)
+            inner = "".join(f"<p>{inline(strip_emoji(x))}</p>" for x in (y.strip() for y in q) if x)
             out.append(f"<blockquote>{inner}</blockquote>")
             continue
 
@@ -264,6 +278,8 @@ def parse_meta(md: str, path: Path):
         title = headline or raw_title
 
     # 去掉开头的口语化标签，避免目录里出现"一句话：…""资金表现（一句话）：…"
+    title = strip_emoji(title)
+    title = re.sub(r"^(一句话定性|一句话总结|一句话|资金表现|核心结论|结论|判读|定性)\s*[：:]\s*", "", title)
     title = re.sub(r"^(资金表现|核心结论|结论|一句话|判读|定性)\s*[（(]?一句话[）)]?\s*[：:]\s*", "", title)
     title = re.sub(r"^(资金表现|核心结论|结论|一句话|判读|定性)\s*[：:]\s*", "", title)
     title = title.strip("　 ：:，、")
@@ -288,7 +304,114 @@ def parse_meta(md: str, path: Path):
                 pm = re.search(r"[+\-]?\d+(?:\.\d+)?%", cells[2])
                 if pm:
                     idx[name] = pm.group(0)
-    return dict(date=date, weekday=weekday, weekend=weekend, title=title, lead=lead, idx=idx)
+
+    return dict(
+        date=date, weekday=weekday, weekend=weekend,
+        title=title, lead=lead, idx=idx,
+        indices=parse_indices(md), mood=parse_mood(md),
+    )
+
+
+IDX_ORDER = ("上证指数", "深证成指", "创业板指", "科创50", "沪深300", "北证50", "中证500", "中证1000")
+
+
+def parse_indices(md: str):
+    """从「核心指数表现」的表格里抓完整行情（名称/收盘/涨跌/备注），用于正文顶部速览条"""
+    body = ""
+    for mm in re.finditer(r"^##\s*([^\n]*)\n(.+?)(?=\n##\s|\Z)", md, re.S | re.M):
+        if "指数" in mm.group(1) and "|" in mm.group(2):
+            body = mm.group(2)
+            break
+    if not body:
+        return []
+
+    rows, seen = [], set()
+    for line in body.split("\n"):
+        if not line.strip().startswith("|"):
+            continue
+        cells = split_row(line)
+        if len(cells) < 3:
+            continue
+        name = re.sub(r"[*\s]", "", cells[0])
+        if name not in IDX_ORDER or name in seen:
+            continue
+        pm = re.search(r"[+\-]?\d+(?:\.\d+)?%", cells[2])
+        if not pm:
+            continue
+        close = re.sub(r"[*\s]", "", cells[1])
+        if not re.fullmatch(r"\d+(?:\.\d+)?", close):
+            continue
+        # 备注列：从第 4 格往后找第一个非数字格，避开"成交额""盘中最高"这类纯数值列
+        note = ""
+        for c in cells[3:]:
+            c2 = re.sub(r"[*\s]", "", c)
+            if c2 and not re.fullmatch(r"[\d.]+(?:亿|万|%|元|手)?", c2):
+                note = c2
+                break
+        note = re.split(r"[，,；;]", note)[0].strip()   # 只留第一个短句，避免在数字中间截断
+        if len(note) > 14:
+            note = note[:14] + "…"
+        seen.add(name)
+        rows.append(dict(name=name, close=close, chg=pm.group(0), note=note))
+
+    rows.sort(key=lambda r: IDX_ORDER.index(r["name"]))
+    return rows[:8]
+
+
+def _first(patterns, text: str) -> str:
+    for p in patterns:
+        m = re.search(p, text)
+        if m:
+            return m.group(1)
+    return ""
+
+
+def parse_mood(md: str):
+    """从正文里抓情绪指标，抓不到就跳过（历史报告格式不一，宁缺不乱）"""
+    items = []
+
+    def grab(strict, loose):
+        v = _first(strict, md)
+        return v or _first(loose, md)
+
+    v = grab(
+        [r"红盘率[^\d\n]{0,8}?(\d+(?:\.\d+)?)\s*%"],
+        [r"红盘[^\d\n]{0,8}?(\d+(?:\.\d+)?)\s*%"],
+    )
+    if v:
+        items.append(("红盘率", v + "%"))
+
+    v = grab(
+        [r"涨停[^\d\n]{0,4}?(\d+)\s*\*{0,3}\s*[家只]", r"(\d+)\s*[家只]\s*涨停"],
+        [r"涨停[^\d\n]{0,4}?(\d+)"],
+    )
+    if v:
+        items.append(("涨停", v + " 家"))
+
+    v = grab(
+        [r"跌停[^\d\n]{0,4}?(\d+)\s*\*{0,3}\s*[家只]", r"(\d+)\s*[家只]\s*跌停"],
+        [r"跌停[^\d\n]{0,4}?(\d+)"],
+    )
+    if v:
+        items.append(("跌停", v + " 家"))
+
+    v = _first([r"成交[^\d\n]{0,10}?(\d+(?:\.\d+)?)\s*亿"], md)
+    if v:
+        try:
+            f = float(v)
+            items.append(("成交额", f"{f / 10000:.2f} 万亿" if f >= 10000 else f"{f:.0f} 亿"))
+        except ValueError:
+            pass
+
+    v = _first([r"连板[^\d\n]{0,6}?(\d+)\s*只"], md)
+    if v:
+        items.append(("连板", v + " 只"))
+
+    v = _first([r"最高[^\d\n]{0,8}?(\d+)\s*板"], md)
+    if v:
+        items.append(("最高板", v + " 板"))
+
+    return items[:6]
 
 
 def dek_of(meta):
@@ -323,6 +446,45 @@ FOOT = """<footer class="foot"><div class="wrap">
 </div></footer>"""
 
 
+def build_tape(meta) -> str:
+    """正文顶部的「市场速览」数据栏：指数一格一个，下面一行情绪指标"""
+    if meta.get("weekend"):
+        return ""
+    idx = meta.get("indices") or []
+    mood = meta.get("mood") or []
+    if not idx and not mood:
+        return ""
+
+    blocks = []
+    if idx:
+        has_note = any(it["note"] for it in idx)
+        lis = []
+        for it in idx:
+            cls = "up" if it["chg"].startswith("+") else ("down" if it["chg"].startswith("-") else "flat")
+            note = ""
+            if has_note:
+                note = f'<span class="tn">{esc(it["note"])}</span>' if it["note"] else '<span class="tn">　</span>'
+            lis.append(
+                f'<li><span class="tnm">{esc(it["name"])}</span>'
+                f'<span class="tvl">{esc(it["close"])}</span>'
+                f'<span class="tch {cls}">{esc(it["chg"])}</span>{note}</li>'
+            )
+        blocks.append(f'<ul class="tape-idx">{"".join(lis)}</ul>')
+
+    if mood:
+        lis = "".join(
+            f'<li><span class="tk">{esc(k)}</span><b>{esc(v)}</b></li>' for k, v in mood
+        )
+        blocks.append(f'<ul class="tape-mood">{lis}</ul>')
+
+    return (
+        '<section class="tape">'
+        f'<div class="tape-h"><span>市 场 速 览</span>'
+        f'<span>{meta["date"]:%Y-%m-%d} 收盘 · 沪深A股</span></div>'
+        f'{"".join(blocks)}</section>'
+    )
+
+
 def render_issue(meta, body, toc, no, prev_m, next_m) -> str:
     mast = MASTHEAD.format(
         home="../index.html",
@@ -337,6 +499,7 @@ def render_issue(meta, body, toc, no, prev_m, next_m) -> str:
 
     dek_html = ""
     dek = ""
+    tape = build_tape(meta)
 
     nav = []
     if prev_m:
@@ -366,6 +529,7 @@ def render_issue(meta, body, toc, no, prev_m, next_m) -> str:
   <div class="meta">{meta['date']:%Y年%-m月%-d日}　{meta['weekday']}</div>
   <h1 class="hl">{esc(meta['title'])}</h1>
   {dek_html}
+{tape}
 {body}
 {pager}
 </article>
@@ -387,6 +551,13 @@ def render_index(metas) -> str:
     )
     dek = dek_of(latest)
     dek_html = f'<p class="dek">{esc(dek)}</p>' if dek else ""
+
+    mood_html = ""
+    if latest.get("mood") and not latest.get("weekend"):
+        lis = "".join(
+            f'<li><span class="tk">{esc(k)}</span><b>{esc(v)}</b></li>' for k, v in latest["mood"]
+        )
+        mood_html = f'<ul class="tape-mood">{lis}</ul>'
 
     groups = {}
     for m in metas:
@@ -427,6 +598,7 @@ def render_index(metas) -> str:
     <h1><a href="issues/{latest['date']:%Y-%m-%d}.html">{esc(latest['title'])}</a></h1>
     {dek_html}
     <div class="indices">{idx_items}</div>
+    {mood_html}
     <a class="more" href="issues/{latest['date']:%Y-%m-%d}.html">阅读本期</a>
   </section>
 

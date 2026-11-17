@@ -137,6 +137,58 @@ p.k{
   letter-spacing:.2px;color:var(--ink);
 }
 p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -149,7 +201,8 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月3日　周六</div>
   <h1 class="hl">假期过半，外围已翻多 —— 10/8 开盘作战手册</h1>
   
-<blockquote><p><strong>⚠️ 本文不是 A 股复盘。</strong></p><p>2026-10-03（周六）为国庆假期第 3 天，A 股休市（三步判定一致：指数行情 time=2026-09-30 /</p><p>K 线最新一根=2026-09-30 / 采集日志已打印「10-01、10-02 不是交易日，跳过」）。</p><p>香港市场周末同样休市。文中不出现任何"今日 A 股涨跌"，不基于昨日数据改写当日口径。</p><p>本文做的是 <strong>假期外围定价复盘 + 10/8 开盘推演</strong>，供公众号素材与节前决策使用。</p></blockquote>
+
+<blockquote><p><strong> 本文不是 A 股复盘。</strong></p><p>2026-10-03（周六）为国庆假期第 3 天，A 股休市（三步判定一致：指数行情 time=2026-09-30 /</p><p>K 线最新一根=2026-09-30 / 采集日志已打印「10-01、10-02 不是交易日，跳过」）。</p><p>香港市场周末同样休市。文中不出现任何"今日 A 股涨跌"，不基于昨日数据改写当日口径。</p><p>本文做的是 <strong>假期外围定价复盘 + 10/8 开盘推演</strong>，供公众号素材与节前决策使用。</p></blockquote>
 <h2 id="sec0">一、核心结论（先看这三条）</h2>
 <p class="k">1. 假期最重要的一件事：美国 9 月非农爆冷，加息押注崩塌——这把假期前段的恐慌直接反转了。</p>
 <p>9 月非农仅增 <strong>2.9 万人</strong>，远低于预期 9 万；失业率 4.1%→<strong>4.2%</strong>；7、8 月合计下修 6 万 （7 月由 +2.1 万修正为 <strong>-1.0 万</strong>）。时薪环比仅 <span class="up">+0.1%</span>、同比 <span class="up">+3.0%</span>，为 2021 年以来最低。 CME 口径下 10 月维持不变概率升至 <strong>71.8%~84%</strong>，加息概率由数据前的 29% 降至 17%~22%。</p>
@@ -170,19 +223,19 @@ p.k strong{font-weight:700}
 <div class="tbl"><table><thead><tr><th>指数</th><th>收盘</th><th>涨跌</th><th>年内</th></tr></thead><tbody><tr><td>恒生指数</td><td>23972.29</td><td><strong><span class="down">-2.60%</span></strong></td><td><span class="down">-6.47%</span></td></tr><tr><td>恒生科技</td><td>4157.94</td><td><strong><span class="down">-2.26%</span></strong></td><td><span class="down">-24.62%</span></td></tr><tr><td>国企指数</td><td>8030.54</td><td><strong><span class="down">-2.31%</span></strong></td><td><span class="down">-9.91%</span></td></tr></tbody></table></div>
 <p>恒指再度跌破 24000 点。跌得最狠的是<strong>利率敏感型</strong>（保险、银行），不是中国基本面型； 半导体（中芯 <span class="down">-0.82%</span>、华虹 0.00%）几乎没跟跌——<strong>"谁没跌"比"跌多少"更有信息量</strong>。</p>
 <h2 id="sec2">三、假期题材涨跌分析（领涨 3 个 / 领跌 3 个）</h2>
-<h3>🔴 领涨 ①：AI 算力与半导体龙头</h3>
+<h3>领涨 ①：AI 算力与半导体龙头</h3>
 <p><strong>代表个股</strong>：英伟达 <span class="up">+1.34%</span>（历史新高，市值 5.65 万亿）、SK 海力士 <span class="up">+5.08%</span>、 美光科技 <span class="up">+3.03%</span>、闪迪 <span class="up">+2.75%</span>、IBM <span class="up">+2.63%</span>、埃森哲 <span class="up">+15.99%</span></p>
 <p><strong>上涨逻辑</strong>：三重共振——①非农爆冷压低加息概率，分母端（利率）压力缓解， 高估值成长股最受益；②英伟达自身产业地位未见松动，AI 资本开支叙事仍在； ③值得注意的<strong>结构分裂</strong>：同一天纳指创新高，而存储双雄暴跌 10%。 说明市场在做的是"AI 算力 vs 存储涨价"的<strong>再平衡</strong>，不是全面撤退。</p>
 <p><strong>对 A 股映射</strong>：利好算力硬件、光模块、AI 服务器。但要扣掉一层—— 节前 CPO 5 日 -682 亿 &gt; 20 日 -550 亿（急跑型资金撤离），大摩称 FCC 限制或聚焦 3.2T、 中际旭创不确定性下降。<strong>基本面没坏，坏的是筹码结构</strong>，节后具备反弹条件但需量能确认。</p>
-<h3>🔴 领涨 ②：新能源车</h3>
+<h3>领涨 ②：新能源车</h3>
 <p><strong>代表个股</strong>：特斯拉 <span class="up">+4.65%</span>（370.59 美元）</p>
 <p><strong>上涨逻辑</strong>：基本面驱动，纯内生利好。Q3 全球交付超 48 万辆、高于市场预期且环比二季度 回升，Model 3/Y 占交付总量 98%；欧洲市场成为关键增量，8 月欧盟注册量同比 <span class="up">+53%</span>， 有效对冲了其他市场的压力。这是假期为数不多的"业绩说话型"上涨。</p>
 <p><strong>对 A 股映射</strong>：利好特斯拉产业链、一体化压铸、汽车电子。但 A 股新能车节前并非强势板块， 且港股 10/2 新能车是下跌的（理想、小米走弱），<strong>内外盘信号冲突，节后不宜当作主线</strong>。</p>
-<h3>🔴 领涨 ③：贵金属（冲高后回落，方向变了但幅度有限）</h3>
+<h3>领涨 ③：贵金属（冲高后回落，方向变了但幅度有限）</h3>
 <p><strong>代表品种</strong>：现货黄金冲高至 4207~4227 美元/盎司、白银 61.57 美元/盎司</p>
 <p><strong>上涨逻辑</strong>：标准宏观看跌期权兑现——非农弱 → 加息预期降 → 实际利率下行 → 黄金机会成本下降， 同时美元指数跌破 102 助推。<strong>但要注意"冲高回落收跌"这个形态</strong>：降息交易已被市场部分抢跑， 黄金没有走出趋势行情。</p>
 <p><strong>对 A 股映射</strong>：节前贵金属是重灾区（9/28 贵金属 <span class="down">-6.12%</span>、0/11 红盘、山东黄金跌停）， 源于中美"300 亿对 300 亿"降税框架削避险溢价。如今加息退潮给了一个修复窗口， 但<strong>修复弹性取决于美元能否持续走弱，属于跟随型而非领涨型</strong>。</p>
-<h3>🟢 领跌 ①：HDD / 近线存储（假期最值得研究的一条）</h3>
+<h3>领跌 ①：HDD / 近线存储（假期最值得研究的一条）</h3>
 <p><strong>代表个股</strong>：<strong>西部数据 <span class="down">-10.22%</span></strong>（415.29 美元，盘中最大 <span class="down">-14%</span>）、 <strong>希捷科技 <span class="down">-10.21%</span></strong>（848.99 美元，盘中最大 <span class="down">-16%</span>）</p>
 <p><strong>下跌逻辑</strong>：<strong>不是需求崩了，是"供应纪律"这个叙事第一次被打破。</strong> 东芝宣布投资约 600 亿日元（3.8 亿美元）扩建菲律宾 HDD 工厂，目标 2027 财年把存储容量 年产能较 2025 财年<strong>翻一番</strong>，份额从略高于 10% 提至 30% 中期目标。这是东芝约五年来 首次大规模 HDD 投资。</p>
 <p>为什么杀伤力这么大？支撑希捷/西数今年暴涨（年内 <span class="up">+208%</span>/<span class="up">+141%</span>，远超纳指 100 的 <span class="up">+22%</span>） 的核心逻辑只有一句话：<strong>没有人在建新工厂</strong>。Bernstein 8 月组织希捷管理层路演后明确写道： "三家均未增加驱动器产能，希捷管理层表示工厂已满产、不会扩建……新建工厂至少需要两年， 管理层没有这样的计划。" 现在，占行业约 10% 份额的东芝说它要扩。</p>
@@ -191,28 +244,28 @@ p.k strong{font-weight:700}
 <p><strong>对 A 股映射（关键判断）</strong>：这条利空<strong>不能直接照搬</strong>。看位置——</p>
 <div class="tbl"><table><thead><tr><th>标的</th><th>9/30 收盘</th><th>9/30 当日</th><th>60 日</th><th>年内</th><th>PE</th></tr></thead><tbody><tr><td>江波龙</td><td>301.93</td><td><span class="down">-3.12%</span></td><td><strong><span class="down">-51.91%</span></strong></td><td><span class="up">+23.82%</span></td><td>11.58</td></tr><tr><td>佰维存储</td><td>192.35</td><td><span class="down">-3.15%</span></td><td><strong><span class="down">-54.70%</span></strong></td><td><span class="up">+68.50%</span></td><td>11.12</td></tr><tr><td>德明利</td><td>358.46</td><td><span class="down">-3.69%</span></td><td><strong><span class="down">-57.88%</span></strong></td><td><span class="up">+54.85%</span></td><td>11.92</td></tr><tr><td>香农芯创</td><td>153.24</td><td><span class="down">-4.34%</span></td><td><span class="down">-37.26%</span></td><td><span class="up">+6.23%</span></td><td>17.86</td></tr><tr><td>中芯国际</td><td>111.99</td><td><span class="down">-4.70%</span></td><td><span class="down">-22.99%</span></td><td><span class="down">-8.83%</span></td><td>133.05</td></tr></tbody></table></div>
 <p>A 股存储链 60 日已经腰斩、PE 压到 11 倍出头，<strong>泡沫早已挤掉大半</strong>， 与美股希捷 <span class="up">+208%</span> 的高位完全是两回事。节后大概率是<strong>情绪性低开 + 快速分化</strong>， 而不是美股那种趋势性杀跌。<strong>真正的风险点在于：HDD 扩产是对 SSD 的替代竞争， 若存储芯片涨价叙事同步松动，A 股存储链的"涨价逻辑"会比"估值"先受伤。</strong></p>
-<h3>🟢 领跌 ②：石油石化与油运</h3>
+<h3>领跌 ②：石油石化与油运</h3>
 <p><strong>代表品种</strong>：布伦特 12 月 101.23 美元（<span class="down">-1.1%</span>）、WTI 12 月 90.70 美元（<span class="down">-2.3%</span>）</p>
 <p><strong>下跌逻辑</strong>：<strong>G7 集体行动，人为增加供给。</strong> 法国总统府爱丽舍宫 10/2 声明， 七国集团（美法德英意日加）将通过 IEA 协调<strong>释放 1 亿桶战略石油储备</strong>，立即启动、 持续 4 个月，<strong>最初 20 天集中释放大量柴油</strong>。同步协调炼厂检修避免集中停产、 并承诺成员国之间不设能源出口限制。</p>
 <p>背景是美欧柴油价格创历史新高：欧盟均价已达 2.24 欧元/升（冲突前 1.59）， 12 个成员国柴油价格创历史新高；英国柴油零售价 2 英镑/升，突破 2022 年 6 月纪录。 供给端，美以伊冲突 8 个月致波斯湾柴油出货量降至战前 1/4，俄罗斯 8 月出口降至 5 月的 20%。 政治层面，特朗普面临 11/3 中期选举压力，其经济表现支持率创新低。</p>
 <p><strong>对 A 股映射</strong>：利空油气开采、炼化；<strong>利多航空、航运、交运等燃油成本敏感行业</strong> （这与 10/2 港股航空股大跌形成反向）。但要提示：释放是 4 个月的<strong>存量投放</strong>， 不改变中东地缘的供给约束，油价中枢大概率高位震荡而非趋势下行。</p>
-<h3>🟢 领跌 ③：港股金融地产（利率敏感型）</h3>
+<h3>领跌 ③：港股金融地产（利率敏感型）</h3>
 <p><strong>代表个股</strong>：汇丰控股、友邦保险、工商银行等（10/2 港股普跌，恒指 <span class="down">-2.60%</span>）</p>
 <p><strong>下跌逻辑</strong>：典型的美债长端定价。10 年期美债本周盘中触 5.34%（2002 年以来最高）， 高利率环境下保险/银行的资产端与估值同时承压。<strong>这是纯外生变量，不是中国基本面恶化</strong>—— 同期港股半导体几乎没跟跌就是反证。</p>
 <p><strong>⚠️ 重要修正</strong>：这批跌幅发生在<strong>非农公布前</strong>。非农后 10 年美债已回落 6bp、 美元跌破 102，<strong>压制因素正在解除</strong>。10/5 港股开盘应优先观察金融板块是否补涨—— 如果补涨，说明是流动性冲击；如果不补涨，说明市场在定价别的东西（那才是真麻烦）。</p>
 <h2 id="sec3">四、A 股自身的基本面增量（假期期间累积）</h2>
 <h3>三季报窗口正式开启</h3>
 <ul><li>已有 38 家披露前三季预告，<strong>26 家预喜（预增/略增/扭亏），预喜率近七成</strong></li><li><strong>半导体是大赢家</strong>：芯联集成-U 预计前三季营收约 77.66 亿（<span class="up">+43.23%</span>）、 归母净利约 6.81 亿（去年同期亏 4.63 亿），Q3 全品类调价约 <strong>15%</strong>， 涨价带来的毛利弹性从 Q3 开始体现、Q4 进一步释放； 气派科技 Q3 营收 3.3 亿（<span class="up">+61.26%</span>）、净利 2150 万扭亏</li><li>立讯精密前三季净利 132.46~143.98 亿（<span class="up">+15%</span>~25%）</li><li><strong>节后前 10 个交易日（10/8–10/21）134 家集中披露</strong>，电子、基础化工、 医药生物、有色金属为主力；15 只上半年盈利标的融资余额较 8 月末增超 10%</li></ul>
-<h3>⚠️ 风险事件：ST 联光（原联创光电 600363）</h3>
+<h3>风险事件：ST 联光（原联创光电 600363）</h3>
 <ul><li>控股股东江西省电子集团非经营性占用资金 <strong>16.92 亿元</strong>未清偿，触发其他风险警示</li><li>9/29 停牌一日，9/30 复牌一字跌停收 <strong>12.20 元</strong>，年内 <strong><span class="down">-80.65%</span></strong>，股东 7.67 万户踩雷</li><li>连带风险：金融机构借款及票据逾期本金 <strong>14.39 亿</strong>（占净资产 32.26%）、 银行账户冻结、子公司股权冻结；8/4 公司及董事长伍锐已被证监会立案</li><li><strong>对市场的意义</strong>：这是"大股东资金占用"从 ST 滑向退市的又一案例， 会引发市场对<strong>同类治理瑕疵标的</strong>的再审视（下文持仓部分会点名一只）</li></ul>
 <h3>其他</h3>
 <ul><li>商务部就对原产于欧盟的进口<strong>对硝基甲苯</strong>发起反倾销调查（小品种，影响有限）</li><li>深圳楼市假期成交回暖，地产链政策预期仍在</li><li>券商 10 月金股：<strong>药明康德获 9 次机构推荐居首</strong>，中际旭创 4 次； 主线共识为"超跌硬科技 + 资源周期 + 政策受益"三条</li></ul>
 <h2 id="sec4">五、10/8 A 股开盘推演</h2>
-<h3>🟢 利多传导链（确定性从高到低）</h3>
+<h3>利多传导链（确定性从高到低）</h3>
 <ol><li><strong>美债长端回落 → 高估值成长股估值约束缓解</strong>。这是开源证券"科技反弹两个条件" （新叙事 + 美债收益率拐点）中的第二个，现已部分满足。</li><li><strong>英伟达历史新高 + 纳指新高 → AI 算力链情绪修复</strong>。节前 CPO 属"急跑型"资金撤离 （5 日 -682 亿 &gt; 20 日 -550 亿），假期无新增利空，具备反弹条件。</li><li><strong>三季报预喜率近七成 + 半导体业绩兑现</strong> → 10 月从"估值博弈"切向"业绩验证"， 有订单和现金流可验证的标的率先受益。</li><li><strong>日历效应</strong>：2016 年以来国庆后一周沪指上涨概率 62.5%（平均 <span class="up">+1.3%</span>）； 券商口径节后 5 个交易日上涨概率约 70%。<strong>这一条要扣除季节性，别全归因为新增利好。</strong></li></ol>
-<h3>🔴 利空传导链</h3>
+<h3>利空传导链</h3>
 <ol><li><strong>存储/HDD 供应纪律终结</strong> → 节后存储链情绪性承压（但见上文位置差异分析，杀伤力有限）</li><li><strong>油价下行</strong> → 油气开采、炼化承压</li><li><strong>ST 联光事件</strong> → 治理瑕疵标的、特别是有资金占用历史的公司承压</li><li><strong>外部不确定性未消</strong>：美联储 10 月底议息仍在，美债大概率高位震荡而非趋势下行； 中东局势与油价尾部风险仍在</li></ol>
-<h3>⚪ 需要 10/5–10/7 港股验证的中性变量</h3>
+<h3>需要 10/5–10/7 港股验证的中性变量</h3>
 <p>港股 10/5（一）、10/6（二）、10/7（三）三个交易日，是 10/8 A 股开盘前<strong>唯一的 中国资产定价窗口</strong>。重点看三件事：</p>
 <ol><li><strong>恒指能否收复 24000 点</strong>、金融板块是否补涨 → 验证"美债冲击是否解除"</li><li><strong>半导体（中芯/华虹）能否由抗跌转上涨</strong> → 验证 AI 算力链情绪</li><li><strong>成交是否放量</strong> → 南向资金 10/8 恢复，但港股通节前已暂停，缩量属正常</li></ol>
 <h2 id="sec5">六、持仓提示（基于 9/30 收盘价 × 最新确认持仓）</h2>
