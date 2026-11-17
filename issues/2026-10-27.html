@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月27日　周二</div>
   <h1 class="hl">权重银行独红、成长科技与军工医药全面失血</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-27 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3648.30</span><span class="tch down">-1.33%</span><span class="tn">权重护盘</span></li><li><span class="tnm">深证成指</span><span class="tvl">11245.73</span><span class="tch down">-2.50%</span><span class="tn">　</span></li><li><span class="tnm">创业板指</span><span class="tvl">2548.15</span><span class="tch down">-3.41%</span><span class="tn">失守2600</span></li><li><span class="tnm">科创50</span><span class="tvl">1252.28</span><span class="tch down">-4.81%</span><span class="tn">主要指数最弱</span></li><li><span class="tnm">沪深300</span><span class="tvl">4049.55</span><span class="tch down">-1.32%</span><span class="tn">大票相对扛跌</span></li><li><span class="tnm">北证50</span><span class="tvl">931.64</span><span class="tch down">-3.35%</span><span class="tn">　</span></li><li><span class="tnm">中证500</span><span class="tvl">6511.42</span><span class="tch down">-3.00%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6427.17</span><span class="tch down">-3.07%</span><span class="tn">　</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>10%</b></li><li><span class="tk">涨停</span><b>44 家</b></li><li><span class="tk">跌停</span><b>28 家</b></li><li><span class="tk">成交额</span><b>1.46 万亿</b></li></ul></section>
-<blockquote><p>数据来源：westock（腾讯自选股）实时收盘；全市场主力净额由 124 个行业榜求和得出。</p><p>注：market-overview 数据日期滞后为 10/26，本文以 quote / changedist / sector ranking 当日口径为准。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-27 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3648.30</span><span class="tch down">-1.33%</span><span class="tn">权重护盘</span></li><li><span class="tnm">深证成指</span><span class="tvl">11245.73</span><span class="tch down">-2.50%</span><span class="tn">　</span></li><li><span class="tnm">创业板指</span><span class="tvl">2548.15</span><span class="tch down">-3.41%</span><span class="tn">失守2600</span></li><li><span class="tnm">科创50</span><span class="tvl">1252.28</span><span class="tch down">-4.81%</span><span class="tn">主要指数最弱</span></li><li><span class="tnm">沪深300</span><span class="tvl">4049.55</span><span class="tch down">-1.32%</span><span class="tn">大票相对扛跌</span></li><li><span class="tnm">北证50</span><span class="tvl">931.64</span><span class="tch down">-3.35%</span><span class="tn">　</span></li><li><span class="tnm">中证500</span><span class="tvl">6511.42</span><span class="tch down">-3.00%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6427.17</span><span class="tch down">-3.07%</span><span class="tn">　</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">606</b></li><li><span class="tk">下跌</span><b class="down">4922</b></li><li><span class="tk">涨停</span><b>44</b></li><li><span class="tk">跌停</span><b>28</b></li><li><span class="tk">成交额</span><b>1.46 万亿</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">今日是国庆后最极端的系统性杀跌日——红盘率仅 10%、917 股跌超 5%、科创50 跌近 5%，全市场主力净流出约 455 亿。盘面结构是「权重银行独红、成长科技与军工医药全面失血」。</p>
 <ul><li><strong>资金表现</strong>：全 A 行业主力净额 <strong>-455.43 亿</strong>（净流出，124 个行业中仅 23 个净流入、101 个净流出）。资金高度集中于避险：银行（股份制+6.59亿/国有大行+3.55亿）、电机（<span class="up">+6.81亿</span>，三周期全正）、个护用品（<span class="up">+2.48亿</span>，20日累计+59亿）。失血主力是<strong>科技硬件全产业链</strong>——半导体今日 -74.19 亿（全市场第一），20日累计 -828 亿为全市场最深坑；元件 <span class="down">-35.23亿</span>（20日 <span class="down">-496亿</span>）、软件开发 <span class="down">-33.43亿</span>、通信设备 <span class="down">-20.65亿</span>（20日 <span class="down">-855亿</span>）、消费电子 <span class="down">-18.89亿</span>。</li><li><strong>领涨板块</strong>：银行（红利避险）、零售/免税/离境退税（政策+低位）、航运港口/BDI（运价业绩）。</li><li><strong>领跌板块</strong>：科技硬件（半导体/元件/软件/通信/消费电子）、军工（航展预期兑现补跌）、医药（三季报证伪+长久期压制）。</li></ul>
@@ -235,6 +247,7 @@ p.k strong{font-weight:700}
 <blockquote><p>红盘率仅10%、科创50跌近5%、917股跌超5%：A股系统性杀跌，银行红利独撑盘面，科技硬件成今日唯一系统性失血主线</p></blockquote>
 <p><strong>备选</strong>：</p>
 <blockquote><p>基金经理「止损科技重回红利」刷屏，A股10/27极致避险，半导体20日失血828亿成全市场最深坑</p><p>红盘率10%、28股跌停：五中全会与美联储议息「双会周」前夜，A股用脚投票选了确定性（银行/航运/零售）</p></blockquote>
+<div class="source-notes"><blockquote><p>数据来源：westock（腾讯自选股）实时收盘；全市场主力净额由 124 个行业榜求和得出。</p><p>注：market-overview 数据日期滞后为 10/26，本文以 quote / changedist / sector ranking 当日口径为准。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-26.html"><span class="dir">上一期</span>10-26　权重护盘、成长杀跌</a><a class="next" href="2026-10-28.html"><span class="dir">下一期</span>10-28　昨日系统性杀跌、今日风险偏好一夜反转</a></div>
 </article>
 </div></div>

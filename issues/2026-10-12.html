@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月12日　周一</div>
   <h1 class="hl">权重护盘、个股普杀</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-12 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3797.24</span><span class="tch flat">0.43%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12384.87</span><span class="tch flat">2.03%</span></li><li><span class="tnm">创业板指</span><span class="tvl">2963.82</span><span class="tch flat">2.61%</span></li><li><span class="tnm">科创50</span><span class="tvl">1426.72</span><span class="tch flat">2.10%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4287.98</span><span class="tch flat">0.68%</span></li><li><span class="tnm">北证50</span><span class="tvl">1011.75</span><span class="tch flat">2.46%</span></li><li><span class="tnm">中证500</span><span class="tvl">7093.02</span><span class="tch flat">2.18%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7021.47</span><span class="tch flat">1.88%</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>20%</b></li><li><span class="tk">涨停</span><b>48 家</b></li><li><span class="tk">跌停</span><b>23 家</b></li></ul></section>
-<blockquote><p>国庆后第 3 个交易日（10/9、10/12 为交易日，10/10–11 周末休市）。</p><p>数据来源：neodata 统一行情 / 大盘市场宽度统计 / 板块资金排行（westock 仍 AUTH_REQUIRED，全程免鉴权通道）。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-12 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3797.24</span><span class="tch flat">0.43%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12384.87</span><span class="tch flat">2.03%</span></li><li><span class="tnm">创业板指</span><span class="tvl">2963.82</span><span class="tch flat">2.61%</span></li><li><span class="tnm">科创50</span><span class="tvl">1426.72</span><span class="tch flat">2.10%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4287.98</span><span class="tch flat">0.68%</span></li><li><span class="tnm">北证50</span><span class="tvl">1011.75</span><span class="tch flat">2.46%</span></li><li><span class="tnm">中证500</span><span class="tvl">7093.02</span><span class="tch flat">2.18%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7021.47</span><span class="tch flat">1.88%</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">1167</b></li><li><span class="tk">下跌</span><b class="down">4325</b></li><li><span class="tk">涨停</span><b>48</b></li><li><span class="tk">跌停</span><b>23</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p>今日市场呈&amp;#x73B0;<strong>「权重护盘、个股普杀」的极致分化</strong>。上证指数仅微跌 0.43%，完全靠银行板块独撑；但全市场<strong>红盘率仅 20%</strong>，<strong>跌超 5% 个股达 470 家（昨日 165 家，骤扩 2.8 倍）</strong>，中证 2000 小盘指数跌 2.10%、对应 ETF 跌 2.52%。</p>
 <p>资金极致避险：银行（红利）+ 传媒/AI应用（超跌修复）双向吸金，而硬件链（PCB/覆铜板/光模块/半导体/消费电子）与资源品（贵金属）集中出逃。这是 10/8「机构砸盘+游资接力」双轨分裂的延续与深化——<strong>宽度进一步崩塌（红盘率 30%→20%），但高度仍在（涨停 48 家、连板晋级率 56.76%）</strong>。</p>
@@ -238,6 +250,7 @@ p.k strong{font-weight:700}
 <ol><li>银行独撑沪指微跌、470 股跌超 5%：A股极致避险，传媒 AI 应用成唯一活口</li></ol>
 <p class="k">备选标题：</p>
 <p>2\. 红盘率仅 20%！470 股跌超 5%，A股上演"指数稳、个股崩"的极致分化 3\. FCC 放过光模块却仍跌 5%：A股杀的是筹码不是消息，利空出尽 ≠ 见底 4\. 从 10/9 反弹到 10/12 普杀：传媒两连阳成避风港，PCB 贵金属一日游证伪</p>
+<div class="source-notes"><blockquote><p>国庆后第 3 个交易日（10/9、10/12 为交易日，10/10–11 周末休市）。</p><p>数据来源：neodata 统一行情 / 大盘市场宽度统计 / 板块资金排行（westock 仍 AUTH_REQUIRED，全程免鉴权通道）。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-11.html"><span class="dir">上一期</span>10-11　周末）· 外围观察 + 10/12盘前清单</a><a class="next" href="2026-10-13.html"><span class="dir">下一期</span>10-13　探底回升、个股修复、结构撕裂</a></div>
 </article>
 </div></div>

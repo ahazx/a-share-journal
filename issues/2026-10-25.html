@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">周末外围观察 + 10/26 盘前清单</h1>
   
 
-<blockquote><p><strong>本文不是 A 股当日复盘。</strong> 今日为周日，A股/港股/欧股/日韩/美股场内均无交易。</p><p>三步交易日判定一致：① westock quote <code>sh000001</code> time 字段 = <strong>2026-10-23</strong>（周五）；</p><p>② kline 最新一根 = <strong>2026-10-23</strong>；③ 交易所周末一律不开市。</p><p><strong>下一交易日：2026-10-26（周一）已确认开市。</strong> 本报告只做「外围定价 + 周一开盘推演」，不编造当日涨跌。</p></blockquote>
 <h2 id="sec0">一、上一交易日（10/23 周五）收盘基准速览</h2>
 <blockquote><p>口径：10/23 收盘，作为判断「周一怎么开」的锚。源自交易所数据 / 财经早报，非当日行情。</p></blockquote>
 <ul><li><strong>指数</strong>：上证 3690.48 <strong><span class="up">+0.89%</span></strong>（盘中探底 3574 后深V 收回，成交额 8987 亿）；深成指 11673.83 <strong><span class="up">+2.79%</span></strong>；创业板 2684.10 <strong><span class="up">+4.16%</span></strong>（收复 2700）；科创50 <strong><span class="up">+3.04%</span></strong>。</li><li><strong>量能</strong>：两市成交 <strong>约 1.96 万亿</strong>（较前日放量约 4310 亿 / <span class="up">+28%</span>），典型「大奇迹日」深V 反包。</li><li><strong>广度</strong>：全市场 <strong>超 4500 股上涨</strong>；涨停 84 / 跌停 9。</li><li><strong>资金结构</strong>：本周（10/20–24）主力资金全周净流出 <strong>744.64 亿</strong>，但股票型+跨境 ETF 合计净流入 <strong>1580.77 亿</strong> —— 下跌对手盘是被动资金而非主动撤离。</li><li><strong>周线分化</strong>：沪指全周 <strong><span class="down">-0.69%</span></strong>、创业板 <strong><span class="down">-3.18%</span></strong>、中证1000 <strong><span class="up">+0.79%</span></strong>（大盘弱、小盘强）。</li><li><strong>当日主线</strong>：① 午间近 10 家 AI 龙头集体公告「订单排至 2027/2028」（新易盛拟回购 8–10 亿、中际旭创称海外客户订单正常）点燃算力硬件反攻，电子获主力净流入超 263 亿；② 人形机器人 / 物理AI 站上风口（电机制造周涨超 15%）；③ 电池修复（宁德 <span class="up">+7.80%</span> 收复 10/21 的 <span class="down">-12%</span>）；④ 银行/红利领跌（risk-on 跷跷板）。</li></ul>
@@ -226,6 +238,7 @@ p.k strong{font-weight:700}
 <h2 id="sec4">五、公众号标题（主推 1 + 备选 3）</h2>
 <ul><li><strong>主推</strong>：《油价破116、美联储周四压境：A股在五中全会与议息周里，前半周只能"多看少动"》</li><li>备选1：《黄金失守4000、美债吃掉AI：全球定价权反转，A股周一的三个开盘变量》</li><li>备选2：《上交所指数新规10/26落地、7000亿MLF对冲：被动再平衡下，超权重银行石油链承压》</li><li>备选3：《三季报最后一周+1060亿解禁：在"增收不增利"的刀口上，A股如何避雷》</li></ul>
 <p><em>数据来源：交易所行情（10/23 收盘）、财经早报（10/25 周日版）、网易薛洪言（10-25）、汇通网美联储前瞻、新华社/商务部/上交所公告。休市日无当日行情，本报告不构成投资建议。</em></p>
+<div class="source-notes"><blockquote><p><strong>本文不是 A 股当日复盘。</strong> 今日为周日，A股/港股/欧股/日韩/美股场内均无交易。</p><p>三步交易日判定一致：① westock quote <code>sh000001</code> time 字段 = <strong>2026-10-23</strong>（周五）；</p><p>② kline 最新一根 = <strong>2026-10-23</strong>；③ 交易所周末一律不开市。</p><p><strong>下一交易日：2026-10-26（周一）已确认开市。</strong> 本报告只做「外围定价 + 周一开盘推演」，不编造当日涨跌。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-24.html"><span class="dir">上一期</span>10-24　外围观察与 10/26 盘前清单</a><a class="next" href="2026-10-26.html"><span class="dir">下一期</span>10-26　权重护盘、成长杀跌</a></div>
 </article>
 </div></div>

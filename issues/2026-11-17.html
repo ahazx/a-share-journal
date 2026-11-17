@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月17日　周二</div>
   <h1 class="hl">外盘重挫传导 + 半导体内部高低切 + 影视短剧一日游崩塌</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-17 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3584.58</span><span class="tch down">-0.50%</span><span class="tn">盘中失守3600</span></li><li><span class="tnm">深证成指</span><span class="tvl">10638.52</span><span class="tch down">-0.49%</span><span class="tn">科技权重拖累</span></li><li><span class="tnm">创业板指</span><span class="tvl">2292.20</span><span class="tch down">-1.20%</span><span class="tn">最弱主要指数</span></li><li><span class="tnm">科创50</span><span class="tvl">1221.19</span><span class="tch up">+0.62%</span><span class="tn">逆势红</span></li><li><span class="tnm">沪深300</span><span class="tvl">3976.46</span><span class="tch down">-0.08%</span><span class="tn">最抗跌</span></li><li><span class="tnm">北证50</span><span class="tvl">841.49</span><span class="tch up">+0.59%</span><span class="tn">小盘局部修复</span></li><li><span class="tnm">中证500</span><span class="tvl">6283.01</span><span class="tch down">-0.23%</span><span class="tn">中盘小幅回落</span></li><li><span class="tnm">中证1000</span><span class="tvl">6092.39</span><span class="tch down">-1.17%</span><span class="tn">中小盘普跌</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>23%</b></li><li><span class="tk">涨停</span><b>38 家</b></li><li><span class="tk">跌停</span><b>84 家</b></li><li><span class="tk">成交额</span><b>1.46 万亿</b></li><li><span class="tk">连板</span><b>6 只</b></li><li><span class="tk">最高板</span><b>3 板</b></li></ul></section>
-<blockquote><p>数据来源：westock 实时行情 / 涨跌分布 / 全行业板块榜（含主力资金三周期）/ 东财涨停连板池（rc:0，38家涨停）；交易日判定三步一致（neodata 日历=开市 / quote time=2026-11-17 / changedist 当日完整）。消息面经财联社、同花顺、腾讯新闻多源交叉核验。</p><p>口径：沪深A股全市场；连板梯队以东财涨停池 + 昨日强势股今日表现为准；主力资金单位已由万元换算为亿元。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-17 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3584.58</span><span class="tch down">-0.50%</span><span class="tn">盘中失守3600</span></li><li><span class="tnm">深证成指</span><span class="tvl">10638.52</span><span class="tch down">-0.49%</span><span class="tn">科技权重拖累</span></li><li><span class="tnm">创业板指</span><span class="tvl">2292.20</span><span class="tch down">-1.20%</span><span class="tn">最弱主要指数</span></li><li><span class="tnm">科创50</span><span class="tvl">1221.19</span><span class="tch up">+0.62%</span><span class="tn">逆势红</span></li><li><span class="tnm">沪深300</span><span class="tvl">3976.46</span><span class="tch down">-0.08%</span><span class="tn">最抗跌</span></li><li><span class="tnm">北证50</span><span class="tvl">841.49</span><span class="tch up">+0.59%</span><span class="tn">小盘局部修复</span></li><li><span class="tnm">中证500</span><span class="tvl">6283.01</span><span class="tch down">-0.23%</span><span class="tn">中盘小幅回落</span></li><li><span class="tnm">中证1000</span><span class="tvl">6092.39</span><span class="tch down">-1.17%</span><span class="tn">中小盘普跌</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">1326</b></li><li><span class="tk">下跌</span><b class="down">4119</b></li><li><span class="tk">涨停</span><b>38</b></li><li><span class="tk">跌停</span><b>84</b></li><li><span class="tk">成交额</span><b>1.46 万亿</b><i class="tsub">缩量 268 亿</i></li><li><span class="tk">连板</span><b>6 只</b></li><li><span class="tk">最高</span><b>3 板</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">「外盘重挫传导 + 半导体内部高低切 + 影视短剧一日游崩塌」的第二个普跌日——指数小跌、个股普杀，科技内部冰火两重天。</p>
 <p class="k">1. 个股层面普跌，情绪降至冰点</p>
@@ -247,14 +259,14 @@ p.k strong{font-weight:700}
 <p><strong>首板 32 只</strong>，行业分布高度分散：IT服务 3、环保设备 3、电子化学 3、电网设备 2、光学光电 2、消费电子 2、小家电 2、通用设备 2、化学原料 2——<strong>没有一条集中主线</strong>，说明资金在到处试错，而不是抱团一个方向。</p>
 <p><strong>梯队判读</strong>：高度从昨日 4 板降至 3 板、连板数从 11 只腰斩至 6 只、跌停 84 远超涨停 38——<strong>打板赚钱效应急剧恶化，短线情绪进入冰点</strong>。唯一有板块效应的是家电线（长虹美菱 + 小熊电器双双 2 板），但高度有限，撑不起情绪修复。</p>
 <h2 id="sec4">五、题材涨跌分析（领涨3 / 领跌3）</h2>
-<h3>▲ 领涨题材</h3>
+<h3>领涨题材</h3>
 <p class="k">① 半导体材料 / 光刻胶 —— 新主线启动第 1 天</p>
 <div class="tbl"><table><thead><tr><th>项</th><th>内容</th></tr></thead><tbody><tr><td>代表个股</td><td><strong>有研新材</strong>（涨停，靶材 + 大基金二期双龙头）、<strong>联合化学</strong>（20cm）、西陇科学（涨停，电子化学品）、华虹宏力（<span class="up">+10.39%</span>，大硅片）、伟测科技（<span class="up">+14.35%</span>）</td></tr><tr><td>板块数据</td><td>靶材 <span class="up">+4.77%</span>（5/5 全红）、光刻胶 <span class="up">+2.71%</span>（54/82 红）、光刻机 <span class="up">+2.70%</span>、大基金二期 <span class="up">+2.10%</span>（主力 +26.89 亿）、中芯国际概念 <span class="up">+1.54%</span>（主力 +36.09 亿）、电子特气 <span class="up">+1.85%</span>、大硅片 <span class="up">+1.70%</span></td></tr><tr><td>资金</td><td>半导体行业主力 <strong>+29.19 亿，全市场第一</strong></td></tr><tr><td>涨跌逻辑</td><td>三重催化共振——① 上海微电子自主研发新一代前道干式光刻机通用技术平台亮相，国产光刻机里程碑突破；② 中芯国际营收同比增 33.9%，晶圆厂扩产带动材料设备需求；③ 氦气等电子特气涨价。资金选择「卡脖子最硬、位置最低」的材料设备端做补涨。</td></tr><tr><td><strong>判定</strong></td><td>前排带得动后排，广度好（光刻胶 54/82 红）。但需警惕内部高低切——昨日龙头凯美特气、华软科技今日高开回落，说明是<strong>换手到新龙头</strong>而非全板块共振。属国产替代 + 低位补涨逻辑，<strong>不是需求反转</strong>，不宜按趋势行情对待。</td></tr></tbody></table></div>
 <p class="k">② 贵金属 —— 避险配置</p>
 <div class="tbl"><table><thead><tr><th>项</th><th>内容</th></tr></thead><tbody><tr><td>代表个股</td><td>山金国际（<span class="up">+3.40%</span>），板块 10/11 红</td></tr><tr><td>板块数据</td><td>贵金属行业 <strong><span class="up">+2.09%</span></strong>，收在全天偏高位，主力净额 <strong>+4.73 亿</strong></td></tr><tr><td>涨跌逻辑</td><td>外围纳指暴跌 2.49%、地缘不确定 + 降息预期升温，避险资金流入黄金。典型「外盘杀跌 → A股避险」传导链条。</td></tr><tr><td><strong>判定</strong></td><td>广度好（10/11 红）但绝对量级有限，属防御配置而非进攻主线。在普跌日能红盘已属不易，但不足以支撑指数。</td></tr></tbody></table></div>
 <p class="k">③ 小家电 / 白电 —— 防御性消费第 1 天</p>
 <div class="tbl"><table><thead><tr><th>项</th><th>内容</th></tr></thead><tbody><tr><td>代表个股</td><td>北鼎股份（<span class="up">+16.05%</span>）、小熊电器（2 板）、长虹美菱（2 板 / <span class="up">+9.98%</span>）、九阳股份（涨停）</td></tr><tr><td>板块数据</td><td>小家电 <strong><span class="up">+3.94%</span>，行业第一</strong>（13/20 红）、黑色家电 <span class="up">+1.51%</span>、白色家电 <span class="up">+1.08%</span>（7/10 红）</td></tr><tr><td>资金</td><td>小家电 +0.53 亿、白电 +3.29 亿——<strong>量级很小</strong></td></tr><tr><td>涨跌逻辑</td><td>普跌环境中资金抱团低位消费防御；以旧换新政策预期 + 高股息属性。典型的「跌怕了找地方躲」。</td></tr><tr><td><strong>判定</strong></td><td>前排带得动后排（白电 7/10 红），但主力净额太小，属<strong>存量资金避险抱团，非增量主线</strong>。这种防御线通常只能维持 1-2 天，一旦大盘企稳就会被抽走。</td></tr></tbody></table></div>
-<h3>▼ 领跌题材</h3>
+<h3>领跌题材</h3>
 <p class="k">① 影视院线 / AI 短剧 —— 一日游崩塌</p>
 <div class="tbl"><table><thead><tr><th>项</th><th>内容</th></tr></thead><tbody><tr><td>代表个股</td><td><strong>文投控股（<span class="down">-9.89%</span> 跌停）</strong>——此前 5 天 4 板的穿越龙；幸福蓝海、浙文影业、大晟文化、中青宝、电魂网络、横店影视<strong>全线跌停</strong>；华策影视、华智数媒跌超 8%</td></tr><tr><td>板块数据</td><td>影视院线 <strong><span class="down">-8.59%</span>（0/19 全绿）</strong>、电视广播 <span class="down">-7.01%</span>（0/13）、数字媒体 <span class="down">-6.2%</span>（0/14）、出版 <span class="down">-5.12%</span>（1/29）、广告营销 <span class="down">-4.99%</span>（1/28）；概念端爱奇艺 <span class="down">-8.3%</span>、短剧/互动游戏 <span class="down">-6.48%</span>、影视传媒 <span class="down">-5.92%</span></td></tr><tr><td>资金</td><td>短剧/互动游戏主力 <strong>-54.01 亿</strong>、影视传媒 <strong>-40.63 亿</strong></td></tr><tr><td>涨跌逻辑</td><td>龙头文投控股昨晚公告：若 2026 年度经审计净利为负值且营收低于 3 亿元，股票将面临退市风险警示；同时澄清 AI 漫剧相关业务收入占营收比例仅 <strong>2.57%</strong>。→ <strong>龙头自身逻辑证伪 + 退市风险</strong>，双杀直接带崩整个板块。</td></tr><tr><td><strong>判定</strong></td><td>前排龙头自己先杀、后排全面跟随跌停，<strong>「前排带不动后排、后排也推不动前排」双向失效，退潮确立</strong>。纯情绪题材缺乏业绩支撑的典型「击鼓传花」终结，短期不宜抄底。</td></tr></tbody></table></div>
 <p class="k">② 通信设备 / 元件 CPO·PCB —— 连续第 4 日杀跌</p>
@@ -267,6 +279,7 @@ p.k strong{font-weight:700}
 <p><strong>风险共性（三条都中）</strong>：低价（1.7~2.9 元）+ 强故事（重整 / 算力 / 机器人）+ 亏损底子。这类标的涨停靠的是情绪与题材想象，不是业绩；<strong>一旦故事证伪或价格跌回 1.5 元以下，流动性会瞬间消失，跌起来是连续跌停而非阴跌。</strong></p>
 <p><strong>现成反面样本</strong>：文投控股今日因退市风险警示直接 <strong><span class="down">-9.89%</span> 跌停</strong>，昨日还是 5 天 4 板的强势龙头——有退市风险的票，情绪退潮时不会给你体面的离场价。</p>
 <p><strong>操作建议</strong>：这类票若已在手，涨停板上就该考虑减仓而不是加仓；若没在手里，<strong>不要因为"才 2 块钱、便宜"去买</strong>——低价不等于低估，面值退市是 A 股唯一会让本金归零的机制。</p>
+<div class="source-notes"><blockquote><p>数据来源：westock 实时行情 / 涨跌分布 / 全行业板块榜（含主力资金三周期）/ 东财涨停连板池（rc:0，38家涨停）；交易日判定三步一致（neodata 日历=开市 / quote time=2026-11-17 / changedist 当日完整）。消息面经财联社、同花顺、腾讯新闻多源交叉核验。</p><p>口径：沪深A股全市场；连板梯队以东财涨停池 + 昨日强势股今日表现为准；主力资金单位已由万元换算为亿元。</p></blockquote></div>
 <blockquote><p>免责声明：本复盘仅供学习研究参考，不构成投资建议。股市有风险，交易需谨慎。</p></blockquote>
 <div class="pager"><a class="prev" href="2026-11-16.html"><span class="dir">上一期</span>11-16　英伟达治理危机引爆算力链、高低切到红利创新高</a></div>
 </article>

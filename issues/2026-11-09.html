@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月9日　周一</div>
   <h1 class="hl">缩量 1.48 万亿、沪强深弱，钱从新能源撤出、猛攻科技</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-09 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3660.79</span><span class="tch up">+0.32%</span><span class="tn">低开高走</span></li><li><span class="tnm">深证成指</span><span class="tvl">11145.49</span><span class="tch down">-0.27%</span><span class="tn">冲高回落</span></li><li><span class="tnm">创业板指</span><span class="tvl">2458.56</span><span class="tch down">-0.27%</span><span class="tn">受新能源权重压制</span></li><li><span class="tnm">科创50</span><span class="tvl">1256.96</span><span class="tch up">+0.30%</span><span class="tn">逆势走强</span></li><li><span class="tnm">沪深300</span><span class="tvl">4056.11</span><span class="tch up">+0.05%</span><span class="tn">微红</span></li><li><span class="tnm">北证50</span><span class="tvl">895.76</span><span class="tch up">+0.82%</span><span class="tn">小盘活跃（公开收盘统计）</span></li></ul><ul class="tape-mood"><li><span class="tk">涨停</span><b>58 家</b></li><li><span class="tk">跌停</span><b>2 家</b></li><li><span class="tk">成交额</span><b>1.48 万亿</b></li><li><span class="tk">连板</span><b>9 只</b></li></ul></section>
-<blockquote><p>数据口径：westock 实时行情/板块榜（收盘快照），辅以公开资讯交叉验证。涨跌分布、量能、板块涨跌、主力净流入均为当日真实数据。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-09 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3660.79</span><span class="tch up">+0.32%</span><span class="tn">低开高走</span></li><li><span class="tnm">深证成指</span><span class="tvl">11145.49</span><span class="tch down">-0.27%</span><span class="tn">冲高回落</span></li><li><span class="tnm">创业板指</span><span class="tvl">2458.56</span><span class="tch down">-0.27%</span><span class="tn">受新能源权重压制</span></li><li><span class="tnm">科创50</span><span class="tvl">1256.96</span><span class="tch up">+0.30%</span><span class="tn">逆势走强</span></li><li><span class="tnm">沪深300</span><span class="tvl">4056.11</span><span class="tch up">+0.05%</span><span class="tn">微红</span></li><li><span class="tnm">北证50</span><span class="tvl">895.76</span><span class="tch up">+0.82%</span><span class="tn">小盘活跃（公开收盘统计）</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">2242</b></li><li><span class="tk">下跌</span><b class="down">3148</b></li><li><span class="tk">涨停</span><b>58</b></li><li><span class="tk">跌停</span><b>2</b></li><li><span class="tk">成交额</span><b>1.48 万亿</b><i class="tsub">缩量 1752 亿</i></li><li><span class="tk">连板</span><b>9 只</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">资金表现（一句话）：缩量 1.48 万亿、沪强深弱，钱从新能源撤出、猛攻科技硬件与资源红利。</p>
 <ul><li><strong>指数分化</strong>：上证 <span class="up">+0.32%</span> 独红，深成指/创业板指双双 <span class="down">-0.27%</span>，典型"沪强深弱、大强小弱"——资金抱团大盘权重与低估值蓝筹。</li><li><strong>资金主线①（科技硬件高低切换）</strong>：元件（<span class="up">+37.7亿</span>）、通信设备（<span class="up">+36.8亿</span>）、消费电子（<span class="up">+26.4亿</span>）三板块合计吸金超 <strong>100 亿</strong>，元件板块主力净流入居全市场首位。本质是资金从新能源、半导体溢出，流向估值更低、景气更确定的元件/通信方向。</li><li><strong>资金主线②（资源红利避险）</strong>：煤炭开采（<span class="up">+6.7亿</span>）、国有大行（<span class="up">+6.4亿</span>）获避险+低估值配置，煤炭 26 只个股全红。</li><li><strong>资金流出（重灾区）</strong>：电池（<span class="down">-25.9亿</span>，全市场最大单）、光伏设备（<span class="down">-10.4亿</span>）、证券（<span class="down">-7.1亿</span>）。</li></ul>
@@ -233,6 +245,7 @@ p.k strong{font-weight:700}
 <p class="k">备选：</p>
 <ol><li>苹果 HALO 撞上马斯克太空算力，A股机器人、卫星两大主线同日点燃</li><li>成交缩至 1.48 万亿、3100 股下跌：资金从新能源撤出，猛攻科技硬件</li><li>涨停 58 只但指数仅微红：今天的 A 股是结构牛，还是情绪牛？</li></ol>
 <p><em>免责声明：本报告基于公开市场数据整理，仅供复盘参考，不构成任何投资建议。</em></p>
+<div class="source-notes"><blockquote><p>数据口径：westock 实时行情/板块榜（收盘快照），辅以公开资讯交叉验证。涨跌分布、量能、板块涨跌、主力净流入均为当日真实数据。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-11-08.html"><span class="dir">上一期</span>11-08　周末外围观察 + 11/09 盘前清单</a><a class="next" href="2026-11-10.html"><span class="dir">下一期</span>11-10　银行/电力/农业避险</a></div>
 </article>
 </div></div>

@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月9日　周五</div>
   <h1 class="hl">机构砸盘 + 宽度崩塌</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-09 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3813.79</span><span class="tch up">+0.05%</span><span class="tn">10/8收3811.90</span></li><li><span class="tnm">深证成指</span><span class="tvl">12641.86</span><span class="tch up">+0.17%</span><span class="tn">10/8收12620.90</span></li><li><span class="tnm">创业板指</span><span class="tvl">3043.33</span><span class="tch up">+0.22%</span><span class="tn">振幅大、收回跌幅</span></li><li><span class="tnm">科创50</span><span class="tvl">1457.27</span><span class="tch up">+0.07%</span><span class="tn">10/8曾-4.82%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4317.25</span><span class="tch up">+0.16%</span><span class="tn">—</span></li><li><span class="tnm">北证50</span><span class="tvl">1037.31</span><span class="tch up">+2.49%</span><span class="tn">—</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>59%</b></li><li><span class="tk">涨停</span><b>46 家</b></li><li><span class="tk">跌停</span><b>11 家</b></li></ul></section>
-<blockquote><p>数据口径：指数/个股/板块行情来自 neodata 统一行情（收盘后 15:22 快照）；涨跌广度、成交额来自 neodata 大盘市场宽度统计；连板高度接口（东财）今日返回 rc:102 不可用，连板情绪以「昨日涨停晋级率」与「昨日连板板块」刻画；主力净流入总额接口不提供全市场口径，本文不报全市场净额（避免虚构），以广度/涨停结构/量能刻画资金表现。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-09 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3813.79</span><span class="tch up">+0.05%</span><span class="tn">10/8收3811.90</span></li><li><span class="tnm">深证成指</span><span class="tvl">12641.86</span><span class="tch up">+0.17%</span><span class="tn">10/8收12620.90</span></li><li><span class="tnm">创业板指</span><span class="tvl">3043.33</span><span class="tch up">+0.22%</span><span class="tn">振幅大、收回跌幅</span></li><li><span class="tnm">科创50</span><span class="tvl">1457.27</span><span class="tch up">+0.07%</span><span class="tn">10/8曾-4.82%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4317.25</span><span class="tch up">+0.16%</span><span class="tn">—</span></li><li><span class="tnm">北证50</span><span class="tvl">1037.31</span><span class="tch up">+2.49%</span><span class="tn">—</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">3297</b></li><li><span class="tk">下跌</span><b class="down">2145</b></li><li><span class="tk">涨停</span><b>46</b></li><li><span class="tk">跌停</span><b>11</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">今日是 10/8「机构砸盘 + 宽度崩塌」之后的超跌普反日，定性为「指数平收、个股回血、结构轮动」，而非增量进攻的趋势反转。</p>
 <ul><li><strong>资金表现</strong>：从 10/8「杀高位成长 + 抱团防御（银行/石油创新高）」切换为「低位补涨 + AI应用接力」。防御板块（银行/石油）今日不再领涨，资金在 AI 内部完成「硬件→应用」的软切硬：传媒/AI应用霸屏涨幅榜，而通信设备（<span class="down">-1.00%</span>）、半导体（<span class="down">-0.68%</span>）、消费电子（<span class="down">-0.87%</span>）科技硬件整体偏弱。</li><li><strong>指数与个股背离</strong>：上证仅 <span class="up">+0.05%</span>、深成指 <span class="up">+0.17%</span>、创业板 <span class="up">+0.22%</span>，四大指数近乎平收；但个股层面上涨 3297 家 vs 下跌 2145 家（红盘率 59%），典型的「指数不涨、个股回血」日。</li><li><strong>量能温和放大</strong>：两市成交 1.90 万亿（+2184 亿 / <span class="up">+13%</span> vs 10/8 的 1.68 万亿），越过节前 1.6 万亿反攻线，但仍属节后中等水位，定性为反弹而非增量主升。</li><li><strong>领涨板块</strong>：传媒/AI应用（数字媒体 <span class="up">+8.00%</span>、出版 <span class="up">+7.20%</span>、影视院线 <span class="up">+7.16%</span>）、贵金属（<span class="up">+5.62%</span>）、种植业（<span class="up">+5.84%</span>）。</li><li><strong>领跌板块</strong>：风电设备（<span class="down">-3.01%</span>）、军工/卫星链（航天装备 <span class="down">-2.70%</span>）、消费电子/华为链（五方光电 <span class="down">-10.01%</span>）。</li></ul>
@@ -230,6 +242,7 @@ p.k strong{font-weight:700}
 <p class="k">备选标题：</p>
 <ol><li>风电坠、传媒飞：节后第二日，超跌反弹里藏着一条 AI 主线</li><li>从杀成长到炒应用：3297 只上涨背后，资金在低位重新找锚</li><li>涨停 72 家、跌停 11 家：昨日连板晋级，短线情绪回来了</li></ol>
 <p><em>免责声明：本复盘基于公开行情数据的客观整理，仅供研究参考，不构成任何投资建议。</em></p>
+<div class="source-notes"><blockquote><p>数据口径：指数/个股/板块行情来自 neodata 统一行情（收盘后 15:22 快照）；涨跌广度、成交额来自 neodata 大盘市场宽度统计；连板高度接口（东财）今日返回 rc:102 不可用，连板情绪以「昨日涨停晋级率」与「昨日连板板块」刻画；主力净流入总额接口不提供全市场口径，本文不报全市场净额（避免虚构），以广度/涨停结构/量能刻画资金表现。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-08.html"><span class="dir">上一期</span>10-08　外部政策杀估值（FCC+美债）</a><a class="next" href="2026-10-10.html"><span class="dir">下一期</span>10-10　｜周末外围观察 + 10/12 盘前清单</a></div>
 </article>
 </div></div>

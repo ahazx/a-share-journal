@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">周末休市</h1>
   
 
-<blockquote><p>定时任务 15:15 触发。按「交易日判定三步流程」核验：<strong>今日非交易日</strong>，故产出休市版（外围观察 + 下一交易日清单），<strong>不编造任何当日 A 股涨跌/板块数据</strong>。</p></blockquote>
 <h2 id="sec0">一、交易日判定（三步一致）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>核验项</th><th>结果</th></tr></thead><tbody><tr><td>1. 统一交易日历</td><td>2026-11-15 上交所交易状态</td><td><strong>休市（周末休市）</strong></td></tr><tr><td>2. 行情「交易状态」字段</td><td>上证指数 000001.SH</td><td>11-15「未开盘」，交易状态「已休市」</td></tr><tr><td>3. 最新有效日期</td><td>上证行情表最新有数据日</td><td><strong>2026-11-13</strong>（上一交易日）</td></tr></tbody></table></div>
 <p>✅ 三步一致，结论成立：<strong>今天（周日）A 股休市，无盘面数据可复盘。</strong></p>
@@ -220,6 +232,7 @@ p.k strong{font-weight:700}
 <p class="k">备选</p>
 <ol><li>周末复盘｜上一交易日3634收跌0.59%，周一量能定方向</li><li>美股分化信号：道指红、纳指绿，A股科技股周一怎么接？</li><li>30Y美债才是成长股命门（数据待补），下周重点盯这条线</li></ol>
 <p><em>数据来源：neodata 统一交易日历 / 统一行情查询（上证指数、美股三大指数）。休市日不产出板块、连板、题材等当日数据。</em></p>
+<div class="source-notes"><blockquote><p>定时任务 15:15 触发。按「交易日判定三步流程」核验：<strong>今日非交易日</strong>，故产出休市版（外围观察 + 下一交易日清单），<strong>不编造任何当日 A 股涨跌/板块数据</strong>。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-11-14.html"><span class="dir">上一期</span>11-14　周末外围观察 + 11/16 盘前清单</a><a class="next" href="2026-11-16.html"><span class="dir">下一期</span>11-16　英伟达治理危机引爆算力链、高低切到红利创新高</a></div>
 </article>
 </div></div>

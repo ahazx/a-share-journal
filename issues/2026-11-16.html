@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月16日　周一</div>
   <h1 class="hl">英伟达治理危机引爆算力链、高低切到红利创新高</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-16 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3602.57</span><span class="tch down">-0.87%</span><span class="tn">权重护盘</span></li><li><span class="tnm">深证成指</span><span class="tvl">10690.78</span><span class="tch down">-2.53%</span><span class="tn">科技权重拖累</span></li><li><span class="tnm">创业板指</span><span class="tvl">2320.02</span><span class="tch down">-4.37%</span><span class="tn">盘中创年内新低</span></li><li><span class="tnm">科创50</span><span class="tvl">1213.68</span><span class="tch down">-5.16%</span><span class="tn">半导体/算力芯片集中</span></li><li><span class="tnm">沪深300</span><span class="tvl">3979.80</span><span class="tch down">-0.91%</span><span class="tn">银行权重托底</span></li><li><span class="tnm">北证50</span><span class="tvl">836.57</span><span class="tch down">-4.54%</span><span class="tn">小盘弹性最差</span></li><li><span class="tnm">中证500</span><span class="tvl">6297.18</span><span class="tch down">-2.60%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6164.62</span><span class="tch down">-3.03%</span><span class="tn">小盘中盘齐跌</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>20%</b></li><li><span class="tk">涨停</span><b>33 家</b></li><li><span class="tk">跌停</span><b>68 家</b></li><li><span class="tk">成交额</span><b>1.48 万亿</b></li><li><span class="tk">连板</span><b>7 只</b></li><li><span class="tk">最高板</span><b>4 板</b></li></ul></section>
-<blockquote><p>数据来源：westock 实时行情 / 涨跌分布 / 全行业板块榜（含主力资金三周期）/ 东财涨停连板池（rc:0，32家）；交易日判定三步一致（neodata 日历=开市 / quote time=2026-11-16 / changedist 当日完整）。消息面经 Eastmoney、同花顺、腾讯新闻多源交叉核验。</p><p>口径：沪深A股全市场；连板梯队以东财涨停池 + 昨日连板成分股今日表现为准；主力资金单位已由万元换算为亿元。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-16 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3602.57</span><span class="tch down">-0.87%</span><span class="tn">权重护盘</span></li><li><span class="tnm">深证成指</span><span class="tvl">10690.78</span><span class="tch down">-2.53%</span><span class="tn">科技权重拖累</span></li><li><span class="tnm">创业板指</span><span class="tvl">2320.02</span><span class="tch down">-4.37%</span><span class="tn">盘中创年内新低</span></li><li><span class="tnm">科创50</span><span class="tvl">1213.68</span><span class="tch down">-5.16%</span><span class="tn">半导体/算力芯片集中</span></li><li><span class="tnm">沪深300</span><span class="tvl">3979.80</span><span class="tch down">-0.91%</span><span class="tn">银行权重托底</span></li><li><span class="tnm">北证50</span><span class="tvl">836.57</span><span class="tch down">-4.54%</span><span class="tn">小盘弹性最差</span></li><li><span class="tnm">中证500</span><span class="tvl">6297.18</span><span class="tch down">-2.60%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6164.62</span><span class="tch down">-3.03%</span><span class="tn">小盘中盘齐跌</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">1136</b></li><li><span class="tk">下跌</span><b class="down">4344</b></li><li><span class="tk">涨停</span><b>33</b></li><li><span class="tk">跌停</span><b>68</b></li><li><span class="tk">成交额</span><b>1.48 万亿</b><i class="tsub">缩量 1712 亿</i></li><li><span class="tk">连板</span><b>7 只</b></li><li><span class="tk">最高</span><b>4 板</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">「英伟达治理危机引爆算力链、高低切到红利创新高」的极度分化杀跌日——指数失真、科技独崩、红利独撑。</p>
 <ul><li><strong>个股层面是普跌但非踩踏</strong>：全市场红盘率 <strong>20%</strong>（上涨 1136 / 下跌 4344 / 平 99），<strong>跌停 68 家 vs 涨停 33 家（涨跌停倒挂）</strong>，涨超 5% 仅 88 家 vs 跌超 5% 高达 1020 家（约 <strong>11.6 倍差</strong>）。跌幅主要集中在 2~5%（1845家）与 5~7%（499家）区间，是「温水式广度塌方 + 科技端集中宣泄」并存，不是全市场恐慌。</li><li><strong>指数严重分化</strong>：上证 <span class="down">-0.87%</span> / 沪深300 <span class="down">-0.91%</span> 扛跌，<strong>科创50 <span class="down">-5.16%</span>、创业板 <span class="down">-4.37%</span>、北证50 <span class="down">-4.54%</span></strong> 领跌——科创与上证剪刀差达 <strong>4.3pct</strong>，典型「权重护盘、硬科技被集中抛售」。</li><li><strong>资金表现（行业主力净额）</strong>：<strong>全行业主力净额约 -636 亿</strong>（124 行业中仅 29 净流入、95 净流出）。失血高度集中在科技硬件——<strong>半导体 -127.9 亿（全市场第一）/ 通信设备 -69.7 亿 / 元件 -64.6 亿 / 消费电子 -29.1 亿，四件套合计 -291.3 亿，占全市场净流出近半</strong>；叠加通用设备 -22.6 / 自动化 -19.6 / 小金属 -27.9，科技制造是唯一系统性失血主线。<strong>流入端极度分散且量级极小</strong>（电视广播 +6.8 / 铁路公路 +6.0 / 白酒 +5.7 / 股份行 +4.5 / 国有大行 +4.4），说明避险是「存量抱团」而非增量进场——这是盘面弱的本质。</li><li><strong>主线判定</strong>：<strong>AI算力链（光模块/CPO/PCB/半导体）继 11/12、11/13 后再度杀跌，确立退潮</strong>（前排中际旭创 <span class="down">-12.28%</span> 创年内新低、新易盛 <span class="down">-11.08%</span>、寒武纪 <span class="down">-8.27%</span>）；<strong>红利防御创历史新高</strong>（工行突破 8.88「对子顶」、建行/中行/长江电力/美的齐创新高）；唯一有连板梯队延续的题材是<strong>影视院线/AI短剧</strong>（文投控股 5天4板、金逸影视续板）。</li></ul>
@@ -245,6 +257,7 @@ p.k strong{font-weight:700}
 <blockquote><p>科创50暴跌5.16%、中际旭创创年内新低：英伟达换帅引爆算力链三连杀，主力狂逃636亿，银行家电却创历史新高</p></blockquote>
 <p><strong>备选</strong>：</p>
 <ol><li>中际旭创-12%、新易盛-11%、寒武纪-8%：英伟达财报前夜，A股算力链为何突然崩了</li><li>工行突破8.88"对子顶"、美的长江电力齐创新高：科技血流成河时，资金躲进了哪里</li><li>红盘率20%、跌停68家、成交缩量1712亿：A股极致分化的背后，是一场636亿的高低切换</li></ol>
+<div class="source-notes"><blockquote><p>数据来源：westock 实时行情 / 涨跌分布 / 全行业板块榜（含主力资金三周期）/ 东财涨停连板池（rc:0，32家）；交易日判定三步一致（neodata 日历=开市 / quote time=2026-11-16 / changedist 当日完整）。消息面经 Eastmoney、同花顺、腾讯新闻多源交叉核验。</p><p>口径：沪深A股全市场；连板梯队以东财涨停池 + 昨日连板成分股今日表现为准；主力资金单位已由万元换算为亿元。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-11-15.html"><span class="dir">上一期</span>11-15　周末休市</a><a class="next" href="2026-11-17.html"><span class="dir">下一期</span>11-17　外盘重挫传导 + 半导体内部高低切 + 影视短剧一日游崩塌</a></div>
 </article>
 </div></div>

@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">｜周末外围观察 + 10/12 盘前清单</h1>
   
 
-<blockquote><p><strong>本文不是 A 股复盘</strong>（今日 10/10 为周六，无 A 股行情）。按非交易日纪律，不基于上一交易日数据"改写今日"，只做休市确认 + 最近有效交易日回顾 + 外围定价窗口 + 下一交易日盘前清单。</p></blockquote>
 <h2 id="sec0">一、休市判定（三步一致）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>数据源</th><th>结论</th></tr></thead><tbody><tr><td>① 统一交易日历</td><td>neodata 统一交易日历</td><td>20261010 · SH = <strong>休市（周末休市）</strong></td></tr><tr><td>② 行情「交易状态」</td><td>上证指数行情</td><td>交易状态「<strong>已休市</strong>」、2026-10-10「<strong>未开盘</strong>」</td></tr><tr><td>③ 最新有效日期</td><td>上证指数行情表</td><td>最新有数据 = <strong>2026-10-09</strong>（收 3813.79，<span class="up">+0.05%</span>）</td></tr></tbody></table></div>
 <p>⚠️ <strong>特别澄清</strong>：10/10 虽是国庆假期「调休补班」工作日（国办发明电〔2025〕7号安排），但沪深交易所<strong>周末一律不开市</strong>，请勿把"补班"误读为"开市"。今日无任何 A 股实时行情。</p>
@@ -222,6 +234,7 @@ p.k strong{font-weight:700}
 <ol><li><strong>AI 应用（传媒）是主线还是昙花</strong>：看 10/12 能否放量续涨且不分化；若中文在线 / 芒果超媒等核心票高开低走，则确认只是 10/8 错杀修复完毕，非新主线。</li><li><strong>杀跌面收敛是否延续</strong>：跌超5% 由 452→165 家，若 10/12 回到 <strong>&lt;100</strong> 确认双轨格局解除；若反弹回 <strong>&gt;200</strong> 则 10/9 只是喘息。</li><li><strong>风电设备 <span class="down">-3.01%</span> 是孤立补跌还是强势赛道集体松动</strong>：盯大金重工 / 天顺风能 / 海力风电是否止跌，防扩散到光伏 / 储能。</li><li><strong>量能是否站稳 1.9 万亿上方</strong>：节前地量 1.45 万亿 → 10/8 1.68 → 10/9 1.90，这是「反抽升级为趋势」的分界线；若 10/12 缩回 1.7 万亿下方，增量未回归。</li><li><strong>外部计时炸弹</strong>：FCC「受控清单」26-50 新规 <strong>10/13 生效</strong>（节后首个交易周即临门），光通信 / CPO 10/8 已杀、10/9 余震；<strong>10/12 是新规前最后一个交易日</strong>，警惕最后一波情绪扰动。另盯 <strong>30Y 美债</strong>（10/7 盘中 5.72%，约 2002 年来最高，长端未回落 → 创新药 / AI 算力估值锚仍受压）。</li></ol>
 <h2 id="sec5">六、公众号标题（主推 + 备选）</h2>
 <ul><li><strong>主推</strong>：周六不开市但周一有雷：FCC 新规 10/13 生效前，A 股最后一天怎么走？</li><li><strong>备选 1</strong>：10/9 回血、10/12 定方向：AI 应用是主线还是昙花，周一见分晓</li><li><strong>备选 2</strong>：持仓两连红：特一药业放量突围，华兰疫苗静待三季报</li><li><strong>备选 3</strong>：美股温和收涨、A 股深 V 收平：下周开盘，增量资金回来了吗？</li></ul>
+<div class="source-notes"><blockquote><p><strong>本文不是 A 股复盘</strong>（今日 10/10 为周六，无 A 股行情）。按非交易日纪律，不基于上一交易日数据"改写今日"，只做休市确认 + 最近有效交易日回顾 + 外围定价窗口 + 下一交易日盘前清单。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-09.html"><span class="dir">上一期</span>10-09　机构砸盘 + 宽度崩塌</a><a class="next" href="2026-10-11.html"><span class="dir">下一期</span>10-11　周末）· 外围观察 + 10/12盘前清单</a></div>
 </article>
 </div></div>

@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年9月28日　周一</div>
   <h1 class="hl">节后首日 A股遭遇"利空共振式"杀跌，杀的是算力硬件的高位筹码，不是</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-09-28 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3823.62</span><span class="tch down">-1.67%</span><span class="tn">-3.25%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12858.75</span><span class="tch down">-3.44%</span><span class="tn">-7.84%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3139.82</span><span class="tch down">-4.53%</span><span class="tn">-8.31%</span></li><li><span class="tnm">科创50</span><span class="tvl">1555.98</span><span class="tch down">-4.06%</span><span class="tn">-6.39%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4340.76</span><span class="tch down">-2.22%</span><span class="tn">-5.82%</span></li><li><span class="tnm">北证50</span><span class="tvl">1026.57</span><span class="tch down">-2.76%</span><span class="tn">-3.50%</span></li><li><span class="tnm">中证500</span><span class="tvl">7402.30</span><span class="tch down">-2.91%</span><span class="tn">-6.25%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7294.17</span><span class="tch down">-3.65%</span><span class="tn">-5.33%</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>16%</b></li><li><span class="tk">涨停</span><b>35 家</b></li><li><span class="tk">跌停</span><b>60 家</b></li><li><span class="tk">成交额</span><b>1.70 万亿</b></li></ul></section>
-<blockquote><p>中秋假期后首个交易日，也是国庆长假前仅有的 3 个交易日（9/28、9/29、9/30）的第一天。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-09-28 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3823.62</span><span class="tch down">-1.67%</span><span class="tn">-3.25%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12858.75</span><span class="tch down">-3.44%</span><span class="tn">-7.84%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3139.82</span><span class="tch down">-4.53%</span><span class="tn">-8.31%</span></li><li><span class="tnm">科创50</span><span class="tvl">1555.98</span><span class="tch down">-4.06%</span><span class="tn">-6.39%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4340.76</span><span class="tch down">-2.22%</span><span class="tn">-5.82%</span></li><li><span class="tnm">北证50</span><span class="tvl">1026.57</span><span class="tch down">-2.76%</span><span class="tn">-3.50%</span></li><li><span class="tnm">中证500</span><span class="tvl">7402.30</span><span class="tch down">-2.91%</span><span class="tn">-6.25%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7294.17</span><span class="tch down">-3.65%</span><span class="tn">-5.33%</span></li></ul><ul class="tape-mood"><li><span class="tk">涨停</span><b>35</b></li><li><span class="tk">跌停</span><b>60</b></li><li><span class="tk">成交额</span><b>1.70 万亿</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">一句话：节后首日 A股遭遇"利空共振式"杀跌，杀的是算力硬件的高位筹码，不是全市场的系统性风险——但跌停数（60）反超涨停数（35），说明这次连游资情绪也一起被砸了。</p>
 <p class="k">今日资金表现：</p>
@@ -248,6 +260,7 @@ p.k strong{font-weight:700}
 <blockquote><p>16% 红盘率、60 家跌停、884 亿主力净流出：长假前最后三个交易日，A股先给了个下马威</p></blockquote>
 <blockquote><p>一份提案 + 一份 66 亿定增 + 一封不可抗力通知：光模块三巨头一天蒸发 1700 亿，AI 硬件的夏天结束了吗</p></blockquote>
 <p><em>数据来源：腾讯自选股（westock）行情接口、东方财富涨停/跌停/炸板池。资金流为近零和指标，"吸金/失血"仅代表方向不代表规模，已按同口径分组并给出今日/5日/20日三周期对照。</em></p>
+<div class="source-notes"><blockquote><p>中秋假期后首个交易日，也是国庆长假前仅有的 3 个交易日（9/28、9/29、9/30）的第一天。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-09-24.html"><span class="dir">上一期</span>09-24　1）今天是"高位筹码清算日"，不是"系统性风险日"</a><a class="next" href="2026-09-29.html"><span class="dir">下一期</span>09-29　今日 / 5日 / 20日</a></div>
 </article>
 </div></div>

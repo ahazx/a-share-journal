@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">周末）· 外围观察 + 10/12盘前清单</h1>
   
 
-<blockquote><p><strong>本文不是 A 股复盘</strong>（10/11 为周末休市，无当日行情）。以下为周末外围定价梳理与下一交易日（10/12 周一）盘前推演，供公众号素材与盘前准备使用。</p></blockquote>
 <h2 id="sec0">一、休市判定（三步一致）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>信号</th><th>结论</th></tr></thead><tbody><tr><td>交易日历</td><td>20261011 SH/SZ = <strong>休市（周末休市）</strong></td><td>非交易日</td></tr><tr><td>行情状态</td><td>上证「交易状态：已休市；2026-10-11 未开盘」</td><td>无当日数据</td></tr><tr><td>最新有效日</td><td>上证最新有数据 = <strong>2026-10-09 收 3813.79 / <span class="up">+0.05%</span></strong></td><td>沿用节后第2日收盘</td></tr></tbody></table></div>
 <p><strong>下一交易日：2026-10-12（周一）已确认开市。</strong> 本篇不基于 10/9 数据改写"今日涨跌"，仅做外围观察与推演。</p>
@@ -243,6 +255,7 @@ p.k strong{font-weight:700}
 <p class="k">备选 3：</p>
 <blockquote><p>30Y 美债回落至 5.6%、人民币破 6.7 创四年新高：外围转暖，A 股 10/12 能接住吗？</p></blockquote>
 <p><em>数据来源：neodata 统一交易日历/行情、WebSearch（澎湃/同花顺/腾讯新闻/东方财富/雪球等公开报道）。休市日不生成当日涨跌数据，所有"最新行情"均指向 2026-10-09 收盘。</em></p>
+<div class="source-notes"><blockquote><p><strong>本文不是 A 股复盘</strong>（10/11 为周末休市，无当日行情）。以下为周末外围定价梳理与下一交易日（10/12 周一）盘前推演，供公众号素材与盘前准备使用。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-10.html"><span class="dir">上一期</span>10-10　｜周末外围观察 + 10/12 盘前清单</a><a class="next" href="2026-10-12.html"><span class="dir">下一期</span>10-12　权重护盘、个股普杀</a></div>
 </article>
 </div></div>

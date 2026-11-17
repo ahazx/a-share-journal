@@ -169,7 +169,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -188,6 +188,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 /* ---------------------------------------------------------------
    目录页 · 编辑部存档样式
    --------------------------------------------------------------- */
@@ -272,7 +285,7 @@ p.k strong{font-weight:700}
     <h1><a href="issues/2026-11-17.html">外盘重挫传导 + 半导体内部高低切 + 影视短剧一日游崩塌</a></h1>
     <p class="dek">全市场红盘率 23%（上涨 1326 / 下跌 4119 / 平 135 / 停牌 7），跌停 84 家 vs 涨停 38 家（涨跌停严重倒挂），涨超 5% 仅 105 家 vs 跌超 5% 高达 535 家（约 5.1 倍差）。跌幅集中在 0~2%（1964 家）与 2~5%（1620 家）区间，属广度塌方 + 局部踩踏并存——不是单点爆雷，是全面失血。</p>
     <div class="indices"><span><b>上证指数</b><span class="down">-0.50%</span></span><span><b>深证成指</b><span class="down">-0.49%</span></span><span><b>创业板指</b><span class="down">-1.20%</span></span><span><b>科创50</b><span class="up">+0.62%</span></span><span><b>沪深300</b><span class="down">-0.08%</span></span><span><b>北证50</b><span class="up">+0.59%</span></span></div>
-    <ul class="tape-mood"><li><span class="tk">红盘率</span><b>23%</b></li><li><span class="tk">涨停</span><b>38 家</b></li><li><span class="tk">跌停</span><b>84 家</b></li><li><span class="tk">成交额</span><b>1.46 万亿</b></li><li><span class="tk">连板</span><b>6 只</b></li><li><span class="tk">最高板</span><b>3 板</b></li></ul>
+    <ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">1326</b></li><li><span class="tk">下跌</span><b class="down">4119</b></li><li><span class="tk">涨停</span><b>38</b></li><li><span class="tk">跌停</span><b>84</b></li><li><span class="tk">成交额</span><b>1.46 万亿</b><i class="tsub">缩量 268 亿</i></li><li><span class="tk">连板</span><b>6 只</b></li><li><span class="tk">最高</span><b>3 板</b></li></ul>
     <a class="more" href="issues/2026-11-17.html">阅读本期</a>
   </section>
 

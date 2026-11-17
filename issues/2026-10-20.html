@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月20日　周二</div>
   <h1 class="hl">指数平淡、个股普涨、成长制造接力防御</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-20 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3735.37</span><span class="tch up">+0.12%</span><span class="tn">低开3718、探3702后收…</span></li><li><span class="tnm">深证成指</span><span class="tvl">11801.29</span><span class="tch flat">0.14%</span><span class="tn">冲高11938回落</span></li><li><span class="tnm">创业板指</span><span class="tvl">2739.20</span><span class="tch flat">0.26%</span><span class="tn">振幅3.05%</span></li><li><span class="tnm">科创50</span><span class="tvl">1342.42</span><span class="tch up">+1.00%</span><span class="tn">结束连跌</span></li><li><span class="tnm">沪深300</span><span class="tvl">4152.11</span><span class="tch flat">0.54%</span><span class="tn">权重蓝筹拖累</span></li><li><span class="tnm">北证50</span><span class="tvl">982.87</span><span class="tch up">+3.88%</span><span class="tn">全场最强</span></li><li><span class="tnm">中证500</span><span class="tvl">6841.44</span><span class="tch up">+0.60%</span><span class="tn">—</span></li><li><span class="tnm">中证1000</span><span class="tvl">6766.90</span><span class="tch up">+1.02%</span><span class="tn">—</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>67%</b></li><li><span class="tk">涨停</span><b>57 家</b></li><li><span class="tk">跌停</span><b>7 家</b></li><li><span class="tk">成交额</span><b>1.46 万亿</b></li></ul></section>
-<blockquote><p>交易日判定：三步一致 — 统一交易日历 SH=开市；上证「盘后交易中」收 3735.37(<span class="up">+0.12%</span>)；最新有效日期 2026-10-20。<strong>为正常交易日，出完整复盘。</strong></p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-20 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3735.37</span><span class="tch up">+0.12%</span><span class="tn">低开3718、探3702后收…</span></li><li><span class="tnm">深证成指</span><span class="tvl">11801.29</span><span class="tch flat">0.14%</span><span class="tn">冲高11938回落</span></li><li><span class="tnm">创业板指</span><span class="tvl">2739.20</span><span class="tch flat">0.26%</span><span class="tn">振幅3.05%</span></li><li><span class="tnm">科创50</span><span class="tvl">1342.42</span><span class="tch up">+1.00%</span><span class="tn">结束连跌</span></li><li><span class="tnm">沪深300</span><span class="tvl">4152.11</span><span class="tch flat">0.54%</span><span class="tn">权重蓝筹拖累</span></li><li><span class="tnm">北证50</span><span class="tvl">982.87</span><span class="tch up">+3.88%</span><span class="tn">全场最强</span></li><li><span class="tnm">中证500</span><span class="tvl">6841.44</span><span class="tch up">+0.60%</span><span class="tn">—</span></li><li><span class="tnm">中证1000</span><span class="tvl">6766.90</span><span class="tch up">+1.02%</span><span class="tn">—</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">3778</b></li><li><span class="tk">下跌</span><b class="down">1668</b></li><li><span class="tk">涨停</span><b>57</b></li><li><span class="tk">跌停</span><b>7</b></li><li><span class="tk">成交额</span><b>1.46 万亿</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">今日是「指数平淡、个股普涨、成长制造接力防御」的修复日，非增量进攻。</p>
 <ul><li><strong>资金表现（主力口径，单位亿元）</strong>：主力净流出资源与大金融，回补超跌成长制造——属结构性轮动反抽，非趋势性建仓。</li><li><strong>吸金 TOP</strong>：消费电子 <strong>+28.29</strong>（但 20 日 −149.76，1 日回补）、自动化设备 <strong>+13.40</strong>（20 日 −97.90）、医疗服务 <strong>+9.55</strong>。</li><li><strong>失血 TOP</strong>：工业金属 <strong>−22.48</strong>（20 日 −156.31，慢性撤离最重）、证券 <strong>−21.34</strong>（20 日 −139.91）、电网设备 <strong>−9.67</strong>、煤炭 <strong>−7.55</strong>、保险 <strong>−6.23</strong>。</li><li><strong>领涨板块</strong>：人形机器人/物理AI、消费电子、半导体（科创50）。</li><li><strong>领跌板块</strong>：军工（中船系/航海装备）、大金融（保险/证券/城商行）、工业金属/煤炭（资源）。</li><li><strong>一句话定性</strong>：权重（沪深300 −0.54%）拖后腿，个股（红盘率 67%）全面回血，资金从避险防御切回低位制造与科技，但量能基本持平 → 是存量修复，不是增量进攻。</li></ul>
@@ -239,6 +251,7 @@ p.k strong{font-weight:700}
 <p><strong>备选</strong>：</p>
 <blockquote><p>1. 特斯拉Optimus量产+OpenAI造机器人：A股人形机器人全线爆发，消费电子跟涨</p><p>2. 权重拖后腿、小盘狂飙3.88%：沪深300绿、北证50红，A股存量修复日量能未跟</p><p>3. 大金融连续两日失血、资源洛阳钼业跌停式重挫：避险逻辑松动，资金切回低位制造</p></blockquote>
 <p><em>数据来源：neodata 统一行情/交易日历/板块数据库 + westock 涨跌分布/行业排行（westock CLI 今日已恢复授权可用）。取数时间 2026-10-20 15:15 盘后。</em></p>
+<div class="source-notes"><blockquote><p>交易日判定：三步一致 — 统一交易日历 SH=开市；上证「盘后交易中」收 3735.37(<span class="up">+0.12%</span>)；最新有效日期 2026-10-20。<strong>为正常交易日，出完整复盘。</strong></p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-19.html"><span class="dir">上一期</span>10-19　指数红、个股崩</a><a class="next" href="2026-10-21.html"><span class="dir">下一期</span>10-21　旧主线失血、科技硬件回血</a></div>
 </article>
 </div></div>

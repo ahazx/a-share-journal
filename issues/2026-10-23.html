@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月23日　周五</div>
   <h1 class="hl">今日是国庆后最像样的一次"全市场风险偏好回归"</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-23 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3690.48</span><span class="tch up">+0.89%</span><span class="tn">早盘最低3574</span></li><li><span class="tnm">深证成指</span><span class="tvl">11673.83</span><span class="tch up">+2.79%</span><span class="tn">强反</span></li><li><span class="tnm">创业板指</span><span class="tvl">2684.10</span><span class="tch up">+4.16%</span><span class="tn">主要指数最强</span></li><li><span class="tnm">科创50</span><span class="tvl">1345.51</span><span class="tch up">+3.04%</span><span class="tn">硬科技共振</span></li><li><span class="tnm">沪深300</span><span class="tvl">4105.33</span><span class="tch up">+1.71%</span><span class="tn">权重回血</span></li><li><span class="tnm">北证50</span><span class="tvl">984.90</span><span class="tch up">+1.88%</span><span class="tn">跟涨</span></li><li><span class="tnm">中证500</span><span class="tvl">6814.44</span><span class="tch up">+2.39%</span><span class="tn">中盘弹性</span></li><li><span class="tnm">中证1000</span><span class="tvl">6734.55</span><span class="tch up">+2.38%</span><span class="tn">小盘同步</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>81%</b></li><li><span class="tk">涨停</span><b>84 家</b></li><li><span class="tk">跌停</span><b>9 家</b></li><li><span class="tk">成交额</span><b>1.96 万亿</b></li></ul></section>
-<blockquote><p>一句话定性：<strong>上午超5000家下跌、收盘超4500家翻红，A股上演"深V反攻"——资金撤离银行红利、猛攻半导体与机器人，成交放至1.96万亿，风险偏好一夜反转。</strong></p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-23 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3690.48</span><span class="tch up">+0.89%</span><span class="tn">早盘最低3574</span></li><li><span class="tnm">深证成指</span><span class="tvl">11673.83</span><span class="tch up">+2.79%</span><span class="tn">强反</span></li><li><span class="tnm">创业板指</span><span class="tvl">2684.10</span><span class="tch up">+4.16%</span><span class="tn">主要指数最强</span></li><li><span class="tnm">科创50</span><span class="tvl">1345.51</span><span class="tch up">+3.04%</span><span class="tn">硬科技共振</span></li><li><span class="tnm">沪深300</span><span class="tvl">4105.33</span><span class="tch up">+1.71%</span><span class="tn">权重回血</span></li><li><span class="tnm">北证50</span><span class="tvl">984.90</span><span class="tch up">+1.88%</span><span class="tn">跟涨</span></li><li><span class="tnm">中证500</span><span class="tvl">6814.44</span><span class="tch up">+2.39%</span><span class="tn">中盘弹性</span></li><li><span class="tnm">中证1000</span><span class="tvl">6734.55</span><span class="tch up">+2.38%</span><span class="tn">小盘同步</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">4526</b></li><li><span class="tk">下跌</span><b class="down">909</b></li><li><span class="tk">涨停</span><b>84</b></li><li><span class="tk">跌停</span><b>9</b></li><li><span class="tk">成交额</span><b>1.96 万亿</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p><strong>今日是国庆后最像样的一次"全市场风险偏好回归"。</strong> 早盘受外围与节前惯性拖累，一度超5000家个股下跌、上证最低砸至 <strong>3574.27</strong>；午后资金强力回补，收盘全市场 <strong>4526 家上涨 / 909 家下跌（红盘率 81%）</strong>，涨停 84 家、跌停仅 9 家，形成典型的"深V"。</p>
 <p class="k">资金表现（同口径行业主力净流入，单位：亿元）：</p>
@@ -233,6 +245,7 @@ p.k strong{font-weight:700}
 <p><strong>主推</strong>：<code>V型反攻！上午5000家下跌、收盘4500家翻红，A股放量大涨近2万亿，半导体与机器人双线引爆</code></p>
 <p><strong>备选 1</strong>：<code>风险偏好一夜反转：资金撤离银行红利、猛攻硬科技，创业板飙涨4%</code></p>
 <p><strong>备选 2</strong>：<code>从"杀小盘"到"爆科技"：10/23 A股深V反弹，人形机器人与半导体谁接棒？</code></p>
+<div class="source-notes"><blockquote><p>一句话定性：<strong>上午超5000家下跌、收盘超4500家翻红，A股上演"深V反攻"——资金撤离银行红利、猛攻半导体与机器人，成交放至1.96万亿，风险偏好一夜反转。</strong></p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-21.html"><span class="dir">上一期</span>10-21　旧主线失血、科技硬件回血</a><a class="next" href="2026-10-24.html"><span class="dir">下一期</span>10-24　外围观察与 10/26 盘前清单</a></div>
 </article>
 </div></div>

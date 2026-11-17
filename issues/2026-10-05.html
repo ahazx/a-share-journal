@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">A 股复盘 · 2026-10-05</h1>
   
 
-<blockquote><p><strong>今日休市，无交易数据。</strong> 这是国庆假期第 5 天，A 股休市至 10/7，<strong>下一交易日 10/8（周四）</strong>。</p><p>本报告按既有惯例改出「节中外围观察 + 10/8 开市作战清单」。</p><p>阅读顺序：先读 10/3《节后作战手册》→ 10/4《美债证伪与 10 月作战》→ 本篇。</p></blockquote>
 <h2 id="sec0">一、今日是否交易日：三步判定（结论一致 = 休市）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>判定依据</th><th>结果</th></tr></thead><tbody><tr><td>①</td><td>统一交易日历 <code>20261005 / SH 上海证券交易所</code></td><td><strong>休市（国庆节休市）</strong></td></tr><tr><td>②</td><td>指数行情接口「交易状态」字段</td><td><strong>国庆节休市</strong>，10/1–10/5 全部「未开盘」</td></tr><tr><td>③</td><td>上证 / 沪深300 行情最新有效日期</td><td><strong>2026-09-30</strong>（9/30 为节前最后交易日）</td></tr></tbody></table></div>
 <p>下一步：10/6（休市）、10/7（休市）、<strong>10/8（SH + SZ 均标记开市）</strong>。</p>
@@ -244,6 +256,7 @@ p.k strong{font-weight:700}
 <p>备选标题（同一内核的三种口味）：</p>
 <ol><li><strong>《美股涨、港股跌，这个背离比指数本身更值钱》</strong></li><li><strong>《节后开盘第一件事：别看美股，看恒生科技》</strong></li><li><strong>《9/30 的医药抢筹和科技失血，10/8 才见分晓》</strong></li></ol>
 <p><em>数据源：neodata 统一行情 / 统一交易日历接口（westock CLI 未授权，已标注）。 </em>生成时间：2026-10-05 19:0x（任务延迟触发，节中外围数据已补齐）。</p>
+<div class="source-notes"><blockquote><p><strong>今日休市，无交易数据。</strong> 这是国庆假期第 5 天，A 股休市至 10/7，<strong>下一交易日 10/8（周四）</strong>。</p><p>本报告按既有惯例改出「节中外围观察 + 10/8 开市作战清单」。</p><p>阅读顺序：先读 10/3《节后作战手册》→ 10/4《美债证伪与 10 月作战》→ 本篇。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-04.html"><span class="dir">上一期</span>10-04　昨天的"美债松绑"被证伪了一半 —— 10/8 开盘前最后一份作战图</a><a class="next" href="2026-10-06.html"><span class="dir">下一期</span>10-06　周末休市</a></div>
 </article>
 </div></div>

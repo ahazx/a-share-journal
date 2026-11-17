@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月21日　周三</div>
   <h1 class="hl">旧主线失血、科技硬件回血</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-21 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3713.03</span><span class="tch down">-0.60%</span><span class="tn">受权重股（电池/券商/白酒）…</span></li><li><span class="tnm">深证成指</span><span class="tvl">11704.35</span><span class="tch down">-0.82%</span><span class="tn">　</span></li><li><span class="tnm">创业板指</span><span class="tvl">2694.71</span><span class="tch down">-1.62%</span><span class="tn">最弱主要指数</span></li><li><span class="tnm">科创50</span><span class="tvl">1343.28</span><span class="tch up">+0.06%</span><span class="tn">基本平收</span></li><li><span class="tnm">沪深300</span><span class="tvl">4111.93</span><span class="tch down">-0.97%</span><span class="tn">大票权重最弱</span></li><li><span class="tnm">北证50</span><span class="tvl">975.78</span><span class="tch down">-0.72%</span><span class="tn">　</span></li><li><span class="tnm">中证500</span><span class="tvl">6840.56</span><span class="tch down">-0.01%</span><span class="tn">平</span></li><li><span class="tnm">中证1000</span><span class="tvl">6780.26</span><span class="tch up">+0.20%</span><span class="tn">小盘相对抗跌</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>35%</b></li><li><span class="tk">涨停</span><b>50 家</b></li><li><span class="tk">跌停</span><b>5 家</b></li><li><span class="tk">成交额</span><b>1.43 万亿</b></li></ul></section>
-<blockquote><p>数据来源：westock（腾讯自选股，已恢复授权）核心指数/涨跌分布/行业资金 + neodata 交易日历交叉验证。</p><p>交易日判定：日历 20261021=开市、上证 quote time=2026-10-21、最新有效日=今日，三步一致，正常出复盘。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-21 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3713.03</span><span class="tch down">-0.60%</span><span class="tn">受权重股（电池/券商/白酒）…</span></li><li><span class="tnm">深证成指</span><span class="tvl">11704.35</span><span class="tch down">-0.82%</span><span class="tn">　</span></li><li><span class="tnm">创业板指</span><span class="tvl">2694.71</span><span class="tch down">-1.62%</span><span class="tn">最弱主要指数</span></li><li><span class="tnm">科创50</span><span class="tvl">1343.28</span><span class="tch up">+0.06%</span><span class="tn">基本平收</span></li><li><span class="tnm">沪深300</span><span class="tvl">4111.93</span><span class="tch down">-0.97%</span><span class="tn">大票权重最弱</span></li><li><span class="tnm">北证50</span><span class="tvl">975.78</span><span class="tch down">-0.72%</span><span class="tn">　</span></li><li><span class="tnm">中证500</span><span class="tvl">6840.56</span><span class="tch down">-0.01%</span><span class="tn">平</span></li><li><span class="tnm">中证1000</span><span class="tvl">6780.26</span><span class="tch up">+0.20%</span><span class="tn">小盘相对抗跌</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">1981</b></li><li><span class="tk">下跌</span><b class="down">3364</b></li><li><span class="tk">涨停</span><b>50</b></li><li><span class="tk">跌停</span><b>5</b></li><li><span class="tk">成交额</span><b>1.43 万亿</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">一句话：宁王单日重挫10%带崩锂电、创业板失守2700，指数走弱但资金并未恐慌出逃，而是从旧赛道（电池/券商/汽车）撤出、转身回补科技硬件（CPO/半导体/元件/数据要素）——这是一场「旧主线失血、科技硬件回血」的结构切换日。</p>
 <ul><li><strong>资金表现</strong>：全A行业主力净额约 <strong><span class="down">-89.45亿</span></strong>（净流出但规模可控）。净流入 TOP5 中科技硬件占 4 席（元件+19.93亿、通信设备+14.07亿、半导体+13.46亿、光学光电子+11.95亿、IT服务+10.87亿）；净流出 TOP5 为 电池-50.74亿、证券-19.12亿、计算机设备-9.53亿、乘用车-9.25亿、光伏-8.54亿。<strong>电池单板块净流出占全市场净流出的 57%</strong>，今日几乎是被一只板块拖出的净流出。</li><li><strong>领涨板块</strong>：养殖业(<span class="up">+2.97%</span>)、电视广播/出版(<span class="up">+2.47%</span>/<span class="up">+1.81%</span>)、IT服务/元件/光学(<span class="up">+1.69%</span>/<span class="up">+1.50%</span>/<span class="up">+1.31%</span>)。</li><li><strong>领跌板块</strong>：电池(<span class="down">-7.56%</span>，9/97 红盘)、商用车(<span class="down">-2.44%</span>)/乘用车(<span class="down">-2.23%</span>)、煤炭(<span class="down">-2.00%</span>)/白酒(<span class="down">-1.88%</span>)/白色家电(<span class="down">-2.21%</span>)。</li></ul>
@@ -238,6 +250,7 @@ p.k strong{font-weight:700}
 <blockquote><p>宁王单日重挫10%带崩锂电、创业板失守2700，资金却逆势加仓CPO与半导体：A股上演「旧赛道失血、科技硬件回血」的结构切换</p></blockquote>
 <p><strong>备选</strong>：</p>
 <ol><li>红盘率仅35%、创业板跌1.62%：宁德时代暴跌成今日最大变量，科技硬件成唯一避风港</li><li>电池板块暴跌7.56%、主力净流出50亿居首，资金转身抱团CPO/元件/数据要素：A股高低切加速</li><li>低迷多年的养殖悄然领涨、传媒AI再脉冲：在宁王带崩的弱市里，资金在找下一个洼地</li></ol>
+<div class="source-notes"><blockquote><p>数据来源：westock（腾讯自选股，已恢复授权）核心指数/涨跌分布/行业资金 + neodata 交易日历交叉验证。</p><p>交易日判定：日历 20261021=开市、上证 quote time=2026-10-21、最新有效日=今日，三步一致，正常出复盘。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-20.html"><span class="dir">上一期</span>10-20　指数平淡、个股普涨、成长制造接力防御</a><a class="next" href="2026-10-23.html"><span class="dir">下一期</span>10-23　今日是国庆后最像样的一次"全市场风险偏好回归"</a></div>
 </article>
 </div></div>

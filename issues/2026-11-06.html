@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月6日　周五</div>
   <h1 class="hl">外围雪崩拖累 A 股全线重挫，成长科技遭集中踩踏，资金高低切抱团银行</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-06 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3649.18</span><span class="tch down">-1.10%</span><span class="tn">银行保险撑住</span></li><li><span class="tnm">深证成指</span><span class="tvl">11175.78</span><span class="tch down">-2.57%</span><span class="tn">成长权重拖累</span></li><li><span class="tnm">创业板指</span><span class="tvl">2465.23</span><span class="tch down">-3.96%</span><span class="tn">跌幅最大</span></li><li><span class="tnm">科创50</span><span class="tvl">1253.20</span><span class="tch down">-2.60%</span><span class="tn">半导体链重挫</span></li><li><span class="tnm">沪深300</span><span class="tvl">4054.28</span><span class="tch down">-1.44%</span><span class="tn">大盘蓝筹相对抗跌</span></li><li><span class="tnm">北证50</span><span class="tvl">888.48</span><span class="tch down">-2.37%</span><span class="tn">跟跌</span></li><li><span class="tnm">中证500</span><span class="tvl">6597.35</span><span class="tch down">-2.13%</span><span class="tn">中盘成长承压</span></li><li><span class="tnm">中证1000</span><span class="tvl">6505.35</span><span class="tch down">-2.18%</span><span class="tn">小盘跟跌</span></li></ul><ul class="tape-mood"><li><span class="tk">涨停</span><b>33 家</b></li><li><span class="tk">跌停</span><b>15 家</b></li><li><span class="tk">成交额</span><b>4600 亿</b></li></ul></section>
-<blockquote><p>数据来源：腾讯自选股（westock），截至 15:00 收盘。今日为交易日，上证 <code>time=2026-11-06</code>。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-06 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3649.18</span><span class="tch down">-1.10%</span><span class="tn">银行保险撑住</span></li><li><span class="tnm">深证成指</span><span class="tvl">11175.78</span><span class="tch down">-2.57%</span><span class="tn">成长权重拖累</span></li><li><span class="tnm">创业板指</span><span class="tvl">2465.23</span><span class="tch down">-3.96%</span><span class="tn">跌幅最大</span></li><li><span class="tnm">科创50</span><span class="tvl">1253.20</span><span class="tch down">-2.60%</span><span class="tn">半导体链重挫</span></li><li><span class="tnm">沪深300</span><span class="tvl">4054.28</span><span class="tch down">-1.44%</span><span class="tn">大盘蓝筹相对抗跌</span></li><li><span class="tnm">北证50</span><span class="tvl">888.48</span><span class="tch down">-2.37%</span><span class="tn">跟跌</span></li><li><span class="tnm">中证500</span><span class="tvl">6597.35</span><span class="tch down">-2.13%</span><span class="tn">中盘成长承压</span></li><li><span class="tnm">中证1000</span><span class="tvl">6505.35</span><span class="tch down">-2.18%</span><span class="tn">小盘跟跌</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">758</b></li><li><span class="tk">下跌</span><b class="down">4741</b></li><li><span class="tk">涨停</span><b>33</b></li><li><span class="tk">跌停</span><b>15</b></li><li><span class="tk">成交额</span><b>4600 亿</b><i class="tsub">缩量 4600 亿</i></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">一句话：外围雪崩拖累 A 股全线重挫，成长科技遭集中踩踏，资金高低切抱团银行/电力/农业避险，成交大幅缩量 4600 亿。</p>
 <ul><li><strong>盘面定调</strong>：隔夜美股遭遇历史性抛售——纳指暴跌 5.5%、半导体指数暴跌 12%（AI 监管担忧引爆），韩国股市一度触发熔断。A 股今日跟随杀跌，且内部分化极端：高位的 AI 算力、半导体、消费电子满屏绿，低位的银行、电力、农业逆势红盘撑盘。</li><li><strong>领涨阵营（防御/红利）</strong>：银行（农商行、城商行、国有大行全线红）、种植业/农业（转基因、棉花、玉米）、电力。</li><li><strong>领跌阵营（高位成长）</strong>：元件、通信设备、玻璃玻纤、医疗服务领跌；概念端博通/谷歌/覆铜板/光芯片/CPO 重挫。</li><li><strong>资金本质</strong>：不是系统性流动性危机，而是<strong>从高位科技向低估值防御的剧烈高低切</strong>——下跌家数 4741 家但成交反而缩量，说明恐慌中惜售与观望并存。</li></ul>
@@ -238,6 +250,7 @@ p.k strong{font-weight:700}
 <blockquote><p>外围雪崩传导 A 股全线重挫，成交缩量 4600 亿，资金抱团银行电力农业避险</p></blockquote>
 <p class="k">备选：</p>
 <ol><li>纳指暴跌 5.5% 引发科技踩踏，CPO 单日失血超 130 亿，创业板跌近 4%</li><li>高低切下的极端分化：科技满屏绿，银行农业电力撑起防御线</li><li>从半导体到 CPO 高位松动，红利资产成乱世避风港</li></ol>
+<div class="source-notes"><blockquote><p>数据来源：腾讯自选股（westock），截至 15:00 收盘。今日为交易日，上证 <code>time=2026-11-06</code>。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-11-05.html"><span class="dir">上一期</span>11-05　指数平、个股疯</a><a class="next" href="2026-11-07.html"><span class="dir">下一期</span>11-07　周末外围观察 + 11/09 盘前清单</a></div>
 </article>
 </div></div>

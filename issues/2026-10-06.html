@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">周末休市</h1>
   
 
-<blockquote><p><strong>本文不是 A 股复盘。</strong></p><p>2026-10-06（周二）为国庆假期第 6 天，A 股休市（10/1–10/7 放假，10/8 才开市）。</p><p>按既定纪律，<strong>不生成伪 A 股复盘、不把 9/30 数据当今日数据</strong>。本文是「外围定价 + 下一交易日（10/8）推演」。</p><p>配套阅读顺序：10/3《节后作战手册》→ 10/4《美债证伪与10月作战》→ 10/5《港股背离与10月8日开市清单》→ 本文。</p></blockquote>
 <p><strong>生成时间</strong>：2026-10-06 15:15（北京时间） <strong>取数</strong>：neodata-financial-search（westock CLI 仍未授权，走免鉴权通道） <strong>第三步交易日判定（三步一致）</strong>：</p>
 <ol><li>统一交易日历 → <code>20261006 / SH / 休市（国庆节休市）</code>、<code>20261006 / SZ / 休市（国庆节休市）</code></li><li>上证指数行情 → <code>交易状态: 国庆节休市</code>，10/1–10/6 全部「未开盘」，最新有效日期 <strong>2026-09-30</strong></li><li>沪深300 行情表 → 10/7、10/8 均「未开盘」，最新有效 <strong>2026-09-30（4357.62 <span class="up">+0.29%</span>）</strong></li></ol>
 <p>→ 确认休市。<strong>下一个交易日 = 10/8（周四）</strong>，日历已确认 SH+SZ 均开市。</p>
@@ -264,6 +276,7 @@ p.k strong{font-weight:700}
 <blockquote><p>1. <strong>A 股休市第 6 天：港股变盘的方向，中概 ADR 比恒指早走一天——它的 24447 悬念只到 10 月 7 日</strong></p><p>2. <strong>A 股 9/30 那波医药涨不是"节前最后一冲"：港股 CRO 单日暴涨 21.62%，离岸资金替 A 股投了票</strong></p><p>3. <strong>3 天修复了什么？汇丰涨 1.53%、友邦还跌 0.36%——"长端利率杀估值"里，银行已康复，保险还没出院</strong></p></blockquote>
 <h3>附：本文数据口径与免责说明</h3>
 <ul><li><strong>A 股部分全部为 2026-09-30 收盘数据</strong>，仅作 10/8 对照基准，非今日行情。</li><li><strong>港股数据为 2026-10-06 15:16 盘中快照</strong>，港股 16:00 收盘，最终收盘价可能与本文不同。</li><li><strong>美股、中概 ADR 为 2026-10-05 收盘数据</strong>（美股 10/6 尚未开盘）。</li><li><strong>美债收益率最新可得为 10/2 口径（10Y 5.28%）</strong>，10/3 起无更新，与 10/4 报告同口径，未混用。</li><li>10Y 美债 5.28% 仍处于 2002 年来高位区，这是当前所有高估值成长股的核心压制项，<strong>不要用"港股两连红"去否定它</strong>。</li><li>本文仅为市场信息整理与 personally 的推演记录，<strong>不构成投资建议</strong>。</li></ul>
+<div class="source-notes"><blockquote><p><strong>本文不是 A 股复盘。</strong></p><p>2026-10-06（周二）为国庆假期第 6 天，A 股休市（10/1–10/7 放假，10/8 才开市）。</p><p>按既定纪律，<strong>不生成伪 A 股复盘、不把 9/30 数据当今日数据</strong>。本文是「外围定价 + 下一交易日（10/8）推演」。</p><p>配套阅读顺序：10/3《节后作战手册》→ 10/4《美债证伪与10月作战》→ 10/5《港股背离与10月8日开市清单》→ 本文。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-05.html"><span class="dir">上一期</span>10-05　A 股复盘 · 2026-10-05</a><a class="next" href="2026-10-07.html"><span class="dir">下一期</span>10-07　15:15</a></div>
 </article>
 </div></div>

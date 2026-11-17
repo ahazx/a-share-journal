@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月13日　周二</div>
   <h1 class="hl">探底回升、个股修复、结构撕裂</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-13 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3800.86</span><span class="tch up">+0.10%</span><span class="tn">振幅2.12%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12353.70</span><span class="tch flat">0.25%</span><span class="tn">冲高12486回落</span></li><li><span class="tnm">创业板指</span><span class="tvl">2958.34</span><span class="tch flat">0.18%</span><span class="tn">振幅4.69%</span></li><li><span class="tnm">科创50</span><span class="tvl">1427.18</span><span class="tch up">+0.03%</span><span class="tn">基本平收</span></li><li><span class="tnm">沪深300</span><span class="tvl">4275.68</span><span class="tch flat">0.29%</span><span class="tn">权重拖累</span></li><li><span class="tnm">北证50</span><span class="tvl">1008.66</span><span class="tch flat">0.31%</span><span class="tn">偏弱</span></li><li><span class="tnm">中证500</span><span class="tvl">7085.09</span><span class="tch flat">0.11%</span><span class="tn">—</span></li><li><span class="tnm">中证1000</span><span class="tvl">7023.22</span><span class="tch up">+0.02%</span><span class="tn">小盘微红</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>52%</b></li><li><span class="tk">涨停</span><b>70 家</b></li><li><span class="tk">跌停</span><b>10 家</b></li></ul></section>
-<blockquote><p>数据来源：neodata 统一行情 / 大盘市场宽度统计 / 板块涨跌排行 / 板块异动；催化信息交叉 WebSearch 与公开收评（格隆汇、网易、东财）。</p><p>取数口径：交易日历确认 SH/SZ 2026-10-13 开市；上证 15:15 后「盘后交易中」，收盘数据已锁定。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-13 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3800.86</span><span class="tch up">+0.10%</span><span class="tn">振幅2.12%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12353.70</span><span class="tch flat">0.25%</span><span class="tn">冲高12486回落</span></li><li><span class="tnm">创业板指</span><span class="tvl">2958.34</span><span class="tch flat">0.18%</span><span class="tn">振幅4.69%</span></li><li><span class="tnm">科创50</span><span class="tvl">1427.18</span><span class="tch up">+0.03%</span><span class="tn">基本平收</span></li><li><span class="tnm">沪深300</span><span class="tvl">4275.68</span><span class="tch flat">0.29%</span><span class="tn">权重拖累</span></li><li><span class="tnm">北证50</span><span class="tvl">1008.66</span><span class="tch flat">0.31%</span><span class="tn">偏弱</span></li><li><span class="tnm">中证500</span><span class="tvl">7085.09</span><span class="tch flat">0.11%</span><span class="tn">—</span></li><li><span class="tnm">中证1000</span><span class="tvl">7023.22</span><span class="tch up">+0.02%</span><span class="tn">小盘微红</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">2909</b></li><li><span class="tk">下跌</span><b class="down">2486</b></li><li><span class="tk">涨停</span><b>70</b></li><li><span class="tk">跌停</span><b>10</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p><strong>今天是「探底回升、个股修复、结构撕裂」的假阳线日。</strong> 早盘受隔夜日韩股市暴跌（韩国综指 −5.47%、SK海力士 −10%）拖累，沪指低开后一度杀至 <strong>3741.53</strong>，午后资金进场托底、硬科技与军工率先拉升，走出深 V，沪指收 <strong>3800.86（<span class="up">+0.10%</span>）</strong>。</p>
 <p><strong>资金表现</strong>：全市场主力资金整体净流出（东财复盘口径），杠杆资金连续第 2 日降温（融资余额 25171.89 亿，−0.19%）。资金从 <strong>新能源（电池/风电）+ 金融（保险）</strong> 撤离，切换至 <strong>军工、AI 硬件、低位消费（旅游/零售）</strong>。典型「存量轮动、拆东墙补西墙」，非增量进攻。</p>
@@ -245,6 +257,7 @@ p.k strong{font-weight:700}
 <p><strong>主推</strong>：探底 3741 深 V 收复 3800：A股缩量修复，军工与 AI 硬件抢跑，电池风电失血领跌</p>
 <p><strong>备选</strong>：</p>
 <ol><li>保险、电池、风电成今日三大失血板块，珠海航展预期点燃军工低位轮动</li><li>业绩预增引爆 AI 硬件超跌反弹，锂电遭抽血：10 月 13 日 A股复盘</li><li>沪指假阳线站上 3800、红盘率仅 52%：赚指数不赚钱的撕裂日</li></ol>
+<div class="source-notes"><blockquote><p>数据来源：neodata 统一行情 / 大盘市场宽度统计 / 板块涨跌排行 / 板块异动；催化信息交叉 WebSearch 与公开收评（格隆汇、网易、东财）。</p><p>取数口径：交易日历确认 SH/SZ 2026-10-13 开市；上证 15:15 后「盘后交易中」，收盘数据已锁定。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-12.html"><span class="dir">上一期</span>10-12　权重护盘、个股普杀</a><a class="next" href="2026-10-14.html"><span class="dir">下一期</span>10-14　"10/13 假阳线"一日游后市场重回普杀</a></div>
 </article>
 </div></div>

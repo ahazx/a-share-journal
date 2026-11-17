@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">外围观察</h1>
   
 
-<blockquote><p><strong>本文不是 A 股当日复盘。</strong> 2026-10-17 为周末，A股、港股、美股当日均无 A股交易。</p><p>三步交易日判定一致：①交易日历 SH/SZ = 休市（周末休市）②上证行情「已休市 / 2026-10-17 未开盘」③最新有效行情停在 2026-10-16。</p><p>下一交易日：<strong>2026-10-19（周一）开市</strong>（SH/SZ 日历已确认为开市）。</p><p>本文作用 = 周末外围定价 + 10/19 盘前清单，供公众号素材与下周一开盘准备。</p></blockquote>
 <h2 id="sec0">一、上一交易日（10/16 周五）收盘速览（回顾，非今日）</h2>
 <ul><li>指数：上证 <strong>3716.28 / <span class="up">+0.24%</span></strong>、深成指 −0.12%、创业板 −0.39%、科创50 −0.06%、北证50 −1.81%、沪深300 <span class="up">+0.11%</span></li><li>成交：<strong>1.555 万亿</strong>（较 10/15 的 1.633 万亿缩 776 亿 / −4.7%），缩量平淡收场</li><li>广度：红盘率 <strong>59%</strong>（涨 3301 / 跌 2128，较 10/15 的 7% 大幅逆转）、涨停 63 / 跌停 12、<strong>跌超 5% 由 838 家骤降至 163 家</strong></li><li>结构：<strong>军工独强 + 低位轮动修复</strong></li><li>领涨③：国防军工（地面兵装 <span class="up">+5.96%</span> / 航空装备 <span class="up">+3.71%</span>，珠海航展 + 特斯拉 Roadster 碳纤维低空催化）、建材水泥 + 地产链（水泥 <span class="up">+4.17%</span> 福建水泥涨停，金融街论坛政策预期）、商用车 + 农业（江淮汽车 <span class="up">+9.98%</span>）</li><li>领跌③：传媒 / AI 应用（传媒 −2.30%，电魂网络 −9.99%，资金撤离高位 AI 应用、追板亏钱）、医药 CRO / 医疗服务（药明康德 −6.60% 尾盘放量跳水，30Y≈5.6% 压长久期 + 三季报兑现）、电池锂电（万里股份 −10.03% 高位赛道补跌）</li><li>持仓视角：中证2000ETF南方 <span class="up">+0.75%</span>（受益普修）/ 华兰疫苗 −0.47% / 特一药业 −0.72%（医药内部分化微亏）；三季报（华兰 10-28 / 特一 10-27）为关键变量。</li></ul>
 <h2 id="sec1">二、外围市场（周末窗口内可得的最新收盘）</h2>
@@ -224,6 +236,7 @@ p.k strong{font-weight:700}
 <p><strong>主推：</strong> 周六不开市，但周一有雷：三季度GDP + 国常会"AI+"双落地，A股 10/19 怎么走？</p>
 <p><strong>备选 1：</strong> 费城半导体八连跌、布伦特破110、国常会再提"AI+"：周末三件大事定调 A股下周</p>
 <p><strong>备选 2：</strong> 油价破110、出口管制来袭、GDP 周一见：A股 10/19 开盘前必看的三条线</p>
+<div class="source-notes"><blockquote><p><strong>本文不是 A 股当日复盘。</strong> 2026-10-17 为周末，A股、港股、美股当日均无 A股交易。</p><p>三步交易日判定一致：①交易日历 SH/SZ = 休市（周末休市）②上证行情「已休市 / 2026-10-17 未开盘」③最新有效行情停在 2026-10-16。</p><p>下一交易日：<strong>2026-10-19（周一）开市</strong>（SH/SZ 日历已确认为开市）。</p><p>本文作用 = 周末外围定价 + 10/19 盘前清单，供公众号素材与下周一开盘准备。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-16.html"><span class="dir">上一期</span>10-16　指数平淡、个股普修</a><a class="next" href="2026-10-18.html"><span class="dir">下一期</span>10-18　｜本文不是复盘（2026-10-18  · 周末外围观察 + 10/19 盘前清单</a></div>
 </article>
 </div></div>

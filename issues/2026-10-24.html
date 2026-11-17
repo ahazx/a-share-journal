@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">外围观察与 10/26 盘前清单</h1>
   
 
-<blockquote><p><strong>本文不是 A股复盘。A股今日（10/24 周六）休市，未产生任何当日行情数据。</strong></p><p>以下为「节前收盘基准 + 周末外围定价 + 10/26 周一盘前清单」，供公众号素材与下周开盘参考。</p><p>取数说明：neodata token 今日本次执行已过期，主数据源回退至 <code>westock</code>（10/20 起恢复授权可用）；</p><p>海外数据经 westock 美股报价与财联社/新华财经早报交叉验证，已排雷（见第三节）。</p></blockquote>
 <h2 id="sec0">一、交易日判定（三步一致 → 休市）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>依据</th><th>结果</th></tr></thead><tbody><tr><td>① 交易日历</td><td>10/24 周六、10/25 周日，交易所周末一律不开市（10/10 已澄清：调休补班日也不开市）</td><td>周末休市</td></tr><tr><td>② 行情时间字段</td><td><code>westock quote sh000001</code> 返回 <code>time = 2026-10-23</code>，10/24 无交易</td><td>最新有效交易日 = 周五</td></tr><tr><td>③ kline 最新一根</td><td><code>sh000001</code> 日K最新日期 = 2026-10-23</td><td>休市确认</td></tr></tbody></table></div>
 <p class="k">结论：A股今日休市，不出交易复盘。下一交易日 = 10/26（周一）。</p>
@@ -225,6 +237,7 @@ p.k strong{font-weight:700}
 <h2 id="sec5">六、公众号标题（休市观察向，非「今日复盘」）</h2>
 <ul><li><strong>主推</strong>：周六不开市但周一有雷：五中全会 + 美联储议息 + 科技财报三箭齐发，A股 1.97 万亿反弹后迎「考试周」</li><li><strong>备选1</strong>：上午 5000 家下跌、收盘 4500 家翻红后，下周一怎么走？三大事件定调反弹成色</li><li><strong>备选2</strong>：油价破 116、黄金守 4000、美债 30Y 悬 5.3%：全球定价变量齐聚，A股开盘前先看这张清单</li><li><strong>备选3</strong>：光模块 5 龙头午间「订单正常」公告点燃反攻，周一算力硬件是续命还是一日游？</li></ul>
 <p><em>风险提示：今日为周六休市日，本文为周末市场回顾与下周前瞻，所载信息来源于公开渠道并经交叉验证，不构成任何投资建议。</em></p>
+<div class="source-notes"><blockquote><p><strong>本文不是 A股复盘。A股今日（10/24 周六）休市，未产生任何当日行情数据。</strong></p><p>以下为「节前收盘基准 + 周末外围定价 + 10/26 周一盘前清单」，供公众号素材与下周开盘参考。</p><p>取数说明：neodata token 今日本次执行已过期，主数据源回退至 <code>westock</code>（10/20 起恢复授权可用）；</p><p>海外数据经 westock 美股报价与财联社/新华财经早报交叉验证，已排雷（见第三节）。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-23.html"><span class="dir">上一期</span>10-23　今日是国庆后最像样的一次"全市场风险偏好回归"</a><a class="next" href="2026-10-25.html"><span class="dir">下一期</span>10-25　周末外围观察 + 10/26 盘前清单</a></div>
 </article>
 </div></div>

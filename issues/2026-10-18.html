@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">｜本文不是复盘（2026-10-18  · 周末外围观察 + 10/19 盘前清单</h1>
   
 
-<blockquote><p><strong>今日（2026-10-18）为周日，A股休市。本篇不是当日A股复盘，而是休市期间的外围观察与下一个交易日（10/19 周一）盘前清单。</strong></p></blockquote>
 <h2 id="sec0">一、交易日判定（三步，今日结论：休市）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>数据源</th><th>结果</th></tr></thead><tbody><tr><td>① 统一交易日历</td><td>neodata 公共工具</td><td>2026-10-18 SH = <strong>休市（周末休市）</strong></td></tr><tr><td>② 上证行情状态</td><td>neodata 统一行情</td><td>2026-10-18 <strong>未开盘</strong>、交易状态「已休市」，最新有效交易日 <strong>2026-10-16</strong>（收 3716.28 / <span class="up">+0.24%</span>）</td></tr><tr><td>③ 港股交叉</td><td>neodata 港股</td><td>恒指最近交易日 2026-10-16（24186.83 / <span class="up">+0.52%</span>），10-17~18 均休市</td></tr></tbody></table></div>
 <p>三步一致指向<strong>周末休市</strong>。休市日不出A股复盘，以下为外围观察 + 周一盘前清单。</p>
@@ -228,6 +240,7 @@ p.k strong{font-weight:700}
 <ul><li><strong>中证2000ETF南方（159531）</strong>：小盘宽基，周一直面"外部风险 + 解禁潮 + 成长杀估值"三重压，但宽基 ETF 正被大资金逆势申购托底；短线波动大，<strong>非对冲仓</strong>。</li><li><strong>华兰疫苗（301207）</strong>：流感疫苗线，10/16 −0.47%（缩量），医药线近期分化；<strong>三季报 10-28 披露</strong>为关键变量（中报净利 <span class="up">+75.23%</span>）。周末无直接利空。</li><li><strong>特一药业（002728）</strong>：中药 OTC，10/16 −0.72%；<strong>中报净利 −18.15%、三季报 10-27 披露</strong>，业绩兑现前防御属性弱于纯红利，需盯三季报是否触底。</li><li><strong>总体</strong>：三只均为"非科技、非高位"标的，相对避开上周通信/电子 −10% 的主跌浪；但周一若 GDP 不及预期 + 外部 risk-off，小盘（中证2000）首当其冲，医药线看三季报定力。</li></ul>
 <h2 id="sec6">七、一句话总结（公众号标题备选）</h2>
 <ul><li><strong>主推</strong>：周一开盘就一件事——钱认不认政策？国内利好密集、海外油价破110+韩国熔断，3700 政策底与外围冷水正面交锋</li><li><strong>备选①</strong>：三季度GDP周一见分晓：4.4%是顺周期反攻号角，还是红利防御的续命符？</li><li><strong>备选②</strong>：长鑫净利1300亿+20亿回购，韩国存储却周跌28%：同一产业链，A股与首尔为何反向定价</li></ul>
+<div class="source-notes"><blockquote><p><strong>今日（2026-10-18）为周日，A股休市。本篇不是当日A股复盘，而是休市期间的外围观察与下一个交易日（10/19 周一）盘前清单。</strong></p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-17.html"><span class="dir">上一期</span>10-17　外围观察</a><a class="next" href="2026-10-19.html"><span class="dir">下一期</span>10-19　指数红、个股崩</a></div>
 </article>
 </div></div>

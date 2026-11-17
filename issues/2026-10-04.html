@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">昨天的"美债松绑"被证伪了一半 —— 10/8 开盘前最后一份作战图</h1>
   
 
-<blockquote><p><strong> 本文不是 A 股复盘。</strong></p><p>2026-10-04（周日）为国庆假期第 4 天，A 股休市（三步判定一致：A 股指数行情停更在 <code>2026-09-30</code>、</p><p>K 线最新一根=2026-09-30；港股停更在 <code>2026-10-02</code>），香港市场周末同样休市。</p><p>文中不出现任何"今日 A 股涨跌"，不基于 9/30 的数据改写当日口径。</p><p>本文做的是 <strong>10/3 报告的修正 + 假期第 4 天新增变量 + 10/8 开盘推演</strong>。</p><p><strong>与 10/3《节后作战手册》配套阅读，先读那份，再读这份，否则会错过下面第一条的修正。</strong></p></blockquote>
 <h2 id="sec0">一、核心结论（先看这三条）</h2>
 <p class="k">1. ⚠️【最重要·修正 10/3 的判断】10 年期美债的"松绑"是盘中诱多，收盘打回原形。</p>
 <p>10/3 那篇写"10 年美债 5.18%（-6bp）、压制因素正在解除"——<strong>这个读数是非农公布瞬间的盘中值， 收盘是 5.28%（部分口径 5.30%），全周累计上行 11~12bp，已经连续第五周攀升。</strong> 同一时间，2 年期全周反而下行约 3bp（非农当日单日跌 10bp 至 4.69%）。 <strong>短端在降息，长端在加息，两条曲线像剪刀一样张开了。</strong></p>
@@ -293,6 +305,7 @@ p.k strong{font-weight:700}
 <p class="k">备选 3（偏持仓）：</p>
 <blockquote><p><strong>假期外围只利好你 20% 的仓位：74% 的医药，10 月 27 日之后要靠自己说话</strong></p></blockquote>
 <p><em>数据来源：腾讯自选股（westock）行情接口、BT财经、华尔街见闻、东方财富财富号、格隆汇、网易财经、 雪球、中新经纬、CME FedWatch、ADR（AASTOCKS/长桥）。</em> <em>行情数据：A 股截至 2026-09-30 收盘，港股截至 2026-10-02 收盘，美股截至 2026-10-02 收盘。</em> <em>本文为市场观察记录，不构成投资建议。与《A股复盘_20261003_休市_节后作战手册.md》配套阅读。</em></p>
+<div class="source-notes"><blockquote><p><strong> 本文不是 A 股复盘。</strong></p><p>2026-10-04（周日）为国庆假期第 4 天，A 股休市（三步判定一致：A 股指数行情停更在 <code>2026-09-30</code>、</p><p>K 线最新一根=2026-09-30；港股停更在 <code>2026-10-02</code>），香港市场周末同样休市。</p><p>文中不出现任何"今日 A 股涨跌"，不基于 9/30 的数据改写当日口径。</p><p>本文做的是 <strong>10/3 报告的修正 + 假期第 4 天新增变量 + 10/8 开盘推演</strong>。</p><p><strong>与 10/3《节后作战手册》配套阅读，先读那份，再读这份，否则会错过下面第一条的修正。</strong></p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-03.html"><span class="dir">上一期</span>10-03　假期过半，外围已翻多 —— 10/8 开盘作战手册</a><a class="next" href="2026-10-05.html"><span class="dir">下一期</span>10-05　A 股复盘 · 2026-10-05</a></div>
 </article>
 </div></div>

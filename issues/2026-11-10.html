@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月10日　周二</div>
   <h1 class="hl">银行/电力/农业避险</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-10 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3663.72</span><span class="tch up">+0.08%</span><span class="tn">独红但近乎走平</span></li><li><span class="tnm">深证成指</span><span class="tvl">11241.54</span><span class="tch up">+0.86%</span><span class="tn">　</span></li><li><span class="tnm">创业板指</span><span class="tvl">2494.40</span><span class="tch up">+1.46%</span><span class="tn">主要指数最强</span></li><li><span class="tnm">科创50</span><span class="tvl">1265.02</span><span class="tch up">+0.64%</span><span class="tn">　</span></li><li><span class="tnm">沪深300</span><span class="tvl">4059.11</span><span class="tch up">+0.07%</span><span class="tn">与上证同弱</span></li><li><span class="tnm">北证50</span><span class="tvl">902.51</span><span class="tch up">+0.75%</span><span class="tn">　</span></li><li><span class="tnm">中证500</span><span class="tvl">6645.89</span><span class="tch up">+0.91%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6579.36</span><span class="tch up">+1.22%</span><span class="tn">小盘弹性最好</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>76%</b></li><li><span class="tk">涨停</span><b>5 家</b></li><li><span class="tk">跌停</span><b>0 家</b></li><li><span class="tk">成交额</span><b>1.50 万亿</b></li><li><span class="tk">连板</span><b>10 只</b></li></ul></section>
-<blockquote><p>取数：westock（已授权，changedist / sector ranking / quote 正常）。neodata 今日 TOKEN_EXPIRED 未用，不影响（主源 westock 覆盖）。东财连板池 push2ex 今日返回 rc:102 不可用，连板梯队改用「昨日连板」概念成分股(10只)今日表现刻画。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-10 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3663.72</span><span class="tch up">+0.08%</span><span class="tn">独红但近乎走平</span></li><li><span class="tnm">深证成指</span><span class="tvl">11241.54</span><span class="tch up">+0.86%</span><span class="tn">　</span></li><li><span class="tnm">创业板指</span><span class="tvl">2494.40</span><span class="tch up">+1.46%</span><span class="tn">主要指数最强</span></li><li><span class="tnm">科创50</span><span class="tvl">1265.02</span><span class="tch up">+0.64%</span><span class="tn">　</span></li><li><span class="tnm">沪深300</span><span class="tvl">4059.11</span><span class="tch up">+0.07%</span><span class="tn">与上证同弱</span></li><li><span class="tnm">北证50</span><span class="tvl">902.51</span><span class="tch up">+0.75%</span><span class="tn">　</span></li><li><span class="tnm">中证500</span><span class="tvl">6645.89</span><span class="tch up">+0.91%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6579.36</span><span class="tch up">+1.22%</span><span class="tn">小盘弹性最好</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">4273</b></li><li><span class="tk">下跌</span><b class="down">1149</b></li><li><span class="tk">涨停</span><b>5</b></li><li><span class="tk">跌停</span><b>0</b></li><li><span class="tk">成交额</span><b>1.50 万亿</b></li><li><span class="tk">连板</span><b>10 只</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p><strong>宽基普涨、情绪偏热、risk-on 全面切换。</strong> 今日无系统性杀跌信号（跌停 0 家、跌超 5% 仅 9 家），红盘率 76%、95 股涨停，是 11 月以来强度仅次于 11/04–11/05 的普涨日。资金从上周五(11/06)的「银行/电力/农业避险」一键切回「传媒 AI 应用 + 科技硬件 + 机器人」进攻线。</p>
 <ul><li><strong>领涨主线</strong>：①传媒 / AI 应用 / 短剧出海（影视院线 <span class="up">+6.80%</span> 全行业第一，连续约一周活跃，今日最强）②人形机器人 / 物理 AI（宇树成 A 股第三高价股催化）③科技硬件急反（半导体单日主力 +41 亿全市场第一，易中天携手大涨）。</li><li><strong>领跌方向</strong>：几乎全集中在「油价链 + 避险权重」——美伊和谈信号致布油暴跌超 6%，炼化、油服、航运、煤炭、BDI 集体浅绿；上证 50 / 证金持股 / 大行微跌，是 risk-on 下权重被抽血，非真杀跌。</li><li><strong>资金结论</strong>：全 A 行业主力净额 <strong>+166.43 亿（净回流）</strong>，124 个行业中 56 净流入、68 净流出——结束了 11/03(<span class="down">-567亿</span>)、11/06 的净流出，单日转大幅净流入。</li></ul>
@@ -245,6 +257,7 @@ p.k strong{font-weight:700}
 <p><strong>主推</strong>：沪强深弱、95 股涨停！传媒 AI 应用霸屏领涨，龙江交通 9 天 5 板打开高度，科技硬件急反回潮</p>
 <p><strong>备选 1</strong>：红盘率 76%、跌停 0 家：A 股缩量普涨切换进攻，油价暴跌埋葬避险链，机器人接棒爆发</p>
 <p><strong>备选 2</strong>：易中天携手大涨、半导体单日吸金 41 亿：科技硬件是急反还是反转？20 日深坑未填先看清</p>
+<div class="source-notes"><blockquote><p>取数：westock（已授权，changedist / sector ranking / quote 正常）。neodata 今日 TOKEN_EXPIRED 未用，不影响（主源 westock 覆盖）。东财连板池 push2ex 今日返回 rc:102 不可用，连板梯队改用「昨日连板」概念成分股(10只)今日表现刻画。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-11-09.html"><span class="dir">上一期</span>11-09　缩量 1.48 万亿、沪强深弱，钱从新能源撤出、猛攻科技</a><a class="next" href="2026-11-11.html"><span class="dir">下一期</span>11-11　光模块（FCC 利空出尽）引爆的科技成长单日暴力反包，指数小涨但结构</a></div>
 </article>
 </div></div>

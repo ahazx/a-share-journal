@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月5日　周四</div>
   <h1 class="hl">指数平、个股疯</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-05 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3689.91</span><span class="tch up">+0.10%</span><span class="tn">权重压盘、近乎走平</span></li><li><span class="tnm">深证成指</span><span class="tvl">11471.09</span><span class="tch up">+1.19%</span><span class="tn">中小成长走强</span></li><li><span class="tnm">创业板指</span><span class="tvl">2566.80</span><span class="tch up">+0.87%</span><span class="tn">温和跟涨</span></li><li><span class="tnm">科创50</span><span class="tvl">1286.68</span><span class="tch up">+1.68%</span><span class="tn">硬科技内部分化</span></li><li><span class="tnm">沪深300</span><span class="tvl">4113.41</span><span class="tch up">+0.29%</span><span class="tn">大票护盘、几乎不动</span></li><li><span class="tnm">北证50</span><span class="tvl">910.07</span><span class="tch up">+1.79%</span><span class="tn">小盘活跃</span></li><li><span class="tnm">中证500</span><span class="tvl">6740.93</span><span class="tch up">+1.80%</span><span class="tn">中盘领涨</span></li><li><span class="tnm">中证1000</span><span class="tvl">6650.14</span><span class="tch up">+2.12%</span><span class="tn">小盘弹性最强</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>87%</b></li><li><span class="tk">涨停</span><b>86 家</b></li><li><span class="tk">跌停</span><b>0 家</b></li><li><span class="tk">成交额</span><b>2.12 万亿</b></li></ul></section>
-<blockquote><p>交易日判定：上证 quote time=2026-11-05 / kline 最新一根=2026-11-05 → 开市，正常出报告。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-05 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3689.91</span><span class="tch up">+0.10%</span><span class="tn">权重压盘、近乎走平</span></li><li><span class="tnm">深证成指</span><span class="tvl">11471.09</span><span class="tch up">+1.19%</span><span class="tn">中小成长走强</span></li><li><span class="tnm">创业板指</span><span class="tvl">2566.80</span><span class="tch up">+0.87%</span><span class="tn">温和跟涨</span></li><li><span class="tnm">科创50</span><span class="tvl">1286.68</span><span class="tch up">+1.68%</span><span class="tn">硬科技内部分化</span></li><li><span class="tnm">沪深300</span><span class="tvl">4113.41</span><span class="tch up">+0.29%</span><span class="tn">大票护盘、几乎不动</span></li><li><span class="tnm">北证50</span><span class="tvl">910.07</span><span class="tch up">+1.79%</span><span class="tn">小盘活跃</span></li><li><span class="tnm">中证500</span><span class="tvl">6740.93</span><span class="tch up">+1.80%</span><span class="tn">中盘领涨</span></li><li><span class="tnm">中证1000</span><span class="tvl">6650.14</span><span class="tch up">+2.12%</span><span class="tn">小盘弹性最强</span></li></ul><ul class="tape-mood"><li><span class="tk">涨停</span><b>86</b></li><li><span class="tk">跌停</span><b>0</b></li><li><span class="tk">成交额</span><b>2.12 万亿</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">一句话定性：「指数平、个股疯」的普涨轮动日——光伏新能源接棒成为最强主线，AI应用延续，而前一日领涨的算力硬件（CPO）与防御（煤炭/银行红利）双双掉队。</p>
 <p class="k">今日资金表现</p>
@@ -233,6 +245,7 @@ p.k strong{font-weight:700}
 <blockquote><p>指数平、个股疯！87%红盘86股涨停，光伏新能源接棒AI成为最强主线，煤炭与算力硬件双双掉队</p></blockquote>
 <p class="k">备选：</p>
 <ol><li>2万亿成交连续两天，A股「指数失真」日：光伏集体爆发，中际旭创跌超7%带崩CPO</li><li>美中选民主党横扫引爆绿色补贴预期，光伏掀涨停潮，黄金续创新高</li><li>红盘率87%、零跌停：风险偏好一夜反转，银行红利松动、小盘成长全面起舞</li></ol>
+<div class="source-notes"><blockquote><p>交易日判定：上证 quote time=2026-11-05 / kline 最新一根=2026-11-05 → 开市，正常出报告。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-11-04.html"><span class="dir">上一期</span>11-04　利空落地 + 全球风险偏好一夜反转</a><a class="next" href="2026-11-06.html"><span class="dir">下一期</span>11-06　外围雪崩拖累 A 股全线重挫，成长科技遭集中踩踏，资金高低切抱团银行</a></div>
 </article>
 </div></div>

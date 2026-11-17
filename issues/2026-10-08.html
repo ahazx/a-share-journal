@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月8日　周四</div>
   <h1 class="hl">外部政策杀估值（FCC+美债）</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-08 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3811.90</span><span class="tch down">-0.79%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12620.90</span><span class="tch down">-2.07%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3036.66</span><span class="tch down">-3.15%</span></li><li><span class="tnm">科创50</span><span class="tvl">1456.32</span><span class="tch down">-4.82%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4310.28</span><span class="tch down">-1.09%</span></li><li><span class="tnm">北证50</span><span class="tvl">1012.10</span><span class="tch down">-2.65%</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>9.33%</b></li><li><span class="tk">涨停</span><b>43 家</b></li><li><span class="tk">跌停</span><b>16 家</b></li><li><span class="tk">成交额</span><b>1.68 万亿</b></li><li><span class="tk">最高板</span><b>7 板</b></li></ul></section>
-<blockquote><p>交易状态判定：上证/深证 20261008 均「开市」，行情接口「盘后交易中」，数据为当日实盘。</p><p>取数链路：neodata-financial-search（westock CLI 仍处于未授权状态，全程走免鉴权通道）。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-08 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3811.90</span><span class="tch down">-0.79%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12620.90</span><span class="tch down">-2.07%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3036.66</span><span class="tch down">-3.15%</span></li><li><span class="tnm">科创50</span><span class="tvl">1456.32</span><span class="tch down">-4.82%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4310.28</span><span class="tch down">-1.09%</span></li><li><span class="tnm">北证50</span><span class="tvl">1012.10</span><span class="tch down">-2.65%</span></li></ul><ul class="tape-mood"><li><span class="tk">涨停</span><b>43</b></li><li><span class="tk">跌停</span><b>16</b></li><li><span class="tk">成交额</span><b>1.68 万亿</b><i class="tsub">放量 2441 亿</i></li><li><span class="tk">最高</span><b>7 板</b></li></ul></section>
 <h2 id="sec0">一、核心结论：指数跌出两条平行线，机构在砸、游资在接</h2>
 <p>今天只有一个事实值得记住：<strong>上证只跌 0.79%，创业板跌 3.15%、科创50 跌 4.82%——但全市场有 3748 只股票下跌。</strong></p>
 <p>这不是"大盘抗跌"能解释的，是两条资金线在完全相反的方向上走：</p>
@@ -269,6 +281,7 @@ p.k strong{font-weight:700}
 <p class="k">【备选 3】</p>
 <blockquote><p>30 年美债冲上 5.72%，砸的不是指数，是创新药的未来现金流</p></blockquote>
 <p><em>数据来源：neodata-financial-search 统一行情/板块排行/大盘宽度、东财涨停池、公开财经媒体（已做点位交叉校验）。 westock CLI 未授权，未参与取数。</em></p>
+<div class="source-notes"><blockquote><p>交易状态判定：上证/深证 20261008 均「开市」，行情接口「盘后交易中」，数据为当日实盘。</p><p>取数链路：neodata-financial-search（westock CLI 仍处于未授权状态，全程走免鉴权通道）。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-07.html"><span class="dir">上一期</span>10-07　15:15</a><a class="next" href="2026-10-09.html"><span class="dir">下一期</span>10-09　机构砸盘 + 宽度崩塌</a></div>
 </article>
 </div></div>

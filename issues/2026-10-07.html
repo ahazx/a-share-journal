@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">15:15</h1>
   
 
-<blockquote><p><strong>本文不是交易复盘。今天是国庆假期第 7 天（10/1–10/7），A 股休市，无 A 股当日行情。</strong></p><p>文中所有"领涨/领跌/涨跌"数据 <strong>全部来自港股 10/7 与美股 10/6（北京时间 10/7 凌晨收盘）</strong>，</p><p>不是 A 股数据。A 股最新有效交易日仍是 <strong>2026-09-30</strong>。</p><p>建议阅读顺序：先看 10/3《节后作战手册》→ 10/4《美债证伪与10月作战》→ 10/5 → 10/6 → 本篇。</p></blockquote>
 <h2 id="sec0">〇、交易日判定（三步流程，三条一致才算数）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>结果</th></tr></thead><tbody><tr><td>① 统一交易日历</td><td>20261007 <strong>SH 上海证券交易所 = 休市（国庆节休市）</strong>；SZ 深圳证券交易所 = 休市（国庆节休市）</td></tr><tr><td>② 上证指数「交易状态」</td><td><strong>国庆节休市</strong>；10/01–10/07 全部「未开盘」，最新有数据日 2026-09-30</td></tr><tr><td>③ 最新有效日期</td><td>上证行情表最新数据行 = <strong>2026-09-30</strong>（收 3842.19，<span class="up">+0.31%</span>，成交额 6793.99 亿）</td></tr></tbody></table></div>
 <p class="k">结论：休市日。不出 A 股交易复盘。下一交易日 = 2026-10-08（周四）。</p>
@@ -271,6 +283,7 @@ p.k strong{font-weight:700}
 <ol><li><strong>主推</strong>：《同一条AI链，美股创新高、港股杀跌：10月8日A股开门前，先看清这个裂缝》</li><li>《港股三根K线，量比51→46→44：这不是止跌，是没人愿意先动》</li><li>《我10月6日说"CRO获离岸定价"，10月7日就被打脸：一根巨阳的全部真相》</li><li>《别再把美股新高当A股利好了：10Y美债5.28%没下来，这波涨的是数据不是利率》</li></ol>
 <h2 id="sec7">附：数据口径与避坑记录（供后续执行复用）</h2>
 <ul><li>✅ 交易日判定三步一致：日历休市 / 上证「国庆节休市」+ 10/1–10/7 未开盘 / 最新有效 2026-09-30</li><li>⚠️ <strong>美股接口滞后</strong>：默认查询返回 2026-07-13~07-17 旧数据，<strong>必须显式给日期区间</strong>（如 "纳斯达克指数 2026年10月2日 至 2026年10月7日"）才能拿到 10 月值。已记入纪律。</li><li>⚠️ <strong>WebSearch 旧闻坑再次应验</strong>：搜"A股 + 日期 + 开盘/收盘"在休市日会返回往年同日期快讯 （但本次关键词锁定"美股/隔夜/美债"，返回内容均为 10/6–10/7 当日，经 neodata 实盘值交叉验证一致： 标普 7818.93、道指 51521.28、纳指 27599.79 三项完全吻合，可信）。</li><li>⚠️ 美债 10Y 存在多口径（5.262% / 5.28% / 5.303%），<strong>已在正文并列标注，不混用、不取单一值下结论</strong>。</li><li>⚠️ 港股数据为 <strong>15:16 盘中值</strong>，非收盘价，10/8 复盘中须以收盘值复核。</li><li>❌ 沪深300 接口返回 7 月旧值（区间默认拉太长），第三步判定改以上证行情表为准，已一致。</li></ul>
+<div class="source-notes"><blockquote><p><strong>本文不是交易复盘。今天是国庆假期第 7 天（10/1–10/7），A 股休市，无 A 股当日行情。</strong></p><p>文中所有"领涨/领跌/涨跌"数据 <strong>全部来自港股 10/7 与美股 10/6（北京时间 10/7 凌晨收盘）</strong>，</p><p>不是 A 股数据。A 股最新有效交易日仍是 <strong>2026-09-30</strong>。</p><p>建议阅读顺序：先看 10/3《节后作战手册》→ 10/4《美债证伪与10月作战》→ 10/5 → 10/6 → 本篇。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-06.html"><span class="dir">上一期</span>10-06　周末休市</a><a class="next" href="2026-10-08.html"><span class="dir">下一期</span>10-08　外部政策杀估值（FCC+美债）</a></div>
 </article>
 </div></div>

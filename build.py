@@ -35,6 +35,7 @@ EMOJI_RE = re.compile(
     "\U00002600-\U000027BF"
     "\U00002B00-\U00002BFF"
     "\U0000FE0F"
+    "\U000025A0-\U000025FF"
     "]+"
 )
 
@@ -86,6 +87,7 @@ def md_to_html(md: str):
     """返回 (html_body, toc_list)"""
     lines = md.split("\n")
     out, toc = [], []
+    front_notes = []          # 正文开头的「数据来源 / 口径」，渲染时移到文末
     i, n = 0, len(lines)
     para_buf = []
     h2_idx = 0
@@ -155,7 +157,11 @@ def md_to_html(md: str):
                 q.append(re.sub(r"^\s*>\s?", "", lines[i]))
                 i += 1
             inner = "".join(f"<p>{inline(strip_emoji(x))}</p>" for x in (y.strip() for y in q) if x)
-            out.append(f"<blockquote>{inner}</blockquote>")
+            block = f"<blockquote>{inner}</blockquote>"
+            if h2_idx == 0 and not any(o.startswith("<h2") for o in out):
+                front_notes.append(block)      # 还没进第一节 → 属抬头说明，先存着
+            else:
+                out.append(block)
             continue
 
         if re.match(r"^[-*+]\s+", s):
@@ -210,6 +216,12 @@ def md_to_html(md: str):
         i += 1
 
     flush_para()
+    if front_notes:
+        block = f'<div class="source-notes">{"".join(front_notes)}</div>'
+        if out and out[-1].startswith("<blockquote") and "免责" in out[-1]:
+            out.insert(len(out) - 1, block)
+        else:
+            out.append(block)
     return "\n".join(out), toc
 
 # ---------------------------------------------------------------- 元信息
@@ -367,51 +379,61 @@ def _first(patterns, text: str) -> str:
 
 
 def parse_mood(md: str):
-    """从正文里抓情绪指标，抓不到就跳过（历史报告格式不一，宁缺不乱）"""
+    """从正文里抓情绪指标（返回 dict 列表，抓不到的项直接跳过）"""
     items = []
 
-    def grab(strict, loose):
-        v = _first(strict, md)
-        return v or _first(loose, md)
+    def add(label, value, sub="", cls=""):
+        items.append(dict(label=label, value=value, sub=sub, cls=cls))
 
-    v = grab(
-        [r"红盘率[^\d\n]{0,8}?(\d+(?:\.\d+)?)\s*%"],
-        [r"红盘[^\d\n]{0,8}?(\d+(?:\.\d+)?)\s*%"],
-    )
-    if v:
-        items.append(("红盘率", v + "%"))
+    def grab(strict, loose):
+        return _first(strict, md) or _first(loose, md)
+
+    # 涨跌家数
+    m = re.search(r"上涨[^\d\n]{0,3}(\d+)[^\d\n]{0,8}?下跌[^\d\n]{0,3}(\d+)", md)
+    if m:
+        add("上涨", m.group(1), cls="up")
+        add("下跌", m.group(2), cls="down")
 
     v = grab(
         [r"涨停[^\d\n]{0,4}?(\d+)\s*\*{0,3}\s*[家只]", r"(\d+)\s*[家只]\s*涨停"],
         [r"涨停[^\d\n]{0,4}?(\d+)"],
     )
     if v:
-        items.append(("涨停", v + " 家"))
+        add("涨停", v)
 
     v = grab(
         [r"跌停[^\d\n]{0,4}?(\d+)\s*\*{0,3}\s*[家只]", r"(\d+)\s*[家只]\s*跌停"],
         [r"跌停[^\d\n]{0,4}?(\d+)"],
     )
     if v:
-        items.append(("跌停", v + " 家"))
+        add("跌停", v)
 
+    # 成交额 + 环比放量/缩量
     v = _first([r"成交[^\d\n]{0,10}?(\d+(?:\.\d+)?)\s*亿"], md)
     if v:
         try:
             f = float(v)
-            items.append(("成交额", f"{f / 10000:.2f} 万亿" if f >= 10000 else f"{f:.0f} 亿"))
+            vol = f"{f / 10000:.2f} 万亿" if f >= 10000 else f"{f:.0f} 亿"
         except ValueError:
-            pass
+            vol = v + " 亿"
+        chg = ""
+        mm = re.search(r"(放|缩)量?\s*(\d+(?:\.\d+)?)\s*亿", md)
+        if mm:
+            try:
+                chg = f"{mm.group(1)}量 {float(mm.group(2)):.0f} 亿"
+            except ValueError:
+                pass
+        add("成交额", vol, sub=chg)
 
     v = _first([r"连板[^\d\n]{0,6}?(\d+)\s*只"], md)
     if v:
-        items.append(("连板", v + " 只"))
+        add("连板", v + " 只")
 
     v = _first([r"最高[^\d\n]{0,8}?(\d+)\s*板"], md)
     if v:
-        items.append(("最高板", v + " 板"))
+        add("最高", v + " 板")
 
-    return items[:6]
+    return items[:7]
 
 
 def dek_of(meta):
@@ -472,9 +494,11 @@ def build_tape(meta) -> str:
         blocks.append(f'<ul class="tape-idx">{"".join(lis)}</ul>')
 
     if mood:
-        lis = "".join(
-            f'<li><span class="tk">{esc(k)}</span><b>{esc(v)}</b></li>' for k, v in mood
-        )
+        lis = ""
+        for m in mood:
+            cls = f' class="{m["cls"]}"' if m.get("cls") else ""
+            sub = f'<i class="tsub">{esc(m["sub"])}</i>' if m.get("sub") else ""
+            lis += f'<li><span class="tk">{esc(m["label"])}</span><b{cls}>{esc(m["value"])}</b>{sub}</li>'
         blocks.append(f'<ul class="tape-mood">{lis}</ul>')
 
     return (
@@ -554,9 +578,11 @@ def render_index(metas) -> str:
 
     mood_html = ""
     if latest.get("mood") and not latest.get("weekend"):
-        lis = "".join(
-            f'<li><span class="tk">{esc(k)}</span><b>{esc(v)}</b></li>' for k, v in latest["mood"]
-        )
+        lis = ""
+        for m in latest["mood"]:
+            cls = f' class="{m["cls"]}"' if m.get("cls") else ""
+            sub = f'<i class="tsub">{esc(m["sub"])}</i>' if m.get("sub") else ""
+            lis += f'<li><span class="tk">{esc(m["label"])}</span><b{cls}>{esc(m["value"])}</b>{sub}</li>'
         mood_html = f'<ul class="tape-mood">{lis}</ul>'
 
     groups = {}

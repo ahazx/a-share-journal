@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月26日　周一</div>
   <h1 class="hl">权重护盘、成长杀跌</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-26 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3697.52</span><span class="tch up">+0.19%</span><span class="tn">权重护盘</span></li><li><span class="tnm">深证成指</span><span class="tvl">11534.38</span><span class="tch down">-1.19%</span><span class="tn">深市拖累</span></li><li><span class="tnm">创业板指</span><span class="tvl">2638.23</span><span class="tch down">-1.71%</span><span class="tn">失守2700后继续下探</span></li><li><span class="tnm">科创50</span><span class="tvl">1315.50</span><span class="tch down">-2.23%</span><span class="tn">硬科技集中地</span></li><li><span class="tnm">沪深300</span><span class="tvl">4103.54</span><span class="tch down">-0.04%</span><span class="tn">几乎平收</span></li><li><span class="tnm">北证50</span><span class="tvl">963.95</span><span class="tch down">-2.13%</span><span class="tn">小盘成长同步承压</span></li><li><span class="tnm">中证500</span><span class="tvl">6712.73</span><span class="tch down">-1.49%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6630.78</span><span class="tch down">-1.54%</span><span class="tn">小盘弱于大票约1.5pct</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>40%</b></li><li><span class="tk">涨停</span><b>59 家</b></li><li><span class="tk">跌停</span><b>28 家</b></li><li><span class="tk">成交额</span><b>1.61 万亿</b></li></ul></section>
-<blockquote><p>数据口径：westock 收盘行情。三大指数沪强深弱、成交缩量，科技硬件（元件/半导体/通信）成今日唯一系统性失血主线。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-26 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3697.52</span><span class="tch up">+0.19%</span><span class="tn">权重护盘</span></li><li><span class="tnm">深证成指</span><span class="tvl">11534.38</span><span class="tch down">-1.19%</span><span class="tn">深市拖累</span></li><li><span class="tnm">创业板指</span><span class="tvl">2638.23</span><span class="tch down">-1.71%</span><span class="tn">失守2700后继续下探</span></li><li><span class="tnm">科创50</span><span class="tvl">1315.50</span><span class="tch down">-2.23%</span><span class="tn">硬科技集中地</span></li><li><span class="tnm">沪深300</span><span class="tvl">4103.54</span><span class="tch down">-0.04%</span><span class="tn">几乎平收</span></li><li><span class="tnm">北证50</span><span class="tvl">963.95</span><span class="tch down">-2.13%</span><span class="tn">小盘成长同步承压</span></li><li><span class="tnm">中证500</span><span class="tvl">6712.73</span><span class="tch down">-1.49%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6630.78</span><span class="tch down">-1.54%</span><span class="tn">小盘弱于大票约1.5pct</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">2252</b></li><li><span class="tk">下跌</span><b class="down">3157</b></li><li><span class="tk">涨停</span><b>59</b></li><li><span class="tk">跌停</span><b>28</b></li><li><span class="tk">成交额</span><b>1.61 万亿</b><i class="tsub">缩量 3475 亿</i></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p><strong>今日是「权重护盘、成长杀跌」的缩量分化日。</strong> 上证 <span class="up">+0.19%</span>、沪深300 <span class="down">-0.04%</span> 勉强收平，但深成指 <span class="down">-1.19%</span>、创业板 <span class="down">-1.71%</span>、科创50 <span class="down">-2.23%</span>、北证50 <span class="down">-2.13%</span>、中证1000 <span class="down">-1.54%</span> —— 大票扛旗、小票与成长（尤其硬科技）被集中抛售。</p>
 <p><strong>资金表现</strong>：全 A 行业主力净额 <strong>-276.3 亿</strong>（净流出）。净流出绝对主力是科技硬件——元件 -65.2 亿、半导体 -51.1 亿、通信设备 -44.2 亿，三者合计 -160 亿，占全市场净流出近六成；净流入则散落在汽车零部件、医疗服务、游戏、自动化设备等零星方向，无单一主线吸金。</p>
@@ -238,6 +250,7 @@ p.k strong{font-weight:700}
 <h2 id="sec6">七、一句话总结（公众号标题）</h2>
 <p><strong>主推</strong>：沪强深弱、1.6万亿缩量：权重银行独撑盘面，科技硬件（元件-6.8%、半导体-3.6%）成今日唯一系统性失血主线</p>
 <p><strong>备选 1</strong>：红盘率仅40%、410股跌超5%：A股缩量分化，油服与医药逆势扛旗 <strong>备选 2</strong>：覆铜板暴跌9%、大基金持股重挫4%：科技硬件全产业链杀跌，长端美债仍是估值之锚 <strong>备选 3</strong>：五中全会开幕日A股观望：资金抱团油气+医药+红利，成长小盘再遭抛售</p>
+<div class="source-notes"><blockquote><p>数据口径：westock 收盘行情。三大指数沪强深弱、成交缩量，科技硬件（元件/半导体/通信）成今日唯一系统性失血主线。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-25.html"><span class="dir">上一期</span>10-25　周末外围观察 + 10/26 盘前清单</a><a class="next" href="2026-10-27.html"><span class="dir">下一期</span>10-27　权重银行独红、成长科技与军工医药全面失血</a></div>
 </article>
 </div></div>

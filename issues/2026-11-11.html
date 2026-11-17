@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月11日　周三</div>
   <h1 class="hl">光模块（FCC 利空出尽）引爆的科技成长单日暴力反包，指数小涨但结构</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-11 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3680.64</span><span class="tch up">+0.46%</span><span class="tn">-0.15%</span></li><li><span class="tnm">深证成指</span><span class="tvl">11389.74</span><span class="tch up">+1.32%</span><span class="tn">+0.48%</span></li><li><span class="tnm">创业板指</span><span class="tvl">2572.07</span><span class="tch up">+3.11%</span><span class="tn">+1.07%</span></li><li><span class="tnm">科创50</span><span class="tvl">1300.38</span><span class="tch up">+2.80%</span><span class="tn">+2.76%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4075.71</span><span class="tch up">+0.41%</span><span class="tn">-0.62%</span></li><li><span class="tnm">北证50</span><span class="tvl">923.31</span><span class="tch up">+2.30%</span><span class="tn">+3.27%</span></li><li><span class="tnm">中证500</span><span class="tvl">6713.18</span><span class="tch up">+1.01%</span><span class="tn">+1.38%</span></li><li><span class="tnm">中证1000</span><span class="tvl">6669.55</span><span class="tch up">+1.37%</span><span class="tn">+2.42%</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>63%</b></li><li><span class="tk">涨停</span><b>85 家</b></li><li><span class="tk">跌停</span><b>3 家</b></li><li><span class="tk">成交额</span><b>1.68 万亿</b></li></ul></section>
-<blockquote><p>数据口径：westock 实盘（腾讯自选股）+ 东财连板池（今日 rc:102 不可用，连板梯队改以公开新闻+「昨日连板」板块推断）。全市场主力净流入为 124 个行业榜 mainNetInflow 求和（零和口径，单位亿元）。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-11 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3680.64</span><span class="tch up">+0.46%</span><span class="tn">-0.15%</span></li><li><span class="tnm">深证成指</span><span class="tvl">11389.74</span><span class="tch up">+1.32%</span><span class="tn">+0.48%</span></li><li><span class="tnm">创业板指</span><span class="tvl">2572.07</span><span class="tch up">+3.11%</span><span class="tn">+1.07%</span></li><li><span class="tnm">科创50</span><span class="tvl">1300.38</span><span class="tch up">+2.80%</span><span class="tn">+2.76%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4075.71</span><span class="tch up">+0.41%</span><span class="tn">-0.62%</span></li><li><span class="tnm">北证50</span><span class="tvl">923.31</span><span class="tch up">+2.30%</span><span class="tn">+3.27%</span></li><li><span class="tnm">中证500</span><span class="tvl">6713.18</span><span class="tch up">+1.01%</span><span class="tn">+1.38%</span></li><li><span class="tnm">中证1000</span><span class="tvl">6669.55</span><span class="tch up">+1.37%</span><span class="tn">+2.42%</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">3538</b></li><li><span class="tk">下跌</span><b class="down">1827</b></li><li><span class="tk">涨停</span><b>85</b></li><li><span class="tk">跌停</span><b>3</b></li><li><span class="tk">成交额</span><b>1.68 万亿</b></li></ul></section>
 <h2 id="sec0">一、核心结论（今日资金表现 + 领涨领跌）</h2>
 <p class="k">一句话：光模块（FCC 利空出尽）引爆的科技成长单日暴力反包，指数小涨但结构极端分化。</p>
 <ul><li><strong>指数层面</strong>：上证 <span class="up">+0.46%</span>、深成指 <span class="up">+1.32%</span>、创业板 <span class="up">+3.11%</span>、科创50 <span class="up">+2.80%</span>、北证50 <span class="up">+2.30%</span>、沪深300 <span class="up">+0.41%</span>、中证500 <span class="up">+1.01%</span>、中证1000 <span class="up">+1.37%</span>。<strong>成长（创业板/科创）远强于权重（沪深300）</strong>，与光模块/半导体驱动完全对应。</li><li><strong>资金表现（零和口径）</strong>：全市场主力净流入 <strong>+196.4 亿</strong>（5日 +56.3 亿、20日仍 -3132.4 亿）。<strong>通信设备 +130.2 亿、元件 +81.3 亿、半导体 +76.9 亿——硬件三行业今日独吞 288.4 亿，超过全市场净流入总额，意味着其余 121 个行业合计净失血约 92 亿。</strong> 这是"资金搬家到硬件"而非普涨资金雨。</li><li><strong>领涨方向</strong>：光模块/CPO（通信设备 <span class="up">+9.99%</span>）→ 半导体/电子 → 人形机器人。</li><li><strong>领跌方向</strong>：白酒/茅指数（消费核心资产，0/19 全绿）→ 光伏/新能源（电池主力失血最多 -15.4 亿）→ 医药（医疗服务/化学制药主力净流出居前）。</li></ul>
@@ -237,6 +249,7 @@ p.k strong{font-weight:700}
 <ol><li><strong>光模块反转 vs 反弹</strong>：CPO 20 日仍 -623 亿，今日 +251 亿仅修复约 40%。<strong>明日能否放量续涨（而非缩量冲高回落）是判反转的唯一标尺</strong>；若缩量，按"超跌修复"处理，不追高。</li><li><strong>量能能否守住 1.7 万亿</strong>：今日放量主要靠硬件回补，若明日量能回落至 1.5 万亿下方，单线行情难持续。</li><li><strong>消费/医药失血是否扩散</strong>：白酒 0/19、医药/电池主力失血居前，若扩散到大盘权重（银行/电力已偏弱），上证上攻乏力。</li><li><strong>连板梯队高度</strong>：襄阳轴承/AI 漫剧累计板高度标明日是否"前排断板、后排跟不上"——警惕纯情绪票（妖股 3 连板）退潮。</li><li><strong>外部变量</strong>：美联储放鹰 + CPI 超预期压制估值；30Y 美债仍是长久期资产（创新药/AI）的估值锚，需持续盯。</li></ol>
 <h3>公众号标题（主推 1 + 备选 3）</h3>
 <ul><li><strong>主推</strong>：光模块利空出尽暴力反包！通信设备涨停级大涨，全市场 196 亿回流却"搬"进这三个行业</li><li><strong>备选 1</strong>：白酒 0/19 全绿、茅指数失血 46 亿：今天 A 股的钱，全跑去炒"光"了</li><li><strong>备选 2</strong>：半导体 5 日回补 148 亿、CPO 单日吸金 251 亿：10/8 那根阴线，今天一根阳线收回来了？</li><li><strong>备选 3</strong>：涨停 85 跌停 3、红盘率 63%：放量普涨背后，是科技单线狂欢还是行情真反转？</li></ul>
+<div class="source-notes"><blockquote><p>数据口径：westock 实盘（腾讯自选股）+ 东财连板池（今日 rc:102 不可用，连板梯队改以公开新闻+「昨日连板」板块推断）。全市场主力净流入为 124 个行业榜 mainNetInflow 求和（零和口径，单位亿元）。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-11-10.html"><span class="dir">上一期</span>11-10　银行/电力/农业避险</a><a class="next" href="2026-11-12.html"><span class="dir">下一期</span>11-12　放量普跌、指数失真、硬科技高低切</a></div>
 </article>
 </div></div>

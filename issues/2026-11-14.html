@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">周末外围观察 + 11/16 盘前清单</h1>
   
 
-<blockquote><p>本日为周末休市，按纪律不出交易复盘，仅做外围观察与下一交易日盘前清单。</p></blockquote>
 <h2 id="sec0">一、交易日判定（三步一致）</h2>
 <ol><li><code>westock quote sh000001</code> → time = <strong>2026-11-13</strong>（≠今日）</li><li><code>westock kline sh000001</code> → 最新一根 = <strong>2026-11-13</strong></li><li>港股/美股行情 time 均为 2026-11-13，今日周六交易所不开市</li></ol>
 <p class="k">结论：2026-11-14（周六）休市，不出交易复盘。下一交易日 = 2026-11-16（周一）。</p>
@@ -236,6 +248,7 @@ p.k strong{font-weight:700}
 <p>当前按投影为<strong>空仓</strong>状态（11-10 已清仓），本复盘不涉个股建议。</p>
 <h2 id="sec5">六、公众号标题</h2>
 <ul><li><strong>主推</strong>：费半再杀、英伟达跌穿 4 万亿，A 股光模块三连杀后，周一能否止跌？</li><li><strong>备选①</strong>：30Y 美债站上 5.46%、黄金周跌 5%：外围两颗雷，A 股 11/16 怎么接</li><li><strong>备选②</strong>：冰点日唯一活口！影视 AI 短剧逆势反包，能否成新主线</li><li><strong>备选③</strong>：央行 2000 亿逆回购 + 证监会喊长期资本，周一 A 股有托底吗</li></ul>
+<div class="source-notes"><blockquote><p>本日为周末休市，按纪律不出交易复盘，仅做外围观察与下一交易日盘前清单。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-11-13.html"><span class="dir">上一期</span>11-13　科技硬件三连杀、防御与影视独撑</a><a class="next" href="2026-11-15.html"><span class="dir">下一期</span>11-15　周末休市</a></div>
 </article>
 </div></div>

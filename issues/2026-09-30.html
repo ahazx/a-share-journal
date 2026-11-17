@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年9月30日　周三</div>
   <h1 class="hl">指数稳、结构裂</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-09-30 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3842.19</span><span class="tch up">+0.31%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12887.62</span><span class="tch down">-0.11%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3135.28</span><span class="tch down">-0.23%</span></li><li><span class="tnm">科创50</span><span class="tvl">1530.01</span><span class="tch down">-2.51%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4357.62</span><span class="tch up">+0.29%</span></li><li><span class="tnm">北证50</span><span class="tvl">1039.61</span><span class="tch up">+0.70%</span></li><li><span class="tnm">中证500</span><span class="tvl">7435.16</span><span class="tch down">-0.06%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7298.82</span><span class="tch down">-0.36%</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>46%</b></li><li><span class="tk">涨停</span><b>1 家</b></li><li><span class="tk">跌停</span><b>51 家</b></li><li><span class="tk">成交额</span><b>1.44 万亿</b></li></ul></section>
-<blockquote><p>数据口径：westock（腾讯自选股）+ 东财涨停池，收盘后采集。行业/概念主力资金单位为万元，已换算为亿元。</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-09-30 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3842.19</span><span class="tch up">+0.31%</span></li><li><span class="tnm">深证成指</span><span class="tvl">12887.62</span><span class="tch down">-0.11%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3135.28</span><span class="tch down">-0.23%</span></li><li><span class="tnm">科创50</span><span class="tvl">1530.01</span><span class="tch down">-2.51%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4357.62</span><span class="tch up">+0.29%</span></li><li><span class="tnm">北证50</span><span class="tvl">1039.61</span><span class="tch up">+0.70%</span></li><li><span class="tnm">中证500</span><span class="tvl">7435.16</span><span class="tch down">-0.06%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7298.82</span><span class="tch down">-0.36%</span></li></ul><ul class="tape-mood"><li><span class="tk">涨停</span><b>1</b></li><li><span class="tk">跌停</span><b>51</b></li><li><span class="tk">成交额</span><b>1.44 万亿</b></li></ul></section>
 <h2 id="sec0">核心结论</h2>
 <p class="k">一句话：指数稳、结构裂——1.44 万亿地量里完成了一次主线换位，钱从算力硬件撤出来，涌进了医药。</p>
 <ul><li><strong>资金表现</strong>：全行业主力净流出 <strong>135.45 亿</strong>（昨日 +57.65 亿刚转正，今日又回负）；5 日 -1974.2 亿、20 日 -3741.5 亿，坑远未填平。同口径 3 对 3 对比：医药三行业（医疗服务 +25.93、化学制药 +19.16、生物制品 +12.38）合计 <strong>+57.47 亿</strong>，科技三行业（半导体 -98.68、元件 -37.45、电子化学品 -5.49）合计 <strong>-141.62 亿</strong>——医药吸到的钱只有科技流出的 <strong>41%</strong>，叠加全市场仍净流出，这不是"资金搬家"，是<strong>净失血下的抢筹</strong>。</li><li><strong>领涨</strong>：创新药 / 生物制品链（生物制品 <span class="up">+4.18%</span>，49/52 红）、CRO 与科研服务上游（CRO 概念 <span class="up">+3.79%</span>，34/37 红）、地产链（贴息新政，深物业A 地天板）。</li><li><strong>领跌</strong>：半导体（<strong><span class="down">-2.99%</span>，仅 9/182 红</strong>）、元件 / PCB（<span class="down">-2.60%</span>，仅 3/61 红）、CPO 光模块（概念 <span class="down">-1.99%</span>，5 日已流出 682.48 亿）。</li><li><strong>反差点</strong>：上证 <span class="up">+0.31%</span> 收红，但<strong>跌家数 2824 &gt; 涨家数 2567</strong>，科创50 单独跌 2.51%——指数是被医药 + 白酒 + 地产撑住的，不是普涨。</li></ul>
@@ -260,6 +272,7 @@ p.k strong{font-weight:700}
 <blockquote><p>恒瑞 26 亿美元大单点燃创新药，科创50 却跌 2.51%——节前最后一天，资金到底在换什么？</p></blockquote>
 <p class="k">备选 2：</p>
 <blockquote><p>指数红、个股绿、成交 1.44 万亿：A股把主线从算力硬件，换成了医药和地产</p></blockquote>
+<div class="source-notes"><blockquote><p>数据口径：westock（腾讯自选股）+ 东财涨停池，收盘后采集。行业/概念主力资金单位为万元，已换算为亿元。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-09-29.html"><span class="dir">上一期</span>09-29　今日 / 5日 / 20日</a><a class="next" href="2026-10-02.html"><span class="dir">下一期</span>10-02　｜ · 港股风向标大跌 -2.77%</a></div>
 </article>
 </div></div>

@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">周末外围观察 + 11/09 盘前清单</h1>
   
 
-<blockquote><p><strong>本文不是 A 股复盘。</strong> 今日（2026-11-08 周日）A股休市，无当日行情。</p><p>三步交易日判定一致：上交所日历 2026-11-08 = 周末休市；westock 上证指数 <code>time=2026-11-06</code>（最近有效交易日）；neodata 美股 11/07、11/08 均显示「未开盘」。</p><p>最近一个有效交易日为 <strong>11/06（周五）</strong>；下一交易日为 <strong>11/09（周一）</strong>。</p><p>下文为「11/06 收盘基准 + 周末外围窗口（截至 11/08 北京时间，含非农最终值与地缘新变量）+ 11/09 盘前清单」，供周一开盘推演与公众号素材使用。</p><p>休市日严禁编造当日涨跌/板块数据，下文所有 A 股数字均来自 11/06 收盘，外围数字来自公开报道核验。</p></blockquote>
 <h2 id="sec0">一、上一交易日（11/06 周五）收盘基准回顾</h2>
 <p class="k">外围雪崩传导 A 股全线重挫，成长科技遭集中踩踏，资金高低切抱团银行/电力/农业避险，成交大幅缩量 4600 亿。</p>
 <div class="tbl"><table><thead><tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>点评</th></tr></thead><tbody><tr><td>上证指数</td><td>3649.18</td><td><strong><span class="down">-1.10%</span></strong></td><td>银行保险撑住，跌幅最小</td></tr><tr><td>深证成指</td><td>11175.78</td><td><strong><span class="down">-2.57%</span></strong></td><td>成长权重拖累</td></tr><tr><td>创业板指</td><td>2465.23</td><td><strong><span class="down">-3.96%</span></strong></td><td>跌幅最大，高β成长杀跌</td></tr><tr><td>科创50</td><td>1253.20</td><td><strong><span class="down">-2.60%</span></strong></td><td>半导体链重挫</td></tr><tr><td>沪深300</td><td>4054.28</td><td><strong><span class="down">-1.44%</span></strong></td><td>大盘蓝筹相对抗跌</td></tr><tr><td>中证1000</td><td>6505.35</td><td><strong><span class="down">-2.18%</span></strong></td><td>小盘跟跌</td></tr></tbody></table></div>
@@ -225,6 +237,7 @@ p.k strong{font-weight:700}
 <p><strong>备选 1</strong>：利率更高更久 vs 国内稳市组合拳，长久期资产（创新药/AI算力）估值修复的钥匙在 30Y 而非美股反弹。</p>
 <p><strong>备选 2</strong>：从 CPO 到半导体高位松动后，银行电力农业撑起防御线，下周是风格切换还是 risk-off 延续？</p>
 <p><strong>备选 3</strong>：美伊冲突再起推高油价波动，布油重回 98 美元，周一能源链与输入性通胀成新变量。</p>
+<div class="source-notes"><blockquote><p><strong>本文不是 A 股复盘。</strong> 今日（2026-11-08 周日）A股休市，无当日行情。</p><p>三步交易日判定一致：上交所日历 2026-11-08 = 周末休市；westock 上证指数 <code>time=2026-11-06</code>（最近有效交易日）；neodata 美股 11/07、11/08 均显示「未开盘」。</p><p>最近一个有效交易日为 <strong>11/06（周五）</strong>；下一交易日为 <strong>11/09（周一）</strong>。</p><p>下文为「11/06 收盘基准 + 周末外围窗口（截至 11/08 北京时间，含非农最终值与地缘新变量）+ 11/09 盘前清单」，供周一开盘推演与公众号素材使用。</p><p>休市日严禁编造当日涨跌/板块数据，下文所有 A 股数字均来自 11/06 收盘，外围数字来自公开报道核验。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-11-07.html"><span class="dir">上一期</span>11-07　周末外围观察 + 11/09 盘前清单</a><a class="next" href="2026-11-09.html"><span class="dir">下一期</span>11-09　缩量 1.48 万亿、沪强深弱，钱从新能源撤出、猛攻科技</a></div>
 </article>
 </div></div>

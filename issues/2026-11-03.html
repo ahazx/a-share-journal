@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,7 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年11月3日　周二</div>
   <h1 class="hl">指数失真、个股普杀、科技崩塌</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-03 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3608.10</span><span class="tch flat">0.82%</span><span class="tn">权重托底</span></li><li><span class="tnm">深证成指</span><span class="tvl">10876.99</span><span class="tch flat">1.21%</span><span class="tn">　</span></li><li><span class="tnm">创业板指</span><span class="tvl">2391.65</span><span class="tch flat">2.73%</span><span class="tn">　</span></li><li><span class="tnm">科创50</span><span class="tvl">1151.28</span><span class="tch flat">3.81%</span><span class="tn">主要指数最弱</span></li><li><span class="tnm">沪深300</span><span class="tvl">4008.87</span><span class="tch flat">0.20%</span><span class="tn">主要指数中最抗跌（宽基ETF…</span></li><li><span class="tnm">北证50</span><span class="tvl">855.06</span><span class="tch flat">4.02%</span><span class="tn">最弱</span></li><li><span class="tnm">中证500</span><span class="tvl">6327.05</span><span class="tch flat">1.45%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6221.23</span><span class="tch flat">1.71%</span><span class="tn">　</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>37%</b></li><li><span class="tk">涨停</span><b>52 家</b></li><li><span class="tk">跌停</span><b>22 家</b></li><li><span class="tk">成交额</span><b>1.70 万亿</b></li></ul></section>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-03 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3608.10</span><span class="tch flat">0.82%</span><span class="tn">权重托底</span></li><li><span class="tnm">深证成指</span><span class="tvl">10876.99</span><span class="tch flat">1.21%</span><span class="tn">　</span></li><li><span class="tnm">创业板指</span><span class="tvl">2391.65</span><span class="tch flat">2.73%</span><span class="tn">　</span></li><li><span class="tnm">科创50</span><span class="tvl">1151.28</span><span class="tch flat">3.81%</span><span class="tn">主要指数最弱</span></li><li><span class="tnm">沪深300</span><span class="tvl">4008.87</span><span class="tch flat">0.20%</span><span class="tn">主要指数中最抗跌（宽基ETF…</span></li><li><span class="tnm">北证50</span><span class="tvl">855.06</span><span class="tch flat">4.02%</span><span class="tn">最弱</span></li><li><span class="tnm">中证500</span><span class="tvl">6327.05</span><span class="tch flat">1.45%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6221.23</span><span class="tch flat">1.71%</span><span class="tn">　</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">2108</b></li><li><span class="tk">下跌</span><b class="down">3309</b></li><li><span class="tk">涨停</span><b>52</b></li><li><span class="tk">跌停</span><b>22</b></li><li><span class="tk">成交额</span><b>1.70 万亿</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p><strong>「指数失真、个股普杀、科技崩塌」的极致分化日。</strong> 表面看上证仅跌 0.82%、沪深300 仅跌 0.20%（权重护盘），但科创50 −3.81%、北证50 −4.02%——小盘与硬科技遭集中抛售，市场实际体感远差于指数。全市场红盘率仅 37%、<strong>跌超5% 达 636 家（约为涨超5% 137 家的 4.6 倍）</strong>、跌停 22 家；两市成交 17034 亿小幅缩量。全A 行业主力净流出 567.73 亿，<strong>失血高度集中于 AI 硬件链</strong>（半导体+通信+元件+消费电子四件套合计约 −320 亿，占全市场净流出约 56%），养殖、白酒、保险等防御与困境反转方向独撑盘面。</p>
 <h2 id="sec1">二、核心指数表现</h2>

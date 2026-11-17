@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年9月22日　周二</div>
   <h1 class="hl">放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-09-22 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3952.13</span><span class="tch up">+0.06%</span></li><li><span class="tnm">深证成指</span><span class="tvl">13723.74</span><span class="tch down">-0.05%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3399.93</span><span class="tch up">+0.01%</span></li><li><span class="tnm">科创50</span><span class="tvl">1665.04</span><span class="tch up">+0.46%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4544.59</span><span class="tch up">+0.11%</span></li><li><span class="tnm">北证50</span><span class="tvl">1046.80</span><span class="tch down">-1.08%</span></li><li><span class="tnm">中证500</span><span class="tvl">7828.94</span><span class="tch down">-0.27%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7759.03</span><span class="tch down">-0.09%</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>42%</b></li><li><span class="tk">涨停</span><b>65 家</b></li><li><span class="tk">跌停</span><b>5 家</b></li><li><span class="tk">成交额</span><b>2.14 万亿</b></li></ul></section>
-<blockquote><p>数据截至 15:15 收盘 · 来源：腾讯自选股/东方财富行情接口</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-09-22 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3952.13</span><span class="tch up">+0.06%</span></li><li><span class="tnm">深证成指</span><span class="tvl">13723.74</span><span class="tch down">-0.05%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3399.93</span><span class="tch up">+0.01%</span></li><li><span class="tnm">科创50</span><span class="tvl">1665.04</span><span class="tch up">+0.46%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4544.59</span><span class="tch up">+0.11%</span></li><li><span class="tnm">北证50</span><span class="tvl">1046.80</span><span class="tch down">-1.08%</span></li><li><span class="tnm">中证500</span><span class="tvl">7828.94</span><span class="tch down">-0.27%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7759.03</span><span class="tch down">-0.09%</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">2374</b></li><li><span class="tk">下跌</span><b class="down">3030</b></li><li><span class="tk">涨停</span><b>65</b></li><li><span class="tk">跌停</span><b>5</b></li><li><span class="tk">成交额</span><b>2.14 万亿</b><i class="tsub">放量 1040 亿</i></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">一句话定性：放量滞涨、冲高回落，指数级别的胜利没能转化成个股的胜利。</p>
 <div class="tbl"><table><thead><tr><th>维度</th><th>结论</th></tr></thead><tbody><tr><td>量能</td><td>两市成交 <strong>21355.50亿</strong>（2.14万亿），较上日 <strong>放量1040.37亿</strong>，重回2.1万亿上方</td></tr><tr><td>指数</td><td>沪指 <span class="up">+0.06%</span> 收 3952.13，深成指 <span class="down">-0.05%</span>，创业板指 <span class="up">+0.01%</span>，<strong>尾盘集体下挫</strong>，"高开祖训"再现</td></tr><tr><td>广度</td><td>上涨 2374 / 下跌 3030，红盘率仅 <strong>42%</strong>（昨日 81%），赚钱效应大幅收敛</td></tr><tr><td>情绪</td><td>涨停 <strong>65</strong> 家（昨日 106 家）、跌停 5 家；昨日涨停股今日 61.32% 上涨（前值 67.9%）——降温但未崩</td></tr><tr><td>主力资金</td><td>行业净流入前三：广告营销 <span class="up">+19.38亿</span>、IT服务 <span class="up">+15.51亿</span>、计算机设备 <span class="up">+14.38亿</span>&lt;br&gt;净流出第一：通信设备 <strong><span class="down">-63.53亿</span></strong>（昨日 <span class="up">+32.95亿</span>，单日反转近100亿）</td></tr><tr><td>领涨板块</td><td>AI应用/Agent软件链、广告营销·出版传媒、创新药·肿瘤疫苗</td></tr><tr><td>领跌板块</td><td>航运港口、贵金属、算力硬件（通信设备）</td></tr><tr><td>核心矛盾</td><td><strong>资金从"算力硬件"切向"AI应用"</strong>，硬件端的产业利好与资金流向首次明显背离</td></tr></tbody></table></div>
@@ -249,6 +261,7 @@ p.k strong{font-weight:700}
 <ul><li>冲高回落、红盘率仅42%：谁在卖出算力，谁在买入AI应用？</li><li>AI主线内部"大换血"？一天的资金反转说明不了什么</li></ul>
 <blockquote><p>注：若要用"硬件失血 X 亿、软件吸金 Y 亿"的句式，务必用同口径分组数（硬件 8 行业 -120.4 亿 / 软件 8 行业 +67.6 亿），并注明是单日数据。直接用"通信设备 -63 亿 vs 软件三行业 +50 亿"属于跨层级对比，不严谨。</p></blockquote>
 <p><em>本文为公开市场数据整理与复盘，不构成任何投资建议。投资有风险，决策需谨慎。</em></p>
+<div class="source-notes"><blockquote><p>数据截至 15:15 收盘 · 来源：腾讯自选股/东方财富行情接口</p></blockquote></div>
 <div class="pager"><a class="next" href="2026-09-23.html"><span class="dir">下一期</span>09-23　缩量冲高回落，指数全线收绿但跌幅有限，赚钱效应明显收缩</a></div>
 </article>
 </div></div>

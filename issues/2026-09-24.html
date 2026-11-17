@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年9月24日　周四</div>
   <h1 class="hl">1）今天是"高位筹码清算日"，不是"系统性风险日"</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-09-24 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3888.37</span><span class="tch down">-1.22%</span></li><li><span class="tnm">深证成指</span><span class="tvl">13316.97</span><span class="tch down">-2.34%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3288.95</span><span class="tch down">-2.68%</span></li><li><span class="tnm">科创50</span><span class="tvl">1621.87</span><span class="tch down">-2.35%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4439.14</span><span class="tch down">-1.73%</span></li><li><span class="tnm">北证50</span><span class="tvl">1055.74</span><span class="tch down">-1.70%</span></li><li><span class="tnm">中证500</span><span class="tvl">7624.07</span><span class="tch down">-2.15%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7570.14</span><span class="tch down">-2.26%</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>20%</b></li><li><span class="tk">涨停</span><b>53 家</b></li><li><span class="tk">跌停</span><b>13 家</b></li><li><span class="tk">成交额</span><b>1.65 万亿</b></li><li><span class="tk">最高板</span><b>5 板</b></li></ul></section>
-<blockquote><p>数据截至 15:15 收盘 · 数据源：腾讯自选股（westock）/ 东方财富涨停池</p><p>全市场样本 5568 只（沪深主板+创业+科创+北交所）</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-09-24 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3888.37</span><span class="tch down">-1.22%</span></li><li><span class="tnm">深证成指</span><span class="tvl">13316.97</span><span class="tch down">-2.34%</span></li><li><span class="tnm">创业板指</span><span class="tvl">3288.95</span><span class="tch down">-2.68%</span></li><li><span class="tnm">科创50</span><span class="tvl">1621.87</span><span class="tch down">-2.35%</span></li><li><span class="tnm">沪深300</span><span class="tvl">4439.14</span><span class="tch down">-1.73%</span></li><li><span class="tnm">北证50</span><span class="tvl">1055.74</span><span class="tch down">-1.70%</span></li><li><span class="tnm">中证500</span><span class="tvl">7624.07</span><span class="tch down">-2.15%</span></li><li><span class="tnm">中证1000</span><span class="tvl">7570.14</span><span class="tch down">-2.26%</span></li></ul><ul class="tape-mood"><li><span class="tk">涨停</span><b>53</b></li><li><span class="tk">跌停</span><b>13</b></li><li><span class="tk">成交额</span><b>1.65 万亿</b><i class="tsub">缩量 4850 亿</i></li><li><span class="tk">最高</span><b>5 板</b></li></ul></section>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">1）今天是"高位筹码清算日"，不是"系统性风险日"。</p>
 <p>上证 <span class="down">-1.22%</span>、深证 <span class="down">-2.34%</span>、创业板 <span class="down">-2.68%</span>，三大指数<strong>全部收在当日最低点</strong>，全天单边下行无像样反弹。但指数级的跌幅并没有对应情绪崩塌——连板梯队最高摸到 5 板、昨日连板指数逆势 <span class="up">+1.40%</span>。跌的是估值高位、筹码拥挤的品种，不是人气。</p>
@@ -276,6 +288,7 @@ p.k strong{font-weight:700}
 <p class="k">备选 2：</p>
 <blockquote><p>贵金属-5%、覆铜板-5%、元件-4.5%：普跌日里，只有低估值与政策题材站着</p></blockquote>
 <p><em>免责声明：本文为数据复盘与方法论记录，所有板块与个股仅为盘面客观描述，不构成任何投资建议。</em></p>
+<div class="source-notes"><blockquote><p>数据截至 15:15 收盘 · 数据源：腾讯自选股（westock）/ 东方财富涨停池</p><p>全市场样本 5568 只（沪深主板+创业+科创+北交所）</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-09-23.html"><span class="dir">上一期</span>09-23　缩量冲高回落，指数全线收绿但跌幅有限，赚钱效应明显收缩</a><a class="next" href="2026-09-28.html"><span class="dir">下一期</span>09-28　节后首日 A股遭遇"利空共振式"杀跌，杀的是算力硬件的高位筹码，不是</a></div>
 </article>
 </div></div>

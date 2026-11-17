@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -201,8 +214,7 @@ p.k strong{font-weight:700}
   <div class="meta">2026年10月15日　周四</div>
   <h1 class="hl">"权重护盘、小票崩塌"的极致分化日，是国庆后广度最差的一天</h1>
   
-<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-15 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3707.48</span><span class="tch down">-1.59%</span><span class="tn">成交额7743.92亿</span></li><li><span class="tnm">深证成指</span><span class="tvl">11816.79</span><span class="tch down">-2.43%</span><span class="tn">成交额8586.04亿</span></li><li><span class="tnm">创业板指</span><span class="tvl">2783.17</span><span class="tch down">-2.92%</span><span class="tn">　</span></li><li><span class="tnm">科创50</span><span class="tvl">1359.52</span><span class="tch down">-1.50%</span><span class="tn">　</span></li><li><span class="tnm">沪深300</span><span class="tvl">4166.01</span><span class="tch down">-1.23%</span><span class="tn">权重相对抗跌</span></li><li><span class="tnm">北证50</span><span class="tvl">967.51</span><span class="tch down">-3.44%</span><span class="tn">跌幅最大</span></li><li><span class="tnm">中证500</span><span class="tvl">6769.25</span><span class="tch down">-3.02%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6678.65</span><span class="tch down">-3.28%</span><span class="tn">　</span></li></ul><ul class="tape-mood"><li><span class="tk">红盘率</span><b>7%</b></li><li><span class="tk">涨停</span><b>40 家</b></li><li><span class="tk">跌停</span><b>28 家</b></li><li><span class="tk">成交额</span><b>7744 亿</b></li></ul></section>
-<blockquote><p>取数链路：neodata 统一行情 / 统一交易日历 / 大盘市场宽度统计（westock 仍 AUTH_REQUIRED，全程免鉴权通道）。</p><p>交易日判定三步一致：交易日历 SH=开市 / 上证「盘后交易中」/ 行情表最新有效日=2026-10-15</p></blockquote>
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-10-15 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3707.48</span><span class="tch down">-1.59%</span><span class="tn">成交额7743.92亿</span></li><li><span class="tnm">深证成指</span><span class="tvl">11816.79</span><span class="tch down">-2.43%</span><span class="tn">成交额8586.04亿</span></li><li><span class="tnm">创业板指</span><span class="tvl">2783.17</span><span class="tch down">-2.92%</span><span class="tn">　</span></li><li><span class="tnm">科创50</span><span class="tvl">1359.52</span><span class="tch down">-1.50%</span><span class="tn">　</span></li><li><span class="tnm">沪深300</span><span class="tvl">4166.01</span><span class="tch down">-1.23%</span><span class="tn">权重相对抗跌</span></li><li><span class="tnm">北证50</span><span class="tvl">967.51</span><span class="tch down">-3.44%</span><span class="tn">跌幅最大</span></li><li><span class="tnm">中证500</span><span class="tvl">6769.25</span><span class="tch down">-3.02%</span><span class="tn">　</span></li><li><span class="tnm">中证1000</span><span class="tvl">6678.65</span><span class="tch down">-3.28%</span><span class="tn">　</span></li></ul><ul class="tape-mood"><li><span class="tk">涨停</span><b>40</b></li><li><span class="tk">跌停</span><b>28</b></li><li><span class="tk">成交额</span><b>7744 亿</b></li></ul></section>
 <h2 id="sec0">一、核心结论（今日资金表现）</h2>
 <p class="k">"权重护盘、小票崩塌"的极致分化日，是国庆后广度最差的一天。</p>
 <ul><li><strong>指数跌幅被权重稀释，个股实际惨烈</strong>：上证 <span class="down">-1.59%</span> 收 3707.48，靠白酒/银行/保险撑住；但沪深300（<span class="down">-1.23%</span>）与中证2000（<span class="down">-3.30%</span>）剪刀差达 <strong>2 个百分点</strong>，小盘成重灾区。</li><li><strong>红盘率仅 7%</strong>（全市场 430 涨 / 5108 跌），<strong>838 家跌超 5%</strong>——全面恶化于 10/14（红盘率 17%、跌超 5% 约 325 家），为 10/8 以来最冷。</li><li><strong>放量下杀而非惜售</strong>：两市成交 <strong>1.633 万亿</strong>（较昨日 1.414 万亿 +2186 亿 / <span class="up">+15.5%</span>），恐慌盘涌出特征明显。</li><li><strong>杠杆持续去化</strong>：融资余额 24974.85 亿（<span class="down">-0.42%</span>，4 日连降）；涨停 36 / 跌停 28，昨日涨停 40 只今日仅 <strong>37.50%</strong> 上涨，连板高度与宽度同弱。</li></ul>
@@ -235,6 +247,7 @@ p.k strong{font-weight:700}
 <ol><li><strong>情绪冰点后的反抽概率</strong>：红盘率 7% 已近极端广度，历史此类情形后常有技术性反抽，关键看量能是否继续放大（恐慌抛压是否衰竭）。</li><li><strong>强势补跌是否见底</strong>：通信设备、风电的"强势补跌"节奏未止，观察中际旭创、大金重工能否止跌。</li><li><strong>30Y 美债仍是估值锚</strong>：≈5.6% 未回落前，成长 / 小盘（中证2000）难趋势反转。</li><li><strong>持仓关键节点</strong>：华兰 / 特一三季报（10-27 / 10-28）为业绩验证点；中证2000ETF 的小盘敞口建议审视。</li></ol>
 <h2 id="sec6">公众号标题</h2>
 <ul><li><strong>主推</strong>：红盘率仅 7%、838 股跌超 5%：A股极致避险，白酒银行独红，小盘中证2000 重挫 3.3%</li><li>备选①：权重护盘难掩个股崩塌：通信设备 <span class="down">-5.26%</span> 四连杀，风电强势补跌，传媒一日游瓦解</li><li>备选②：国庆后最冷交易日：430 涨 5108 跌，融资 4 日连降，资金只敢抱白酒与银行</li><li>备选③：放量下杀、红盘率 7%：A股进入恐慌出清，持仓里只有医药和红利在扛</li></ul>
+<div class="source-notes"><blockquote><p>取数链路：neodata 统一行情 / 统一交易日历 / 大盘市场宽度统计（westock 仍 AUTH_REQUIRED，全程免鉴权通道）。</p><p>交易日判定三步一致：交易日历 SH=开市 / 上证「盘后交易中」/ 行情表最新有效日=2026-10-15</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-14.html"><span class="dir">上一期</span>10-14　"10/13 假阳线"一日游后市场重回普杀</a><a class="next" href="2026-10-16.html"><span class="dir">下一期</span>10-16　指数平淡、个股普修</a></div>
 </article>
 </div></div>

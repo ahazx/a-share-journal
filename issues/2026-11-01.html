@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">｜2026-11-01 周末外围观察 + 11/02盘前清单</h1>
   
 
-<blockquote><p><strong>本文不是 A股复盘</strong>。今日（2026-11-01 周日）为周末，交易所不开市，无 A股行情。</p><p>按纪律：不拿上一交易日数据冒充当日复盘，只做「外围定价 + 下一交易日推演」。</p></blockquote>
 <h2 id="sec0">一、交易日判定（三步一致）</h2>
 <div class="tbl"><table><thead><tr><th>步骤</th><th>信号</th><th>结论</th></tr></thead><tbody><tr><td>① westock quote <code>sh000001</code> 的 <code>time</code> 字段</td><td><code>2026-10-30</code>（≠今日）</td><td>休市</td></tr><tr><td>② westock kline 最新一根</td><td>最新有效日 ≤ <code>2026-10-30</code></td><td>休市</td></tr><tr><td>③ 历次执行与日历交叉验证</td><td>今日周日，交易所周末不开市</td><td>休市</td></tr></tbody></table></div>
 <p class="k">下一交易日：2026-11-02（周一）开市。</p>
@@ -235,6 +247,7 @@ p.k strong{font-weight:700}
 <blockquote><p>PMI跌破荣枯线、美股芯片"黑色星期五"，A股11月开门红还是开门黑？</p></blockquote>
 <p class="k">备选（3条）：</p>
 <blockquote><p>1. 央行利率换锚+证监会稳市场，休市长假后A股能企稳吗？</p><p>2. 中国稀土、TCL中环周一停牌重组，弱势里稀缺的事件题材能撑起盘面吗？</p><p>3. 创业板10月重挫23%、科创50创年内新低，11月是最后一跌还是继续磨底？</p></blockquote>
+<div class="source-notes"><blockquote><p><strong>本文不是 A股复盘</strong>。今日（2026-11-01 周日）为周末，交易所不开市，无 A股行情。</p><p>按纪律：不拿上一交易日数据冒充当日复盘，只做「外围定价 + 下一交易日推演」。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-10-31.html"><span class="dir">上一期</span>10-31　周末外围观察 + 11/02 盘前清单</a><a class="next" href="2026-11-02.html"><span class="dir">下一期</span>11-02　放量大反攻日，风险偏好一夜反转</a></div>
 </article>
 </div></div>

@@ -170,7 +170,7 @@ p.k strong{font-weight:700}
   display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
   border-top:1px solid var(--hair);font-size:12px;
 }
-.tape-mood li{position:static;margin:0;padding:0 16px;line-height:1.7;white-space:nowrap}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
 .tape-mood li::before{content:none}
 .tape-mood li:first-child{padding-left:0}
 .tape-mood li+li{border-left:1px solid var(--hair)}
@@ -189,6 +189,19 @@ p.k strong{font-weight:700}
   .tape-mood li:first-child{padding-left:0}
 }
 @media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
 </style>
 </head><body>
 <header class="masthead"><div class="wrap">
@@ -202,7 +215,6 @@ p.k strong{font-weight:700}
   <h1 class="hl">｜ · 港股风向标大跌 -2.77%</h1>
   
 
-<blockquote><p><strong>A股状态：国庆假期休市（10/1–10/7），10/8（周四）开市。</strong></p><p>三步判定一致：① <code>westock quote sh000001</code> 返回 time = 2026-09-30 ② <code>kline</code> 最新一根 = 2026-09-30</p><p>③ 采集日志打印「2026-10-01 不是交易日（接口返回 2026-09-30），跳过」。</p><p><strong>本文不是A股复盘</strong>，是假期外围观察——港股10/2正常交易，是这7天里唯一可交易的中国资产定价窗口。</p><p>港股数据截至北京时间 15:15 盘中（港股16:00收盘），非最终收盘价。</p></blockquote>
 <h2 id="sec0">一、核心结论</h2>
 <p class="k">A股休市，港股独自承压——但跌幅里有一半是"没有南向资金"造成的，不能1:1映射给A股。</p>
 <p>恒生指数盘中跌 2.77% 报 23931.27（-682点），创 2026年7月以来最大单日跌幅；恒生科技 <span class="down">-2.61%</span>、国企指数 <span class="down">-2.50%</span>。</p>
@@ -258,6 +270,7 @@ p.k strong{font-weight:700}
 <blockquote><p>港股创7月来最大跌幅，四个原因里三个10月8日就消失：拆解假期外围对A股的真假利空</p></blockquote>
 <p class="k">备选2：</p>
 <blockquote><p>油价102美元、美债5.34%、南向缺席：港股替A股扛下的这一跌，节后该怎么还原</p></blockquote>
+<div class="source-notes"><blockquote><p><strong>A股状态：国庆假期休市（10/1–10/7），10/8（周四）开市。</strong></p><p>三步判定一致：① <code>westock quote sh000001</code> 返回 time = 2026-09-30 ② <code>kline</code> 最新一根 = 2026-09-30</p><p>③ 采集日志打印「2026-10-01 不是交易日（接口返回 2026-09-30），跳过」。</p><p><strong>本文不是A股复盘</strong>，是假期外围观察——港股10/2正常交易，是这7天里唯一可交易的中国资产定价窗口。</p><p>港股数据截至北京时间 15:15 盘中（港股16:00收盘），非最终收盘价。</p></blockquote></div>
 <div class="pager"><a class="prev" href="2026-09-30.html"><span class="dir">上一期</span>09-30　指数稳、结构裂</a><a class="next" href="2026-10-03.html"><span class="dir">下一期</span>10-03　假期过半，外围已翻多 —— 10/8 开盘作战手册</a></div>
 </article>
 </div></div>
