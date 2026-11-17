@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-10-12 权重护盘、个股普杀 · A股复盘第017期</title>
+<style>
+:root{
+  --paper:#f6f3ee; --card:#fffdf9; --ink:#1c1a17; --ink2:#413c35; --muted:#8a8279;
+  --line:#e2dbd0; --line2:#cfc6b8; --red:#c0392b; --redbg:#fdf1ef;
+  --green:#1a7f4b; --greenbg:#eef7f1; --gold:#8c6b2f;
+  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:15.5px; line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- 报头 ---------- */
+.masthead{border-bottom:3px double var(--ink);background:var(--card);padding:26px 0 18px}
+.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.brand h1{
+  font-family:var(--serif);font-size:34px;line-height:1.15;margin:0;
+  letter-spacing:2px;font-weight:700;
+}
+.brand .sub{
+  font-family:var(--sans);font-size:11px;letter-spacing:3.5px;color:var(--muted);
+  text-transform:uppercase;margin-top:7px;
+}
+.masthead .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.9}
+.masthead .meta b{color:var(--ink);font-family:var(--serif);font-size:22px;letter-spacing:1px}
+
+/* ---------- 版面骨架 ---------- */
+.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px;padding:38px 0 80px}
+@media(max-width:940px){.layout{grid-template-columns:1fr;gap:20px;padding-top:26px}}
+
+/* ---------- 目录 ---------- */
+.toc{position:sticky;top:24px;align-self:start;font-size:13px}
+.toc .toc-t{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:12px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0 6px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink2);line-height:1.5}
+.toc a:hover{color:var(--red);border-left-color:var(--red);background:var(--redbg)}
+@media(max-width:940px){
+  .toc{position:static;border:1px solid var(--line);background:var(--card);padding:14px 16px}
+  .toc ol{columns:2;column-gap:18px}
+  .toc a{font-size:12.5px}
+}
+
+/* ---------- 正文 ---------- */
+article{max-width:820px}
+.issue-head{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
+.issue-head .kicker{font-size:11.5px;letter-spacing:2px;color:var(--red);margin-bottom:6px}
+.issue-head h1{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:.5px}
+.issue-head .dateline{font-size:12.5px;color:var(--muted)}
+
+h2{
+  font-family:var(--serif);font-size:21px;margin:44px 0 16px;padding-bottom:9px;
+  border-bottom:1px solid var(--line2);letter-spacing:.5px;
+}
+h2::before{content:"";display:inline-block;width:5px;height:15px;background:var(--red);margin-right:10px;vertical-align:-2px}
+h3{font-family:var(--serif);font-size:17px;margin:30px 0 10px;color:var(--ink)}
+h4{font-size:14.5px;margin:22px 0 8px;color:var(--ink2)}
+p{margin:0 0 13px;text-align:justify}
+strong{font-weight:700;color:#000}
+em{font-style:normal;background:linear-gradient(transparent 62%,#f3e2b8 62%);padding:0 1px}
+hr{display:none}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:#efe9df;padding:1px 5px;border-radius:3px}
+
+/* 首段引言 */
+blockquote{
+  margin:0 0 26px;padding:14px 18px;background:var(--card);border-left:3px solid var(--line2);
+  font-size:12.8px;line-height:1.8;color:var(--muted);
+}
+blockquote p{margin:0 0 6px;text-align:left}
+blockquote p:last-child{margin:0}
+
+/* 列表 */
+ul,ol{margin:0 0 16px;padding-left:22px}
+li{margin:0 0 9px;line-height:1.8}
+li::marker{color:var(--muted)}
+ul ul,ol ul,ul ol{margin:8px 0 0}
+
+/* 表格 */
+.tbl{overflow-x:auto;margin:16px 0 24px;border:1px solid var(--line);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6;font-variant-numeric:tabular-nums}
+thead th{
+  background:#efe9df;color:var(--ink);font-weight:600;text-align:left;
+  padding:9px 12px;border-bottom:1px solid var(--line2);white-space:nowrap;font-size:12.5px;
+}
+tbody td{padding:9px 12px;border-bottom:1px solid #f0ebe3;vertical-align:top}
+tbody tr:nth-child(even){background:#fcfaf6}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#fbf4ec}
+td:first-child{font-weight:600;white-space:nowrap}
+.num{font-variant-numeric:tabular-nums}
+
+/* 数字着色（红涨绿跌） */
+.up{color:var(--red);font-weight:600}
+.down{color:var(--green);font-weight:600}
+.flat{color:var(--muted)}
+
+/* 章节内小节 */
+article>b,article>strong{display:block}
+
+/* 页脚 */
+.foot{border-top:3px double var(--ink);margin-top:70px;padding:22px 0 60px;font-size:12px;color:var(--muted)}
+.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* 上下期 */
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
+.pager a{flex:1;border:1px solid var(--line);background:var(--card);padding:12px 16px;font-size:13px;transition:.15s}
+.pager a:hover{border-color:var(--red);color:var(--red)}
+.pager .dir{display:block;font-size:10.5px;letter-spacing:2px;color:var(--muted);margin-bottom:3px}
+.pager a.next{text-align:right}
+
+@media print{
+  body{background:#fff;font-size:11.5pt}
+  .toc,.pager,.masthead .meta{display:none}
+  .layout{grid-template-columns:1fr;padding:0}
+  h2{break-after:avoid}
+  .tbl{overflow:visible;break-inside:avoid}
+}
+</style>
+</head><body>
+
+<header class="masthead"><div class="wrap">
+  <div class="brand">
+    <h1>山哥 · A股每日复盘</h1>
+    <div class="sub">Daily Market Review · A-Share Journal</div>
+  </div>
+  <div class="meta"><b>第 017 期</b><br>2026-10-12 · 周一</div>
+</div></header>
+
+<div class="wrap"><div class="layout">
+<nav class="toc"><div class="toc-t">本期目录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、资金表现（行业主力净流入 TOP3，近零和指标，附三周期）</a></li><li><a href="#sec4">五、题材涨跌分析</a></li><li><a href="#sec5">六、后市观察</a></li><li><a href="#sec6">七、公众号标题</a></li></ol></nav>
+<article>
+  <div class="issue-head">
+    <div class="kicker">第 017 期 · NO.017</div>
+    <h1>权重护盘、个股普杀</h1>
+    <div class="dateline">2026-10-12 · 周一</div>
+  </div>
+<h1 class="md-h1">A股深度复盘 · 2026-10-12（周一）15:15</h1>
+<blockquote><p>国庆后第 3 个交易日（10/9、10/12 为交易日，10/10–11 周末休市）。</p><p>数据来源：neodata 统一行情 / 大盘市场宽度统计 / 板块资金排行（westock 仍 AUTH_REQUIRED，全程免鉴权通道）。</p></blockquote>
+<h2 id="sec0">一、核心结论</h2>
+<p>今日市场呈&amp;#x73B0;<strong>「权重护盘、个股普杀」的极致分化</strong>。上证指数仅微跌 0.43%，完全靠银行板块独撑；但全市场<strong>红盘率仅 20%</strong>，<strong>跌超 5% 个股达 470 家（昨日 165 家，骤扩 2.8 倍）</strong>，中证 2000 小盘指数跌 2.10%、对应 ETF 跌 2.52%。</p>
+<p>资金极致避险：银行（红利）+ 传媒/AI应用（超跌修复）双向吸金，而硬件链（PCB/覆铜板/光模块/半导体/消费电子）与资源品（贵金属）集中出逃。这是 10/8「机构砸盘+游资接力」双轨分裂的延续与深化——<strong>宽度进一步崩塌（红盘率 30%→20%），但高度仍在（涨停 48 家、连板晋级率 56.76%）</strong>。</p>
+<ul><li><strong>今日领涨板块</strong>：传媒/AI应用（出版 <span class="up">+4.02%</span>、影视院线 <span class="up">+3.89%</span>）、银行（三细分均 <span class="up">+2.4%</span>~2.6%）、风电设备（<span class="up">+1.50%</span>）。</li><li><strong>今日领跌板块</strong>：覆铜板（−6.91%）、通信设备/CPO（−5.24%）、贵金属（−4.16%）。</li></ul>
+<h2 id="sec1">二、核心指数表现</h2>
+<div class="tbl"><table><thead><tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>振幅</th><th>成交额</th></tr></thead><tbody><tr><td>上证指数</td><td>3797.24</td><td>−0.43%</td><td>0.98%</td><td>7149 亿</td></tr><tr><td>深证成指</td><td>12384.87</td><td>−2.03%</td><td>2.24%</td><td>8229 亿</td></tr><tr><td>创业板指</td><td>2963.82</td><td>−2.61%</td><td>2.86%</td><td>3923 亿</td></tr><tr><td>科创50</td><td>1426.72</td><td>−2.10%</td><td>3.30%</td><td>646 亿</td></tr><tr><td>北证50</td><td>1011.75</td><td>−2.46%</td><td>2.45%</td><td>131 亿</td></tr><tr><td>沪深300</td><td>4287.98</td><td>−0.68%</td><td>1.26%</td><td>4056 亿</td></tr><tr><td>中证500</td><td>7093.02</td><td>−2.18%</td><td>2.08%</td><td>2572 亿</td></tr><tr><td>中证1000</td><td>7021.47</td><td>−1.88%</td><td>1.83%</td><td>3101 亿</td></tr><tr><td>中证2000</td><td>3000.95</td><td>−2.10%</td><td>1.95%</td><td>3408 亿</td></tr></tbody></table></div>
+<blockquote><p><strong>大小盘劈叉明显</strong>：沪深300（−0.68%）远强于中证1000（−1.88%）/ 中证2000（−2.10%），避险资金抱团权重，小盘筹码松动。</p></blockquote>
+<h2 id="sec2">三、市场情绪与量能</h2>
+<ul><li><strong>成交额</strong>：两市合计 <strong>1.5378 万亿</strong>，较昨日 1.90 万亿 <strong>缩量 3627 亿（−19%）</strong>。缩量下跌，承接力弱。</li><li><strong>涨跌家数</strong>：上涨 1167 / 下跌 4325 / 平盘 81 / 停牌 12；<strong>红盘率 20%</strong>，市场情绪低（过去一年仅 27% 交易日处此热度区间）。</li><li><strong>涨跌停</strong>：涨停 48 家、跌停 23 家。</li><li><strong>杀跌面</strong>：<strong>跌超 5% 共 470 家</strong>（−7%~~−5% 段 323 + −7% 以下 124 + 跌停 23）；<strong>跌超 2% 约 2414 家</strong>（含 −5%~~−2% 段 1944）。昨日跌超 5% 仅 165 家，今日骤扩近 3 倍。</li><li><strong>短线情绪</strong>：昨日涨停 74 只，今日 56.76% 上涨（昨日晋级率 60.87%，微降）；涨停 48 家尚可，但宽度崩塌。</li><li><strong>杠杆</strong>：昨日融资余额 25218.85 亿，环比 −0.57%，融券 296.01 亿；杠杆做多情绪一般。</li></ul>
+<h2 id="sec3">四、资金表现（行业主力净流入 TOP3，近零和指标，附三周期）</h2>
+<div class="tbl"><table><thead><tr><th>板块</th><th>今日净流入</th><th>5日</th><th>20日</th><th>涨股比</th></tr></thead><tbody><tr><td>影视院线</td><td>+7.43 亿</td><td>+12.89 亿</td><td>+10.08 亿</td><td>14/19</td></tr><tr><td>风电设备</td><td>+6.86 亿</td><td>−6.66 亿</td><td>+3.65 亿</td><td>23/31</td></tr><tr><td>股份制银行</td><td>+6.75 亿</td><td>−7.03 亿</td><td>−39.14 亿</td><td>9/9</td></tr></tbody></table></div>
+<blockquote><p><strong>纪律提醒</strong>：板块资金流为近零和，单列金额只证方向不证规模。今日看点：</p><p>① <strong>影视院线三周期资金全正（+7.43 / +12.89 / +10.08 亿）</strong>，是全市场最稀缺的"真主线"信号，与板块涨幅（影视 <span class="up">+3.89%</span>）相互印证；</p><p>② 风电流入但 5 日仍 −6.66 亿，属节前流出后的回补而非反转；</p><p>③ 银行今日流入但 20 日 −39.14 亿（巨额负值），说明是<strong>避险回流而非趋势性配置</strong>——银行涨的是"防御属性"，不是基本面拐点。</p></blockquote>
+<h2 id="sec4">五、题材涨跌分析</h2>
+<h3>领涨题材 ① 传媒 / AI应用（延续 10/9 主线，超跌修复 + 催化）</h3>
+<ul><li><strong>行业</strong>：出版 <span class="up">+4.02%</span>、影视院线 <span class="up">+3.89%</span>、数字媒体 <span class="up">+2.65%</span>。</li><li><strong>概念</strong>：爱奇艺概念 <span class="up">+4.00%</span>、短剧/互动游戏 <span class="up">+1.88%</span>、Kimi <span class="up">+1.90%</span>、影视传媒 <span class="up">+1.87%</span>。</li><li><strong>代表个股</strong>：果麦文化 <span class="up">+20.01%</span>（20cm）、欢瑞世纪 <span class="up">+10.10%</span>、掌阅科技 <span class="up">+9.98%</span>。</li><li><strong>涨跌逻辑</strong>：连续两日霸屏领涨，核心驱动是 ① <strong>超跌修复</strong>——传媒是 10/8 错杀最重的板块之一，估值与位置双低； ② <strong>AI 应用端催化持续</strong>（爱奇艺 / Kimi / 短剧同步走强），属同一"软切硬"叙事的延续，资金在 AI 内部从硬件切向应用； ③ 节后三季报窗口下，硬件高位筹码松动，低位传媒成为避险资金与游资的共振方向。 <strong>风险提示</strong>：影视院线换手率高达 8.74%、出版 3.54%，短线拥挤度上升，连续两日大涨后分化风险加大。</li></ul>
+<h3>领涨题材 ② 银行（红利避险抱团）</h3>
+<ul><li><strong>行业</strong>：国有大型银行 <span class="up">+2.60%</span>、股份制银行 <span class="up">+2.41%</span>、农商行 <span class="up">+2.61%</span>。</li><li><strong>代表个股</strong>：渝农商行 <span class="up">+4.95%</span>、农业银行 <span class="up">+3.01%</span>、招商银行 <span class="up">+3.24%</span>（农行盘中再创历史新高）。</li><li><strong>涨跌逻辑</strong>：极致分化日典型的"防御抱团"。当红盘率跌至 20%、小盘普杀时，红利低波资产成为绝对收益资金的避风港。银行 20 日资金为 −39.14 亿（巨额净流出），今日上涨是<strong>避险回流而非趋势反转</strong>，其持续性取决于市场风险偏好的修复速度。</li></ul>
+<h3>领涨题材 ③ 风电设备（强势赛道资金回流）</h3>
+<ul><li><strong>板块</strong>：风电设备 <span class="up">+1.50%</span>，今日主力净流入 +6.86 亿居全市场第二。</li><li><strong>代表个股</strong>：威力传动 <span class="up">+10.42%</span>（20cm 领涨）。</li><li><strong>涨跌逻辑</strong>：10/9 风电设备曾以 −3.01% 领跌（强势赛道补跌），今日逆势翻红且资金净流入第二，说明<strong>分歧中仍有资金承接</strong>。但 5 日主力仍为 −6.66 亿，属节前流出的回补性质，暂不能判定为趋势重启；需观察后续能否站上 5 日线并伴随量能放大。</li></ul>
+<h3>领跌题材 ① PCB / 覆铜板产业链（涨价链退潮、节前强势股补跌）</h3>
+<ul><li><strong>板块</strong>：覆铜板 −6.91%（全市场最大跌幅）、元件 −4.51%。</li><li><strong>代表个股</strong>：华正新材 −10.00%、金安国纪 −10.00%（双双跌停）、东材科技 −6.31%。</li><li><strong>涨跌逻辑</strong>：PCB/覆铜板是 9 月最强涨价链之一，节前累积巨大涨幅。今日属<strong>高位强势股补跌</strong>——覆铜板板块振幅 5.25%、换手 4.73%，典型获利盘集中兑现。需警惕：若补跌扩散至其他涨价链（如元件），可能拖累整个硬件方向。</li></ul>
+<h3>领跌题材 ② 通信设备 / CPO 光模块（余震延续）</h3>
+<ul><li><strong>板块</strong>：通信设备 −5.24%（振幅 5.39%）。</li><li><strong>背景</strong>：10/11 周末 FCC 26-50 最终规则生效，且<strong>未将中际旭创 / 新易盛 / 天孚等中国厂商列入 Covered List</strong>，理论上"利空出尽"。</li><li><strong>涨跌逻辑（反直觉点）</strong>：利好（未被列入清单）未能阻止板块继续大跌，证明当前杀的是<strong>节前高位筹码 + 1.6T 降价传闻余震 + 大摩草案远期悬剑</strong>，而非纯消息面。这与 10/8「杀估值 + 杀筹码非杀基本面」的判断一致——<strong>消息面利空出尽 ≠ 股价见底</strong>，筹码结构未修复前反弹难持续。</li></ul>
+<h3>领跌题材 ③ 贵金属（10/9 超跌反弹一日游证伪）</h3>
+<ul><li><strong>板块</strong>：贵金属 −4.16%（西部黄金等回落）。</li><li><strong>涨跌逻辑</strong>：10/9 贵金属曾以 <span class="up">+5.62%</span> 领涨（西部黄金 <span class="up">+9.98%</span>，属 20 日 −15.67% 后的超跌反弹）。今日 −4.16% 回落，<strong>印证此前纪律结论——单日放量大涨（量比 &gt;3）一律按"脉冲"处理，不写"反转确认"</strong>。黄金的商品属性（美联储 30Y 美债锚）未变，但短线资金明显是一日游。</li></ul>
+<blockquote><p><strong>次要走弱方向</strong>：半导体 −2.77%、消费电子 −3.51%、CRO −3.08%、医疗服务 −0.94%——硬件 + 资源 + 医药三线同步回调，与传媒 / 银行的避险抱团形成"极致劈叉"，这是当前市场最显著的结构特征。</p></blockquote>
+<h2 id="sec5">六、后市观察</h2>
+<ol><li><strong>红盘率能否回到 40% 以上</strong>：今日 20% 属情绪冰点区间，若明日仍低于 30%，需警惕"阴跌→恐慌"负反馈；反之若传媒 / 银行发散带动宽度修复，则今日为单日错杀。</li><li><strong>量能标尺</strong>：今日 1.5378 万亿较昨日缩 19%，<strong>缩量下跌 ≠ 企稳</strong>，需回到 1.7 万亿上方且红盘率回升，才能确认承接恢复。</li><li><strong>光模块"利空出尽"能否兑现</strong>：FCC 未列名后，观察中际旭创 / 新易盛能否止跌反包；若继续新低，则确认筹码驱动未结束（参考 10/8 纪律）。</li><li><strong>30Y 美债锚</strong>：10/10 收 5.600%，VIX −3.7%，利率压力边际缓和；但今日成长股（创业板 −2.61% / 科创 −2.10%）仍杀，说明主导因素已从利率切换为<strong>节后获利盘 + 三季报业绩验证窗口（10 月中下旬）的筹码再平衡</strong>。</li><li><strong>持仓视角（用户组合：医药 2 + 小盘宽基 1）</strong>：今日精准踩中"杀小盘"主线对立面——中证2000ETF南方 −2.52%、特一药业 −6.35%（中药 OTC，中报净利 −18.15% 弱势延续、今日放量跌）、华兰疫苗 −1.66%（流感疫苗偏消费医疗，相对抗跌）。<strong>组合整体承压但结构分化</strong>：华兰疫苗体现医药内部"消费医疗抗跌、业绩弱势股走弱"的特征，与 CRO −3.08% 的弱势相互印证；小盘宽基继续承担"杀小盘"beta。三季报披露临近（华兰 10-28、特一 10-27），业绩兑现成为这两只医药股下一阶段的关键变量。</li></ol>
+<h2 id="sec6">七、公众号标题</h2>
+<p><strong>一句话总结（主标题）：</strong></p>
+<blockquote><p>银行独撑沪指微跌、470 股跌超 5%：A股极致避险，传媒 AI 应用成唯一活口</p></blockquote>
+<p><strong>主推标题：</strong></p>
+<ol><li>银行独撑沪指微跌、470 股跌超 5%：A股极致避险，传媒 AI 应用成唯一活口</li></ol>
+<p><strong>备选标题：</strong> 2\. 红盘率仅 20%！470 股跌超 5%，A股上演"指数稳、个股崩"的极致分化 3\. FCC 放过光模块却仍跌 5%：A股杀的是筹码不是消息，利空出尽 ≠ 见底 4\. 从 10/9 反弹到 10/12 普杀：传媒两连阳成避风港，PCB 贵金属一日游证伪</p>
+<div class="pager"><a class="prev" href="2026-10-11.html"><span class="dir">← 上一期</span>10-11 交易状态：已休市；2026-10-11 未开盘</a><a class="next" href="2026-10-13.html"><span class="dir">下一期 →</span>10-13 探底回升、个股修复、结构撕裂</a></div>
+</article>
+</div></div>
+
+<footer class="foot"><div class="wrap">
+  <span>A股每日复盘期刊 · 由收盘数据自动生成</span>
+  <span>数据口径：沪深A股全市场 · 红涨绿跌</span>
+</div></footer>
+
+</body></html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-10-11 交易状态：已休市；2026-10-11 未开盘 · A股复盘第016期</title>
+<style>
+:root{
+  --paper:#f6f3ee; --card:#fffdf9; --ink:#1c1a17; --ink2:#413c35; --muted:#8a8279;
+  --line:#e2dbd0; --line2:#cfc6b8; --red:#c0392b; --redbg:#fdf1ef;
+  --green:#1a7f4b; --greenbg:#eef7f1; --gold:#8c6b2f;
+  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:15.5px; line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- 报头 ---------- */
+.masthead{border-bottom:3px double var(--ink);background:var(--card);padding:26px 0 18px}
+.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.brand h1{
+  font-family:var(--serif);font-size:34px;line-height:1.15;margin:0;
+  letter-spacing:2px;font-weight:700;
+}
+.brand .sub{
+  font-family:var(--sans);font-size:11px;letter-spacing:3.5px;color:var(--muted);
+  text-transform:uppercase;margin-top:7px;
+}
+.masthead .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.9}
+.masthead .meta b{color:var(--ink);font-family:var(--serif);font-size:22px;letter-spacing:1px}
+
+/* ---------- 版面骨架 ---------- */
+.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px;padding:38px 0 80px}
+@media(max-width:940px){.layout{grid-template-columns:1fr;gap:20px;padding-top:26px}}
+
+/* ---------- 目录 ---------- */
+.toc{position:sticky;top:24px;align-self:start;font-size:13px}
+.toc .toc-t{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:12px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0 6px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink2);line-height:1.5}
+.toc a:hover{color:var(--red);border-left-color:var(--red);background:var(--redbg)}
+@media(max-width:940px){
+  .toc{position:static;border:1px solid var(--line);background:var(--card);padding:14px 16px}
+  .toc ol{columns:2;column-gap:18px}
+  .toc a{font-size:12.5px}
+}
+
+/* ---------- 正文 ---------- */
+article{max-width:820px}
+.issue-head{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
+.issue-head .kicker{font-size:11.5px;letter-spacing:2px;color:var(--red);margin-bottom:6px}
+.issue-head h1{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:.5px}
+.issue-head .dateline{font-size:12.5px;color:var(--muted)}
+
+h2{
+  font-family:var(--serif);font-size:21px;margin:44px 0 16px;padding-bottom:9px;
+  border-bottom:1px solid var(--line2);letter-spacing:.5px;
+}
+h2::before{content:"";display:inline-block;width:5px;height:15px;background:var(--red);margin-right:10px;vertical-align:-2px}
+h3{font-family:var(--serif);font-size:17px;margin:30px 0 10px;color:var(--ink)}
+h4{font-size:14.5px;margin:22px 0 8px;color:var(--ink2)}
+p{margin:0 0 13px;text-align:justify}
+strong{font-weight:700;color:#000}
+em{font-style:normal;background:linear-gradient(transparent 62%,#f3e2b8 62%);padding:0 1px}
+hr{display:none}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:#efe9df;padding:1px 5px;border-radius:3px}
+
+/* 首段引言 */
+blockquote{
+  margin:0 0 26px;padding:14px 18px;background:var(--card);border-left:3px solid var(--line2);
+  font-size:12.8px;line-height:1.8;color:var(--muted);
+}
+blockquote p{margin:0 0 6px;text-align:left}
+blockquote p:last-child{margin:0}
+
+/* 列表 */
+ul,ol{margin:0 0 16px;padding-left:22px}
+li{margin:0 0 9px;line-height:1.8}
+li::marker{color:var(--muted)}
+ul ul,ol ul,ul ol{margin:8px 0 0}
+
+/* 表格 */
+.tbl{overflow-x:auto;margin:16px 0 24px;border:1px solid var(--line);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6;font-variant-numeric:tabular-nums}
+thead th{
+  background:#efe9df;color:var(--ink);font-weight:600;text-align:left;
+  padding:9px 12px;border-bottom:1px solid var(--line2);white-space:nowrap;font-size:12.5px;
+}
+tbody td{padding:9px 12px;border-bottom:1px solid #f0ebe3;vertical-align:top}
+tbody tr:nth-child(even){background:#fcfaf6}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#fbf4ec}
+td:first-child{font-weight:600;white-space:nowrap}
+.num{font-variant-numeric:tabular-nums}
+
+/* 数字着色（红涨绿跌） */
+.up{color:var(--red);font-weight:600}
+.down{color:var(--green);font-weight:600}
+.flat{color:var(--muted)}
+
+/* 章节内小节 */
+article>b,article>strong{display:block}
+
+/* 页脚 */
+.foot{border-top:3px double var(--ink);margin-top:70px;padding:22px 0 60px;font-size:12px;color:var(--muted)}
+.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* 上下期 */
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
+.pager a{flex:1;border:1px solid var(--line);background:var(--card);padding:12px 16px;font-size:13px;transition:.15s}
+.pager a:hover{border-color:var(--red);color:var(--red)}
+.pager .dir{display:block;font-size:10.5px;letter-spacing:2px;color:var(--muted);margin-bottom:3px}
+.pager a.next{text-align:right}
+
+@media print{
+  body{background:#fff;font-size:11.5pt}
+  .toc,.pager,.masthead .meta{display:none}
+  .layout{grid-template-columns:1fr;padding:0}
+  h2{break-after:avoid}
+  .tbl{overflow:visible;break-inside:avoid}
+}
+</style>
+</head><body>
+
+<header class="masthead"><div class="wrap">
+  <div class="brand">
+    <h1>山哥 · A股每日复盘</h1>
+    <div class="sub">Daily Market Review · A-Share Journal</div>
+  </div>
+  <div class="meta"><b>第 016 期</b><br>2026-10-11 · 周日</div>
+</div></header>
+
+<div class="wrap"><div class="layout">
+<nav class="toc"><div class="toc-t">本期目录</div><ol><li><a href="#sec0">一、休市判定（三步一致）</a></li><li><a href="#sec1">二、核心结论（周末外围定价 → 周一推演）</a></li><li><a href="#sec2">三、外围市场（截至 10/10 周六海外收盘）</a></li><li><a href="#sec3">四、周末关键事件（按对 10/12 影响排序）</a></li><li><a href="#sec4">五、10/12（周一）盘前观察清单</a></li><li><a href="#sec5">六、公众号标题（1 主推 + 3 备选）</a></li></ol></nav>
+<article>
+  <div class="issue-head">
+    <div class="kicker">第 016 期 · NO.016</div>
+    <h1>交易状态：已休市；2026-10-11 未开盘</h1>
+    <div class="dateline">2026-10-11 · 周日 · 休市</div>
+  </div>
+<h1 class="md-h1">A股休市（周末）· 外围观察 + 10/12（周一）盘前清单</h1>
+<blockquote><p><strong>本文不是 A 股复盘</strong>（10/11 为周末休市，无当日行情）。以下为周末外围定价梳理与下一交易日（10/12 周一）盘前推演，供公众号素材与盘前准备使用。</p></blockquote>
+<h2 id="sec0">一、休市判定（三步一致）</h2>
+<div class="tbl"><table><thead><tr><th>步骤</th><th>信号</th><th>结论</th></tr></thead><tbody><tr><td>交易日历</td><td>20261011 SH/SZ = <strong>休市（周末休市）</strong></td><td>非交易日</td></tr><tr><td>行情状态</td><td>上证「交易状态：已休市；2026-10-11 未开盘」</td><td>无当日数据</td></tr><tr><td>最新有效日</td><td>上证最新有数据 = <strong>2026-10-09 收 3813.79 / <span class="up">+0.05%</span></strong></td><td>沿用节后第2日收盘</td></tr></tbody></table></div>
+<p><strong>下一交易日：2026-10-12（周一）已确认开市。</strong> 本篇不基于 10/9 数据改写"今日涨跌"，仅做外围观察与推演。</p>
+<h2 id="sec1">二、核心结论（周末外围定价 → 周一推演）</h2>
+<p><strong>一句话：周末信息面"多空各半、结构分化"——光模块被 FCC 靴子落地放过（利空出尽），科技中线又获《新质生产力意见》锚定；但 33 家利空公告里最刺眼的是 8 板高度股新华传媒被警告"可能停牌核查"，高位连板退潮风险骤升。周一大概率是"指数平稳、个股剧烈分化"的盘面。</strong></p>
+<ul><li><strong>利多锚（偏中线/结构）</strong>：①FCC 新规落地<strong>未列光模块</strong>，最恐慌情形落空 ②《新质生产力意见》19 项举措定向科技成长 ③美债 30Y 自 5.733 高点回落至 5.60%、VIX 回落、美股温和收涨 ④人民币创 2022 年 6 月来新高（6.69）、险资举牌+证监会座谈释放"引长钱"信号。</li><li><strong>利空锚（偏短线/情绪）</strong>：①新华传媒（连板高度核心）被交易所点名"严重异常波动，若继续异动将申请停牌核查" ②周末 33 家利空公告（3 家终止上市风险、多起立案、6 家减持、18 家异动提示）③立讯精密被美方启动侵权调查、双汇被罚 1.29 亿等个股黑天鹅 ④美 ITC 再启对华 337 调查（计算设备组件）。</li></ul>
+<h2 id="sec2">三、外围市场（截至 10/10 周六海外收盘）</h2>
+<p><strong>美股（10/9 周五，与 10/10 报告一致）</strong>：道指 <span class="up">+0.83%</span>、标普 <span class="up">+0.59%</span>、纳指 <span class="up">+0.64%</span>，AI 基建逢低买盘带动；VIX <span class="down">-3.7%</span>（风险偏好小幅修复）。</p>
+<p><strong>美债（关键锚，修正纪律）</strong>：</p>
+<div class="tbl"><table><thead><tr><th>期限</th><th>10/9 收盘</th><th>10/10 收盘</th><th>解读</th></tr></thead><tbody><tr><td><strong>30Y</strong></td><td>5.605%</td><td>5.600%</td><td>较 <strong>10/7 盘中 5.733（约 2002 年来最高）</strong> 回落约 13bp，仍处 20 余年高位</td></tr><tr><td>20Y</td><td>5.647%</td><td>5.647%</td><td>高位横盘</td></tr><tr><td>10Y</td><td>5.242%</td><td>5.242%</td><td>高位</td></tr></tbody></table></div>
+<p>→ <strong>沿用 10/8 升级纪律：判成长/久期资产（创新药、AI 算力、小盘）估值压力看 30Y 不是 10Y。</strong> 30Y 已从尖峰回吐，但 5.6% 仍构成折现率压制，未到"松绑"级别。</p>
+<p><strong>商品</strong>：COMEX 黄金 4220.30（<span class="up">+1.52%</span>，周 <span class="up">+1.39%</span>）、白银 <span class="up">+2.84%</span>（避险+通胀对冲）；WTI 91.66 / 布伦特 104.45（周 <span class="up">+2.24%</span>，墨西哥湾飓风 71.5% 停产支撑）；LME 铜 14550（<span class="up">+1.68%</span>，智利 Centinela 铜矿 10/7 首次罢工→供应紧张）。<strong>国家气候中心确认"超强厄尔尼诺正式形成"</strong>。</p>
+<p><strong>汇率</strong>：在岸人民币 6.6921，创 2022 年 6 月来新高（RMB 走强，外资风险偏好正面，但 A 股以内资主导，传导有限）。</p>
+<h2 id="sec3">四、周末关键事件（按对 10/12 影响排序）</h2>
+<h3>1. ⭐ FCC 26-50 最终规则 10/11 生效，且<strong>未将中国光模块厂商列入清单</strong> → 光模块"利空出尽"</h3>
+<ul><li><strong>修正此前判断</strong>：10/8、10/10 报告把"FCC 26-50 新规生效"列为 10/12 临门风险，<strong>实际生效日即今日（10/11），且最终规则 Covered List 仅含华为/中兴/海康/大华/海能达，中际旭创、新易盛、天孚通信均不在列</strong>。规则核心是"穿透至上游逻辑承载型硬件组件"，且仅对清单实体、仅管新规生效后的新认证申请（不追溯存量）。</li><li><strong>直接影响</strong>：10/8 通信设备 <span class="down">-4.48%</span>、仕佳光子 <span class="down">-17.40%</span>、源杰/长光华芯 20cm 跌停，部分是定价"直接禁中国光模块"的极端情形——该情形未落地。<strong>周一 CPO/光模块链存在技术修复动能。</strong></li><li><strong>但别乐观过头</strong>：大摩 10/1 纪要显示另有一份<strong>征求意见草案</strong>专门针对 <strong>3.2T</strong> 光模块（65% 美系物料门槛、800G/1.6T 豁免、约 24 个月缓冲至 2028-2029），是远期悬剑。→ 定性为"逻辑修复"而非"趋势反转"，重点看中际旭创/新易盛/天孚通信周一能否反包。</li></ul>
+<h3>2. ⭐⭐ 新华传媒被警告"可能停牌核查" → 连板高度核心遭监管敲打</h3>
+<ul><li>周末公告显示：新华传媒连续 <strong>9 个一字涨停</strong>，公司提示"股价严重偏离基本面"，<strong>若后续继续异常波动将可能申请停牌核查</strong>。</li><li><strong>为什么重要</strong>：新华传媒正是 10/8 的 8 板高度股、10/9 仍 <span class="up">+10.01%</span> 延续高度（见 10/9 复盘）。它是当前连板梯队的"高度锚"。监管点名=给高位连板降温的明确信号。<strong>周一高位连板（尤其是蹭概念、无业绩支撑的）退潮/分歧概率显著上升。</strong> 这是本周末对短线情绪杀伤力最大的一条。</li><li>同批异动提示里还有<strong>力王股份明示"固态电池概念与公司业务关联有限"</strong>——回扣 10/8 固态电池领涨（领湃科技 20cm 等），提示"蹭热点"个股周一承压。</li></ul>
+<h3>3. 《关于发展新质生产力的意见》印发（10/9 新华社）→ 科技中线催化</h3>
+<ul><li>19 项重点举措，覆盖科技创新、产业融合、体制机制、人才；点名<strong>量子科技、生物制造、氢能/核聚变、脑机接口、具身智能、6G</strong> 为新增增长点。</li><li>属框架性意见、非即时财政刺激，利好<strong>中长期科技叙事</strong>。警惕"政策兑现=利好出尽"在已高位板块（如 10/9 的 AI 应用/传媒）上演。</li></ul>
+<h3>4. 政策+资金面偏暖</h3>
+<ul><li>证监会吴清座谈：拓宽中长期资金入市、强化分红回购、储备政策工具 → 稳预期。</li><li>标普上调 6 家中国金融公司评级（BB-→BB），穆迪此前已上调头部券商；<strong>新华保险举牌国泰海通</strong> → 险资增配权益、增量资金预期。</li><li>央行 7 天逆回购 0（零投放零回笼），Shibor 短端下行，流动性合理充裕。</li></ul>
+<h3>5. 个股利空集群（33 家，需防情绪传染）</h3>
+<ul><li>终止上市风险：ST 岭南（连续 19 日&lt;1 元，周一最后交易日）、ST 纳川、ST 华西。</li><li>立案/调查：祥源文化、交建股份实控人信披违规；圣诺生物子公司+实控人串通投标被诉；<strong>立讯精密被美方启动侵权调查</strong>（消费电子，股价已从 81 跌至 47.59）。</li><li>减持 6 家：华密新材、三晖电气、弘业期货、龙星科技、康龙化成、富特科技。</li><li>双汇发展因抗生素违规被罚 1.29 亿。</li></ul>
+<h3>6. 贸易摩擦余波</h3>
+<ul><li>美 ITC 正式对华"垂直电力传输系统相关产品"启动 337 调查（计算设备组件）→ 出口链应对成本上升。</li><li>美俄柴油供应共识、美方阶段性放松俄柴油制裁 → 压制柴油/炼油利润（部分对冲前期油气利好）。</li></ul>
+<h2 id="sec4">五、10/12（周一）盘前观察清单</h2>
+<ol><li><strong>连板高度能否稳住</strong>：新华传媒是否被停牌核查、高位连板（固态电池/AI 应用蹭概念股）是否集体分歧。这是周一<strong>首要情绪风险</strong>。</li><li><strong>光模块利空出尽成色</strong>：中际旭创/新易盛/天孚通信能否反包 10/8 跌幅；若高开低走，说明"3.2T 草案悬剑"仍压估值。</li><li><strong>AI 应用/传媒延续性</strong>：10/9 数字媒体+8.00%/出版+7.20%/影视+7.16% 为节后最强主线，叠加《新质生产力意见》，看能否二日延续还是"卖新闻"。</li><li><strong>杀跌面是否继续收敛</strong>：10/9 跌超 5% 已由 10/8 的 452 家收敛至 165 家；若周一反弹至 &lt;120 家，确认结构修复。</li><li><strong>量能与 30Y 锚</strong>：成交能否稳在 1.9 万亿附近；30Y 美债是否守住 5.6% 下方（下破则久期资产压力缓解，上破则创新药/小盘再承压）。</li><li><strong>商品链映射</strong>：黄金/铜/油高位 → 贵金属、有色（铜）、油服周一是否延续 10/9 的贵金属+5.62% 强势。</li></ol>
+<h3>持仓视角（标的为 10/09 确认持仓，最新收盘=10/9）</h3>
+<ul><li><strong>华兰疫苗（301207，流感疫苗）</strong>：10/9 <span class="up">+1.90%</span> 缩量企稳；PE 60.87、中报净利 <span class="up">+75.23%</span>、<strong>三季报 10-28 披露</strong>。流感季+业绩正增，中线逻辑未破，但缺量能配合。</li><li><strong>特一药业（002728，中药 OTC）</strong>：10/9 <span class="up">+3.02%</span> 放量活跃、连续两日强；<strong>但中报净利 <span class="down">-18.15%</span>⚠️、三季报 10-27</strong>——短线情绪强于业绩，警惕三季报证伪。</li><li><strong>中证2000ETF南方（159531）</strong>：10/9 收 1.429 深 V（盘中 <span class="down">-4%</span> 收回），小盘筹码仍不稳；受 <strong>30Y 美债（久期压制）+ 高位股监管敲打（小盘游资首当其冲）</strong> 双重影响，周一若连板退潮需防二次回踩。</li></ul>
+<h2 id="sec5">六、公众号标题（1 主推 + 3 备选）</h2>
+<p><strong>主推：</strong></p>
+<blockquote><p>周末三件大事定调周一：FCC 放过光模块、新质生产力意见落地，但 8 板新华传媒被警告停牌核查——高位连板要退潮了？</p></blockquote>
+<p><strong>备选 1：</strong></p>
+<blockquote><p>光模块"利空出尽"撞上高位"停牌警告"：周末两信号博弈，10/12 A 股看谁先认怂</p></blockquote>
+<p><strong>备选 2：</strong></p>
+<blockquote><p>新质生产力意见 + FCC 靴子落地，科技线中线有锚了；但 33 家利空公告 + 新华传媒核查，周一先防分化</p></blockquote>
+<p><strong>备选 3：</strong></p>
+<blockquote><p>30Y 美债回落至 5.6%、人民币破 6.7 创四年新高：外围转暖，A 股 10/12 能接住吗？</p></blockquote>
+<p><em>数据来源：neodata 统一交易日历/行情、WebSearch（澎湃/同花顺/腾讯新闻/东方财富/雪球等公开报道）。休市日不生成当日涨跌数据，所有"最新行情"均指向 2026-10-09 收盘。</em></p>
+<div class="pager"><a class="prev" href="2026-10-10.html"><span class="dir">← 上一期</span>10-10 **已休市**</a><a class="next" href="2026-10-12.html"><span class="dir">下一期 →</span>10-12 权重护盘、个股普杀</a></div>
+</article>
+</div></div>
+
+<footer class="foot"><div class="wrap">
+  <span>A股每日复盘期刊 · 由收盘数据自动生成</span>
+  <span>数据口径：沪深A股全市场 · 红涨绿跌</span>
+</div></footer>
+
+</body></html>

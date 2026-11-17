@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-11-04 利空落地 + 全球风险偏好一夜反转 · A股复盘第039期</title>
+<style>
+:root{
+  --paper:#f6f3ee; --card:#fffdf9; --ink:#1c1a17; --ink2:#413c35; --muted:#8a8279;
+  --line:#e2dbd0; --line2:#cfc6b8; --red:#c0392b; --redbg:#fdf1ef;
+  --green:#1a7f4b; --greenbg:#eef7f1; --gold:#8c6b2f;
+  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:15.5px; line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- 报头 ---------- */
+.masthead{border-bottom:3px double var(--ink);background:var(--card);padding:26px 0 18px}
+.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.brand h1{
+  font-family:var(--serif);font-size:34px;line-height:1.15;margin:0;
+  letter-spacing:2px;font-weight:700;
+}
+.brand .sub{
+  font-family:var(--sans);font-size:11px;letter-spacing:3.5px;color:var(--muted);
+  text-transform:uppercase;margin-top:7px;
+}
+.masthead .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.9}
+.masthead .meta b{color:var(--ink);font-family:var(--serif);font-size:22px;letter-spacing:1px}
+
+/* ---------- 版面骨架 ---------- */
+.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px;padding:38px 0 80px}
+@media(max-width:940px){.layout{grid-template-columns:1fr;gap:20px;padding-top:26px}}
+
+/* ---------- 目录 ---------- */
+.toc{position:sticky;top:24px;align-self:start;font-size:13px}
+.toc .toc-t{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:12px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0 6px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink2);line-height:1.5}
+.toc a:hover{color:var(--red);border-left-color:var(--red);background:var(--redbg)}
+@media(max-width:940px){
+  .toc{position:static;border:1px solid var(--line);background:var(--card);padding:14px 16px}
+  .toc ol{columns:2;column-gap:18px}
+  .toc a{font-size:12.5px}
+}
+
+/* ---------- 正文 ---------- */
+article{max-width:820px}
+.issue-head{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
+.issue-head .kicker{font-size:11.5px;letter-spacing:2px;color:var(--red);margin-bottom:6px}
+.issue-head h1{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:.5px}
+.issue-head .dateline{font-size:12.5px;color:var(--muted)}
+
+h2{
+  font-family:var(--serif);font-size:21px;margin:44px 0 16px;padding-bottom:9px;
+  border-bottom:1px solid var(--line2);letter-spacing:.5px;
+}
+h2::before{content:"";display:inline-block;width:5px;height:15px;background:var(--red);margin-right:10px;vertical-align:-2px}
+h3{font-family:var(--serif);font-size:17px;margin:30px 0 10px;color:var(--ink)}
+h4{font-size:14.5px;margin:22px 0 8px;color:var(--ink2)}
+p{margin:0 0 13px;text-align:justify}
+strong{font-weight:700;color:#000}
+em{font-style:normal;background:linear-gradient(transparent 62%,#f3e2b8 62%);padding:0 1px}
+hr{display:none}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:#efe9df;padding:1px 5px;border-radius:3px}
+
+/* 首段引言 */
+blockquote{
+  margin:0 0 26px;padding:14px 18px;background:var(--card);border-left:3px solid var(--line2);
+  font-size:12.8px;line-height:1.8;color:var(--muted);
+}
+blockquote p{margin:0 0 6px;text-align:left}
+blockquote p:last-child{margin:0}
+
+/* 列表 */
+ul,ol{margin:0 0 16px;padding-left:22px}
+li{margin:0 0 9px;line-height:1.8}
+li::marker{color:var(--muted)}
+ul ul,ol ul,ul ol{margin:8px 0 0}
+
+/* 表格 */
+.tbl{overflow-x:auto;margin:16px 0 24px;border:1px solid var(--line);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6;font-variant-numeric:tabular-nums}
+thead th{
+  background:#efe9df;color:var(--ink);font-weight:600;text-align:left;
+  padding:9px 12px;border-bottom:1px solid var(--line2);white-space:nowrap;font-size:12.5px;
+}
+tbody td{padding:9px 12px;border-bottom:1px solid #f0ebe3;vertical-align:top}
+tbody tr:nth-child(even){background:#fcfaf6}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#fbf4ec}
+td:first-child{font-weight:600;white-space:nowrap}
+.num{font-variant-numeric:tabular-nums}
+
+/* 数字着色（红涨绿跌） */
+.up{color:var(--red);font-weight:600}
+.down{color:var(--green);font-weight:600}
+.flat{color:var(--muted)}
+
+/* 章节内小节 */
+article>b,article>strong{display:block}
+
+/* 页脚 */
+.foot{border-top:3px double var(--ink);margin-top:70px;padding:22px 0 60px;font-size:12px;color:var(--muted)}
+.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* 上下期 */
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
+.pager a{flex:1;border:1px solid var(--line);background:var(--card);padding:12px 16px;font-size:13px;transition:.15s}
+.pager a:hover{border-color:var(--red);color:var(--red)}
+.pager .dir{display:block;font-size:10.5px;letter-spacing:2px;color:var(--muted);margin-bottom:3px}
+.pager a.next{text-align:right}
+
+@media print{
+  body{background:#fff;font-size:11.5pt}
+  .toc,.pager,.masthead .meta{display:none}
+  .layout{grid-template-columns:1fr;padding:0}
+  h2{break-after:avoid}
+  .tbl{overflow:visible;break-inside:avoid}
+}
+</style>
+</head><body>
+
+<header class="masthead"><div class="wrap">
+  <div class="brand">
+    <h1>山哥 · A股每日复盘</h1>
+    <div class="sub">Daily Market Review · A-Share Journal</div>
+  </div>
+  <div class="meta"><b>第 039 期</b><br>2026-11-04 · 周三</div>
+</div></header>
+
+<div class="wrap"><div class="layout">
+<nav class="toc"><div class="toc-t">本期目录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、题材涨跌分析</a></li><li><a href="#sec4">五、持仓视角（华兰疫苗 + 特一药业）</a></li><li><a href="#sec5">六、一句话总结（公众号标题）</a></li></ol></nav>
+<article>
+  <div class="issue-head">
+    <div class="kicker">第 039 期 · NO.039</div>
+    <h1>利空落地 + 全球风险偏好一夜反转</h1>
+    <div class="dateline">2026-11-04 · 周三</div>
+  </div>
+<h1 class="md-h1">A股深度复盘 · 2026-11-04（周三）</h1>
+<blockquote><p>15:15 收盘定稿。今日为交易日（上交所日历：2026-11-04 开市；上证行情 time=2026-11-04）。</p></blockquote>
+<h2 id="sec0">一、核心结论</h2>
+<p><strong>「利空落地 + 全球风险偏好一夜反转」的放量大反攻日——科创50 暴涨近 10%，为 10 月系统性杀跌以来最强单日。</strong> 昨日（11/03）还是"指数失真、科技崩塌"的普杀日（科创50 −3.81%、红盘率 37%），今日彻底逆转。</p>
+<p><strong>核心驱动（已交叉验证 hot news）：</strong></p>
+<ol><li><strong>美国中期选举民主党横扫国会（共和党失去两院）</strong>——政治不确定性消除，全球风险资产集体回暖（"利空落地！共和党确认遭横扫后全球市场集体回暖，A股创业板大涨超 6%"），这是今日 risk-on 的总开关。</li><li><strong>存储涨价 + 长鑫科技上调回购至 50 亿护盘</strong>——杠杆资金抢筹，长鑫跃居沪指第一权重股的权重效应延续，直接点燃半导体/存储主线。</li><li><strong>光模块"小作文"被产业链集体澄清</strong>——前期"1150 亿美元光通信收购一夜变天 + 信贷海啸警报 + 高盛下调中际指引"的恐慌传闻，被野村、中际旭创等回应证伪 → 错杀修复。</li><li><strong>外围半导体暖风</strong>——AMD Q3 营收 <span class="up">+45%</span>、Q4 指引提速；半导体设备景气依旧（韩媒：下游客户争夺三年后订单）；英伟达 51% 算力管制红线反而强化国产替代逻辑。</li></ol>
+<p><strong>今日资金表现（全 A 行业主力净额口径）：</strong></p>
+<ul><li><strong>全 A 行业主力净额 +493.74 亿</strong>（前日 11/03 为 −567.73 亿，由净流出骤转为大幅净流入，风险偏好逆转）。</li><li><strong>科技硬件"四件套"吸金 +351 亿，占全市场净流入 71%</strong>：半导体 +194.01 亿（全市场第一）、通信设备 +74.57 亿、元件 +48.75 亿、消费电子 +33.75 亿。但半导体 / 通信 <strong>20 日累计仍 −462 / −555 亿</strong>（全市场最深坑）→ 今日属"急抄底超跌"，并非趋势反转。</li><li><strong>净流出集中在避险/红利</strong>：白酒 −14.26 亿、电力 −10.24 亿、股份制银行 −9.00 亿、煤炭 −6.43 亿、炼化 −6.35 亿、白色家电 −4.50 亿 → 防御仓位在 risk-on 日撤离（跷跷板）。</li></ul>
+<p><strong>领涨板块</strong>：半导体 <span class="up">+11.41%</span>、电子化学品 <span class="up">+10.55%</span>、贵金属 <span class="up">+10.06%</span>、元件 <span class="up">+9.14%</span>、通信设备 <span class="up">+8.91%</span>、医疗服务 <span class="up">+7.83%</span>、消费电子 <span class="up">+7.11%</span>、自动化设备 <span class="up">+7.00%</span>。 <strong>领跌板块</strong>：白酒 −2.05%、饮料乳品 −1.98%、国有大型银行 −1.85%、调味发酵品 −1.09%、煤炭 −1.08%、保险 −1.01%。</p>
+<h2 id="sec1">二、核心指数表现</h2>
+<div class="tbl"><table><thead><tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>备注</th></tr></thead><tbody><tr><td>上证指数</td><td>3686.17</td><td><strong><span class="up">+2.16%</span></strong></td><td>收复 3600，重回 5 日线上方</td></tr><tr><td>深证成指</td><td>11335.69</td><td><strong><span class="up">+4.22%</span></strong></td><td></td></tr><tr><td>创业板指</td><td>2544.73</td><td><strong><span class="up">+6.40%</span></strong></td><td>最强主要指数之一，收复 2500</td></tr><tr><td>科创50</td><td>1265.47</td><td><strong><span class="up">+9.92%</span></strong></td><td><strong>全场最强，单日近 10%，10 月杀跌以来最大涨幅</strong></td></tr><tr><td>北证50</td><td>894.08</td><td><span class="up">+4.56%</span></td><td></td></tr><tr><td>沪深300</td><td>4101.34</td><td><span class="up">+2.31%</span></td><td>权重相对滞涨</td></tr><tr><td>中证500</td><td>6622.03</td><td><span class="up">+4.66%</span></td><td></td></tr><tr><td>中证1000</td><td>6511.81</td><td><span class="up">+4.67%</span></td><td>小盘弹性释放</td></tr></tbody></table></div>
+<p><strong>解读</strong>：大小盘、成长/价值全面普涨，创业板与科创50 弹性远超沪深300（差约 4–7 个百分点），说明今日是<strong>成长/硬科技领涨 + 小盘弹性释放</strong>的结构，与 11/03"权重护盘、小盘硬科技崩塌"完全镜像。</p>
+<h2 id="sec2">三、市场情绪与量能</h2>
+<ul><li><strong>成交额</strong>：两市 <strong>20376.92 亿（+3342.55 亿，<span class="up">+19.6%</span>）</strong>——<strong>时隔多日重回 2 万亿上方</strong>，放量确认反攻成色。</li><li><strong>涨跌家数</strong>：上涨 4667 / 下跌 779 / 平 132，<strong>红盘率 83%</strong>（前日 37%，从普杀到普涨一夜反转）。</li><li><strong>涨跌停</strong>：涨停 <strong>123</strong> 家 / 跌停 <strong>11</strong> 家（非倒挂，多头绝对占优）。</li><li><strong>涨跌幅分布</strong>：涨超 5% 约 <strong>1117 家</strong>（涨停 123 + &gt;7% 580 + 5~7% 414）；跌超 5% 仅 <strong>46 家</strong>（跌停 11 + 5~7% 14 + &gt;7% 21）。<strong>多空比约 24:1</strong>，杀跌面几乎消失（前日跌超 5% 仍有 636 家）。</li><li><strong>情绪温度</strong>：过去一年仅 15% 交易日处于 83% 红盘率区间 → 极度亢奋，但需警惕"一根阳线改三观"后的短线获利回吐。</li></ul>
+<h2 id="sec3">四、题材涨跌分析</h2>
+<h3>🔺 领涨题材 ①：半导体全产业链（国产替代 + 存储涨价 + 大基金/长鑫）</h3>
+<ul><li><strong>板块强度</strong>：行业 <strong>半导体 <span class="up">+11.41%</span>（181/183 红盘）</strong>、电子化学品 <span class="up">+10.55%</span>；概念侧 <strong>长鑫存储 <span class="up">+11.88%</span></strong>、国家大基金持股 <span class="up">+10.77%</span>、中芯国际概念 <span class="up">+10.27%</span>、HBM <span class="up">+10.20%</span>、大基金二期 <span class="up">+10.16%</span>、存储器 <span class="up">+9.22%</span>、先进封装(Chiplet) <span class="up">+8.40%</span>、半导体设备 <span class="up">+8.69%</span>——全线 10% 量级的涨停潮。</li><li><strong>代表个股</strong>：江丰电子（20.00% 涨停，靶材/半导体材料）、拓荆科技（20.00%，半导体设备）、芯源微（20.00%）、思瑞浦（20.00%，模拟芯片）、光智科技（20.00%，锗镓/先进封装）、北方华创（<span class="up">+10.00%</span>）、盛美上海（<span class="up">+19.82%</span>）。</li><li><strong>涨跌逻辑</strong>：①宏观——美中期选举民主党横扫、不确定性消除，全球风险偏好回暖；②产业——存储涨价潮延续、长鑫科技上调回购至 50 亿护盘、内存现货价高位，长鑫跃居沪指第一权重股带来权重效应；③国产替代——英伟达 51% 算力管制红线 + 韩媒称设备订单排至 2028 后 → 自主可控逻辑强化；④情绪——11/03 半导体 20 日累计 −755 亿 属恐慌超跌，今日急抄底。<strong>今日主力 +194 亿全市场第一，但 5 日/20 日仍 −87/−462 亿 → 急反非反转，追高需看持续性。</strong></li></ul>
+<h3>🔺 领涨题材 ②：光通信 / CPO / AI 硬件（易中天反包、错杀修复）</h3>
+<ul><li><strong>板块强度</strong>：行业 <strong>通信设备 <span class="up">+8.91%</span>（85/86 红盘）</strong>；概念 共封装光模块(CPO) <span class="up">+7.55%</span>、博通概念 <span class="up">+9.19%</span>。</li><li><strong>代表个股</strong>：新易盛 <strong><span class="up">+13.35%</span></strong>（"易中天"反包先锋）、中际旭创（回应"物料紧张是否影响净利"传闻，企稳回升）、光模块龙头集体大涨。</li><li><strong>涨跌逻辑</strong>：11/02–11/03 通信设备被血洗（高盛下调中际指引 + "1150 亿美元光通信收购一夜变天"传闻 + 信贷海啸警报），今日野村、产业链龙头（中际旭创等）集体回应澄清"小作文" → <strong>错杀修复</strong>；叠加 AMD Q3 营收 <span class="up">+45%</span>、Q4 指引提速的外围暖风。<strong>今日主力 +74.57 亿，但 5 日/20 日 −172/−555 亿 仍深坑 → 反弹性质，警惕"一日游"。</strong></li></ul>
+<h3>🔺 领涨题材 ③：贵金属（央行购金 + 商品反弹，全行业全红）</h3>
+<ul><li><strong>板块强度</strong>：行业 <strong>贵金属 <span class="up">+10.06%</span>（11/11 全红）</strong>；概念 锗镓概念 <span class="up">+8.44%</span>。</li><li><strong>代表个股</strong>：晓程科技 <strong><span class="up">+19.99%</span></strong>（近 20cm）、赤峰黄金、山东黄金、湖南黄金。</li><li><strong>涨跌逻辑</strong>：央行扫金提速（连续增持黄金）、金价底部夯实；特朗普称"无立即打击伊朗计划"使中东短期降温，但<strong>避险配置 + 通胀预期（美债 30Y 仍约 5.3% 高位）+ 商品端金价反弹</strong>共同驱动。属于 11/02 贵金属 −3.10%（美伊缓和）后的修复，是今日唯一非科技主线的大级别领涨，显示行情广度不止于硬科技。</li></ul>
+<h3>🔻 领跌题材 ①：白酒 / 食品饮料（避险兑现，防御瓦解）</h3>
+<ul><li><strong>板块强度</strong>：行业 <strong>白酒 −2.05%（2/19 红盘，全场最弱）</strong>、饮料乳品 −1.98%、调味发酵品 −1.09%；概念 白酒概念 −0.63%、超级品牌 −0.61%。</li><li><strong>代表个股</strong>：贵州茅台 <strong>−2.27%</strong>（1446.44）、五粮液 −0.60%、泸州老窖（前期领涨今回调）。</li><li><strong>涨跌逻辑</strong>：11/02–11/03 白酒是系统性杀跌中的避险活口（泸州老窖 10/30 涨停、茅台重回 1400、喝酒吃药避险），今日 risk-on 全面切换，<strong>避险仓位撤离、资金从防御切到进攻（跷跷板）</strong>；白酒 5 日/20 日仍 +14/+31 亿（前期流入未撤完），今日 −14.26 亿 是兑现。</li></ul>
+<h3>🔻 领跌题材 ②：银行 / 红利 / 煤炭 / 保险（防御抱团松动）</h3>
+<ul><li><strong>板块强度</strong>：<strong>国有大型银行 −1.85%（0/6 全绿）</strong>、股份制银行 −0.51%（1/9）、煤炭 −1.08%、保险 −1.01%、中证银行 −0.84%。</li><li><strong>代表个股</strong>：工商银行 <strong>−2.10%</strong>、中国银行 −1.30%、煤炭股普遍绿盘。</li><li><strong>涨跌逻辑</strong>：与白酒同源——红利/防御在 10/27–10/30 系统性杀跌中是避风港（四大行市值破 10 万亿、六大行 Q3 净利 +逾 10%），今日 risk-on 日资金撤离避险资产；叠加 11/03 晚"六大行一天跌去 770 亿市值、多只银行股惊现对子顶"（见顶技术信号）→ 防御抱团松动。</li></ul>
+<h3>🔻 领跌题材 ③：昨日首板 / 证金汇金概念（短线接力退潮，偏好低位新题材）</h3>
+<ul><li><strong>板块强度</strong>：概念 <strong>昨日首板 −0.83%</strong>、证金持股 −1.13%、汇金持股 −0.58%、农垦 −1.10%。</li><li><strong>涨跌逻辑</strong>：今日虽 123 家涨停（情绪火热），但"昨日首板"（11/03 首板股）今日 −0.83% 多数未延续 → <strong>资金偏好低位新题材（半导体/贵金属）的首板，而非接力昨日强势股</strong>；属于"宽度火热、高度不连"的轮动特征。对比 11/02 昨日连板 <span class="up">+4.86%</span>（打板赚钱效应佳），今日接力意愿下降，短线情绪偏谨慎。</li></ul>
+<h2 id="sec4">五、持仓视角（华兰疫苗 + 特一药业）</h2>
+<ul><li><strong>华兰疫苗（301207）</strong>：15.13 元 <strong><span class="up">+2.86%</span></strong>，量比 0.78、换手 1.68%——随大盘缩量企稳，但量比不足 1 显示承接仍弱；三季报已由盈转亏（10/27 披露），基本面证伪后的反弹缺乏量能确认，审慎。</li><li><strong>特一药业（002728）</strong>：9.06 元 <strong><span class="up">+0.78%</span></strong>，量比 1.18、换手 4.37%——温和跟涨，中药 OTC 防御属性在今日科技主线行情中相对滞涨；三季报 −24.18% 仍处弱势区间。</li><li>两只医药股今日均红，但<strong>显著跑输科创50(<span class="up">+9.92%</span>)/创业板(<span class="up">+6.40%</span>)</strong>，在科技单边行情中属"跟涨不领涨"，不构成加仓信号。</li></ul>
+<h2 id="sec5">六、一句话总结（公众号标题）</h2>
+<p><strong>主推</strong>：美中期选举民主党横扫国会、不确定性落地，A股放量大反攻——科创50 暴涨近 10%、成交破 2 万亿，半导体携手光模块掀起涨停潮，白酒银行红利成唯一逆风。</p>
+<p><strong>备选 1</strong>：一根阳线改三观？红盘率 83%、1117 股涨超 5%，A股 11/04 普涨反攻，长鑫 50 亿回购点燃半导体。</p>
+<p><strong>备选 2</strong>：创业板大涨 6.4%、科创50 近 10%：利空落地全球 risk-on，光模块"小作文"被澄清，错杀板块集体反包。</p>
+<p><strong>备选 3</strong>：2 万亿成交、123 股涨停：科技硬件单日吸金 351 亿，A股上演"利空出尽"式逼空，防御红利遭资金甩卖。</p>
+<div class="pager"><a class="prev" href="2026-11-03.html"><span class="dir">← 上一期</span>11-03 指数失真、个股普杀、科技崩塌</a><a class="next" href="2026-11-05.html"><span class="dir">下一期 →</span>11-05 指数平、个股疯</a></div>
+</article>
+</div></div>
+
+<footer class="foot"><div class="wrap">
+  <span>A股每日复盘期刊 · 由收盘数据自动生成</span>
+  <span>数据口径：沪深A股全市场 · 红涨绿跌</span>
+</div></footer>
+
+</body></html>

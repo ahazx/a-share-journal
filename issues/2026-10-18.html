@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-10-18 休市（周末休市） · A股复盘第023期</title>
+<style>
+:root{
+  --paper:#f6f3ee; --card:#fffdf9; --ink:#1c1a17; --ink2:#413c35; --muted:#8a8279;
+  --line:#e2dbd0; --line2:#cfc6b8; --red:#c0392b; --redbg:#fdf1ef;
+  --green:#1a7f4b; --greenbg:#eef7f1; --gold:#8c6b2f;
+  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:15.5px; line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- 报头 ---------- */
+.masthead{border-bottom:3px double var(--ink);background:var(--card);padding:26px 0 18px}
+.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.brand h1{
+  font-family:var(--serif);font-size:34px;line-height:1.15;margin:0;
+  letter-spacing:2px;font-weight:700;
+}
+.brand .sub{
+  font-family:var(--sans);font-size:11px;letter-spacing:3.5px;color:var(--muted);
+  text-transform:uppercase;margin-top:7px;
+}
+.masthead .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.9}
+.masthead .meta b{color:var(--ink);font-family:var(--serif);font-size:22px;letter-spacing:1px}
+
+/* ---------- 版面骨架 ---------- */
+.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px;padding:38px 0 80px}
+@media(max-width:940px){.layout{grid-template-columns:1fr;gap:20px;padding-top:26px}}
+
+/* ---------- 目录 ---------- */
+.toc{position:sticky;top:24px;align-self:start;font-size:13px}
+.toc .toc-t{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:12px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0 6px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink2);line-height:1.5}
+.toc a:hover{color:var(--red);border-left-color:var(--red);background:var(--redbg)}
+@media(max-width:940px){
+  .toc{position:static;border:1px solid var(--line);background:var(--card);padding:14px 16px}
+  .toc ol{columns:2;column-gap:18px}
+  .toc a{font-size:12.5px}
+}
+
+/* ---------- 正文 ---------- */
+article{max-width:820px}
+.issue-head{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
+.issue-head .kicker{font-size:11.5px;letter-spacing:2px;color:var(--red);margin-bottom:6px}
+.issue-head h1{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:.5px}
+.issue-head .dateline{font-size:12.5px;color:var(--muted)}
+
+h2{
+  font-family:var(--serif);font-size:21px;margin:44px 0 16px;padding-bottom:9px;
+  border-bottom:1px solid var(--line2);letter-spacing:.5px;
+}
+h2::before{content:"";display:inline-block;width:5px;height:15px;background:var(--red);margin-right:10px;vertical-align:-2px}
+h3{font-family:var(--serif);font-size:17px;margin:30px 0 10px;color:var(--ink)}
+h4{font-size:14.5px;margin:22px 0 8px;color:var(--ink2)}
+p{margin:0 0 13px;text-align:justify}
+strong{font-weight:700;color:#000}
+em{font-style:normal;background:linear-gradient(transparent 62%,#f3e2b8 62%);padding:0 1px}
+hr{display:none}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:#efe9df;padding:1px 5px;border-radius:3px}
+
+/* 首段引言 */
+blockquote{
+  margin:0 0 26px;padding:14px 18px;background:var(--card);border-left:3px solid var(--line2);
+  font-size:12.8px;line-height:1.8;color:var(--muted);
+}
+blockquote p{margin:0 0 6px;text-align:left}
+blockquote p:last-child{margin:0}
+
+/* 列表 */
+ul,ol{margin:0 0 16px;padding-left:22px}
+li{margin:0 0 9px;line-height:1.8}
+li::marker{color:var(--muted)}
+ul ul,ol ul,ul ol{margin:8px 0 0}
+
+/* 表格 */
+.tbl{overflow-x:auto;margin:16px 0 24px;border:1px solid var(--line);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6;font-variant-numeric:tabular-nums}
+thead th{
+  background:#efe9df;color:var(--ink);font-weight:600;text-align:left;
+  padding:9px 12px;border-bottom:1px solid var(--line2);white-space:nowrap;font-size:12.5px;
+}
+tbody td{padding:9px 12px;border-bottom:1px solid #f0ebe3;vertical-align:top}
+tbody tr:nth-child(even){background:#fcfaf6}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#fbf4ec}
+td:first-child{font-weight:600;white-space:nowrap}
+.num{font-variant-numeric:tabular-nums}
+
+/* 数字着色（红涨绿跌） */
+.up{color:var(--red);font-weight:600}
+.down{color:var(--green);font-weight:600}
+.flat{color:var(--muted)}
+
+/* 章节内小节 */
+article>b,article>strong{display:block}
+
+/* 页脚 */
+.foot{border-top:3px double var(--ink);margin-top:70px;padding:22px 0 60px;font-size:12px;color:var(--muted)}
+.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* 上下期 */
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
+.pager a{flex:1;border:1px solid var(--line);background:var(--card);padding:12px 16px;font-size:13px;transition:.15s}
+.pager a:hover{border-color:var(--red);color:var(--red)}
+.pager .dir{display:block;font-size:10.5px;letter-spacing:2px;color:var(--muted);margin-bottom:3px}
+.pager a.next{text-align:right}
+
+@media print{
+  body{background:#fff;font-size:11.5pt}
+  .toc,.pager,.masthead .meta{display:none}
+  .layout{grid-template-columns:1fr;padding:0}
+  h2{break-after:avoid}
+  .tbl{overflow:visible;break-inside:avoid}
+}
+</style>
+</head><body>
+
+<header class="masthead"><div class="wrap">
+  <div class="brand">
+    <h1>山哥 · A股每日复盘</h1>
+    <div class="sub">Daily Market Review · A-Share Journal</div>
+  </div>
+  <div class="meta"><b>第 023 期</b><br>2026-10-18 · 周日</div>
+</div></header>
+
+<div class="wrap"><div class="layout">
+<nav class="toc"><div class="toc-t">本期目录</div><ol><li><a href="#sec0">一、交易日判定（三步，今日结论：休市）</a></li><li><a href="#sec1">二、上一交易日（10/16 周五）A股快照（休市前最后可得）</a></li><li><a href="#sec2">三、周末外围全景（10/16 美股收盘 / 10/16 港股 / 最新商品利率）</a></li><li><a href="#sec3">四、周末消息面（国内利好密集 vs 海外泼冷水）</a></li><li><a href="#sec4">五、10/19 周一 盘前清单（国庆后首个重量级宏观数据日）</a></li><li><a href="#sec5">六、持仓视角（华兰疫苗 / 特一药业 / 中证2000ETF南方）</a></li><li><a href="#sec6">七、一句话总结（公众号标题备选）</a></li></ol></nav>
+<article>
+  <div class="issue-head">
+    <div class="kicker">第 023 期 · NO.023</div>
+    <h1>休市（周末休市）</h1>
+    <div class="dateline">2026-10-18 · 周日 · 休市</div>
+  </div>
+<h1 class="md-h1">A股休市｜本文不是A股复盘（2026-10-18 周日 · 周末外围观察 + 10/19 盘前清单）</h1>
+<blockquote><p>⚠️ <strong>今日（2026-10-18）为周日，A股休市。本篇不是当日A股复盘，而是休市期间的外围观察与下一个交易日（10/19 周一）盘前清单。</strong></p></blockquote>
+<h2 id="sec0">一、交易日判定（三步，今日结论：休市）</h2>
+<div class="tbl"><table><thead><tr><th>步骤</th><th>数据源</th><th>结果</th></tr></thead><tbody><tr><td>① 统一交易日历</td><td>neodata 公共工具</td><td>2026-10-18 SH = <strong>休市（周末休市）</strong></td></tr><tr><td>② 上证行情状态</td><td>neodata 统一行情</td><td>2026-10-18 <strong>未开盘</strong>、交易状态「已休市」，最新有效交易日 <strong>2026-10-16</strong>（收 3716.28 / <span class="up">+0.24%</span>）</td></tr><tr><td>③ 港股交叉</td><td>neodata 港股</td><td>恒指最近交易日 2026-10-16（24186.83 / <span class="up">+0.52%</span>），10-17~18 均休市</td></tr></tbody></table></div>
+<p>三步一致指向<strong>周末休市</strong>。休市日不出A股复盘，以下为外围观察 + 周一盘前清单。</p>
+<h2 id="sec1">二、上一交易日（10/16 周五）A股快照（休市前最后可得）</h2>
+<ul><li><strong>指数</strong>：上证 3716.28 / <strong><span class="up">+0.24%</span></strong>、深成指 −0.12%、创业板 −0.39%、科创50 −0.06%、北证50 −1.81%、沪深300 <span class="up">+0.11%</span>、中证500 <span class="up">+0.05%</span>、中证1000 <span class="up">+0.05%</span></li><li><strong>量能</strong>：成交 <strong>1.555 万亿</strong>（较 10/15 缩 776 亿 / −4.7%）</li><li><strong>广度</strong>：红盘率 <strong>59%</strong>（涨 3301 / 跌 2128）、涨停 63 / 跌停 12、<strong>跌超 5% 由 838 家骤降至 163 家</strong></li><li><strong>结构</strong>：军工独强（地面兵装 <span class="up">+5.96%</span>）、建材水泥 + 地产链、商用车 + 农业领涨；传媒/AI应用（−2.30%）、医药CRO/医疗服务（−1.24%）、电池锂电（−1.10%）领跌</li><li><strong>融资</strong>：24661.61 亿（−1.25%，5 日连降）</li><li><strong>周度回顾</strong>（东财 10/18）：上证周 −2.56%、创业板周 <strong>−8.90%</strong>，通信 −10.87%、电子 −8.75% 为重灾区；银行、食品饮料逆势收红；"易中天"（新易盛/中际旭创/天孚通信）合计净流出 100.74 亿，北方华创、沪电股份获加仓；牛散章建平退出科翔股份、中际旭创前十大股东</li></ul>
+<p>→ 定性：<strong>指数平淡、个股普修、极致高低切的修复日，非进攻</strong>。</p>
+<h2 id="sec2">三、周末外围全景（10/16 美股收盘 / 10/16 港股 / 最新商品利率）</h2>
+<h3>1）美股（10/16 周五，10/17 报道）：科技重挫，红利能源新高</h3>
+<ul><li>道指 −0.34%（52002.41）、标普 −1.09%（7659.44）、纳指 <strong>−2.14%</strong>（26140.03）；标普/纳指再度跌破 50 日均线</li><li><strong>周度</strong>：道指 <span class="up">+0.67%</span>、标普 −1.95%、纳指 <strong>−4.48%</strong>（AI 交易"黑暗6月"以来最大单周跌幅）</li><li><strong>费城半导体指数连续第 8 日下跌（2008 年来最长连跌）</strong>，存储概念 −6.28%；CoreWeave −11%（周 −25%），AI 基础设施债务担忧集中释放</li><li>中概金龙 −1.3%（周 −1.01%）；黄仁勋柏林喊话"AI 动荡终将过去"，未止跌</li></ul>
+<h3>2）港股（10/16 最近交易日）：全球最抗跌</h3>
+<ul><li>恒指 24186.83 / <span class="up">+0.52%</span>、恒科 4108.24 / <span class="up">+1.16%</span>；<strong>上周恒指仅 −0.10%</strong>，为全球主要股指最抗跌</li></ul>
+<h3>3）商品 / 利率 / 汇率</h3>
+<ul><li><strong>油价破位</strong>：布伦特 109.7 美元（<span class="up">+3.57%</span>，周 <span class="up">+4.76%</span>，5 月以来首破 110）、WTI 99.04（<span class="up">+2.63%</span>，周 <span class="up">+7.83%</span>）——胡塞袭沙特 + 波斯湾冲突概率标至 65%</li><li>黄金 COMEX 4186.70（<span class="up">+0.40%</span>，周 −0.70%）、白银 57.13（周 −6.41%）</li><li>美债：10Y 重上 <strong>5.12%</strong>、30Y ≈<strong>5.6%</strong> 高位；沃什不预判议息，10 月加息概率降至 15% 以下</li><li>人民币：延续强势（10/11 报 6.6921，创 2022 年 6 月来新高）</li></ul>
+<h2 id="sec3">四、周末消息面（国内利好密集 vs 海外泼冷水）</h2>
+<h3>利多（国内）</h3>
+<ul><li>国常会深化"<strong>AI+</strong>"行动 + 原则通过《价格法》修正草案（治理低价无序竞争 = 反内卷）</li><li>《关于发展新质生产力的意见》<strong>19 项举措</strong>（AI+ / 智能网联汽车 / 人形机器人）</li><li>证监会座谈会：稳市机制、中长期资金、耐心资本、<strong>储备增量政策工具</strong></li><li>陆家嘴论坛：科创板第五套标准扩至 AI 大模型企业，量子 / 生物制造 / 具身智能放开上市通道</li><li>超长期特别国债全年 <strong>1.3 万亿发行完毕</strong>（财政部 200 亿续发行，票面 2.24%）；央行本周净投放 1740 亿</li><li><strong>长鑫科技业绩预告</strong>：前三季度净利 1310–1325 亿（扭亏，上年同期 −52.8 亿），董事长提议 10–20 亿回购——国产存储里程碑</li></ul>
+<h3>利空 / 风险（国内 + 海外）</h3>
+<ul><li>商务部/科技部拟将 AI、生物医药（CGT/小核酸）、光伏等 <strong>40 项技术纳入限制/禁止出口目录</strong></li><li>四部门召集 30 余家车企座谈（不得虚假夸大宣传）；证监会严打操纵（周吉锋/周吉辉罚没 3.28 亿、陈秋航内幕交易 1.82 亿）</li><li><strong>韩国 KOSPI 周 −14.46% 触发熔断</strong>（三星 −19.55%、SK 海力士 −28.66%），导火索含长鑫 4F DRAM 披露 + 马斯克称中国 2028 大量产内存 + 美国 CPI 超预期——全球科技股恐慌在蔓延</li><li>下周 A 股<strong>超千亿解禁潮</strong>；章建平退出科翔股份/中际旭创前十大股东</li><li>宽基 ETF 逆势吸金托底（沪深300ETF 华泰柏瑞单日 160 亿、上证50ETF 华夏 54 亿）——"看不见的手"在 3700 下方接货</li></ul>
+<h2 id="sec4">五、10/19 周一 盘前清单（国庆后首个重量级宏观数据日）</h2>
+<p>⚠️ <strong>09:30 房价指数、10:00 国民经济运行情况 + 三季度 GDP 发布</strong>，为全天最大变量。</p>
+<ol><li><strong>GDP 兑现度</strong>：市场一致预期 Q3 同比 <strong><span class="up">+4.4%</span></strong>（Q2 <span class="up">+4.3%</span>）、名义约 <span class="up">+6.0%</span>；若 ≥4.5% 则顺周期/消费有修复理由，若 ≤4.3% 则"弱现实"压制风险偏好。</li><li><strong>9 月分项</strong>：工业增加值预期 <span class="up">+5.6%</span>（8 月 <span class="up">+5.2%</span>）、社零 <span class="up">+0.7%</span>（假期错位拉动）、1–9 月固投 −7.3%（地产拖累未解）；出口 9 月 <strong><span class="up">+36.3%</span></strong>（美元计价创历史新高，AI 产业链是核心主线）。</li><li><strong>外部定价权</strong>：韩国科技股熔断 + 费半 8 连跌 + 油价破 110，A 股科技硬件（半导体/CPO/消费电子）周一能否止跌，决定"外盘杀估值"是否继续向内传导。</li><li><strong>红利/防御 vs 成长</strong>：银行/食品饮料上周逆势收红，若早盘 GDP 不及预期，资金大概率继续抱团红利 + 宽基 ETF；若超预期，超跌成长（军工/AI硬件/传媒）或有反包。</li><li><strong>长鑫链 vs 韩国链</strong>：长鑫 4F DRAM + 巨额回购是国产替代强信号，周一存储/设备（北方华创、沪电获加仓方向）或独立于全球半导体下跌。</li><li><strong>量能 + 30Y 美债锚</strong>：成交需重回 <strong>1.6 万亿上方</strong>才能支撑反包；30Y≈5.6% 仍压制长久期资产（创新药/AI 算力估值）。</li></ol>
+<h2 id="sec5">六、持仓视角（华兰疫苗 / 特一药业 / 中证2000ETF南方）</h2>
+<ul><li><strong>中证2000ETF南方（159531）</strong>：小盘宽基，周一直面"外部风险 + 解禁潮 + 成长杀估值"三重压，但宽基 ETF 正被大资金逆势申购托底；短线波动大，<strong>非对冲仓</strong>。</li><li><strong>华兰疫苗（301207）</strong>：流感疫苗线，10/16 −0.47%（缩量），医药线近期分化；<strong>三季报 10-28 披露</strong>为关键变量（中报净利 <span class="up">+75.23%</span>）。周末无直接利空。</li><li><strong>特一药业（002728）</strong>：中药 OTC，10/16 −0.72%；<strong>中报净利 −18.15%、三季报 10-27 披露</strong>，业绩兑现前防御属性弱于纯红利，需盯三季报是否触底。</li><li><strong>总体</strong>：三只均为"非科技、非高位"标的，相对避开上周通信/电子 −10% 的主跌浪；但周一若 GDP 不及预期 + 外部 risk-off，小盘（中证2000）首当其冲，医药线看三季报定力。</li></ul>
+<h2 id="sec6">七、一句话总结（公众号标题备选）</h2>
+<ul><li><strong>主推</strong>：周一开盘就一件事——钱认不认政策？国内利好密集、海外油价破110+韩国熔断，3700 政策底与外围冷水正面交锋</li><li><strong>备选①</strong>：三季度GDP周一见分晓：4.4%是顺周期反攻号角，还是红利防御的续命符？</li><li><strong>备选②</strong>：长鑫净利1300亿+20亿回购，韩国存储却周跌28%：同一产业链，A股与首尔为何反向定价</li></ul>
+<div class="pager"><a class="prev" href="2026-10-17.html"><span class="dir">← 上一期</span>10-17 3716.28 / +0.24%</a><a class="next" href="2026-10-19.html"><span class="dir">下一期 →</span>10-19 指数红、个股崩</a></div>
+</article>
+</div></div>
+
+<footer class="foot"><div class="wrap">
+  <span>A股每日复盘期刊 · 由收盘数据自动生成</span>
+  <span>数据口径：沪深A股全市场 · 红涨绿跌</span>
+</div></footer>
+
+</body></html>

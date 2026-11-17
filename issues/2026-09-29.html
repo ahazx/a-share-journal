@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-09-29 今日 / 5日 / 20日 · A股复盘第005期</title>
+<style>
+:root{
+  --paper:#f6f3ee; --card:#fffdf9; --ink:#1c1a17; --ink2:#413c35; --muted:#8a8279;
+  --line:#e2dbd0; --line2:#cfc6b8; --red:#c0392b; --redbg:#fdf1ef;
+  --green:#1a7f4b; --greenbg:#eef7f1; --gold:#8c6b2f;
+  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:15.5px; line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- 报头 ---------- */
+.masthead{border-bottom:3px double var(--ink);background:var(--card);padding:26px 0 18px}
+.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.brand h1{
+  font-family:var(--serif);font-size:34px;line-height:1.15;margin:0;
+  letter-spacing:2px;font-weight:700;
+}
+.brand .sub{
+  font-family:var(--sans);font-size:11px;letter-spacing:3.5px;color:var(--muted);
+  text-transform:uppercase;margin-top:7px;
+}
+.masthead .meta{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.9}
+.masthead .meta b{color:var(--ink);font-family:var(--serif);font-size:22px;letter-spacing:1px}
+
+/* ---------- 版面骨架 ---------- */
+.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px;padding:38px 0 80px}
+@media(max-width:940px){.layout{grid-template-columns:1fr;gap:20px;padding-top:26px}}
+
+/* ---------- 目录 ---------- */
+.toc{position:sticky;top:24px;align-self:start;font-size:13px}
+.toc .toc-t{font-size:10.5px;letter-spacing:2.5px;color:var(--muted);margin-bottom:12px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0 6px 12px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink2);line-height:1.5}
+.toc a:hover{color:var(--red);border-left-color:var(--red);background:var(--redbg)}
+@media(max-width:940px){
+  .toc{position:static;border:1px solid var(--line);background:var(--card);padding:14px 16px}
+  .toc ol{columns:2;column-gap:18px}
+  .toc a{font-size:12.5px}
+}
+
+/* ---------- 正文 ---------- */
+article{max-width:820px}
+.issue-head{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
+.issue-head .kicker{font-size:11.5px;letter-spacing:2px;color:var(--red);margin-bottom:6px}
+.issue-head h1{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:.5px}
+.issue-head .dateline{font-size:12.5px;color:var(--muted)}
+
+h2{
+  font-family:var(--serif);font-size:21px;margin:44px 0 16px;padding-bottom:9px;
+  border-bottom:1px solid var(--line2);letter-spacing:.5px;
+}
+h2::before{content:"";display:inline-block;width:5px;height:15px;background:var(--red);margin-right:10px;vertical-align:-2px}
+h3{font-family:var(--serif);font-size:17px;margin:30px 0 10px;color:var(--ink)}
+h4{font-size:14.5px;margin:22px 0 8px;color:var(--ink2)}
+p{margin:0 0 13px;text-align:justify}
+strong{font-weight:700;color:#000}
+em{font-style:normal;background:linear-gradient(transparent 62%,#f3e2b8 62%);padding:0 1px}
+hr{display:none}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:#efe9df;padding:1px 5px;border-radius:3px}
+
+/* 首段引言 */
+blockquote{
+  margin:0 0 26px;padding:14px 18px;background:var(--card);border-left:3px solid var(--line2);
+  font-size:12.8px;line-height:1.8;color:var(--muted);
+}
+blockquote p{margin:0 0 6px;text-align:left}
+blockquote p:last-child{margin:0}
+
+/* 列表 */
+ul,ol{margin:0 0 16px;padding-left:22px}
+li{margin:0 0 9px;line-height:1.8}
+li::marker{color:var(--muted)}
+ul ul,ol ul,ul ol{margin:8px 0 0}
+
+/* 表格 */
+.tbl{overflow-x:auto;margin:16px 0 24px;border:1px solid var(--line);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6;font-variant-numeric:tabular-nums}
+thead th{
+  background:#efe9df;color:var(--ink);font-weight:600;text-align:left;
+  padding:9px 12px;border-bottom:1px solid var(--line2);white-space:nowrap;font-size:12.5px;
+}
+tbody td{padding:9px 12px;border-bottom:1px solid #f0ebe3;vertical-align:top}
+tbody tr:nth-child(even){background:#fcfaf6}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#fbf4ec}
+td:first-child{font-weight:600;white-space:nowrap}
+.num{font-variant-numeric:tabular-nums}
+
+/* 数字着色（红涨绿跌） */
+.up{color:var(--red);font-weight:600}
+.down{color:var(--green);font-weight:600}
+.flat{color:var(--muted)}
+
+/* 章节内小节 */
+article>b,article>strong{display:block}
+
+/* 页脚 */
+.foot{border-top:3px double var(--ink);margin-top:70px;padding:22px 0 60px;font-size:12px;color:var(--muted)}
+.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* 上下期 */
+.pager{display:flex;justify-content:space-between;gap:14px;margin-top:56px;padding-top:20px;border-top:1px solid var(--line)}
+.pager a{flex:1;border:1px solid var(--line);background:var(--card);padding:12px 16px;font-size:13px;transition:.15s}
+.pager a:hover{border-color:var(--red);color:var(--red)}
+.pager .dir{display:block;font-size:10.5px;letter-spacing:2px;color:var(--muted);margin-bottom:3px}
+.pager a.next{text-align:right}
+
+@media print{
+  body{background:#fff;font-size:11.5pt}
+  .toc,.pager,.masthead .meta{display:none}
+  .layout{grid-template-columns:1fr;padding:0}
+  h2{break-after:avoid}
+  .tbl{overflow:visible;break-inside:avoid}
+}
+</style>
+</head><body>
+
+<header class="masthead"><div class="wrap">
+  <div class="brand">
+    <h1>山哥 · A股每日复盘</h1>
+    <div class="sub">Daily Market Review · A-Share Journal</div>
+  </div>
+  <div class="meta"><b>第 005 期</b><br>2026-09-29 · 周二</div>
+</div></header>
+
+<div class="wrap"><div class="layout">
+<nav class="toc"><div class="toc-t">本期目录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、资金表现（主力资金，全 A 汇总）</a></li><li><a href="#sec4">五、题材涨跌分析</a></li><li><a href="#sec5">六、后市观察</a></li><li><a href="#sec6">📌 一句话总结（公众号标题）</a></li></ol></nav>
+<article>
+  <div class="issue-head">
+    <div class="kicker">第 005 期 · NO.005</div>
+    <h1>今日 / 5日 / 20日</h1>
+    <div class="dateline">2026-09-29 · 周二</div>
+  </div>
+<h1 class="md-h1">A股深度复盘 · 2026年9月29日（周二）</h1>
+<blockquote><p>国庆前倒数第 2 个交易日 | 数据截至 15:00 收盘</p></blockquote>
+<h2 id="sec0">一、核心结论</h2>
+<p><strong>一句话定性：这是一次"地量普涨"的止血日，不是反攻日。</strong></p>
+<p>三个数字说清楚今天：</p>
+<ol><li><strong>成交 1.41 万亿，创 14 个月地量</strong>——较昨日缩量 2936 亿（<span class="down">-17.2%</span>）。钱没回来，是卖压消失了。</li><li><strong>跌停从 60 家骤降到 10-12 家，涨停从 35 家回到 57 家</strong>——9/28 那个"跌停&gt;涨停"的倒挂，一天就修复了。</li><li><strong>全行业主力资金由昨日的 -884.8 亿转为 +57.65 亿</strong>——止血了，但 +57.65 亿相对 1.41 万亿成交，只是"不流出了"，谈不上"在进场"。</li></ol>
+<p><strong>今日资金表现</strong>：主力资金结束失血、转为小幅净流入（+57.65 亿），但 5 日累计仍 -2130.51 亿、20 日累计 -3916.71 亿，<strong>中期失血的坑远没有填上</strong>。资金流向呈现明显的"高切低"——从煤炭、炼化这类节前避险品种，切向地产（政策）与元件（超跌）这两个方向。</p>
+<p>⚠️ <strong>必须提示的口径问题</strong>：主力资金是近零和指标，"某板块吸金"只能证明方向、不能证明规模。今日 +57.65 亿是<strong>全 A 汇总值</strong>，量级极小；下文每个板块我都给了「今日 / 5日 / 20日」三个维度，请对照看，不要用单日数字下趋势结论。</p>
+<p><strong>领涨三题材</strong>：地产链（<span class="up">+4.16%</span>，95% 个股飘红）、被动元件/覆铜板（<span class="up">+2.51%</span>，吸金 29.45 亿居首）、AI营销/传媒短剧（<span class="up">+3.55%</span>）。 <strong>领跌三题材</strong>：炼化及贸易（<span class="down">-2.20%</span>）、非白酒/黄酒（<span class="down">-2.09%</span>，黄酒 <span class="down">-4.46%</span>）、煤炭开采（<span class="down">-1.44%</span>）。</p>
+<h2 id="sec1">二、核心指数表现</h2>
+<div class="tbl"><table><thead><tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>备注</th></tr></thead><tbody><tr><td>上证指数</td><td>3830.45</td><td><strong><span class="up">+0.18%</span></strong></td><td>全天 3810.81-3843.84 窄幅震荡，收在中上部</td></tr><tr><td>深证成指</td><td>12901.95</td><td><strong><span class="up">+0.34%</span></strong></td><td></td></tr><tr><td>创业板指</td><td>3142.56</td><td><strong><span class="up">+0.09%</span></strong></td><td>主要指数中最弱，昨日重挫 <span class="down">-4.53%</span> 后仅微修复</td></tr><tr><td>科创50</td><td>1569.34</td><td><strong><span class="up">+0.86%</span></strong></td><td><strong>今日最强</strong>，半导体+元件带动</td></tr><tr><td>北证50</td><td>1032.36</td><td><strong><span class="up">+0.56%</span></strong></td><td></td></tr><tr><td>沪深300</td><td>4345.21</td><td><strong><span class="up">+0.10%</span></strong></td><td>大盘蓝筹几乎没动</td></tr><tr><td>中证500</td><td>7439.63</td><td><strong><span class="up">+0.50%</span></strong></td><td></td></tr><tr><td>中证1000</td><td>7325.35</td><td><strong><span class="up">+0.43%</span></strong></td><td>小盘显著强于沪深300</td></tr></tbody></table></div>
+<p><strong>结构特征</strong>：中证500/1000（<span class="up">+0.50%</span>/<span class="up">+0.43%</span>）明显跑赢沪深300（<span class="up">+0.10%</span>），微盘股概念 402/476 飘红（84%）——<strong>今天是小盘股、微盘股的修复日，权重股基本躺平</strong>。这解释了为什么指数只涨 0.18%、但 3471 家个股上涨：涨的是数量，不是重量。</p>
+<h2 id="sec2">三、市场情绪与量能</h2>
+<div class="tbl"><table><thead><tr><th>指标</th><th>今日(9/29)</th><th>昨日(9/28)</th><th>变化</th></tr></thead><tbody><tr><td>两市成交额</td><td><strong>14091.98 亿</strong></td><td>17028 亿</td><td><strong>-2936.02 亿（<span class="down">-17.2%</span>），创 14 个月地量</strong></td></tr><tr><td>上涨/下跌家数</td><td><strong>3471 / 1933</strong></td><td>—</td><td>红盘率 <strong>62%</strong>（昨日 16%）</td></tr><tr><td>涨停 / 跌停</td><td><strong>57 / 12</strong></td><td>35 / 60</td><td><strong>跌停大幅收敛，倒挂解除</strong></td></tr><tr><td>炸板数</td><td>8</td><td>12</td><td>打板成功率提升</td></tr><tr><td>涨超 5% / 跌超 5%</td><td>214 / 68</td><td>— / 799</td><td>跌超5%从 799 家降到 68 家</td></tr></tbody></table></div>
+<blockquote><p>东财口径涨停 57 / 跌停 10 / 炸板 8，与 changedist 的 57/12 略有口径差，属正常。</p></blockquote>
+<p><strong>连板梯队</strong>：6板 1 家（新华传媒）、4板 1 家（雪龙集团）、3板 1 家（襄阳轴承）、2板 7 家、首板 47 家。 → 高度板（新华传媒 6 板，昨晚上交所已出手降温）仍在，但梯队偏薄，2板只有 7 家，<strong>题材的纵深不足</strong>。</p>
+<p><strong>打板赚钱效应明显修复</strong>（这是今天最重要的情绪信号）：</p>
+<div class="tbl"><table><thead><tr><th>概念</th><th>今日涨跌</th><th>红盘</th><th>9/28 对比</th></tr></thead><tbody><tr><td>昨日涨停</td><td><strong><span class="up">+2.58%</span></strong></td><td>20/35</td><td>游资回血</td></tr><tr><td>昨日连板</td><td><strong><span class="up">+2.10%</span></strong></td><td>4/7</td><td>昨日 <span class="down">-0.68%</span>（游资被打掉）→ 今日转正</td></tr><tr><td>昨日首板</td><td><strong><span class="up">+3.54%</span></strong></td><td>13/22</td><td></td></tr><tr><td>昨日高换手</td><td><strong><span class="down">-1.55%</span></strong></td><td>26/75</td><td>⚠️ 仍为负</td></tr></tbody></table></div>
+<p><strong>解读</strong>：连板与首板都赚钱了，但"昨日高换手"还是 <span class="down">-1.55%</span>（26/75）——说明<strong>市场在炒低位、不炒高位</strong>。放量过的票继续被砍，这是典型的存量博弈特征，与"地量"互相印证。</p>
+<h2 id="sec3">四、资金表现（主力资金，全 A 汇总）</h2>
+<div class="tbl"><table><thead><tr><th>维度</th><th>净流入</th></tr></thead><tbody><tr><td>今日</td><td><strong>+57.65 亿</strong>（昨日 -884.8 亿）</td></tr><tr><td>5 日累计</td><td><strong>-2130.51 亿</strong></td></tr><tr><td>20 日累计</td><td><strong>-3916.71 亿</strong></td></tr></tbody></table></div>
+<p><strong>这是"止血"不是"输血"</strong>：单日转正的 57.65 亿，相对于 5 日 -2130 亿、20 日 -3916 亿的窟窿，连零头都算不上。</p>
+<p><strong>主力净流入 TOP5 行业</strong>：元件 <span class="up">+29.45亿</span>、电池 <span class="up">+21.02亿</span>、房地产开发 <span class="up">+13.77亿</span>、工业金属 <span class="up">+11.98亿</span>、软件开发 <span class="up">+10.26亿</span>。 <strong>主力净流出 TOP5 行业</strong>：光学光电子 <span class="down">-10.09亿</span>、电子化学品 <span class="down">-8.11亿</span>、军工电子 <span class="down">-6.32亿</span>、化学制品 <span class="down">-6.24亿</span>、通用设备 <span class="down">-5.94亿</span>。</p>
+<p><strong>值得单独点名的信号</strong>：房地产开发是<strong>全市场极少数三个周期资金全为正</strong>的板块（今日 <span class="up">+13.77亿</span> / 5日 <span class="up">+2.46亿</span> / 20日 <span class="up">+12.02亿</span>）。在一个 20 日累计净流出 3916 亿的市场里，20 日资金为正的板块屈指可数——<strong>这不是一日游的资金特征</strong>。</p>
+<h2 id="sec4">五、题材涨跌分析</h2>
+<h3>🔴 领涨 TOP3</h3>
+<h4>1. 地产链 —— 今日最强主线，全板块普涨</h4>
+<ul><li><strong>房地产开发 <span class="up">+4.16%</span>，79/83 飘红（红盘率 95%）</strong>，主力 +13.77 亿</li><li>联动：房地产服务 <span class="up">+2.70%</span>（10/12）、房屋租赁 <span class="up">+3.58%</span>、租售同权 <span class="up">+3.13%</span>、房地产开发概念 <span class="up">+3.00%</span>（122/135）</li><li><strong>代表个股</strong>：信达地产 <span class="up">+10.10%</span>（量比 0.91，一字/接近一字）、华发股份 <span class="up">+10.07%</span>、<strong>特发服务 <span class="up">+13.49%</span>（20cm 大号，换手 17.9%、量比 1.56）</strong></li><li><strong>资金三周期</strong>：今日 <span class="up">+13.77亿</span> / 5日 <span class="up">+2.46亿</span> / <strong>20日 <span class="up">+12.02亿</span>（全正）</strong></li><li><strong>涨跌逻辑</strong>：政策利好密集落地是主因——富国基金《这轮地产行情，哪里不一样了？》、东方财富研究中心《地产政策利好密集，人气股2连板只是"前菜"》、证券时报《地产9月逆市向好》三篇研报同日刷屏。<strong>关键判断</strong>：95% 的板块内红盘率 + 20 日资金为正，说明是<strong>板块级资金配置行为</strong>，不是单点题材炒作。这是今天唯一有资格谈"持续性"的方向。</li></ul>
+<h4>2. 被动元件 / 覆铜板 / PCB —— 超跌反弹的主力方向</h4>
+<ul><li><strong>元件 <span class="up">+2.51%</span>，55/61 飘红（红盘率 90%）</strong>，主力 <strong>+29.45 亿（全行业第一）</strong></li><li>联动：覆铜板概念 <span class="up">+3.75%</span>（4/5）、PCB概念 <span class="up">+1.75%</span>（157/222）、博通概念 <span class="up">+2.67%</span></li><li><strong>代表个股</strong>：<strong>迅捷兴 <span class="up">+20.01%</span>（20cm，换手 10.19%）</strong>、超声电子 <span class="up">+10.01%</span>（换手 19.56%）</li><li><strong>资金三周期</strong>：今日 <span class="up">+29.45亿</span> / 5日 <strong><span class="down">-161.81亿</span></strong> / 20日 <span class="down">-89.25亿</span></li><li><strong>涨跌逻辑</strong>：三重驱动 ①东方财富《被动元件大涨，AI需求驱动结构性紧缺》②科创板日报《CPO设备订单"蜂拥而至"，产业链缺货潮蔓延》③昨日元件被砸到 0/61（<span class="down">-6.80%</span>），属超跌反弹。</li><li>⚠️ <strong>必须泼的冷水</strong>：今日 +29.45 亿只回补了 5 日流出（<span class="down">-161.81亿</span>）的 <strong>18%</strong>。按资金流纪律，这是<strong>1 天样本，不构成趋势反转</strong>，需要节后连续 2-3 天净流入才能确认。注意昨日杀跌的元凶亨通光电今日仍 <span class="down">-5.82%</span>（66 亿定增的账还没还完），光通信链内部是分化的。</li></ul>
+<h4>3. AI营销 / 传媒短剧 —— 题材驱动的批量涨停</h4>
+<ul><li>数字媒体 <span class="up">+3.67%</span>（13/14）、广告营销 <span class="up">+2.14%</span>（25/28）、影视院线 <span class="up">+2.05%</span>（<strong>19/19 全红</strong>）、出版 <span class="up">+3.17%</span>（26/29）</li><li>概念端：AI营销 <span class="up">+3.55%</span>（34/36）、Kimi概念 <span class="up">+3.75%</span>（<strong>9/9 全红</strong>）、短剧/互动游戏 <span class="up">+2.49%</span>（81/88）、Sora概念 <span class="up">+2.82%</span></li><li><strong>代表个股</strong>：<strong>值得买 <span class="up">+10.71%</span>（换手 17.98%、量比 1.72）</strong>、中国出版 <span class="up">+10.07%</span>、华媒控股 <span class="up">+10.13%</span></li><li><strong>资金三周期</strong>（AI营销概念）：今日 <span class="up">+7.69亿</span> / 5日 <span class="down">-6.20亿</span> / 20日 <strong><span class="down">-60.26亿</span></strong></li><li><strong>涨跌逻辑</strong>：抖音 AI 短剧单月播放增量 <strong>1798 亿</strong>、漫剧一口气吃掉 TOP50 近六成；首部 AI 电影定档。这是<strong>产业数据驱动的题材</strong>，与 9/23 那次被证伪的"AI应用转向"区别在于——这次有具体的播放量数据落地。但 20 日仍 -60.26 亿，属脉冲型题材，不宜当主线。</li></ul>
+<h3>🟢 领跌 TOP3</h3>
+<h4>1. 炼化及贸易 -2.20%（12/30，红盘率仅 40%）</h4>
+<ul><li><strong>代表个股</strong>：中国石化 <strong><span class="down">-2.40%</span></strong>、宝丰能源 <span class="down">-0.18%</span>（主营聚乙烯概念 <span class="down">-2.07%</span>，0/6）、PTA概念 <span class="down">-2.28%</span></li><li>主力 -5.07 亿（5日 <span class="down">-6.84亿</span> / 20日 <span class="down">-7.63亿</span>，三周期全负）</li><li><strong>涨跌逻辑</strong>：①9/24 焦炭煤炭领涨后的获利兑现，节前资金撤离周期品；②逻辑陷阱——沙特东西向输油管道恢复出口、油价维持高位，但<strong>油价高位对炼化是成本压力而非利好</strong>，市场这次定价是对的。红盘率仅 40%，是普跌不是个股问题。</li></ul>
+<h4>2. 非白酒 / 黄酒 -2.09%（5/16，红盘率 31%）</h4>
+<ul><li><strong>黄酒概念 <span class="down">-4.46%</span>（1/4）</strong>——板块内几乎全军覆没</li><li><strong>代表个股</strong>：<strong>会稽山 <span class="down">-9.99%</span>（跌停）</strong>，换手仅 1.46%、量比 0.13</li><li>主力 -1.88 亿（5日 <span class="down">-0.98亿</span> / 20日 <span class="up">+9.20亿</span>）</li><li><strong>涨跌逻辑</strong>：<strong>这是今天最典型的一日游兑现</strong>。会稽山在 9/28 还是 <span class="up">+9.99%</span> 涨停的领涨龙头，今日直接跌停，且换手只有 1.46%、量比 0.13 —— 想跑跑不掉、没人接盘的形态。涨幅榜上的领涨股次日跌停，是节前资金"打一枪换一个地方"的直接证据。<strong>不要把昨日的领涨题材当主线。</strong></li></ul>
+<h4>3. 煤炭开采 -1.44%（6/26，红盘率仅 23%）</h4>
+<ul><li><strong>代表个股</strong>：中国神华 <span class="down">-2.25%</span>、兰花科创 <strong><span class="down">-2.30%</span></strong>、山西焦煤 <span class="down">-1.70%</span>（板块龙头辽宁能源却 <span class="up">+5.90%</span>，内部分化）</li><li>主力 +0.99 亿（今日反而小幅正流入）</li><li><strong>涨跌逻辑</strong>：9/24 焦炭煤炭曾是全市场唯一三周期资金全正的避险主线，今日资金转向地产、元件这类<strong>进攻方向</strong>，防御品种被抽血。注意主力今日仍为小幅正流入（<span class="up">+0.99亿</span>），说明是<strong>缩量阴跌、无人接盘</strong>，不是恐慌抛售——机构没走，但也没人买。</li></ul>
+<blockquote><p><strong>补充观察</strong>：航天装备Ⅱ <span class="down">-1.35%</span>（<strong>0/9，全军覆没</strong>），但成分仅 9 只，样本过小，不作为独立领跌题材，仅提示商业航天概念 20 日 -317.60 亿仍在持续失血。</p></blockquote>
+<h2 id="sec5">六、后市观察</h2>
+<ol><li><strong>明日（9/30）是国庆前最后一个交易日</strong>，10/1-10/7 休市 7 天，10/10（六）调休上班。地量已现，节前最后一日大概率继续缩量，<strong>缩量下的涨跌不宜过度解读</strong>，别把节前情绪当趋势信号。</li><li><strong>地产链是明天最值得跟踪的一条线</strong>。它是全市场极少数「今日/5日/20日资金全正」的板块（20日 <span class="up">+12.02亿</span>），且 95% 个股飘红是板块级行为。节后若政策继续落地，有可能从"政策脉冲"升级为"资金主线"；若节后第一天就熄火，则今日只是节前避险资金的临时栖息地。</li><li><strong>元件的超跌反弹需连续验证</strong>。今日 +29.45 亿 vs 5日 -161.81 亿，只回补 18%。按纪律，节后需要连续 2-3 天净流入才有资格谈反转。今天只能定性为"超跌反弹第一天"。</li><li><strong>情绪已止血，但骨架仍虚</strong>。跌停 60→12、昨日连板 <span class="down">-0.68%</span>→<span class="up">+2.10%</span>，修复是真实的；但成交创 14 个月地量、昨日高换手仍 <span class="down">-1.55%</span>，说明增量资金没进场，只是卖压消失。<strong>存量博弈下，追高标不如看低位。</strong></li><li><strong>微盘股爆发但机构缺席</strong>。微盘股概念 402/476 飘红（84%）、中证1000 跑赢沪深300，但微盘主力资金 -1.45 亿为负 → 这是游资/散户的情绪修复，机构资金没参与，持续性存疑。</li></ol>
+<h2 id="sec6">📌 一句话总结（公众号标题）</h2>
+<p><strong>主推：</strong></p>
+<blockquote><p><strong>1.41 万亿创 14 个月地量，3471 家飘红、跌停从 60 家降到 10 家——情绪止血了，但钱还没回来</strong></p></blockquote>
+<p><strong>备选 1：</strong></p>
+<blockquote><p>地产链 95% 个股飘红、元件吸金 29 亿反攻：节前倒数第二日，资金在赌什么？</p></blockquote>
+<p><strong>备选 2：</strong></p>
+<blockquote><p>昨天跌停 60 家今天只剩 10 家，可成交创了 14 个月新低：这波修复，是反弹还是回光？</p></blockquote>
+<p><em>数据来源：腾讯自选股（westock）、东方财富涨停池。资金指标为近零和指标，单日数据仅指示方向，请结合 5 日/20 日维度解读。本报告不构成投资建议。</em></p>
+<div class="pager"><a class="prev" href="2026-09-28.html"><span class="dir">← 上一期</span>09-28 一句话：节后首日 A股遭遇"利空共振式"杀跌，杀的是算力硬件的高位筹码，不是</a><a class="next" href="2026-09-30.html"><span class="dir">下一期 →</span>09-30 | 1530.01 |</a></div>
+</article>
+</div></div>
+
+<footer class="foot"><div class="wrap">
+  <span>A股每日复盘期刊 · 由收盘数据自动生成</span>
+  <span>数据口径：沪深A股全市场 · 红涨绿跌</span>
+</div></footer>
+
+</body></html>
