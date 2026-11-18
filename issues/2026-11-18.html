@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>英伟达财报 + BIS算力新规 + 证监会辟谣三重共振｜2026-11-18 A股复盘</title>
+<meta name="description" content="英伟达财报 + BIS算力新规 + 证监会辟谣三重共振">
+<style>/* ---------------------------------------------------------------
+   A股复盘期刊 · 编辑部风格
+   原则：白底、细线、衬线标题、无卡片无阴影无彩色标签
+   --------------------------------------------------------------- */
+:root{
+  --ink:#111110;
+  --body:#26251f;
+  --muted:#8b887f;
+  --hair:#e4e1da;
+  --hair2:#c9c5bb;
+  --up:#b02a1e;
+  --down:#166b45;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:#fff;color:var(--body);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16.5px;line-height:1.95;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"palt" 1;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+.serif{font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif}
+
+/* ---------- 报头 ---------- */
+.masthead{border-bottom:1px solid var(--ink);background:#fff}
+.masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:15px 0 11px}
+.masthead .brand{font-size:15px;letter-spacing:2px;font-weight:600;color:var(--ink)}
+.masthead .mhmeta{font-size:12px;color:var(--muted);letter-spacing:.6px;white-space:nowrap}
+
+/* ---------- 版面 ---------- */
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px;padding:40px 0 90px}
+@media(max-width:920px){.layout{grid-template-columns:1fr;gap:0;padding-top:26px}}
+
+/* ---------- 目录 ---------- */
+.toc{position:sticky;top:26px;align-self:start;font-size:12px;line-height:1.5}
+.toc .toc-t{font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:11px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:0 0 3px}
+.toc a{display:block;padding:5px 0;color:#57544c;transition:color .12s}
+.toc a:hover{color:var(--up)}
+@media(max-width:920px){
+  .toc{position:static;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--hair)}
+  .toc ol{columns:2;column-gap:22px}
+}
+
+/* ---------- 标题区 ---------- */
+.meta{font-size:12px;color:var(--muted);letter-spacing:1px;margin-bottom:14px}
+h1.hl{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:31px;line-height:1.45;letter-spacing:.5px;font-weight:700;
+  margin:0 0 14px;color:var(--ink);
+}
+.dek{font-size:15.5px;line-height:1.9;color:#57544c;margin:0 0 30px;padding-bottom:26px;border-bottom:1px solid var(--hair)}
+@media(max-width:640px){h1.hl{font-size:25px}}
+
+/* ---------- 正文 ---------- */
+article{max-width:720px}
+h2{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:19px;font-weight:700;letter-spacing:.4px;color:var(--ink);
+  margin:52px 0 18px;padding-top:13px;border-top:1px solid var(--ink);
+}
+h3{font-size:16.5px;font-weight:700;color:var(--ink);margin:34px 0 10px;letter-spacing:.2px}
+h4{font-size:15px;font-weight:600;margin:24px 0 8px;color:#3a3730}
+p{margin:0 0 15px;text-align:left}
+strong{font-weight:700;color:#000}
+em{font-style:normal;font-weight:600}
+hr{display:none}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.87em;background:#f4f2ec;padding:1px 5px}
+
+/* 数据来源等说明 */
+blockquote{
+  margin:0 0 34px;padding:0;border:none;color:var(--muted);
+  font-size:12.5px;line-height:1.85;
+}
+blockquote p{margin:0 0 5px;text-align:left}
+blockquote p:last-child{margin:0}
+
+/* 列表：短横线游标 */
+ul,ol{margin:0 0 18px;padding:0;list-style:none}
+li{position:relative;padding-left:1.15em;margin:0 0 10px;line-height:1.85}
+li::before{content:"–";position:absolute;left:0;top:0;color:#b3aea3}
+ol{counter-reset:n}
+ol li{padding-left:1.5em;counter-increment:n}
+ol li::before{content:counter(n) ".";color:var(--muted);font-size:.9em}
+ul ul,ol ul,ul ol{margin:9px 0 0}
+
+/* 表格：无边框无斑马，报纸数据表 */
+.tbl{overflow-x:auto;margin:20px 0 28px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.72;font-variant-numeric:tabular-nums}
+thead th{
+  border-bottom:1.5px solid var(--ink);padding:0 10px 8px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:.4px;color:#3a3730;white-space:nowrap;
+}
+thead th:first-child,td:first-child{padding-left:0}
+tbody td{padding:10px 10px 10px 10px;border-bottom:1px solid var(--hair);vertical-align:top}
+tbody tr:last-child td{border-bottom:1px solid var(--hair2)}
+td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+tbody tr:hover{background:#fcfbf8}
+
+/* 涨跌色 */
+.up{color:var(--up)}
+.down{color:var(--down)}
+.flat{color:var(--muted)}
+
+/* ---------- 翻页 ---------- */
+.pager{display:flex;justify-content:space-between;gap:30px;margin-top:64px;padding-top:18px;border-top:1px solid var(--hair);font-size:13px}
+.pager a{color:#57544c;max-width:46%}
+.pager a:hover{color:var(--up)}
+.pager .dir{display:block;font-size:11px;color:var(--muted);letter-spacing:1.5px;margin-bottom:4px}
+.pager a.next{text-align:right;margin-left:auto}
+
+/* ---------- 页脚 ---------- */
+.foot{border-top:1px solid var(--ink);margin-top:0;padding:16px 0 64px;font-size:11.5px;color:var(--muted);letter-spacing:.3px}
+.foot .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+@media print{
+  body{font-size:11pt;line-height:1.7}
+  .toc,.pager,.masthead .mhmeta{display:none}
+  .layout{grid-template-columns:1fr;padding:0}
+  h2{break-after:avoid}
+  .tbl{overflow:visible}
+}
+
+/* ---------- 整行加粗的小标题（报告里的 1./2./3.） ---------- */
+p.k{
+  margin:30px 0 9px;font-size:15.5px;line-height:1.75;
+  letter-spacing:.2px;color:var(--ink);
+}
+p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
+</style>
+</head><body>
+<header class="masthead"><div class="wrap">
+  <a class="brand" href="../index.html">A股每日复盘</a>
+  <div class="mhmeta">2026-11-18 · 周三 · 第 053 期</div>
+</div></header>
+<div class="wrap"><div class="layout">
+<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">一、核心结论</a></li><li><a href="#sec1">二、核心指数表现</a></li><li><a href="#sec2">三、市场情绪与量能</a></li><li><a href="#sec3">四、短线连板梯队</a></li><li><a href="#sec4">五、题材涨跌分析</a></li><li><a href="#sec5">六、风险提示</a></li></ol></nav>
+<article>
+  <div class="meta">2026年11月18日　周三</div>
+  <h1 class="hl">英伟达财报 + BIS算力新规 + 证监会辟谣三重共振</h1>
+  
+<section class="tape"><div class="tape-h"><span>市 场 速 览</span><span>2026-11-18 收盘 · 沪深A股</span></div><ul class="tape-idx"><li><span class="tnm">上证指数</span><span class="tvl">3587.83</span><span class="tch up">+0.09%</span><span class="tn">午前跌超0.6%后翻红</span></li><li><span class="tnm">深证成指</span><span class="tvl">10659.41</span><span class="tch up">+0.20%</span><span class="tn">科技权重午后拉起</span></li><li><span class="tnm">创业板指</span><span class="tvl">2311.62</span><span class="tch up">+0.85%</span><span class="tn">成长弹性</span></li><li><span class="tnm">科创50</span><span class="tvl">1247.99</span><span class="tch up">+2.19%</span><span class="tn">最强主要指数</span></li><li><span class="tnm">沪深300</span><span class="tvl">3983.77</span><span class="tch up">+0.18%</span><span class="tn">权重平稳</span></li><li><span class="tnm">北证50</span><span class="tvl">831.86</span><span class="tch down">-1.14%</span><span class="tn">最弱</span></li><li><span class="tnm">中证1000</span><span class="tvl">6052.82</span><span class="tch down">-0.65%</span><span class="tn">中小盘失血</span></li></ul><ul class="tape-mood"><li><span class="tk">上涨</span><b class="up">1318</b></li><li><span class="tk">下跌</span><b class="down">4133</b></li><li><span class="tk">涨停</span><b>43</b></li><li><span class="tk">跌停</span><b>48</b></li><li><span class="tk">成交额</span><b>1.37 万亿</b><i class="tsub">缩量 880 亿</i></li><li><span class="tk">连板</span><b>8 只</b></li><li><span class="tk">最高</span><b>4 板</b></li></ul></section>
+<h2 id="sec0">一、核心结论</h2>
+<p class="k">「英伟达财报 + BIS算力新规 + 证监会辟谣三重共振」引爆AI算力硬件链——午后V型翻红、指数分化上涨，但个股仍是普跌，资金高度抱团科技硬件一条线。</p>
+<p class="k">1. 午前杀、午后拉的V型反转日，指数收红但个股依旧普跌</p>
+<p>早盘受隔夜美股下跌（道指 <span class="down">-1.64%</span>/纳指 <span class="down">-0.74%</span>/标普 <span class="down">-1.03%</span>）与港股走弱（恒指 <span class="down">-0.91%</span>）压制，沪指一度跌超 0.6%、深成指与创指一度跌超 1.1%；午间证监会辟谣"监管要求基金上报全部产品AI敞口"传闻不属实，叠加隔夜英伟达财报炸裂，午后AI硬件获资金力捧，三大指数全线翻红。收盘上证 <strong><span class="up">+0.09%</span></strong>、深成 <span class="up">+0.20%</span>、创业板 <strong><span class="up">+0.85%</span></strong>、科创50 <strong><span class="up">+2.19%</span>（最强）</strong>。但个股层面仍是普跌：全市场红盘率仅 <strong>23%</strong>（上涨 1318 / 下跌 4133 / 平 129 / 停牌 7），<strong>跌停 48 家 vs 涨停 43 家（涨跌停倒挂）</strong>，涨超 5% 约 152 家 vs 跌超 5% 约 285 家（约 <strong>1.9 倍差</strong>）。<strong>指数上涨掩盖了 4133 家下跌——今天是典型的"指数分化、个股失血、赛道抱团"三重错位。</strong></p>
+<p class="k">2. 量能继续萎缩，增量资金并未进场</p>
+<p>两市成交 <strong>13697.02 亿</strong>，较上一交易日（11/17 的 14576.95 亿）<strong>再缩 879.92 亿</strong>，连续三日缩量，并跌破 1.4 万亿关口。午后V型反转靠的是存量资金从其他板块"搬家"到AI硬件，而非增量入场——这决定了行情的持续性存疑。</p>
+<p class="k">3. 资金：科技硬件四件套吸金，其余全线失血</p>
+<p>吸金端高度集中在科技硬件——<strong>元件 +46.18 亿（全市场第一）/ 半导体 +45.13 亿 / 通信设备 +24.0 亿 / IT服务 +17.54 亿</strong>，四者合计吸金超 130 亿；加上消费电子 +9.10 亿、计算机设备 +4.77 亿，科技线几乎包揽净流入前列。失血端是 <strong>工业金属 -25.18 亿 / 航空装备 -15.50 亿 / 化学制药 -13.47 亿 / 股份制银行 -10.78 亿 / 医疗服务 -9.42 亿 / 证券 -8.39 亿</strong>。核心特征：<strong>资金从周期、军工、医药、红利大举撤出，单向涌入AI算力硬件——昨日半导体材料的"科技内部高低切"今天升级为"科技单边吸金、其余全线让渡"。</strong></p>
+<p class="k">4. 主线：AI算力硬件链王者归来，三大催化同日共振</p>
+<p>①隔夜英伟达财报历史性炸裂（单季营收 1158 亿美元、同比 <span class="up">+103%</span>、首破千亿；净利 653 亿美元、<span class="up">+105%</span>；数据中心营收 1076 亿占 93%；Q4指引约1300亿超预期；2028财年增速预期从70%上调至75%）；②11/16 BIS 远程算力新规（管制从"卡芯片"升级到"卡远程算力访问"，海外数据中心向国内提供超1200万聚合TPP需许可，约合750颗H100，国内约105万张H100当量的海外调用需求面临回流）；③午间证监会辟谣基金AI敞口上报传闻。三重共振下，<strong>PCB/覆铜板（生益电子20cm、深南电路/沪电股份涨停）+ 半导体（华虹宏力+6.88%、寒武纪+4%）+ 算力租赁（美利云/润建股份涨停）</strong>集体爆发。但对立面同样惨烈：昨日强势的影视院线 <span class="down">-3.43%</span>、贵金属 <span class="down">-4.62%</span>、航空装备 <span class="down">-4.39%</span> 领跌，高位"龙头股"概念 <strong><span class="down">-5.6%</span></strong>——<strong>这是资金极端的高低切换与赛道再抱团，不是全面转强。</strong></p>
+<blockquote><p><strong>一句话定性</strong>：英伟达破千亿财报 + BIS远程算力卡脖子 + 证监会辟谣，三箭齐发点燃AI算力硬件链，午后V型翻红；但成交连续三日缩量、跌停反超涨停、4133家下跌——这是一场"用全市场失血换来的科技赛道狂欢"，广度极差。</p></blockquote>
+<p><strong>领涨板块③</strong>：元件/PCB覆铜板（元件 <span class="up">+4.90%</span> 行业第一 54/61红、主力+46.18亿；博通概念 <span class="up">+7.30%</span>、覆铜板 <span class="up">+4.02%</span>、生益电子20cm、深南电路/沪电股份涨停）· 通信服务/算力租赁（通信服务 <span class="up">+3.01%</span>、算力租赁 <span class="up">+3.20%</span>、超节点 <span class="up">+3.66%</span>；宏景科技/旋极信息20cm、润建股份/美利云涨停）· 半导体（<span class="up">+1.59%</span>、主力+45.13亿；华虹宏力+6.88%、澜起科技+4.92%、寒武纪+4.00%）。</p>
+<p><strong>领跌板块③</strong>：贵金属（<span class="down">-4.62%</span>、0/11全绿最惨，美元走强+地缘避险降温）· 航空装备/军工（<span class="down">-4.39%</span> 3/46红、主力-15.50亿；印巴冲突概念-4.68%、新质战斗力-4.01% 0/11全绿）· 影视院线/传媒（<span class="down">-3.43%</span>、主力-7.16亿；电视广播-4.38% 0/13、游戏-2.30%、数字媒体-2.24%，昨日反抽后二次杀跌）。</p>
+<h2 id="sec1">二、核心指数表现</h2>
+<div class="tbl"><table><thead><tr><th>指数</th><th>收盘</th><th>涨跌幅</th><th>备注</th></tr></thead><tbody><tr><td>上证指数</td><td>3587.83</td><td><span class="up">+0.09%</span></td><td>午前跌超0.6%后翻红，最低3560.45</td></tr><tr><td>深证成指</td><td>10659.41</td><td><span class="up">+0.20%</span></td><td>科技权重午后拉起</td></tr><tr><td>创业板指</td><td>2311.62</td><td><strong><span class="up">+0.85%</span></strong></td><td>成长弹性，盘中最低2265.76</td></tr><tr><td>科创50</td><td>1247.99</td><td><strong><span class="up">+2.19%</span></strong></td><td><strong>最强主要指数</strong>，盘中一度涨超3%，半导体撑盘</td></tr><tr><td>沪深300</td><td>3983.77</td><td><span class="up">+0.18%</span></td><td>权重平稳</td></tr><tr><td>北证50</td><td>831.86</td><td><strong><span class="down">-1.14%</span></strong></td><td><strong>最弱</strong>，小盘未受益于科技行情</td></tr><tr><td>中证1000</td><td>6052.82</td><td><span class="down">-0.65%</span></td><td>中小盘失血，未跟随成长反弹</td></tr></tbody></table></div>
+<p><strong>判读</strong>：今天指数分化的核心是"科技赛道独舞"。科创50 <span class="up">+2.19%</span> 一枝独秀（半导体+PCB权重集中），创业板 <span class="up">+0.85%</span> 跟上；但代表广泛小盘的北证50 <span class="down">-1.14%</span>、中证1000 <span class="down">-0.65%</span> 反而下跌——<strong>说明资金不是普涨式进场，而是极致集中在AI算力硬件少数大市值赛道股</strong>。叠加红盘率仅23%，这是"赚了指数不赚钱"的极端版本。</p>
+<h2 id="sec2">三、市场情绪与量能</h2>
+<h3>1. 广度与赚钱效应</h3>
+<p>红盘率 <strong>23%</strong>（涨 1318 / 跌 4133 / 平 129 / 停牌 7），仍在偏冷区间；跌停 <strong>48</strong> &gt; 涨停 <strong>43</strong>，涨跌停连续第二日倒挂；涨超5%约152家 vs 跌超5%约285家，<strong>亏钱效应仍大于赚钱效应</strong>。跌幅集中在 0~2%（2459家）与 2~5%（1389家）区间。今天的赚钱效应高度集中在AI硬件一条线——不在赛道内的个股基本是失血状态。</p>
+<h3>2. 量能</h3>
+<p>两市成交 <strong>13697.02 亿</strong>，较昨日（11/17）<strong>再缩 879.92 亿</strong>，连续第三日缩量并跌破 1.4 万亿。<strong>缩量V型反转 = 存量资金调仓，不是新增资金进场</strong>；赛道股拉升的每一分钱几乎都来自周期、军工、医药、红利板块的抛售。这种结构下，一旦赛道情绪退潮，缺乏承接盘的问题会立刻暴露。</p>
+<h3>3. 题材持续性（涨了几天 / 龙头是谁 / 后排是谁 / 谁带不动谁）</h3>
+<p class="k">① AI算力硬件 / PCB覆铜板 —— 今日爆发第1天，最强主线</p>
+<p>元件 <strong><span class="up">+4.90%</span>（54/61红，行业涨幅与吸金双第一，主力+46.18亿）</strong>、博通概念 <strong><span class="up">+7.30%</span>（6/6全红）</strong>、覆铜板 <strong><span class="up">+4.02%</span>（5/5全红）</strong>、超节点 <span class="up">+3.66%</span>、算力租赁 <span class="up">+3.20%</span>（99/143红，主力+58.43亿）、谷歌概念 <span class="up">+2.86%</span>、通信服务 <span class="up">+3.01%</span>。 龙头：生益电子（<strong>20cm涨停</strong>，Q3毛利率同环比改善、铜价与上游产能受限推动涨价传导）、深南电路（涨停）、沪电股份（涨停）、华丰科技（<span class="up">+14.62%</span>）；算力租赁端宏景科技（20cm）、旋极信息（20cm）、润建股份/美利云涨停；半导体端华虹宏力（<span class="up">+6.88%</span>）、澜起科技（<span class="up">+4.92%</span>）、寒武纪（<span class="up">+4.00%</span>）。后排腾景科技、鹏鼎控股、景旺电子、工业富联、太辰光跟涨5%以上。 <strong>判定：前排封板坚决、后排广泛跟涨，全产业链有广度——是今日唯一"前排带得动后排"的方向</strong>。驱动是英伟达财报（AI基建没退潮反而加速）+ BIS远程算力新规（海外算力回流、存量合规算力稀缺性重定价）+ 花旗/中信建投/国金研报（PCB供给紧张延续至2027、三季报高增）+ 证监会辟谣四重共振。但需注意：这是超跌后的暴力反包，元件20日主力仍 -41.09 亿、通信设备20日 -38.98 亿，<strong>今日流入远未回补前期流出，定性仍是反弹而非反转</strong>。</p>
+<p class="k">② 半导体材料/光刻胶 —— 第2天，主线内部切换延续</p>
+<p>昨日新启动的靶材今日 <span class="up">+3.14%</span>（5/5全红），半导体 <span class="up">+1.59%</span> 主力 +45.13 亿；但昨日龙头有研新材等未再领涨，资金切向大市值半导体权重（华虹宏力、澜起、寒武纪）。<strong>判定：前排切换、主线从材料扩散到半导体全线，与AI硬件合并为一条大科技线。</strong></p>
+<p class="k">③ 影视院线/AI短剧 —— 第4天二次杀跌，退潮延续</p>
+<p>影视院线 <strong><span class="down">-3.43%</span>（2/19红，主力-7.16亿）</strong>、电视广播 <span class="down">-4.38%</span>（0/13全绿）、游戏 <span class="down">-2.30%</span>、数字媒体 <span class="down">-2.24%</span>、影视传媒概念 <span class="down">-3.54%</span>。昨日文投控股退市风险警示 + 逻辑证伪后，今日板块二次下杀，资金彻底转向AI硬件。<strong>判定：前排已崩、后排推不动前排，退潮确立，无操作价值。</strong></p>
+<p class="k">④ 贵金属/军工 —— 高位补跌</p>
+<p>贵金属 <span class="down">-4.62%</span>（0/11全绿）、航空装备 <span class="down">-4.39%</span>（3/46红）、印巴冲突 <span class="down">-4.68%</span>、新质战斗力 <span class="down">-4.01%</span>（0/11全绿）、龙头股概念 <span class="down">-5.60%</span>。<strong>判定：避险与前期强势方向今日集体让位给科技，是资金高低切的钱袋子来源。</strong></p>
+<h2 id="sec3">四、短线连板梯队（高度 / 家数 / 封板质量 / 负反馈）</h2>
+<p><strong>高度：4板</strong>（华东重机 002685，4连板，一字板换手仅2.2%、封单5.32亿，梯队唯一高度标）；<strong>涨停家数 43 家（东财池口径41家）</strong>，其中<strong>连板仅 8 只（4板1 + 2板7）+ 首板 33 只</strong>，连板占比较昨日（6只）小幅回升但高度仍低。</p>
+<div class="tbl"><table><thead><tr><th>层级</th><th>个股（代码）</th><th>表现</th><th>封板质量</th></tr></thead><tbody><tr><td>4板（最高标）</td><td>华东重机(002685)</td><td><span class="up">+10.00%</span></td><td>一字板、0炸板、封资5.32亿、换手2.2%，质量高</td></tr><tr><td>2板</td><td>盛剑科技(603324)</td><td><span class="up">+9.99%</span></td><td>一字、0炸板、封资0.06亿</td></tr><tr><td>2板</td><td>全筑股份(603030)</td><td><span class="up">+9.79%</span></td><td>一字、0炸板、封资0.12亿（⚠️见风险提示，2.13元）</td></tr><tr><td>2板</td><td>真视通(002771)</td><td><span class="up">+10.02%</span></td><td>0炸板、封资1.08亿、换手7.9%</td></tr><tr><td>2板</td><td>双环科技(000707)</td><td><span class="up">+10.02%</span></td><td>炸板1次、换手14.9%</td></tr><tr><td>2板</td><td>华胜天成(600410)</td><td><span class="up">+10.01%</span></td><td>4天3板、0炸板、换手19.0%</td></tr><tr><td>2板</td><td>卡莱特(301391)</td><td><span class="up">+20.01%</span></td><td>20cm、0炸板、换手10.1%</td></tr><tr><td>2板</td><td>泰嘉股份(002843)</td><td><span class="up">+10.03%</span></td><td>炸板1次、换手27.6%（分歧大）</td></tr></tbody></table></div>
+<p><strong>首板方向</strong>：33只首板集中在通信设备（武汉凡谷）、元件（深南电路/沪电股份）、IT服务（常山北明/城地香江/宏景科技/美利云）、通信服务（中贝通信/润建股份/北纬科技）、白色家电（四川长虹/澳柯玛/爱仕达）——<strong>首板几乎全部指向AI硬件与算力链，主线高度集中</strong>。</p>
+<p><strong>昨日强势股今日表现（晋级/负反馈）</strong>：</p>
+<ul><li><strong>晋级</strong>：华东重机3→4板一字续强；北纬科技（昨高位断板）今日 <span class="up">+9.99%</span>（6天5板，换手42%高分歧）；华胜天成 <span class="up">+10.01%</span>（4天3板）；城地香江 <span class="up">+9.95%</span>、四川长虹 <span class="up">+10.08%</span>、华升股份 <span class="up">+10.07%</span>、爱仕达 <span class="up">+9.97%</span>、真视通 <span class="up">+10.02%</span> 全部续板。</li><li><strong>负反馈</strong>：<strong>高位"龙头股"概念 <span class="down">-5.60%</span>（50只中仅5红）</strong>是今日最明确的负反馈信号——前期妖股/高位标集体退潮；"昨日高换手"概念 <span class="down">-4.06%</span>（94只中20红），说明昨日追高的接力盘今日大面积亏钱。</li></ul>
+<p><strong>判读</strong>：晋级率较昨日回升、最高标华东重机一字4板打开了高度，但<strong>连板梯队与主线严重脱节</strong>——8只连板里没有一只是AI算力硬件（集中在工程机械、环保、装修、IT服务杂线），而今日最强的PCB/算力股几乎都是首板。<strong>这是"赛道股一日游接力弱、游资连板另起炉灶"的分裂格局</strong>：机构资金抱团AI硬件首板，游资在低位杂股做连板，两条线互不共振。叠加跌停48&gt;涨停43，情绪仍是退潮期的局部修复，不是全面转暖。</p>
+<h2 id="sec4">五、题材涨跌分析（领涨3 + 领跌3）</h2>
+<h3>领涨①：PCB / 覆铜板 / 元件（AI硬件核心）</h3>
+<ul><li><strong>代表个股</strong>：生益电子(688183) <strong><span class="up">+18.53%</span> 20cm</strong>（Q3毛利率同环比改善、原材料涨价传导）、深南电路(002916) 涨停、沪电股份(002463) 涨停、超声电子 <span class="up">+6.07%</span>、胜宏科技/景旺电子/工业富联跟涨5%+。</li><li><strong>板块</strong>：元件 <span class="up">+4.90%</span>（54/61红，主力+46.18亿全市场第一）、博通概念 <span class="up">+7.30%</span>、覆铜板 <span class="up">+4.02%</span>、陶瓷基板 <span class="up">+2.30%</span>、交换机 <span class="up">+2.28%</span>。</li><li><strong>涨跌逻辑</strong>：英伟达财报确认AI基建加速（数据中心营收1076亿占93%）→ 高多层板/HDI需求放量；花旗研报指PCB上游高端基材供给紧张延续至2027；中信建投数据显示PCB行业Q3归母净利+196%、生益电子等三季报毛利率改善。属<strong>超跌 + 业绩 + 涨价三重支撑的暴力反包</strong>，但20日主力仍净流出41亿，是修复而非新趋势。</li></ul>
+<h3>领涨②：算力租赁 / 通信服务 / 超节点</h3>
+<ul><li><strong>代表个股</strong>：宏景科技(301396) 20cm、旋极信息(300324) 20cm、润建股份(002929) 涨停、美利云(000815) 涨停、平治信息 <span class="up">+13.95%</span>、青云科技-U 20cm。</li><li><strong>板块</strong>：通信服务 <span class="up">+3.01%</span>、算力租赁 <span class="up">+3.20%</span>（主力+58.43亿）、超节点 <span class="up">+3.66%</span>（主力+36.18亿）、算力一体机 <span class="up">+2.91%</span>、IT服务 <span class="up">+1.68%</span>。</li><li><strong>涨跌逻辑</strong>：11/16 BIS远程算力新规管制升级到"卡远程算力访问"（约750颗H100门槛），国内约105万张H100当量的海外调用需求面临回流，存量合规算力稀缺性被重新定价——<strong>"自主可控 + 国产替代重估"是这波算力租赁的核心叙事</strong>，与PCB的"全球军备竞赛订单"形成双线共振。</li></ul>
+<h3>领涨③：半导体（权重撑盘）</h3>
+<ul><li><strong>代表个股</strong>：华虹宏力 <span class="up">+6.88%</span>（盘中涨超10%）、澜起科技 <span class="up">+4.92%</span>、寒武纪 <span class="up">+4.00%</span>、海光信息 <span class="up">+3.04%</span>、中微公司 <span class="up">+2.32%</span>。</li><li><strong>板块</strong>：半导体 <span class="up">+1.59%</span>（88/183红，主力+45.13亿全市场第二）、谷歌概念 <span class="up">+2.86%</span>、半导体权重撑起科创50 <span class="up">+2.19%</span>。</li><li><strong>涨跌逻辑</strong>：英伟达财报直接映射 + 国产算力芯片替代预期；但板块内部分化（仅88/183红），<strong>是大市值权重拉指数、并非全员普涨</strong>，延续昨日以来的"半导体权重撑盘"特征。</li></ul>
+<h3>领跌①：贵金属</h3>
+<ul><li><strong>代表个股</strong>：恒邦股份 <span class="down">-1.39%</span>（板块内相对抗跌）、山东黄金/中金黄金等全线下挫，板块 0/11 全绿。</li><li><strong>板块</strong>：贵金属 <span class="down">-4.62%</span>（0/11全绿，全市场跌幅第一）。</li><li><strong>涨跌逻辑</strong>：美元走强 + 地缘避险情绪降温 + 风险偏好回升（资金转向科技进攻线），前期避险抱团松动。这是典型的risk-on切换下防御资产被抽血。</li></ul>
+<h3>领跌②：航空装备 / 军工</h3>
+<ul><li><strong>代表个股</strong>：菲利华 <span class="up">+2.53%</span>（板块内少数红）、航天电子 <span class="down">-1.35%</span>；板块仅3/46红。</li><li><strong>板块</strong>：航空装备 <span class="down">-4.39%</span>（主力-15.50亿）、印巴冲突概念 <span class="down">-4.68%</span>、新质战斗力 <span class="down">-4.01%</span>（0/11全绿）、无人战机 <span class="down">-3.33%</span>、中航系 <span class="down">-3.35%</span>、地面兵装 <span class="down">-3.33%</span>。</li><li><strong>涨跌逻辑</strong>：地缘题材（印巴）降温 + 资金从军工防御切向科技进攻，前期事件驱动溢价回吐。属资金"抽血式"下跌，非个股基本面爆雷。</li></ul>
+<h3>领跌③：影视院线 / 传媒</h3>
+<ul><li><strong>代表个股</strong>：ST华谊 <span class="up">+1.39%</span>（板块内领涨但仍是ST股）、平治信息（跨概念）等；板块 2/19 红。</li><li><strong>板块</strong>：影视院线 <span class="down">-3.43%</span>（主力-7.16亿）、电视广播 <span class="down">-4.38%</span>（0/13全绿）、游戏 <span class="down">-2.30%</span>、数字媒体 <span class="down">-2.24%</span>、影视传媒概念 <span class="down">-3.54%</span>（主力-20.20亿）。</li><li><strong>涨跌逻辑</strong>：昨日文投控股退市风险警示 + AI漫剧收入占比仅2.57%的逻辑证伪后，短剧题材二次杀跌；资金彻底抛弃无业绩支撑的纯情绪题材，转向有业绩兑现的AI硬件。<strong>主线跟风的"故事股"正在被系统性出清。</strong></li></ul>
+<h2 id="sec5">六、风险提示：今日领涨股中的退市风险 / ST风险名单</h2>
+<p>逐一核对今日 41 只涨停股（及领涨强势股）：①简称含 ST/*ST；②股价低于 2 元（面值退市敏感带）；③公告存在立案调查 / 重整 / 净资产为负 / 连续亏损等情形。筛出以下 <strong>2 只</strong>：</p>
+<div class="tbl"><table><thead><tr><th>个股</th><th>代码</th><th>今日表现</th><th>股价</th><th>风险类型</th></tr></thead><tbody><tr><td>众泰汽车</td><td>000980</td><td><span class="up">+9.87%</span>（首板涨停）</td><td><strong>1.67 元</strong></td><td>股价跌破2元面值敏感带 + 证监会立案调查 + 重整留债违约 + 扣非持续亏损</td></tr><tr><td>全筑股份</td><td>603030</td><td><span class="up">+9.79%</span>（2连板）</td><td>2.13 元</td><td>面值敏感带边缘（昨收1.94元）+ 连续亏损 + 破产重整历史</td></tr></tbody></table></div>
+<p class="k">逐只说明（关键事实均引自公告或权威报道）：</p>
+<p class="k">1. 众泰汽车（000980）—— 1.67元，今日涨停，风险最高</p>
+<ul><li><strong>面值退市敏感带</strong>：今日收盘仅 <strong>1.67 元</strong>，远低于 2 元。根据规则，连续 20 个交易日收盘价低于 1 元即触发面值退市，当前虽未跌破1元，但1.67元已属低价博弈区，波动敏感。</li><li><strong>证监会立案调查</strong>：据证券时报网报道，公司 2026 年 <strong>7 月 10 日</strong>收到证监会《立案告知书》，因<strong>涉嫌信息披露违法违规</strong>被立案，截至最新三季报披露日<strong>尚未收到最终调查结论</strong>。</li><li><strong>重整留债违约</strong>：据百度百科引公司公告，按重整计划应于 2025 年 12 月 21 日偿还重整留债本金的 30%，公司及子公司新增到期未偿还债务本金合计 6946.11 万元却直至 2026 年 1 月 27 日才披露，浙江证监局对公司及董事长李立忠等<strong>出具警示函</strong>并记入诚信档案。</li><li><strong>扣非持续亏损</strong>：据中新经纬报道，2026 年前三季度归母净利 0.17 亿元（去年亏2.23亿）看似扭亏，但<strong>扣非净利润亏损 2.46 亿元、亏损扩大 41.68%</strong>；扭亏靠的是上半年注销子公司获 2 亿元补偿 + 诉讼和解约 3000 万元营业外收入等<strong>非经常性损益</strong>。三季报还提示新车Wink Y01"尚未形成销售、量产资金到位存在不确定性"。</li><li><strong>结论</strong>：这是"扭亏标题 + 新车叙事 + 低价博弈"三重情绪叠加的炒作，立案、重整违约、扣非亏损三大风险均未解除。追涨停需高度警惕。</li></ul>
+<p class="k">2. 全筑股份（603030）—— 2.13元，2连板</p>
+<ul><li><strong>面值敏感带边缘</strong>：今日涨停后收 <strong>2.13 元</strong>，刚脱离 2 元关口；昨日收盘仅 1.94 元，属面值退市敏感价格区间附近，低价股属性明显。</li><li><strong>连续亏损</strong>：据新浪财经/腾讯新闻报道，公司 2026 年前三季度归母净利润 <strong>-1309.57 万元</strong>（扣非 -1294.69 万元），2024 年全年亏 1.10 亿、2025 年全年亏 2.90 亿——<strong>连续多个报告期亏损</strong>，虽2026年前三季亏损同比收窄85%，但未实现稳定盈利。</li><li><strong>破产重整历史</strong>：企查查司法信息显示公司涉及<strong>破产债权确认纠纷等多起破产相关案件</strong>、司法案件总数超2000起，历史债务与诉讼包袱沉重。</li><li><strong>对冲信息（须如实列出）</strong>：截至 2026 年三季报，公司归母所有者权益 <strong>6.85 亿元为正</strong>，资产负债结构尚未到资不抵债；今日股价已回升至2.13元、未进入1元面值退市线。<strong>因此属"敏感带 + 连亏 + 重整史"的关注类风险，而非已触发退市。</strong></li><li><strong>结论</strong>：2连板为低价情绪炒作，基本面仍亏损、债务包袱重，若股价重新跌回2元下方需警惕面值退市预期发酵。</li></ul>
+<p><strong>已核对并排除的低价涨停股</strong>：京蓝科技（3.48元）、双环科技（5.05元）、沈阳机床（5.71元）、中嘉博创（3.38元）——股价均在2元以上，暂无 ST/*ST 标识，未见明确立案/退市警示公告，本轮不列入。领涨强势股生益电子（70.95元）、深南电路（201.19元）、沪电股份（80.19元）、华胜天成（16.82元）为高股价正常标的，无退市/ST风险。</p>
+<blockquote><p>风险提示仅基于公开公告与权威报道整理，不构成投资建议；退市/ST认定以上市交易所与证监会正式公告为准。</p></blockquote>
+<p><em>数据来源：westock 实时行情、涨跌分布、全行业板块榜（含主力资金三周期）；东财涨停连板池；neodata 统一交易日历；消息面经新浪财经、澎湃新闻、证券时报、腾讯新闻交叉核验。本文为量化数据复盘，不构成任何投资建议。</em></p>
+<div class="source-notes"><blockquote><p>数据来源：westock 实时行情 / 涨跌分布 / 全行业板块榜（含主力资金三周期）/ 东财涨停连板池（rc:0，41家涨停）；交易日判定三步一致（neodata 日历=开市 / quote time=2026-11-18 / changedist 当日完整）。消息面经新浪财经、澎湃新闻、证券时报、腾讯新闻多源交叉核验。</p><p>口径：沪深A股全市场；连板梯队以东财涨停池 + 昨日强势股今日表现为准；主力资金单位已由万元换算为亿元。</p></blockquote></div>
+<div class="pager"><a class="prev" href="2026-11-17.html"><span class="dir">上一期</span>11-17　外盘重挫传导 + 半导体内部高低切 + 影视短剧一日游崩塌</a></div>
+</article>
+</div></div>
+<footer class="foot"><div class="wrap">
+  <span>数据口径：沪深A股全市场 · 红涨绿跌 · 收盘数据</span>
+  <span>每日收盘后自动生成</span>
+</div></footer>
+</body></html>
