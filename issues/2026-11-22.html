@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>周末休市｜2026-11-22 A股复盘</title>
+<meta name="description" content="周末休市">
+<style>/* ---------------------------------------------------------------
+   A股复盘期刊 · 编辑部风格
+   原则：白底、细线、衬线标题、无卡片无阴影无彩色标签
+   --------------------------------------------------------------- */
+:root{
+  --ink:#111110;
+  --body:#26251f;
+  --muted:#8b887f;
+  --hair:#e4e1da;
+  --hair2:#c9c5bb;
+  --up:#b02a1e;
+  --down:#166b45;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:#fff;color:var(--body);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16.5px;line-height:1.95;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"palt" 1;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+.serif{font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif}
+
+/* ---------- 报头 ---------- */
+.masthead{border-bottom:1px solid var(--ink);background:#fff}
+.masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:15px 0 11px}
+.masthead .brand{font-size:15px;letter-spacing:2px;font-weight:600;color:var(--ink)}
+.masthead .mhmeta{font-size:12px;color:var(--muted);letter-spacing:.6px;white-space:nowrap}
+
+/* ---------- 版面 ---------- */
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px;padding:40px 0 90px}
+@media(max-width:920px){.layout{grid-template-columns:1fr;gap:0;padding-top:26px}}
+
+/* ---------- 目录 ---------- */
+.toc{position:sticky;top:26px;align-self:start;font-size:12px;line-height:1.5}
+.toc .toc-t{font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:11px;padding-bottom:8px;border-bottom:1px solid var(--hair)}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:0 0 3px}
+.toc a{display:block;padding:5px 0;color:#57544c;transition:color .12s}
+.toc a:hover{color:var(--up)}
+@media(max-width:920px){
+  .toc{position:static;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--hair)}
+  .toc ol{columns:2;column-gap:22px}
+}
+
+/* ---------- 标题区 ---------- */
+.meta{font-size:12px;color:var(--muted);letter-spacing:1px;margin-bottom:14px}
+h1.hl{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:31px;line-height:1.45;letter-spacing:.5px;font-weight:700;
+  margin:0 0 14px;color:var(--ink);
+}
+.dek{font-size:15.5px;line-height:1.9;color:#57544c;margin:0 0 30px;padding-bottom:26px;border-bottom:1px solid var(--hair)}
+@media(max-width:640px){h1.hl{font-size:25px}}
+
+/* ---------- 正文 ---------- */
+article{max-width:720px}
+h2{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  font-size:19px;font-weight:700;letter-spacing:.4px;color:var(--ink);
+  margin:52px 0 18px;padding-top:13px;border-top:1px solid var(--ink);
+}
+h3{font-size:16.5px;font-weight:700;color:var(--ink);margin:34px 0 10px;letter-spacing:.2px}
+h4{font-size:15px;font-weight:600;margin:24px 0 8px;color:#3a3730}
+p{margin:0 0 15px;text-align:left}
+strong{font-weight:700;color:#000}
+em{font-style:normal;font-weight:600}
+hr{display:none}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.87em;background:#f4f2ec;padding:1px 5px}
+
+/* 数据来源等说明 */
+blockquote{
+  margin:0 0 34px;padding:0;border:none;color:var(--muted);
+  font-size:12.5px;line-height:1.85;
+}
+blockquote p{margin:0 0 5px;text-align:left}
+blockquote p:last-child{margin:0}
+
+/* 列表：短横线游标 */
+ul,ol{margin:0 0 18px;padding:0;list-style:none}
+li{position:relative;padding-left:1.15em;margin:0 0 10px;line-height:1.85}
+li::before{content:"–";position:absolute;left:0;top:0;color:#b3aea3}
+ol{counter-reset:n}
+ol li{padding-left:1.5em;counter-increment:n}
+ol li::before{content:counter(n) ".";color:var(--muted);font-size:.9em}
+ul ul,ol ul,ul ol{margin:9px 0 0}
+
+/* 表格：无边框无斑马，报纸数据表 */
+.tbl{overflow-x:auto;margin:20px 0 28px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.72;font-variant-numeric:tabular-nums}
+thead th{
+  border-bottom:1.5px solid var(--ink);padding:0 10px 8px;text-align:left;
+  font-weight:600;font-size:12px;letter-spacing:.4px;color:#3a3730;white-space:nowrap;
+}
+thead th:first-child,td:first-child{padding-left:0}
+tbody td{padding:10px 10px 10px 10px;border-bottom:1px solid var(--hair);vertical-align:top}
+tbody tr:last-child td{border-bottom:1px solid var(--hair2)}
+td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+tbody tr:hover{background:#fcfbf8}
+
+/* 涨跌色 */
+.up{color:var(--up)}
+.down{color:var(--down)}
+.flat{color:var(--muted)}
+
+/* ---------- 翻页 ---------- */
+.pager{display:flex;justify-content:space-between;gap:30px;margin-top:64px;padding-top:18px;border-top:1px solid var(--hair);font-size:13px}
+.pager a{color:#57544c;max-width:46%}
+.pager a:hover{color:var(--up)}
+.pager .dir{display:block;font-size:11px;color:var(--muted);letter-spacing:1.5px;margin-bottom:4px}
+.pager a.next{text-align:right;margin-left:auto}
+
+/* ---------- 页脚 ---------- */
+.foot{border-top:1px solid var(--ink);margin-top:0;padding:16px 0 64px;font-size:11.5px;color:var(--muted);letter-spacing:.3px}
+.foot .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+@media print{
+  body{font-size:11pt;line-height:1.7}
+  .toc,.pager,.masthead .mhmeta{display:none}
+  .layout{grid-template-columns:1fr;padding:0}
+  h2{break-after:avoid}
+  .tbl{overflow:visible}
+}
+
+/* ---------- 整行加粗的小标题（报告里的 1./2./3.） ---------- */
+p.k{
+  margin:30px 0 9px;font-size:15.5px;line-height:1.75;
+  letter-spacing:.2px;color:var(--ink);
+}
+p.k strong{font-weight:700}
+
+/* ---------- 市场速览数据栏（正文顶部 · 借鉴终端版速览格，改用报纸数据表做法） ---------- */
+.tape{margin:0 0 40px;border-bottom:1px solid var(--hair2)}
+.tape-h{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10.5px;letter-spacing:2.5px;color:var(--muted);
+  padding:11px 0 9px;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+}
+.tape-idx{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;padding:5px 0 6px;list-style:none;
+}
+.tape-idx li{
+  position:static;margin:0;padding:10px 15px 11px;min-width:0;
+  line-height:1.4;border-left:1px solid var(--hair);
+}
+.tape-idx li::before{content:none}
+.tape-idx li:nth-child(4n+1){border-left:none;padding-left:0}
+.tape-idx li:nth-child(n+5){border-top:1px solid var(--hair)}
+.tape-idx .tnm{display:block;font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:2px}
+.tape-idx .tvl{
+  font-size:18px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.2px;margin-right:7px;
+}
+.tape-idx .tch{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.tape-idx .tn{
+  display:block;font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tape-mood{
+  display:flex;flex-wrap:wrap;margin:0;padding:11px 0 12px;list-style:none;
+  border-top:1px solid var(--hair);font-size:12px;
+}
+.tape-mood li{position:static;margin:0;padding:0 14px;line-height:1.7;white-space:nowrap}
+.tape-mood li::before{content:none}
+.tape-mood li:first-child{padding-left:0}
+.tape-mood li+li{border-left:1px solid var(--hair)}
+.tape-mood .tk{color:var(--muted);margin-right:7px;letter-spacing:.5px}
+.tape-mood b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .tape-idx{grid-template-columns:repeat(2,1fr);padding:3px 0 4px}
+  .tape-idx li{padding:9px 13px 10px}
+  .tape-idx li:nth-child(4n+1){border-left:1px solid var(--hair);padding-left:13px}
+  .tape-idx li:nth-child(2n+1){border-left:none;padding-left:0}
+  .tape-idx li:nth-child(n+3){border-top:1px solid var(--hair)}
+  .tape-idx li:nth-child(-n+2){border-top:none}
+  .tape-idx .tvl{font-size:16.5px}
+  .tape-mood{font-size:11.5px}
+  .tape-mood li{padding:0 11px}
+  .tape-mood li:first-child{padding-left:0}
+}
+@media print{.tape{break-inside:avoid}}
+
+/* 情绪行：涨跌家数着色 + 量能环比小注 */
+.tape-mood b.up{color:var(--up)}
+.tape-mood b.down{color:var(--down)}
+.tape-mood .tsub{font-style:normal;font-size:10.5px;color:var(--muted);margin-left:6px;letter-spacing:0}
+
+/* 文末：数据来源与口径 */
+.source-notes{margin:56px 0 0;padding-top:15px;border-top:1px solid var(--hair)}
+.source-notes blockquote{margin:0;font-size:11.5px;line-height:1.85;color:var(--muted)}
+.source-notes blockquote p{margin:0 0 4px}
+.source-notes blockquote p:last-child{margin:0}
+.source-notes+.pager{margin-top:34px}
+
+</style>
+</head><body>
+<header class="masthead"><div class="wrap">
+  <a class="brand" href="../index.html">A股每日复盘</a>
+  <div class="mhmeta">2026-11-22 · 周日 · 第 057 期</div>
+</div></header>
+<div class="wrap"><div class="layout">
+<nav class="toc"><div class="toc-t">目 录</div><ol><li><a href="#sec0">〇、交易日判定</a></li><li><a href="#sec1">一、核心结论</a></li><li><a href="#sec2">二、核心指数表现</a></li><li><a href="#sec3">三、市场情绪与量能</a></li><li><a href="#sec4">四、短线连板梯队</a></li><li><a href="#sec5">五、题材涨跌分析</a></li><li><a href="#sec6">六、风险提示</a></li><li><a href="#sec7">七、外围观察</a></li><li><a href="#sec8">八、下一交易日关注清单</a></li></ol></nav>
+<article>
+  <div class="meta">2026年11月22日　周日</div>
+  <h1 class="hl">周末休市</h1>
+  
+
+<h2 id="sec0">〇、交易日判定（三步一致）</h2>
+<div class="tbl"><table><thead><tr><th>步骤</th><th>核验项</th><th>结果</th></tr></thead><tbody><tr><td>1. 统一交易日历</td><td>2026-11-22 上交所市场状态</td><td><strong>休市（周末休市）</strong>；11-23 开市</td></tr><tr><td>2. 行情「交易状态」字段</td><td>上证指数 000001.SH</td><td>11-22、11-21 均「未开盘」，交易状态「已休市」</td></tr><tr><td>3. 最新有效日期</td><td>上证行情表最新有数据日</td><td><strong>2026-11-20</strong>（上一交易日，收 3533.79 / −1.23%）</td></tr></tbody></table></div>
+<p>✅ 三步一致：<strong>今天（周日）A 股休市，无盘面数据可复盘。</strong> 下一交易日 <strong>2026-11-23（周一）开市</strong>（日历已确认「开市」）。</p>
+<h2 id="sec1">一、核心结论</h2>
+<ul><li><strong>今日休市，无当日资金、领涨 / 领跌板块、主线判定。</strong> 以下为上一交易日（11-20）收盘锚点，仅供衔接，非今日行情。</li><li><strong>上一交易日定性（11-20）</strong>：外围 AI 交易裂缝引爆全球 risk-off，A 股放量普杀、红盘率仅 5%，半导体天量失血 109 亿、主线退潮确立；银行红利靠 ETF 天量资金尾盘拉出 V 型创新高护盘，PCB / 农业 / 短剧仅局部抱团。全周超 5100 只个股收跌，创年内单周下跌家数纪录。</li><li><strong>周末外围的核心结论不变、细节更新</strong>：美股 11-20（周五）连续第二日暴跌且加速（纳指 −5.28%、费半 −10.73%、英伟达 −14.01%），周一（11-23）低开与情绪传导压力显著。周末新增的关键信息不在暴跌本身（昨日已述），而在两点——<strong>①30Y 美债精确收盘 5.331%（−7.38bp），仍在 5.3% 以上多年高位</strong>；<strong>②下周三是美国 10 月 PCE（预期整体 3.8% / 核心 3.2%），是决定 30Y 守 5.3% 还是重上 5.5% 的分水岭</strong>。</li><li><strong>国内对冲力量是周末最值得记的一组数</strong>：本周股票型 + 跨境 ETF 净流入 1941.71 亿（沪深300 单周 1024 亿）；场外资金 10/15–11/19 累计净买入主流 ETF 约 5892 亿，规模与 2024 年初大底相仿；11-20 盘后 27 家公司密集披露回购。政策底 + 护盘资金明确，但<strong>托底主要流向权重，个股情绪修复会滞后于指数</strong>。</li><li>常规「领涨 / 领跌板块、连板梯队、题材涨跌」模块仅在交易日盘后产出，今日不臆造。</li></ul>
+<h2 id="sec2">二、核心指数表现（无当日数据，列最近有效交易日 11-20 收盘作锚点）</h2>
+<blockquote><p>以下均为 <strong>2026-11-20（周五）收盘</strong>，非 11-22 数据。</p></blockquote>
+<div class="tbl"><table><thead><tr><th>指数</th><th>11-20 收盘</th><th>单日涨跌</th><th>本周涨跌</th><th>备注</th></tr></thead><tbody><tr><td>上证指数</td><td>3533.79</td><td><span class="down">-1.23%</span></td><td><span class="down">-2.77%</span></td><td>险守 3500，最低 3500.83</td></tr><tr><td>深证成指</td><td>10256.39</td><td><span class="down">-3.09%</span></td><td><span class="down">-6.49%</span></td><td>科技权重重挫</td></tr><tr><td>创业板指</td><td>2212.13</td><td><span class="down">-3.54%</span></td><td><span class="down">-8.82%</span></td><td>成长杀跌，收全天最低</td></tr><tr><td>科创50</td><td>1231.09</td><td><span class="down">-3.12%</span></td><td><span class="down">-3.8%</span></td><td>半导体权重拖累</td></tr><tr><td>沪深300</td><td>3954.57</td><td><span class="down">-0.76%</span></td><td><span class="down">-1.54%</span></td><td>相对抗跌，尾盘权重护盘</td></tr><tr><td>上证50</td><td>2785.92</td><td><strong><span class="up">+0.45%</span></strong></td><td><strong><span class="up">+0.39%</span></strong></td><td>唯一收红主要指数，护盘痕迹重</td></tr><tr><td>北证50</td><td>759.90</td><td><strong><span class="down">-4.85%</span></strong></td><td>—</td><td>最弱主要指数</td></tr><tr><td>中证1000</td><td>5648.63</td><td><span class="down">-4.89%</span></td><td><span class="down">-11.15%</span></td><td>中小盘普跌、跌幅居前</td></tr><tr><td>恒生指数</td><td>22410.80</td><td><span class="down">-1.89%</span></td><td><span class="down">-5.19%</span></td><td>港股同步承压</td></tr></tbody></table></div>
+<p><strong>判读</strong>：11-20 是「权重护盘、成长与小盘杀跌」的分层下挫——看上证指数会严重低估惨烈程度（全市场 5236 家下跌、红盘率 5%，万得全A 全周 −6.31%）。上证50 逆势收红 <span class="up">+0.45%</span> 是 ETF 尾盘天量拉抬的结果，不是市场自发买盘。此结构在周一需重点观察是否延续或被外围进一步放大。</p>
+<h2 id="sec3">三、市场情绪与量能（无当日数据，列 11-20 锚点）</h2>
+<blockquote><p>以下均为 <strong>2026-11-20（周五）</strong> 数据，非 11-22 数据。</p></blockquote>
+<ul><li><strong>广度（11-20）</strong>：红盘率 <strong>仅 5%</strong>（上涨 313 / 下跌 5236 / 平 31 / 停牌 8）；全周超 5100 只个股收跌，创年内单周纪录。</li><li><strong>涨跌停（11-20）</strong>：涨停 30 家 vs 跌停 68 家，连续第四日倒挂；涨超 5% 约 54 家 vs 跌超 5% 约 2860 家（约 53 倍差）。</li><li><strong>量能（11-20）</strong>：两市成交 <strong>14222.00 亿</strong>，较上日放量 1170.53 亿——但属<strong>杀跌放量 + 尾盘 ETF 天量护盘</strong>（上证50ETF华夏成交 240 亿创历史天量；上证50 + 沪深300 相关 ETF 当日合计净流入近 640 亿），非增量做多。全周日均 1.41 万亿，较前一周继续走弱。</li><li><strong>资金结构（本周，周末新披露）</strong>：ETF 净流入 1941.71 亿中，宽基 1896 亿、沪深300 单周 1024 亿；半导体设备主题获净买入（科创半导体ETF华夏 +52.19 亿、半导体设备ETF易方达 +20.67 亿），黄金、证券主题遭抛售。<strong>资金是在做「宽基护盘 + 半导体超跌布局」，不是全面撤离，也不是全面进攻。</strong></li><li><strong>题材持续性（11-20 收盘状态，供衔接）</strong>：</li><li>银行红利——持续性最强（11/16 工行首创新高→11/17-19 高位蓄势→11/20 尾盘 V 型集体创新高），龙头工商银行 <span class="up">+3.30%</span>，前排带得动后排（国有大行 6/6 全红），但性质是<strong>护盘防守</strong>，连续新高后追涨性价比低。</li><li>半导体材料 / 存储主线——<strong>第 4 天退潮确立</strong>，11-20 半导体 −4.91%（仅 6/183 红）主力 −109.11 亿天量失血，通富微电 / 联合化学 / 天普股份跌停，前排带崩后排、负反馈极强。</li><li>PCB / 覆铜板——逆势第 1 天，龙头中京电子 2 连板（封单 2.04 亿、0 炸板）带得动后排，元件主力 +18.26 亿居全市场第一，但元件整体仍 −2.94%、20 日主力仍净流出约 300 亿，属超跌反弹非反转。</li><li>AI 漫剧 / 短剧、机器人、华为算力——分别为超跌反抽、脉冲一日游、独立妖股（真视通 4 连板），均无板块广度，<strong>前排带不动后排</strong>。</li></ul>
+<h2 id="sec4">四、短线连板梯队（无当日数据，列 11-20 锚点）</h2>
+<blockquote><p>以下为 <strong>2026-11-20（周五）</strong> 数据，非 11-22 数据；周一梯队需待 15:00 后重新统计。</p></blockquote>
+<ul><li>11-20 涨停 28 家（东财池）中连板仅 3 只：最高 <strong>4 板</strong> 真视通（002771，封单 1.59 亿、0 炸板，质量好）、盛剑科技（603324，封单 0.05 亿、炸 4 次，质量差），2 板中京电子（封单 2.04 亿、0 炸板）；<strong>3 板断层</strong>。</li><li><strong>连板与主线脱节</strong>：连板梯队以独立妖股 / 游资杂股为主，机构赛道（半导体、PCB）多为首板，两线不共振——与 11/18、11/19 同构。</li><li>负反馈：全筑股份 −9.83%、华升 −9.89% 断板大面，断板即重挫。外围剧震 + 情绪冰点下，周一高位连板补跌风险须重点提防。</li></ul>
+<h2 id="sec5">五、题材涨跌分析（休市日不产出当日领涨 / 领跌 3 个）</h2>
+<p>今日休市，<strong>无当日板块涨跌与代表个股</strong>，不编造。11-20 收盘的领涨 / 领跌方向已在上文第三、四节作锚点说明，周一需以 11-23 盘后数据重新判定。</p>
+<h2 id="sec6">六、风险提示</h2>
+<p><strong>今日无。</strong>（休市日无当日领涨股，退市 / ST 风险核对项不适用。）</p>
+<p>按固定规则说明：本栏目仅在交易日核对<strong>当日领涨股</strong>中是否含 ①简称带 ST / *ST、②股价低于 2 元（面值退市敏感带）、③公告存在立案调查 / 重整 / 净资产为负 / 连续亏损等情形。休市日无领涨股，故不列示、不凑数。上一交易日（11-20）曾筛出东方海洋（002086，8 年 7 亏 + 2023 重整 + 营收逼近 3 亿退市红线 + 风险提示公告）、金新农（002548，连亏 + 负债率 75.68%）等，周一如再现低价 / ST 个股领涨，按当日盘面与公告重新核对，不臆断。</p>
+<h2 id="sec7">七、外围观察（周末更新：美股暴跌后续 + 下周宏观日历）</h2>
+<h3>1. 美股三大指数（2026-11-20 收盘，T+1 口径）</h3>
+<div class="tbl"><table><thead><tr><th>指数</th><th>收盘</th><th>单日涨跌</th><th>本周累计</th><th>关键位</th></tr></thead><tbody><tr><td>道琼斯</td><td>48147.33</td><td><strong><span class="down">-1.93%</span></strong>（-949.73点）</td><td><strong><span class="down">-8.02%</span></strong></td><td>连跌 5 天，较 8 月高点 −11.4%，入回调区间</td></tr><tr><td>标普500</td><td>6910.39</td><td><strong><span class="down">-3.70%</span></strong>（-265.44点）</td><td><strong><span class="down">-8.61%</span></strong></td><td>连跌 7 天（2020 年来最长），跌破 200 日均线（4 月来首次），RSI 破 30 超卖</td></tr><tr><td>纳斯达克</td><td>22617.73</td><td><strong><span class="down">-5.28%</span></strong>（-1261.46点）</td><td><strong><span class="down">-10.02%</span></strong></td><td>抹平年内涨幅（年内 −2.7%），2020/3 来最差周</td></tr><tr><td>纳斯达克100</td><td>25028.98</td><td><strong><span class="down">-5.61%</span></strong></td><td>—</td><td>较高点回撤约 19.8%（盘中触 20%），101 只中 71 只入熊</td></tr><tr><td>费城半导体</td><td>8408.59</td><td><strong><span class="down">-10.73%</span></strong></td><td><span class="down">-17.13%</span></td><td>30 只成分全跌</td></tr><tr><td>VIX</td><td>约 34.5–35.9</td><td><span class="up">+22%</span> 以上</td><td>—</td><td>盘中破 40，2025/4 来最高</td></tr></tbody></table></div>
+<ul><li>个股：英伟达 <strong>−14.01%</strong>（七连跌、六周连跌创 2012 年来最长，本周 −22%、2008/10 来最大单周跌幅，市值缩至约 3.03 万亿美元、跌出前三被谷歌超越；SEC 就潜在会计问题展开调查 + 黄仁勋离任 + 三季报超预期但投行评价谨慎）；AMD −13.25%、美光 −13.89%、博通 −12.19%、闪迪 −16.05%、ARM −14.09%。</li><li>科技七巨头指数 −5.12%：特斯拉 −7.64%、Meta −5.93%、亚马逊 −4.10%、微软 −2.77%、谷歌 −2.59%、苹果 −1.90%。</li><li>中概：纳斯达克中国金龙 −3.37%，小鹏 −13.4%、百度 −6%、万国数据 −9%。</li><li>逆势翻红：必需消费唯一红盘，沃尔玛 <span class="up">+1.6%</span>，开市客 / 强生 / 宝洁约 <span class="up">+1%</span>——典型防御避险。</li><li><strong>暴跌五因</strong>（详见 11-21 报告）：AI 资本开支回报重估（SemiAnalysis 下调 2028 支出 28%）+ Anthropic IPO 抽血 + 英伟达三重黑天鹅 + 美联储转鹰 + 拥挤交易平仓负 Gamma。</li></ul>
+<h3>2. 30Y 美债（成长股估值锚，按纪律看 30Y 而非 10Y）</h3>
+<ul><li><strong>11-20 收盘 30Y = 5.331%</strong>（美国财政部收盘口径，单日 −7.38bp）；10Y = 4.944%（−10.23bp）、2Y = 4.647%（−11.92bp）。盘中报道口径「30Y 跌 10bp 至 5.30%」与收盘略有差异，以收盘 5.331% 为准。</li><li>本周路径：11/16 <strong>5.475%</strong> → 11/19 <strong>5.406%</strong> → 11/20 <strong>5.331%</strong>，随股市暴跌连续回落；短端跌幅大于长端、曲线牛陡。</li><li><strong>判读：30Y 虽从 5.475% 回落约 14bp，但仍稳在 5.3% 以上多年高位，估值压力没有解除。</strong> 按纪律，AI 算力 / 半导体 / 创新药这类长久期资产的估值锚是 30Y 不是 10Y——10Y 已回 4.94% 看似缓和，不足以支撑成长股重估。<strong>周三 PCE 是守 5.3% 还是上 5.5% 的分水岭。</strong></li></ul>
+<h3>3. 下周海外宏观日历（本周新增，均为北京时间）</h3>
+<div class="tbl"><table><thead><tr><th>时间</th><th>事件</th><th>关注点</th></tr></thead><tbody><tr><td>周一 11-23</td><td>欧美 11 月制造业 / 服务业 PMI 初值；纽约联储威廉姆斯讲话</td><td>周一开盘前的外围情绪铺垫</td></tr><tr><td>周二 11-24</td><td>美国 11 月消费者信心（预期 92.1，前值 91.7）</td><td>消费韧性</td></tr><tr><td><strong>周三 11-25</strong></td><td><strong>美国 10 月 PCE（整体预期同比 3.8% / 核心 3.2%）</strong>；Q3 GDP 二次估值（3.4%→3.5%）；耐用品订单、初请</td><td><strong>全周分水岭</strong></td></tr><tr><td>周四 11-26</td><td>美联储褐皮书；韩国央行利率决议</td><td>通胀 / 就业线索</td></tr><tr><td>周五 11-27</td><td>日本东京 11 月核心 CPI；法国 / 西班牙 CPI 初值</td><td>全球通胀联动</td></tr></tbody></table></div>
+<ul><li><strong>注意感恩节缩短周</strong>：周四（11/26）美股休市，周五（11/27）提前至美东 13:00 收盘，流动性下降会放大波动。</li><li>PCE 若超预期 → 强化加息预期、30Y 反弹、全球高估值科技股再受压；若偏软 → 可能触发短线技术性反弹。由于 10 月 CPI（环比 0.4% / 核心 0.3%）与 PPI（同比 6.5%）均超预期，市场已基本按「高于预期」定价。</li></ul>
+<h3>4. 美联储 12 月加息预期（本轮是加息周期，非降息）</h3>
+<ul><li>CME FedWatch：12 月加息 25bp 概率 <strong>96.4%–97.5%</strong>，加息 50bp 约 3.6%；到 2027 年 1 月累计加息 50bp 约 67.5%。议息会议 <strong>12/8–9</strong>，11 月 CPI 要到 12/10 才发布（晚于会议），官员只能依赖既有数据。</li><li>官员表态偏鹰：库克「迫切需要在加息，延迟将被迫升得更快」；哈马克「限制性不足，不排除 12 月继续加息」；古尔斯比「不排除高于通常幅度的加息」。</li><li><strong>少数派逆共识</strong>：花旗 11-20 认为「美股估值下跌 + AI 投资放缓 + 金融条件收紧」正限制加息空间，仍预计 12 月加 25bp，但此后暂停、2027 年晚些时候转向降息——这是成长的潜在转机信号，但目前仍是少数派。</li></ul>
+<h3>5. 周末国内消息面（11-22 新披露）</h3>
+<ul><li><strong>监管联合公安公布 4 起「小作文」典型案件</strong>，指向 A 股政策预期、监管执法、上市公司经营三环节（发生于今年 2–6 月），相关人员已被行政处罚——直接剑指虚假信息扰动，利于稳定情绪。</li><li><strong>10 月证券交易印花税 120 亿</strong>，同比 −33.7%、环比 −48.05%，逼近两年低点（1–10 月累计 2511 亿、同比 <span class="up">+54.1%</span>）——交易活跃度大幅降温的侧证。</li><li><strong>首批 18 只主动 ETF 于 11-23（周一）正式上市</strong>，属证监会「引导主动 ETF 加快建仓」的落地动作，增量资金工具扩容。</li><li><strong>产业资本密集回购</strong>：11-20 盘后 27 家披露回购，长鑫科技回购上调至 25–50 亿、荣盛石化拟增持 10–20 亿、通威股份拟回购 10–20 亿。</li><li><strong>11 月 LPR 连续 18 个月持平</strong>（1Y 3.0% / 5Y+ 3.5%），流动性合理充裕；估值端上证 PE(TTM) 16.2 倍、沪深300 13.54 倍（股息率 2.82%），沪深300 股权风险溢价升至历史均值 +1 倍标准差以上。</li></ul>
+<h3>6. 其他资产与亚太</h3>
+<ul><li>亚太同步重挫（11-20）：日经225 −5.1%、韩国 KOSPI −5.2%、恒生科技 −3.78%（全周 −7.92%）。</li><li>贵金属「变现换现金」：COMEX 黄金 3539 美元/盎司（−3.98%，周约 −9%，2025/9 来最低）、白银 −7.39%（周约 −14%）——<strong>黄金未获避险买盘反而下跌，是流动性冲击信号</strong>。</li><li>比特币失守 59000 美元、下探 58000 上方；LME 铜周 −9.23%。</li><li>原油相对抗跌：WTI 83.98（<span class="up">+0.93%</span>，中东局势）、布油 92.57（<span class="up">+0.64%</span>）；美元指数 103.84（近 19 个月高位），离岸人民币 6.6748（涨 176 点）——汇率端未形成额外拖累。</li></ul>
+<h2 id="sec8">八、下一交易日（11-23 周一）关注清单</h2>
+<p>以下为<strong>观察项与条件判断，非买卖建议</strong>，全部待周一盘后数据验证：</p>
+<ol><li><strong>外围传导量级</strong>：连续第二晚暴跌且加速（纳指 −5.28%），远超 11-20 A 股开盘时面对的「隔夜跌约 2%」。周一低开幅度与开盘 30 分钟承接是首要观察点；重点看是否重现 11-20 的 ETF 尾盘护盘。<strong>美股 AI 高贝塔代理</strong>（光模块 / PCB / 存储 / 液冷 / 半导体）承压最重，但直接冲击范围可控——沪深两市仅约 36 家公司较多参与英伟达供应链，多数相关业务占比个位数。</li><li><strong>半导体主线</strong>：11-20 已第 4 天退潮（主力 −109.11 亿天量失血），叠加外围费半 −10.73%、英伟达 −14%，周一延续承压概率大，<strong>不宜以「跌多了」为由外推抄底</strong>。看前排是否继续杀、后排是否全绿；若低开后缩量企稳才是空头衰竭信号，放量大跌则抛压未完。</li><li><strong>长周期成长估值锚——30Y 美债</strong>：5.331% 仍在多年高位，AI 算力 / 半导体 / 创新药估值压力未解。本周盯 30Y 是否重上 5.5%（利空成长）或有效回落（缓解压力），周三 PCE 是关键触发。</li><li><strong>指数关键位与护盘延续性</strong>：3500 点是心理 + 技术双重支撑（11-20 最低 3500.83 已在测试），下方 3480（前密集成交区上沿）、3477（C 浪 1:1 等长）、3400–3450（年线区）。看银行红利 / 权重护盘能否延续、宽基 ETF 是否继续百亿级承接。</li><li><strong>历史回测参考（Wind，2016 年来单周跌超 4000 家的 41 周样本）</strong>：极端悲观后「下一周修复」概率约六成，但「周一立即修复」不到一半，周二、周三修复概率更高——<strong>周一仍有情绪惯性下探的可能，修复多以 V 型反弹而非普涨出现</strong>。</li><li><strong>量能性质</strong>：11-20 放量至 14222 亿是杀跌放量。周一若继续放量下跌，警惕恐慌加速；缩量止跌才算初步企稳。华泰提示反弹确认需成交重回 1.35 万亿以上。</li><li><strong>连板梯队与主线是否共振</strong>：11-20 最高 4 板、3 板断层，连板与主线脱节。外围剧震下高位连板补跌风险大，周一重新统计涨停分布、连板高度、前排后排联动。</li><li><strong>风格——哑铃，别猜 V 型反转</strong>：机构（中信 / 华泰 / 招商 / 申万宏源 / 中金 / 国泰海通 / 海通）一致判断「低开→消化→企稳」的震荡磨底。一头高股息红利（银行 / 煤炭 / 公用事业 / 油气）对冲海外利率，一头等国产替代催化（半导体设备 / 先进封装 / 国产算力），回避纯题材与高位连板。</li><li><strong>事件日历</strong>：周一首批 18 只主动 ETF 上市；周三美国 PCE + Q3 GDP 修正；周四感恩节美股休市、褐皮书。 catalyst 时间表：12/8–9 美联储议息、12 月中央经济工作会议定调、年末公募排名调仓。</li><li><strong>风险核对</strong>：周一若出现低价 / ST 个股领涨，按固定规则逐一核对面值退市敏感带与公告风险，不凑数、不臆断。</li></ol>
+<blockquote><p><strong>免责声明</strong>：以上内容基于公开数据和量化分析，仅供参考，不构成投资建议。市场有风险，投资需谨慎。任何投资决策应结合个人风险承受能力、资金状况和投资目标独立判断，必要时咨询持牌专业机构。过往表现不预示未来收益。</p></blockquote>
+<p><em>数据来源与口径：交易日判定——neodata 统一交易日历（SH 2026-11-22 休市 / 11-23 开市）、统一行情查询（上证 000001.SH 11-22 未开盘、11-20 收盘 3533.79）；上一交易日 A 股指数 / 情绪 / 连板锚点——本系列 2026-11-20 复盘（东财涨停池、changedist、westock 行业资金）及 neodata 周报（11-22）；外围行情与下周日历——domain_search 多源检索（财联社 11-22《环球下周看点》、每日经济新闻 11-22、21 世纪经济报道 11-21、中国金融信息网 11-20、新浪财经 11-21、工商时报 11-22、US Treasury 收盘口径）。美股为 T+1 口径，2026-11-20 收盘对应北京时间 11-21 凌晨；30Y 美债以财政部收盘 5.331% 为准；研报 / 媒体引用为二手来源，需核实原文。休市日不产出当日板块、连板、题材等盘面数据。</em></p>
+<div class="source-notes"><blockquote><p>定时任务 15:15 触发。按「交易日判定三步流程」核验：<strong>今日非交易日</strong>，产出休市版（外围观察 + 下一交易日清单），<strong>不编造任何当日 A 股涨跌 / 板块 / 连板数据</strong>。文中所有 A 股数字均为最近有效交易日 <strong>2026-11-20（周五）</strong> 收盘，已明确标注，不可读作今日数据。今日为周日，消息面重点在<strong>周末新披露的监管 / 资金数据</strong>与<strong>下周海外宏观日历</strong>。</p></blockquote></div>
+<div class="pager"><a class="prev" href="2026-11-21.html"><span class="dir">上一期</span>11-21　周末休市</a></div>
+</article>
+</div></div>
+<footer class="foot"><div class="wrap">
+  <span>数据口径：沪深A股全市场 · 红涨绿跌 · 收盘数据</span>
+  <span>每日收盘后自动生成</span>
+</div></footer>
+</body></html>
